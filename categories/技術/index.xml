@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kokuyokugetter</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <description>kokuyokugetter</description>
+    <title>技術 | kokuyokugetter</title>
+    <link>/categories/%E6%8A%80%E8%A1%93/</link>
+      <atom:link href="/categories/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml" />
+    <description>技術</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 24 Feb 2020 19:46:57 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>kokuyokugetter</title>
-      <link>/</link>
+      <title>技術</title>
+      <link>/categories/%E6%8A%80%E8%A1%93/</link>
     </image>
     
     <item>
