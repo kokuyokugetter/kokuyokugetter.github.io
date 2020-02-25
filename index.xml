@@ -5,12 +5,28 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>kokuyokugetter</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 24 Feb 2020 19:46:57 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 25 Feb 2020 20:17:56 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>kokuyokugetter</title>
       <link>/</link>
     </image>
+    
+    <item>
+      <title>このサイトを作った目的（という建前でTweet貼る練習）</title>
+      <link>/post/tweet/</link>
+      <pubDate>Tue, 25 Feb 2020 20:17:56 +0900</pubDate>
+      <guid>/post/tweet/</guid>
+      <description>&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.trhrkmk.com/posts/hugo-amp-twitter-embedded-shortcode/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo(AMP対応)にTwitterのツイートを埋め込む時のメモ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Twitterの自己紹介雑魚くて、ホームページのリンクにもQiitaのリンクしか貼ってなかったので、ポートフォリオサイト作った。&lt;a href=&#34;https://t.co/LgamCm3g4F&#34;&gt;https://t.co/LgamCm3g4F&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ∿∿ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1230116459562430466?ref_src=twsrc%5Etfw&#34;&gt;February 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;何も設定しなくてもacademicにはスクリプトがちゃんと書かれてるっぽいですね。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>このサイトを作った時のメモ</title>
