@@ -38,9 +38,8 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Hugoをインストール&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install hugo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;==&amp;gt; &lt;code&gt;brew cleanup&lt;/code&gt; has not been run in 30 days, running now&amp;hellip;
 Removing: /Users/ME/Library/Caches/Homebrew/go&amp;ndash;1.13.3.catalina.bottle.tar.gz&amp;hellip; (148MB)
 Removing: /Users/ME/Library/Caches/Homebrew/readline&amp;ndash;8.0.1.mojave.bottle.tar.gz&amp;hellip; (517.9KB)
@@ -51,9 +50,8 @@ Error: Permission denied @ apply2files - /usr/local/share/ghostscript/9.16/Resou
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Hugo実行&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new site getter_portfolio
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new site getter_portfolio
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Congratulations! Your new Hugo site is created in /Users/ME/works/getter_portfolio.&lt;/p&gt;
 &lt;p&gt;Just a few more steps and you&amp;rsquo;re ready to go:&lt;/p&gt;
 &lt;ol&gt;
@@ -69,9 +67,8 @@ with &amp;ldquo;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&amp
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;サーバー実行してみる&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Building sites … WARN 2020/02/11 13:04:24 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:04:24 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;home&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:04:24 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.&lt;/p&gt;
@@ -101,8 +98,7 @@ WARN 2020/02/11 13:04:41 found no layout file for &amp;ldquo;HTML&amp;rdquo; for
 &lt;li&gt;
 &lt;p&gt;ビルド&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;hugo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;Building sites … WARN 2020/02/11 13:07:59 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:07:59 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;home&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:07:59 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.&lt;/p&gt;
@@ -131,18 +127,14 @@ Cleaned          |  0&lt;/p&gt;
 &lt;p&gt;テーマ適用&lt;/p&gt;
 &lt;p&gt;themes内で&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/gcushen/hugo-academic.git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;いやよくわからん&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;いやよくわからん&lt;/p&gt;
 &lt;p&gt;もしかしてここまでの作業全部無意味？（多分hugoのインストール終わっていればここからでOK）&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;これだけでいいんじゃないか？&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;これだけでいいんじゃないか？&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cd My_Website
 git submodule update --init --recursive
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;で普通にAcademicのデフォルトの画面がhttp://localhost:1313/で表示された。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;で普通にAcademicのデフォルトの画面がhttp://localhost:1313/で表示された。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;中身書き換えていく&lt;/p&gt;
@@ -157,15 +149,14 @@ git submodule update --init --recursive
 &lt;blockquote&gt;
 &lt;p&gt;githubに {username}.github.io という名前のリポジトリを作成します。
 その後、CLIで、&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;hugo
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo
 cd public
 git init
 git add .
-git commit -m &amp;quot;first commit&amp;quot;
-git remote add origin https://github.com/{username}/{username}.github.io.git
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
+git remote add origin https://github.com/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;username&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;username&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;.github.io.git
 git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;とし、 https://{username}.github.io/ にアクセスすると、ビルドしたページが表示されます。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;とし、 https://{username}.github.io/ にアクセスすると、ビルドしたページが表示されます。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;

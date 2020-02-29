@@ -641,13 +641,11 @@
 <a href="https://www.howtonote.jp/twitter/helpful/index1.html" target="_blank" rel="noopener">CSVで入手できた</a>のに、js(tweet.js)で渡されるようになったみたい。
 まずは加工からスタート。</p>
 <p>とりあえず適当に読み込んでみる</p>
-<pre><code class="language-python">path = &quot;./twitter-2020-02-27-63146bc9cef271669caea3d761c8f484a1ce32324272beffd822fcb71adcdcc7/tweet.js&quot;
-</code></pre>
-<pre><code class="language-python">with open(path) as f:
-    l = f.readlines()
-    print(&quot;&quot;.join(l[0:50]))
-</code></pre>
-<pre><code>window.YTD.tweet.part0 = [ {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">path <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">./twitter-2020-02-27-63146bc9cef271669caea3d761c8f484a1ce32324272beffd822fcb71adcdcc7/tweet.js</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(path) <span style="color:#66d9ef">as</span> f:
+    l <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>readlines()
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>join(l[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">50</span>]))
+</code></pre></div><pre><code>window.YTD.tweet.part0 = [ {
   &quot;tweet&quot; : {
     &quot;retweeted&quot; : false,
     &quot;source&quot; : &quot;&lt;a href=\&quot;http://twitter.com/download/iphone\&quot; rel=\&quot;nofollow\&quot;&gt;Twitter for iPhone&lt;/a&gt;&quot;,
@@ -702,11 +700,10 @@
 <p>full_textにツイートがあるし、<del>retweetedがfalseなら自分のツイートだなって感じだと推測できる。</del> → 違ったぽいけど何かわからん。</p>
 <p>とりあえず表形式にしたいのでする。</p>
 <p><code>window.YTD.tweet.part0 = </code>は要らなそうなので直接消す。一応jsファイルのコピーは残す。</p>
-<pre><code class="language-python">with open(path) as f:
-    l = f.readlines()
-    print(&quot;&quot;.join(l[0:10]))
-</code></pre>
-<pre><code>[ {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> open(path) <span style="color:#66d9ef">as</span> f:
+    l <span style="color:#f92672">=</span> f<span style="color:#f92672">.</span>readlines()
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>join(l[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">10</span>]))
+</code></pre></div><pre><code>[ {
   &quot;tweet&quot; : {
     &quot;retweeted&quot; : false,
     &quot;source&quot; : &quot;&lt;a href=\&quot;http://twitter.com/download/iphone\&quot; rel=\&quot;nofollow\&quot;&gt;Twitter for iPhone&lt;/a&gt;&quot;,
@@ -719,30 +716,27 @@
 </code></pre>
 <p>消した</p>
 <p>jsonとして処理する。</p>
-<pre><code class="language-python">import json
-json_open = open(path, 'r')
-json_load = json.load(json_open)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> json
+json_open <span style="color:#f92672">=</span> open(path, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;</span>)
+json_load <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>load(json_open)
 
-print(json_load[0])
+<span style="color:#66d9ef">print</span>(json_load[<span style="color:#ae81ff">0</span>])
+</code></pre></div><pre><code>{'tweet': {'retweeted': False, 'source': '&lt;a href=&quot;http://twitter.com/download/iphone&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;', 'entities': {'hashtags': [], 'symbols': [], 'user_mentions': [], 'urls': []}, 'display_text_range': ['0', '22'], 'favorite_count': '0', 'id_str': '1232937395412058114', 'truncated': False, 'retweet_count': '0', 'id': '1232937395412058114', 'created_at': 'Thu Feb 27 07:55:56 +0000 2020', 'favorited': False, 'full_text': '任天堂オールスター大乱闘スマッシュブラザーズ', 'lang': 'ja'}}
 </code></pre>
-<pre><code>{'tweet': {'retweeted': False, 'source': '&lt;a href=&quot;http://twitter.com/download/iphone&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;', 'entities': {'hashtags': [], 'symbols': [], 'user_mentions': [], 'urls': []}, 'display_text_range': ['0', '22'], 'favorite_count': '0', 'id_str': '1232937395412058114', 'truncated': False, 'retweet_count': '0', 'id': '1232937395412058114', 'created_at': 'Thu Feb 27 07:55:56 +0000 2020', 'favorited': False, 'full_text': '任天堂オールスター大乱闘スマッシュブラザーズ', 'lang': 'ja'}}
-</code></pre>
-<pre><code class="language-python">print(json_load[0].keys())
-print(json_load[0][&quot;tweet&quot;].items())
-</code></pre>
-<pre><code>dict_keys(['tweet'])
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(json_load[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>keys())
+<span style="color:#66d9ef">print</span>(json_load[<span style="color:#ae81ff">0</span>][<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tweet</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">.</span>items())
+</code></pre></div><pre><code>dict_keys(['tweet'])
 dict_items([('retweeted', False), ('source', '&lt;a href=&quot;http://twitter.com/download/iphone&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;'), ('entities', {'hashtags': [], 'symbols': [], 'user_mentions': [], 'urls': []}), ('display_text_range', ['0', '22']), ('favorite_count', '0'), ('id_str', '1232937395412058114'), ('truncated', False), ('retweet_count', '0'), ('id', '1232937395412058114'), ('created_at', 'Thu Feb 27 07:55:56 +0000 2020'), ('favorited', False), ('full_text', '任天堂オールスター大乱闘スマッシュブラザーズ'), ('lang', 'ja')])
 </code></pre>
 <p>entitiesの中まで拾うのだるくね？</p>
 <p>pandas変換するか</p>
 <p>ちょうどいいのがあった→
 <a href="https://note.nkmk.me/python-pandas-json-normalize/" target="_blank" rel="noopener">pandasのjson_normalizeで辞書のリストをDataFrameに変換</a></p>
-<pre><code class="language-python">import pandas as pd
-df = pd.io.json.json_normalize(json_load)
-pd.set_option('display.max_columns', 100)
-df.head(10)
-</code></pre>
-<div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>io<span style="color:#f92672">.</span>json<span style="color:#f92672">.</span>json_normalize(json_load)
+pd<span style="color:#f92672">.</span>set_option(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">display.max_columns</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">100</span>)
+df<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">10</span>)
+</code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1062,10 +1056,9 @@ df.head(10)
 </div>
 <h3 id="完全に余談">完全に余談</h3>
 <p>RT数が1以上のツイート</p>
-<pre><code class="language-python">df_rted = df[df[&quot;tweet.retweet_count&quot;] &gt; &quot;0&quot;]
-df_rted[&quot;tweet.full_text&quot;]
-</code></pre>
-<pre><code>67      kashidecにkashidecにkashidecにkashidecにkashidecにk...
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_rted <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tweet.retweet_count</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">0</span><span style="color:#e6db74">&#34;</span>]
+df_rted[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tweet.full_text</span><span style="color:#e6db74">&#34;</span>]
+</code></pre></div><pre><code>67      kashidecにkashidecにkashidecにkashidecにkashidecにk...
 125                                         @toride0313 仏
 331       青い空が\n澄んだ風が\nたとえ星が\n裏切っても\n\nkashidecだけは絶対裏切らない
 1054                                 kashidecを撒き餌にサメ釣ってる。
@@ -1127,20 +1120,17 @@ Name: tweet.full_text, dtype: object
 <p>マルコフ連鎖</p>
 <p>参考→
 <a href="https://qiita.com/shge/items/fbfce6b54d2e0cc1b382" target="_blank" rel="noopener">[Python] MeCab とマルコフ連鎖ライブラリ markovify を使い、文章を学習して自動生成する方法</a></p>
-<pre><code class="language-python">import MeCab
-import markovify
-</code></pre>
-<p>なんか他人のRTとか日本語判定になってないツイートは除いたりしとく</p>
-<pre><code class="language-python">df2 = df.copy()
-</code></pre>
-<pre><code class="language-python">df2[&quot;str&quot;] = df[&quot;tweet.entities.user_mentions&quot;].astype(&quot;unicode&quot;)
-df2 = df2[df2[&quot;str&quot;] == &quot;[]&quot;]
-df2[&quot;str2&quot;] = df[&quot;tweet.entities.hashtags&quot;].astype(&quot;unicode&quot;)
-df2 = df2[df2[&quot;str2&quot;] == &quot;[]&quot;]
-df2 = df2[df2[&quot;tweet.lang&quot;] == &quot;ja&quot;]
-df2.head(30)
-</code></pre>
-<p>取り除いた↓</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> MeCab
+<span style="color:#f92672">import</span> markovify
+</code></pre></div><p>なんか他人のRTとか日本語判定になってないツイートは除いたりしとく</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df2 <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>copy()
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df2[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">str</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tweet.entities.user_mentions</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">unicode</span><span style="color:#e6db74">&#34;</span>)
+df2 <span style="color:#f92672">=</span> df2[df2[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">str</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">[]</span><span style="color:#e6db74">&#34;</span>]
+df2[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">str2</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tweet.entities.hashtags</span><span style="color:#e6db74">&#34;</span>]<span style="color:#f92672">.</span>astype(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">unicode</span><span style="color:#e6db74">&#34;</span>)
+df2 <span style="color:#f92672">=</span> df2[df2[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">str2</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">[]</span><span style="color:#e6db74">&#34;</span>]
+df2 <span style="color:#f92672">=</span> df2[df2[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tweet.lang</span><span style="color:#e6db74">&#34;</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">ja</span><span style="color:#e6db74">&#34;</span>]
+df2<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">30</span>)
+</code></pre></div><p>取り除いた↓</p>
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2061,15 +2051,14 @@ df2.head(30)
   </tbody>
 </table>
 </div>
-<pre><code class="language-python">s = &quot;。&quot;.join(df2[&quot;tweet.full_text&quot;][:13]) + &quot;。&quot;
-parsed_s = MeCab.Tagger(&quot;-Owakati&quot;).parse(s)
-print(parsed_s)
-text_model = markovify.Text(parsed_s, state_size=2)
-for _ in range(1):
-    sentence = text_model.make_short_sentence(140, 1, tries=100)
-    print(sentence)
-</code></pre>
-<pre><code>任天堂 オールスター 大 乱闘 スマッシュブラザーズ 。 今 の 会社 から 学べる 事 無くなっ た 。 ポジティブ な 事 を 言う より も 死ね とか SEX とか 言っ てる 回数 の が 多い 。 6 V 性格 おとなしい ン・ゾス あり ます 。 。 セックス に 積極 的 な 女の子 募集 中 。 早く 俺 も おっぱい で 射精 し たい 。 クソツイ 考察 班 。 俺 が 浮遊 能力 者 だっ たら 衆人 環境 下 で 首吊り の 物真似 し て めちゃくちゃ 炎上 する やつ やり たい 。 全て の アニメ の 同名 キャラ と SEX できる 能力 が ある 時 に 指定 する 名字 ある ？ 。 イクイクイク 。 ド S 女 を 大 逆転 スーパーハメハメエクスタシー してやり たい 。 。 @ 自殺 予定 者 卒 論 書い た ？ 自殺 学部 は 卒論 提出 必須 だ ぞ 。 ベテルギウス の γ線 バースト を 全て 受け 切っ た 男 。 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">s <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">。</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>join(df2[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">tweet.full_text</span><span style="color:#e6db74">&#34;</span>][:<span style="color:#ae81ff">13</span>]) <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">。</span><span style="color:#e6db74">&#34;</span>
+parsed_s <span style="color:#f92672">=</span> MeCab<span style="color:#f92672">.</span>Tagger(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-Owakati</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>parse(s)
+<span style="color:#66d9ef">print</span>(parsed_s)
+text_model <span style="color:#f92672">=</span> markovify<span style="color:#f92672">.</span>Text(parsed_s, state_size<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+<span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>):
+    sentence <span style="color:#f92672">=</span> text_model<span style="color:#f92672">.</span>make_short_sentence(<span style="color:#ae81ff">140</span>, <span style="color:#ae81ff">1</span>, tries<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)
+    <span style="color:#66d9ef">print</span>(sentence)
+</code></pre></div><pre><code>任天堂 オールスター 大 乱闘 スマッシュブラザーズ 。 今 の 会社 から 学べる 事 無くなっ た 。 ポジティブ な 事 を 言う より も 死ね とか SEX とか 言っ てる 回数 の が 多い 。 6 V 性格 おとなしい ン・ゾス あり ます 。 。 セックス に 積極 的 な 女の子 募集 中 。 早く 俺 も おっぱい で 射精 し たい 。 クソツイ 考察 班 。 俺 が 浮遊 能力 者 だっ たら 衆人 環境 下 で 首吊り の 物真似 し て めちゃくちゃ 炎上 する やつ やり たい 。 全て の アニメ の 同名 キャラ と SEX できる 能力 が ある 時 に 指定 する 名字 ある ？ 。 イクイクイク 。 ド S 女 を 大 逆転 スーパーハメハメエクスタシー してやり たい 。 。 @ 自殺 予定 者 卒 論 書い た ？ 自殺 学部 は 卒論 提出 必須 だ ぞ 。 ベテルギウス の γ線 バースト を 全て 受け 切っ た 男 。 
 
 None
 </code></pre>

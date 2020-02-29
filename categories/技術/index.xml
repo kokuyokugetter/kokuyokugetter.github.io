@@ -22,13 +22,11 @@
 &lt;a href=&#34;https://www.howtonote.jp/twitter/helpful/index1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSVで入手できた&lt;/a&gt;のに、js(tweet.js)で渡されるようになったみたい。
 まずは加工からスタート。&lt;/p&gt;
 &lt;p&gt;とりあえず適当に読み込んでみる&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;path = &amp;quot;./twitter-2020-02-27-63146bc9cef271669caea3d761c8f484a1ce32324272beffd822fcb71adcdcc7/tweet.js&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;with open(path) as f:
-    l = f.readlines()
-    print(&amp;quot;&amp;quot;.join(l[0:50]))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;window.YTD.tweet.part0 = [ {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;./twitter-2020-02-27-63146bc9cef271669caea3d761c8f484a1ce32324272beffd822fcb71adcdcc7/tweet.js&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; open(path) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; f:
+    l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;readlines()
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(l[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;]))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;window.YTD.tweet.part0 = [ {
   &amp;quot;tweet&amp;quot; : {
     &amp;quot;retweeted&amp;quot; : false,
     &amp;quot;source&amp;quot; : &amp;quot;&amp;lt;a href=\&amp;quot;http://twitter.com/download/iphone\&amp;quot; rel=\&amp;quot;nofollow\&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&amp;quot;,
@@ -83,11 +81,10 @@
 &lt;p&gt;full_textにツイートがあるし、&lt;del&gt;retweetedがfalseなら自分のツイートだなって感じだと推測できる。&lt;/del&gt; → 違ったぽいけど何かわからん。&lt;/p&gt;
 &lt;p&gt;とりあえず表形式にしたいのでする。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;window.YTD.tweet.part0 = &lt;/code&gt;は要らなそうなので直接消す。一応jsファイルのコピーは残す。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;with open(path) as f:
-    l = f.readlines()
-    print(&amp;quot;&amp;quot;.join(l[0:10]))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;[ {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; open(path) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; f:
+    l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;readlines()
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(l[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;]))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[ {
   &amp;quot;tweet&amp;quot; : {
     &amp;quot;retweeted&amp;quot; : false,
     &amp;quot;source&amp;quot; : &amp;quot;&amp;lt;a href=\&amp;quot;http://twitter.com/download/iphone\&amp;quot; rel=\&amp;quot;nofollow\&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&amp;quot;,
@@ -100,30 +97,27 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;消した&lt;/p&gt;
 &lt;p&gt;jsonとして処理する。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import json
-json_open = open(path, &#39;r&#39;)
-json_load = json.load(json_open)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; json
+json_open &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; open(path, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+json_load &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;load(json_open)
 
-print(json_load[0])
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(json_load[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;{&#39;tweet&#39;: {&#39;retweeted&#39;: False, &#39;source&#39;: &#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/iphone&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&#39;, &#39;entities&#39;: {&#39;hashtags&#39;: [], &#39;symbols&#39;: [], &#39;user_mentions&#39;: [], &#39;urls&#39;: []}, &#39;display_text_range&#39;: [&#39;0&#39;, &#39;22&#39;], &#39;favorite_count&#39;: &#39;0&#39;, &#39;id_str&#39;: &#39;1232937395412058114&#39;, &#39;truncated&#39;: False, &#39;retweet_count&#39;: &#39;0&#39;, &#39;id&#39;: &#39;1232937395412058114&#39;, &#39;created_at&#39;: &#39;Thu Feb 27 07:55:56 +0000 2020&#39;, &#39;favorited&#39;: False, &#39;full_text&#39;: &#39;任天堂オールスター大乱闘スマッシュブラザーズ&#39;, &#39;lang&#39;: &#39;ja&#39;}}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;{&#39;tweet&#39;: {&#39;retweeted&#39;: False, &#39;source&#39;: &#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/iphone&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&#39;, &#39;entities&#39;: {&#39;hashtags&#39;: [], &#39;symbols&#39;: [], &#39;user_mentions&#39;: [], &#39;urls&#39;: []}, &#39;display_text_range&#39;: [&#39;0&#39;, &#39;22&#39;], &#39;favorite_count&#39;: &#39;0&#39;, &#39;id_str&#39;: &#39;1232937395412058114&#39;, &#39;truncated&#39;: False, &#39;retweet_count&#39;: &#39;0&#39;, &#39;id&#39;: &#39;1232937395412058114&#39;, &#39;created_at&#39;: &#39;Thu Feb 27 07:55:56 +0000 2020&#39;, &#39;favorited&#39;: False, &#39;full_text&#39;: &#39;任天堂オールスター大乱闘スマッシュブラザーズ&#39;, &#39;lang&#39;: &#39;ja&#39;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(json_load[0].keys())
-print(json_load[0][&amp;quot;tweet&amp;quot;].items())
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;dict_keys([&#39;tweet&#39;])
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(json_load[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;keys())
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(json_load[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;items())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;dict_keys([&#39;tweet&#39;])
 dict_items([(&#39;retweeted&#39;, False), (&#39;source&#39;, &#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/iphone&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&#39;), (&#39;entities&#39;, {&#39;hashtags&#39;: [], &#39;symbols&#39;: [], &#39;user_mentions&#39;: [], &#39;urls&#39;: []}), (&#39;display_text_range&#39;, [&#39;0&#39;, &#39;22&#39;]), (&#39;favorite_count&#39;, &#39;0&#39;), (&#39;id_str&#39;, &#39;1232937395412058114&#39;), (&#39;truncated&#39;, False), (&#39;retweet_count&#39;, &#39;0&#39;), (&#39;id&#39;, &#39;1232937395412058114&#39;), (&#39;created_at&#39;, &#39;Thu Feb 27 07:55:56 +0000 2020&#39;), (&#39;favorited&#39;, False), (&#39;full_text&#39;, &#39;任天堂オールスター大乱闘スマッシュブラザーズ&#39;), (&#39;lang&#39;, &#39;ja&#39;)])
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;entitiesの中まで拾うのだるくね？&lt;/p&gt;
 &lt;p&gt;pandas変換するか&lt;/p&gt;
 &lt;p&gt;ちょうどいいのがあった→
 &lt;a href=&#34;https://note.nkmk.me/python-pandas-json-normalize/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pandasのjson_normalizeで辞書のリストをDataFrameに変換&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-df = pd.io.json.json_normalize(json_load)
-pd.set_option(&#39;display.max_columns&#39;, 100)
-df.head(10)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+df &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;io&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;json&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;json_normalize(json_load)
+pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_option(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;display.max_columns&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;)
+df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div&gt;
 &lt;style scoped&gt;
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -443,10 +437,9 @@ df.head(10)
 &lt;/div&gt;
 &lt;h3 id=&#34;完全に余談&#34;&gt;完全に余談&lt;/h3&gt;
 &lt;p&gt;RT数が1以上のツイート&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df_rted = df[df[&amp;quot;tweet.retweet_count&amp;quot;] &amp;gt; &amp;quot;0&amp;quot;]
-df_rted[&amp;quot;tweet.full_text&amp;quot;]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;67      kashidecにkashidecにkashidecにkashidecにkashidecにk...
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_rted &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.retweet_count&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+df_rted[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.full_text&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;67      kashidecにkashidecにkashidecにkashidecにkashidecにk...
 125                                         @toride0313 仏
 331       青い空が\n澄んだ風が\nたとえ星が\n裏切っても\n\nkashidecだけは絶対裏切らない
 1054                                 kashidecを撒き餌にサメ釣ってる。
@@ -508,20 +501,17 @@ Name: tweet.full_text, dtype: object
 &lt;p&gt;マルコフ連鎖&lt;/p&gt;
 &lt;p&gt;参考→
 &lt;a href=&#34;https://qiita.com/shge/items/fbfce6b54d2e0cc1b382&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Python] MeCab とマルコフ連鎖ライブラリ markovify を使い、文章を学習して自動生成する方法&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import MeCab
-import markovify
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;なんか他人のRTとか日本語判定になってないツイートは除いたりしとく&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df2 = df.copy()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df2[&amp;quot;str&amp;quot;] = df[&amp;quot;tweet.entities.user_mentions&amp;quot;].astype(&amp;quot;unicode&amp;quot;)
-df2 = df2[df2[&amp;quot;str&amp;quot;] == &amp;quot;[]&amp;quot;]
-df2[&amp;quot;str2&amp;quot;] = df[&amp;quot;tweet.entities.hashtags&amp;quot;].astype(&amp;quot;unicode&amp;quot;)
-df2 = df2[df2[&amp;quot;str2&amp;quot;] == &amp;quot;[]&amp;quot;]
-df2 = df2[df2[&amp;quot;tweet.lang&amp;quot;] == &amp;quot;ja&amp;quot;]
-df2.head(30)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;取り除いた↓&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; MeCab
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; markovify
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;なんか他人のRTとか日本語判定になってないツイートは除いたりしとく&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;str&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.entities.user_mentions&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;astype(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;unicode&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;str&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;str2&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.entities.hashtags&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;astype(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;unicode&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;str2&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.lang&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ja&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head(&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;取り除いた↓&lt;/p&gt;
 &lt;div&gt;
 &lt;style scoped&gt;
     .dataframe tbody tr th:only-of-type {
@@ -1442,15 +1432,14 @@ df2.head(30)
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;s = &amp;quot;。&amp;quot;.join(df2[&amp;quot;tweet.full_text&amp;quot;][:13]) + &amp;quot;。&amp;quot;
-parsed_s = MeCab.Tagger(&amp;quot;-Owakati&amp;quot;).parse(s)
-print(parsed_s)
-text_model = markovify.Text(parsed_s, state_size=2)
-for _ in range(1):
-    sentence = text_model.make_short_sentence(140, 1, tries=100)
-    print(sentence)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;任天堂 オールスター 大 乱闘 スマッシュブラザーズ 。 今 の 会社 から 学べる 事 無くなっ た 。 ポジティブ な 事 を 言う より も 死ね とか SEX とか 言っ てる 回数 の が 多い 。 6 V 性格 おとなしい ン・ゾス あり ます 。 。 セックス に 積極 的 な 女の子 募集 中 。 早く 俺 も おっぱい で 射精 し たい 。 クソツイ 考察 班 。 俺 が 浮遊 能力 者 だっ たら 衆人 環境 下 で 首吊り の 物真似 し て めちゃくちゃ 炎上 する やつ やり たい 。 全て の アニメ の 同名 キャラ と SEX できる 能力 が ある 時 に 指定 する 名字 ある ？ 。 イクイクイク 。 ド S 女 を 大 逆転 スーパーハメハメエクスタシー してやり たい 。 。 @ 自殺 予定 者 卒 論 書い た ？ 自殺 学部 は 卒論 提出 必須 だ ぞ 。 ベテルギウス の γ線 バースト を 全て 受け 切っ た 男 。 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;。&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.full_text&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;][:&lt;span style=&#34;color:#ae81ff&#34;&gt;13&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;。&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+parsed_s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; MeCab&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Tagger(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;-Owakati&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(s)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(parsed_s)
+text_model &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; markovify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Text(parsed_s, state_size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; _ &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;):
+    sentence &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; text_model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;make_short_sentence(&lt;span style=&#34;color:#ae81ff&#34;&gt;140&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, tries&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(sentence)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;任天堂 オールスター 大 乱闘 スマッシュブラザーズ 。 今 の 会社 から 学べる 事 無くなっ た 。 ポジティブ な 事 を 言う より も 死ね とか SEX とか 言っ てる 回数 の が 多い 。 6 V 性格 おとなしい ン・ゾス あり ます 。 。 セックス に 積極 的 な 女の子 募集 中 。 早く 俺 も おっぱい で 射精 し たい 。 クソツイ 考察 班 。 俺 が 浮遊 能力 者 だっ たら 衆人 環境 下 で 首吊り の 物真似 し て めちゃくちゃ 炎上 する やつ やり たい 。 全て の アニメ の 同名 キャラ と SEX できる 能力 が ある 時 に 指定 する 名字 ある ？ 。 イクイクイク 。 ド S 女 を 大 逆転 スーパーハメハメエクスタシー してやり たい 。 。 @ 自殺 予定 者 卒 論 書い た ？ 自殺 学部 は 卒論 提出 必須 だ ぞ 。 ベテルギウス の γ線 バースト を 全て 受け 切っ た 男 。 
 
 None
 &lt;/code&gt;&lt;/pre&gt;
@@ -1505,9 +1494,8 @@ None
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Hugoをインストール&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;brew install hugo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;==&amp;gt; &lt;code&gt;brew cleanup&lt;/code&gt; has not been run in 30 days, running now&amp;hellip;
 Removing: /Users/ME/Library/Caches/Homebrew/go&amp;ndash;1.13.3.catalina.bottle.tar.gz&amp;hellip; (148MB)
 Removing: /Users/ME/Library/Caches/Homebrew/readline&amp;ndash;8.0.1.mojave.bottle.tar.gz&amp;hellip; (517.9KB)
@@ -1518,9 +1506,8 @@ Error: Permission denied @ apply2files - /usr/local/share/ghostscript/9.16/Resou
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Hugo実行&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;hugo new site getter_portfolio
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new site getter_portfolio
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Congratulations! Your new Hugo site is created in /Users/ME/works/getter_portfolio.&lt;/p&gt;
 &lt;p&gt;Just a few more steps and you&amp;rsquo;re ready to go:&lt;/p&gt;
 &lt;ol&gt;
@@ -1536,9 +1523,8 @@ with &amp;ldquo;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&amp
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;サーバー実行してみる&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Building sites … WARN 2020/02/11 13:04:24 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:04:24 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;home&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:04:24 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.&lt;/p&gt;
@@ -1568,8 +1554,7 @@ WARN 2020/02/11 13:04:41 found no layout file for &amp;ldquo;HTML&amp;rdquo; for
 &lt;li&gt;
 &lt;p&gt;ビルド&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;hugo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;Building sites … WARN 2020/02/11 13:07:59 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:07:59 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;home&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:07:59 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.&lt;/p&gt;
@@ -1598,18 +1583,14 @@ Cleaned          |  0&lt;/p&gt;
 &lt;p&gt;テーマ適用&lt;/p&gt;
 &lt;p&gt;themes内で&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/gcushen/hugo-academic.git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;いやよくわからん&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;いやよくわからん&lt;/p&gt;
 &lt;p&gt;もしかしてここまでの作業全部無意味？（多分hugoのインストール終わっていればここからでOK）&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;これだけでいいんじゃないか？&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;これだけでいいんじゃないか？&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cd My_Website
 git submodule update --init --recursive
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;hugo server
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;で普通にAcademicのデフォルトの画面がhttp://localhost:1313/で表示された。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;で普通にAcademicのデフォルトの画面がhttp://localhost:1313/で表示された。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;中身書き換えていく&lt;/p&gt;
@@ -1624,15 +1605,14 @@ git submodule update --init --recursive
 &lt;blockquote&gt;
 &lt;p&gt;githubに {username}.github.io という名前のリポジトリを作成します。
 その後、CLIで、&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;hugo
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo
 cd public
 git init
 git add .
-git commit -m &amp;quot;first commit&amp;quot;
-git remote add origin https://github.com/{username}/{username}.github.io.git
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
+git remote add origin https://github.com/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;username&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;username&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;.github.io.git
 git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;とし、 https://{username}.github.io/ にアクセスすると、ビルドしたページが表示されます。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;とし、 https://{username}.github.io/ にアクセスすると、ビルドしたページが表示されます。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ol&gt;

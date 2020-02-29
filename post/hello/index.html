@@ -670,9 +670,8 @@
 <ol>
 <li>
 <p>Hugoをインストール</p>
-<pre><code class="language-bash">brew install hugo
-</code></pre>
-<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
+</code></pre></div><blockquote>
 <p>==&gt; <code>brew cleanup</code> has not been run in 30 days, running now&hellip;
 Removing: /Users/ME/Library/Caches/Homebrew/go&ndash;1.13.3.catalina.bottle.tar.gz&hellip; (148MB)
 Removing: /Users/ME/Library/Caches/Homebrew/readline&ndash;8.0.1.mojave.bottle.tar.gz&hellip; (517.9KB)
@@ -683,9 +682,8 @@ Error: Permission denied @ apply2files - /usr/local/share/ghostscript/9.16/Resou
 </li>
 <li>
 <p>Hugo実行</p>
-<pre><code class="language-bash">hugo new site getter_portfolio
-</code></pre>
-<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site getter_portfolio
+</code></pre></div><blockquote>
 <p>Congratulations! Your new Hugo site is created in /Users/ME/works/getter_portfolio.</p>
 <p>Just a few more steps and you&rsquo;re ready to go:</p>
 <ol>
@@ -701,9 +699,8 @@ with &ldquo;hugo new <SECTIONNAME>/<FILENAME>.<FORMAT>&rdquo;.</li>
 </li>
 <li>
 <p>サーバー実行してみる</p>
-<pre><code class="language-sh">hugo server
-</code></pre>
-<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo server
+</code></pre></div><blockquote>
 <p>Building sites … WARN 2020/02/11 13:04:24 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;taxonomyTerm&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:04:24 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;home&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:04:24 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;taxonomyTerm&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.</p>
@@ -733,8 +730,7 @@ WARN 2020/02/11 13:04:41 found no layout file for &ldquo;HTML&rdquo; for kind &l
 <li>
 <p>ビルド</p>
 <pre><code>hugo
-</code></pre>
-<blockquote>
+</code></pre><blockquote>
 <p>Building sites … WARN 2020/02/11 13:07:59 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;taxonomyTerm&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:07:59 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;home&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:07:59 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;taxonomyTerm&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.</p>
@@ -763,18 +759,14 @@ Cleaned          |  0</p>
 <p>テーマ適用</p>
 <p>themes内で</p>
 <pre><code>git clone https://github.com/gcushen/hugo-academic.git
-</code></pre>
-<p>いやよくわからん</p>
+</code></pre><p>いやよくわからん</p>
 <p>もしかしてここまでの作業全部無意味？（多分hugoのインストール終わっていればここからでOK）</p>
 <pre><code>git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
-</code></pre>
-<p>これだけでいいんじゃないか？</p>
+</code></pre><p>これだけでいいんじゃないか？</p>
 <pre><code>cd My_Website
 git submodule update --init --recursive
-</code></pre>
-<pre><code>hugo server
-</code></pre>
-<p>で普通にAcademicのデフォルトの画面がhttp://localhost:1313/で表示された。</p>
+</code></pre><pre><code>hugo server
+</code></pre><p>で普通にAcademicのデフォルトの画面がhttp://localhost:1313/で表示された。</p>
 </li>
 <li>
 <p>中身書き換えていく</p>
@@ -789,15 +781,14 @@ git submodule update --init --recursive
 <blockquote>
 <p>githubに {username}.github.io という名前のリポジトリを作成します。
 その後、CLIで、</p>
-<pre><code class="language-sh">hugo
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo
 cd public
 git init
 git add .
-git commit -m &quot;first commit&quot;
-git remote add origin https://github.com/{username}/{username}.github.io.git
+git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+git remote add origin https://github.com/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>.github.io.git
 git push -u origin master
-</code></pre>
-<p>とし、 https://{username}.github.io/ にアクセスすると、ビルドしたページが表示されます。</p>
+</code></pre></div><p>とし、 https://{username}.github.io/ にアクセスすると、ビルドしたページが表示されます。</p>
 </blockquote>
 </li>
 </ol>
