@@ -5,7 +5,7 @@
     <link>/tags/</link>
       <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 25 Feb 2020 20:17:56 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 28 Feb 2020 20:48:42 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
@@ -13,10 +13,26 @@
     </image>
     
     <item>
-      <title>Twitter</title>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twitter</title>
       <link>/tags/twitter/</link>
-      <pubDate>Tue, 25 Feb 2020 20:17:56 +0900</pubDate>
+      <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
       <guid>/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>マルコフ連鎖</title>
+      <link>/tags/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96/</link>
+      <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
+      <guid>/tags/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="ゲッタ〜">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="マルコフ連鎖のやつです">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/kusotwi_markov/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#EF525B">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/kusotwi_markov/">
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="kokuyokugetter">
+  <meta property="og:url" content="/post/kusotwi_markov/">
+  <meta property="og:title" content="クソツイを自動生成してみた (その1) | kokuyokugetter">
+  <meta property="og:description" content="マルコフ連鎖のやつです"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-02-28T20:48:42&#43;09:00">
+    
+    <meta property="article:modified_time" content="2020-02-28T20:48:42&#43;09:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/kusotwi_markov/"
+  },
+  "headline": "クソツイを自動生成してみた (その1)",
+  
+  "datePublished": "2020-02-28T20:48:42+09:00",
+  "dateModified": "2020-02-28T20:48:42+09:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "ゲッタ〜"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "kokuyokugetter",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "マルコフ連鎖のやつです"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>クソツイを自動生成してみた (その1) | kokuyokugetter</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">kokuyokugetter</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">kokuyokugetter</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience"><span>Experience</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#accomplishments"><span>Accomplishments</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>クソツイを自動生成してみた (その1)</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Feb 28, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    11 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="">技術</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>とあるルートから某クソツイ垢の全てのツイートをGETしたので、マルコフ連鎖でクソツイ生成してみる。</p>
+<p>2020/02/27最新の全件を取得したら、昔は
+<a href="https://www.howtonote.jp/twitter/helpful/index1.html" target="_blank" rel="noopener">CSVで入手できた</a>のに、js(tweet.js)で渡されるようになったみたい。
+まずは加工からスタート。</p>
+<p>とりあえず適当に読み込んでみる</p>
+<pre><code class="language-python">path = &quot;./twitter-2020-02-27-63146bc9cef271669caea3d761c8f484a1ce32324272beffd822fcb71adcdcc7/tweet.js&quot;
+</code></pre>
+<pre><code class="language-python">with open(path) as f:
+    l = f.readlines()
+    print(&quot;&quot;.join(l[0:50]))
+</code></pre>
+<pre><code>window.YTD.tweet.part0 = [ {
+  &quot;tweet&quot; : {
+    &quot;retweeted&quot; : false,
+    &quot;source&quot; : &quot;&lt;a href=\&quot;http://twitter.com/download/iphone\&quot; rel=\&quot;nofollow\&quot;&gt;Twitter for iPhone&lt;/a&gt;&quot;,
+    &quot;entities&quot; : {
+      &quot;hashtags&quot; : [ ],
+      &quot;symbols&quot; : [ ],
+      &quot;user_mentions&quot; : [ ],
+      &quot;urls&quot; : [ ]
+    },
+    &quot;display_text_range&quot; : [ &quot;0&quot;, &quot;22&quot; ],
+    &quot;favorite_count&quot; : &quot;0&quot;,
+    &quot;id_str&quot; : &quot;1232937395412058114&quot;,
+    &quot;truncated&quot; : false,
+    &quot;retweet_count&quot; : &quot;0&quot;,
+    &quot;id&quot; : &quot;1232937395412058114&quot;,
+    &quot;created_at&quot; : &quot;Thu Feb 27 07:55:56 +0000 2020&quot;,
+    &quot;favorited&quot; : false,
+    &quot;full_text&quot; : &quot;任天堂オールスター大乱闘スマッシュブラザーズ&quot;,
+    &quot;lang&quot; : &quot;ja&quot;
+  }
+}, {
+  &quot;tweet&quot; : {
+    &quot;retweeted&quot; : false,
+    &quot;source&quot; : &quot;&lt;a href=\&quot;http://twitter.com/download/iphone\&quot; rel=\&quot;nofollow\&quot;&gt;Twitter for iPhone&lt;/a&gt;&quot;,
+    &quot;entities&quot; : {
+      &quot;hashtags&quot; : [ ],
+      &quot;symbols&quot; : [ ],
+      &quot;user_mentions&quot; : [ ],
+      &quot;urls&quot; : [ ]
+    },
+    &quot;display_text_range&quot; : [ &quot;0&quot;, &quot;15&quot; ],
+    &quot;favorite_count&quot; : &quot;1&quot;,
+    &quot;id_str&quot; : &quot;1232934754539884544&quot;,
+    &quot;truncated&quot; : false,
+    &quot;retweet_count&quot; : &quot;0&quot;,
+    &quot;id&quot; : &quot;1232934754539884544&quot;,
+    &quot;created_at&quot; : &quot;Thu Feb 27 07:45:26 +0000 2020&quot;,
+    &quot;favorited&quot; : false,
+    &quot;full_text&quot; : &quot;今の会社から学べる事無くなった&quot;,
+    &quot;lang&quot; : &quot;ja&quot;
+  }
+}, {
+  &quot;tweet&quot; : {
+    &quot;retweeted&quot; : false,
+    &quot;source&quot; : &quot;&lt;a href=\&quot;http://twitter.com/download/iphone\&quot; rel=\&quot;nofollow\&quot;&gt;Twitter for iPhone&lt;/a&gt;&quot;,
+    &quot;entities&quot; : {
+      &quot;hashtags&quot; : [ ],
+      &quot;symbols&quot; : [ ],
+      &quot;user_mentions&quot; : [ ],
+</code></pre>
+<p>まあいわゆるJSON形式ってやつだと思う。</p>
+<p>full_textにツイートがあるし、<del>retweetedがfalseなら自分のツイートだなって感じだと推測できる。</del> → 違ったぽいけど何かわからん。</p>
+<p>とりあえず表形式にしたいのでする。</p>
+<p><code>window.YTD.tweet.part0 = </code>は要らなそうなので直接消す。一応jsファイルのコピーは残す。</p>
+<pre><code class="language-python">with open(path) as f:
+    l = f.readlines()
+    print(&quot;&quot;.join(l[0:10]))
+</code></pre>
+<pre><code>[ {
+  &quot;tweet&quot; : {
+    &quot;retweeted&quot; : false,
+    &quot;source&quot; : &quot;&lt;a href=\&quot;http://twitter.com/download/iphone\&quot; rel=\&quot;nofollow\&quot;&gt;Twitter for iPhone&lt;/a&gt;&quot;,
+    &quot;entities&quot; : {
+      &quot;hashtags&quot; : [ ],
+      &quot;symbols&quot; : [ ],
+      &quot;user_mentions&quot; : [ ],
+      &quot;urls&quot; : [ ]
+    },
+</code></pre>
+<p>消した</p>
+<p>jsonとして処理する。</p>
+<pre><code class="language-python">import json
+json_open = open(path, 'r')
+json_load = json.load(json_open)
+
+print(json_load[0])
+</code></pre>
+<pre><code>{'tweet': {'retweeted': False, 'source': '&lt;a href=&quot;http://twitter.com/download/iphone&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;', 'entities': {'hashtags': [], 'symbols': [], 'user_mentions': [], 'urls': []}, 'display_text_range': ['0', '22'], 'favorite_count': '0', 'id_str': '1232937395412058114', 'truncated': False, 'retweet_count': '0', 'id': '1232937395412058114', 'created_at': 'Thu Feb 27 07:55:56 +0000 2020', 'favorited': False, 'full_text': '任天堂オールスター大乱闘スマッシュブラザーズ', 'lang': 'ja'}}
+</code></pre>
+<pre><code class="language-python">print(json_load[0].keys())
+print(json_load[0][&quot;tweet&quot;].items())
+</code></pre>
+<pre><code>dict_keys(['tweet'])
+dict_items([('retweeted', False), ('source', '&lt;a href=&quot;http://twitter.com/download/iphone&quot; rel=&quot;nofollow&quot;&gt;Twitter for iPhone&lt;/a&gt;'), ('entities', {'hashtags': [], 'symbols': [], 'user_mentions': [], 'urls': []}), ('display_text_range', ['0', '22']), ('favorite_count', '0'), ('id_str', '1232937395412058114'), ('truncated', False), ('retweet_count', '0'), ('id', '1232937395412058114'), ('created_at', 'Thu Feb 27 07:55:56 +0000 2020'), ('favorited', False), ('full_text', '任天堂オールスター大乱闘スマッシュブラザーズ'), ('lang', 'ja')])
+</code></pre>
+<p>entitiesの中まで拾うのだるくね？</p>
+<p>pandas変換するか</p>
+<p>ちょうどいいのがあった→
+<a href="https://note.nkmk.me/python-pandas-json-normalize/" target="_blank" rel="noopener">pandasのjson_normalizeで辞書のリストをDataFrameに変換</a></p>
+<pre><code class="language-python">import pandas as pd
+df = pd.io.json.json_normalize(json_load)
+pd.set_option('display.max_columns', 100)
+df.head(10)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tweet.created_at</th>
+      <th>tweet.display_text_range</th>
+      <th>tweet.entities.hashtags</th>
+      <th>tweet.entities.media</th>
+      <th>tweet.entities.symbols</th>
+      <th>tweet.entities.urls</th>
+      <th>tweet.entities.user_mentions</th>
+      <th>tweet.extended_entities.media</th>
+      <th>tweet.favorite_count</th>
+      <th>tweet.favorited</th>
+      <th>tweet.full_text</th>
+      <th>tweet.id</th>
+      <th>tweet.id_str</th>
+      <th>tweet.in_reply_to_screen_name</th>
+      <th>tweet.in_reply_to_status_id</th>
+      <th>tweet.in_reply_to_status_id_str</th>
+      <th>tweet.in_reply_to_user_id</th>
+      <th>tweet.in_reply_to_user_id_str</th>
+      <th>tweet.lang</th>
+      <th>tweet.possibly_sensitive</th>
+      <th>tweet.retweet_count</th>
+      <th>tweet.retweeted</th>
+      <th>tweet.source</th>
+      <th>tweet.truncated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Thu Feb 27 07:55:56 +0000 2020</td>
+      <td>[0, 22]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>任天堂オールスター大乱闘スマッシュブラザーズ</td>
+      <td>1232937395412058114</td>
+      <td>1232937395412058114</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Thu Feb 27 07:45:26 +0000 2020</td>
+      <td>[0, 15]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>今の会社から学べる事無くなった</td>
+      <td>1232934754539884544</td>
+      <td>1232934754539884544</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Wed Feb 26 23:11:36 +0000 2020</td>
+      <td>[0, 32]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>ポジティブな事を言うよりも死ねとかSEXとか言ってる回数のが多い</td>
+      <td>1232805442415255554</td>
+      <td>1232805442415255554</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Wed Feb 26 11:04:15 +0000 2020</td>
+      <td>[0, 18]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>6V性格おとなしいン・ゾスあります。</td>
+      <td>1232622399671025664</td>
+      <td>1232622399671025664</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Wed Feb 26 09:13:20 +0000 2020</td>
+      <td>[0, 15]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>セックスに積極的な女の子募集中</td>
+      <td>1232594485655134212</td>
+      <td>1232594485655134212</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Wed Feb 26 09:00:41 +0000 2020</td>
+      <td>[0, 14]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>早く俺もおっぱいで射精したい</td>
+      <td>1232591301310201859</td>
+      <td>1232591301310201859</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Wed Feb 26 03:56:37 +0000 2020</td>
+      <td>[0, 7]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>クソツイ考察班</td>
+      <td>1232514780004372480</td>
+      <td>1232514780004372480</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Wed Feb 26 01:25:55 +0000 2020</td>
+      <td>[0, 50]</td>
+      <td>[]</td>
+      <td>[{'expanded_url': 'https://twitter.com/lw_ru/s...</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[{'name': 'LW', 'screen_name': 'lw_ru', 'indic...</td>
+      <td>[{'expanded_url': 'https://twitter.com/lw_ru/s...</td>
+      <td>0</td>
+      <td>False</td>
+      <td>RT @lw_ru: @getter_kusotwi https://t.co/nIO6Vb...</td>
+      <td>1232476857016078336</td>
+      <td>1232476857016078336</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>und</td>
+      <td>False</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Tue Feb 25 13:43:48 +0000 2020</td>
+      <td>[0, 95]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[{'name': 'みんどら', 'screen_name': 'mindora0', '...</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>RT @mindora0: @getter_kusotwi \nミッドサマーのここがオススメ...</td>
+      <td>1232300164028583936</td>
+      <td>1232300164028583936</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Tue Feb 25 12:07:48 +0000 2020</td>
+      <td>[0, 82]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[{'name': 'ひろ', 'screen_name': 'hiroyp_', 'ind...</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>RT @hiroyp_: @getter_kusotwi ゲッタ〜のキャノジョ「今夜は寝かせ...</td>
+      <td>1232276005152157697</td>
+      <td>1232276005152157697</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h3 id="完全に余談">完全に余談</h3>
+<p>RT数が1以上のツイート</p>
+<pre><code class="language-python">df_rted = df[df[&quot;tweet.retweet_count&quot;] &gt; &quot;0&quot;]
+df_rted[&quot;tweet.full_text&quot;]
+</code></pre>
+<pre><code>67      kashidecにkashidecにkashidecにkashidecにkashidecにk...
+125                                         @toride0313 仏
+331       青い空が\n澄んだ風が\nたとえ星が\n裏切っても\n\nkashidecだけは絶対裏切らない
+1054                                 kashidecを撒き餌にサメ釣ってる。
+1098                              でも日本には四季とkashidecがあるから…
+1133                          またkashidecが精神病院からツイートしています。
+1176              kashidecと会う時は握手は断ってください。実はヤバいことをされています。
+1265                     異世界転生kashidec「ふむ、換気を重視してみてはどうかな」
+1269                   カシデックって人、全然ツイートしてないのにファボしてて気持ち悪ｗｗｗ
+1328    kashidecガチ信者はkashidecの市議選出馬を楽しみに毎日生きているが、kashi...
+1411                       kashidecガチ信者だから3秒に1回歯の定期検診してる。
+1501                                        #オナニー見てくれる人RT
+1502                                       #オナニー見せてくれる人RT
+1504      kashidecガチ信者なろう小説\n「ふむ、それではヨシケイを頼んでみてはどうだろうか？ｗ」
+1548                  法で取り締まって欲しいものリスト\n・パチンコ\n・タバコ\n・オリパ
+1565    ブン回ったアンデシンクロ漫談「ゴヨウガーディアン、ゴヨウガーディアン、一つ飛ばしてゴヨウガー...
+1612                           kashidecドヤ街に住んでみたシリーズ第一弾寿町
+1682     全盛期のkashidecがポルトガルに行ったときにありがちなこと、ポルトガルにそもそも行かない。
+1691                                     パクチー無いからカメムシ食べてる
+1735                                           オワッタクカシデッナ
+1740                                   kashidecは実際クズっぽいよな
+1796                                  KSU kashidecの家キャンパス
+1883    終わりの世界のナベアツ「1の倍数の時だけ1の倍数の代わりに、この現代社会を生き抜くために我々...
+1884       KSUで薬物で死んだ人リスト\n・kashidec（治験新薬）\n・とりでまん（コンサータ）
+1886               映画、『範馬の子』にありがちなこと、「今から地震がとまるよ、チェリアアッッ」
+1888    【都市伝説】○アニの犯人はkashidec信者らしい - kashidecガチアンチ速報 h...
+1891    大学前飯屋が会社前に転生した時にありがちなこと\n\n「何って、350円で死ぬほど腹一杯にな...
+1919            kashidecガチアンチ「kashidec生きてる意味ない…俺以外にとってはな」
+1923                                         N国の佐藤恵理子とSEX
+1938                                     動くな、俺はkashidecだ。
+1944    ガチアンチ。兵庫県出身。大阪神天才大学卒業。在学中にkashidecガチアンチ検定1級に当時...
+1952    【驚愕】kashidecの「信じてください。」は「信じて（お金を）くださいだった」 - ka...
+1979    kashidecとカラオケに行った時にありがちなこと\n\nkashidec「私のお墓のお墓...
+1993                               kashiがdecすぎるとツイッターで話題に
+2001                               どうしてそんなにエッチなファボばかりするの？
+2026          赤ちゃん→可愛い😍\n製造→凄い😮\nミルク→美味しい😋\n\n赤ちゃん製造ミルク→🤔
+2059    エロファボしてるkashidec「エロファボをしてください。kashidickからのお願いです。」
+2344    2018年、クソツイランキング～～～～！！！\n\n3位、「50音を言っていって、ンコを足し...
+2392               引いてしまうkashidecの異常行動ｗｗｗｗｗｗ\n\nスマホを投げて遊ぶ
+2615    kashidecかなーやっぱりww 自分は思わないんだけど周りにkashidecに似てるって...
+2626    ←kashidec前期      kashidec後期→\n\n※画像はイメージです htt...
+2633    カシデックと貸していくで韻が踏める\nヒモニート酷い人で韻が踏める\n\nこの韻はフィクショ...
+2635                              https://t.co/tylQ8pGpID
+2636                        ミュージカル『全てkashi06が悪い』を開演いたします。
+2656                      ザーメン大好き小泉さんという同人誌が1000000000%出る
+2687    ゲッタークソツイの墓場が2018年を大胆予想！！！！\n\n・何かが流行る！！！\n\n・ニ...
+2707                   キズナ・アイ主催のデスゲーム、バーチャルユーチューバーのコロシ・アイ
+2792    チュイイイイイイイイイイイン！！\nガキン！\nガキン！\nTUEEEEEEEEEEEッッッ...
+3121                           カシデック靴でしか、回文パーツとしてお使いください。
+3231                              https://t.co/pdVxW6qZyC
+3238    @toride0313 @peroshirako  https://t.co/zWzq5RFN3W
+3239                    20年後の遊戯王のCS\n「CS優勝しました！使用AIは○○です」
+3242            もうすぐ #kashidec生誕祭 https://t.co/Rg06fY0Dik
+3362                              https://t.co/oyzAlScCj0
+3364                              https://t.co/I7e4WQWvpR
+Name: tweet.full_text, dtype: object
+</code></pre>
+<p>kashidecばっかりじゃねーか</p>
+<h3 id="閑話休題">閑話休題</h3>
+<p>マルコフ連鎖</p>
+<p>参考→
+<a href="https://qiita.com/shge/items/fbfce6b54d2e0cc1b382" target="_blank" rel="noopener">[Python] MeCab とマルコフ連鎖ライブラリ markovify を使い、文章を学習して自動生成する方法</a></p>
+<pre><code class="language-python">import MeCab
+import markovify
+</code></pre>
+<p>なんか他人のRTとか日本語判定になってないツイートは除いたりしとく</p>
+<pre><code class="language-python">df2 = df.copy()
+</code></pre>
+<pre><code class="language-python">df2[&quot;str&quot;] = df[&quot;tweet.entities.user_mentions&quot;].astype(&quot;unicode&quot;)
+df2 = df2[df2[&quot;str&quot;] == &quot;[]&quot;]
+df2[&quot;str2&quot;] = df[&quot;tweet.entities.hashtags&quot;].astype(&quot;unicode&quot;)
+df2 = df2[df2[&quot;str2&quot;] == &quot;[]&quot;]
+df2 = df2[df2[&quot;tweet.lang&quot;] == &quot;ja&quot;]
+df2.head(30)
+</code></pre>
+<p>取り除いた↓</p>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tweet.created_at</th>
+      <th>tweet.display_text_range</th>
+      <th>tweet.entities.hashtags</th>
+      <th>tweet.entities.media</th>
+      <th>tweet.entities.symbols</th>
+      <th>tweet.entities.urls</th>
+      <th>tweet.entities.user_mentions</th>
+      <th>tweet.extended_entities.media</th>
+      <th>tweet.favorite_count</th>
+      <th>tweet.favorited</th>
+      <th>tweet.full_text</th>
+      <th>tweet.id</th>
+      <th>tweet.id_str</th>
+      <th>tweet.in_reply_to_screen_name</th>
+      <th>tweet.in_reply_to_status_id</th>
+      <th>tweet.in_reply_to_status_id_str</th>
+      <th>tweet.in_reply_to_user_id</th>
+      <th>tweet.in_reply_to_user_id_str</th>
+      <th>tweet.lang</th>
+      <th>tweet.possibly_sensitive</th>
+      <th>tweet.retweet_count</th>
+      <th>tweet.retweeted</th>
+      <th>tweet.source</th>
+      <th>tweet.truncated</th>
+      <th>str</th>
+      <th>str2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Thu Feb 27 07:55:56 +0000 2020</td>
+      <td>[0, 22]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>任天堂オールスター大乱闘スマッシュブラザーズ</td>
+      <td>1232937395412058114</td>
+      <td>1232937395412058114</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Thu Feb 27 07:45:26 +0000 2020</td>
+      <td>[0, 15]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>今の会社から学べる事無くなった</td>
+      <td>1232934754539884544</td>
+      <td>1232934754539884544</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Wed Feb 26 23:11:36 +0000 2020</td>
+      <td>[0, 32]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>ポジティブな事を言うよりも死ねとかSEXとか言ってる回数のが多い</td>
+      <td>1232805442415255554</td>
+      <td>1232805442415255554</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Wed Feb 26 11:04:15 +0000 2020</td>
+      <td>[0, 18]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>6V性格おとなしいン・ゾスあります。</td>
+      <td>1232622399671025664</td>
+      <td>1232622399671025664</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Wed Feb 26 09:13:20 +0000 2020</td>
+      <td>[0, 15]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>セックスに積極的な女の子募集中</td>
+      <td>1232594485655134212</td>
+      <td>1232594485655134212</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Wed Feb 26 09:00:41 +0000 2020</td>
+      <td>[0, 14]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>早く俺もおっぱいで射精したい</td>
+      <td>1232591301310201859</td>
+      <td>1232591301310201859</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Wed Feb 26 03:56:37 +0000 2020</td>
+      <td>[0, 7]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>クソツイ考察班</td>
+      <td>1232514780004372480</td>
+      <td>1232514780004372480</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Tue Feb 25 08:54:54 +0000 2020</td>
+      <td>[0, 42]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>俺が浮遊能力者だったら衆人環境下で首吊りの物真似してめちゃくちゃ炎上するやつやりたい</td>
+      <td>1232227460143439873</td>
+      <td>1232227460143439873</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Tue Feb 25 07:18:35 +0000 2020</td>
+      <td>[0, 35]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>全てのアニメの同名キャラとSEXできる能力がある時に指定する名字ある？</td>
+      <td>1232203221319372800</td>
+      <td>1232203221319372800</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Tue Feb 25 07:17:51 +0000 2020</td>
+      <td>[0, 6]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>イクイクイク</td>
+      <td>1232203035310321664</td>
+      <td>1232203035310321664</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Mon Feb 24 09:20:52 +0000 2020</td>
+      <td>[0, 28]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>ドS女を大逆転スーパーハメハメエクスタシーしてやりたい。</td>
+      <td>1231871603522162688</td>
+      <td>1231871603522162688</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Mon Feb 24 03:25:09 +0000 2020</td>
+      <td>[0, 26]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>@自殺予定者 卒論書いた？自殺学部は卒論提出必須だぞ</td>
+      <td>1231782084538036226</td>
+      <td>1231782084538036226</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Mon Feb 24 01:03:13 +0000 2020</td>
+      <td>[0, 22]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>ベテルギウスのγ線バーストを全て受け切った男</td>
+      <td>1231746366881189889</td>
+      <td>1231746366881189889</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Sun Feb 23 14:34:46 +0000 2020</td>
+      <td>[0, 24]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>エロ漫画はすぐSEXするからなぁ…(´･_･`)</td>
+      <td>1231588212864217090</td>
+      <td>1231588212864217090</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Sat Feb 22 11:48:29 +0000 2020</td>
+      <td>[0, 14]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>わたてん見ながら彼女とSEX</td>
+      <td>1231183977290985472</td>
+      <td>1231183977290985472</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Sat Feb 22 11:26:13 +0000 2020</td>
+      <td>[0, 9]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>エロ部の部長です。</td>
+      <td>1231178374812291072</td>
+      <td>1231178374812291072</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Sat Feb 22 00:12:21 +0000 2020</td>
+      <td>[0, 19]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>False</td>
+      <td>映像研にも手を出してしまうほどの性豪。</td>
+      <td>1231008791702822914</td>
+      <td>1231008791702822914</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Fri Feb 21 11:32:12 +0000 2020</td>
+      <td>[0, 22]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>けんぷファーのアニメってなんだったんですか？</td>
+      <td>1230817494580903936</td>
+      <td>1230817494580903936</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Fri Feb 21 11:25:20 +0000 2020</td>
+      <td>[0, 19]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>お前ら…全員俺が幸せにしてやるからな…</td>
+      <td>1230815763855896576</td>
+      <td>1230815763855896576</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Fri Feb 21 10:56:57 +0000 2020</td>
+      <td>[0, 6]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>青い鯨RTA</td>
+      <td>1230808622906494977</td>
+      <td>1230808622906494977</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Fri Feb 21 10:39:26 +0000 2020</td>
+      <td>[0, 4]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>あ、イク</td>
+      <td>1230804213644398592</td>
+      <td>1230804213644398592</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Thu Feb 20 10:17:26 +0000 2020</td>
+      <td>[0, 20]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>お片付け！お片付け！（るろうに剣心の話）</td>
+      <td>1230436290929184769</td>
+      <td>1230436290929184769</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Thu Feb 20 08:16:07 +0000 2020</td>
+      <td>[0, 14]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>可愛い女の子に生まれ変わるぬ</td>
+      <td>1230405757474000896</td>
+      <td>1230405757474000896</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Thu Feb 20 07:07:04 +0000 2020</td>
+      <td>[0, 33]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>JKだからレッグエクステンションのことをレグエクちゃんって呼んでる</td>
+      <td>1230388382531870721</td>
+      <td>1230388382531870721</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Thu Feb 20 01:48:12 +0000 2020</td>
+      <td>[0, 6]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>バードカフェ</td>
+      <td>1230308137774616577</td>
+      <td>1230308137774616577</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Thu Feb 20 00:39:44 +0000 2020</td>
+      <td>[0, 16]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>触らなくても、射精ちゃったね…♡</td>
+      <td>1230290905115922432</td>
+      <td>1230290905115922432</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Wed Feb 19 13:59:08 +0000 2020</td>
+      <td>[0, 11]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>いつメンで女装しねえ？</td>
+      <td>1230129693120053248</td>
+      <td>1230129693120053248</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>Thu Jan 23 03:46:52 +0000 2020</td>
+      <td>[0, 16]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>テクマクマヤコンをご存知でない？</td>
+      <td>1220191140911075328</td>
+      <td>1220191140911075328</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>Thu Jan 23 03:29:59 +0000 2020</td>
+      <td>[0, 31]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>ナビエストークス方程式の中にいるカワイコチャンとラブラブする〜</td>
+      <td>1220186891175116801</td>
+      <td>1220186891175116801</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>Wed Jan 22 23:13:18 +0000 2020</td>
+      <td>[0, 12]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>False</td>
+      <td>ガキの陰茎やあらへんで！</td>
+      <td>1220122294560772096</td>
+      <td>1220122294560772096</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ja</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>False</td>
+      <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
+      <td>False</td>
+      <td>[]</td>
+      <td>[]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">s = &quot;。&quot;.join(df2[&quot;tweet.full_text&quot;][:13]) + &quot;。&quot;
+parsed_s = MeCab.Tagger(&quot;-Owakati&quot;).parse(s)
+print(parsed_s)
+text_model = markovify.Text(parsed_s, state_size=2)
+for _ in range(1):
+    sentence = text_model.make_short_sentence(140, 1, tries=100)
+    print(sentence)
+</code></pre>
+<pre><code>任天堂 オールスター 大 乱闘 スマッシュブラザーズ 。 今 の 会社 から 学べる 事 無くなっ た 。 ポジティブ な 事 を 言う より も 死ね とか SEX とか 言っ てる 回数 の が 多い 。 6 V 性格 おとなしい ン・ゾス あり ます 。 。 セックス に 積極 的 な 女の子 募集 中 。 早く 俺 も おっぱい で 射精 し たい 。 クソツイ 考察 班 。 俺 が 浮遊 能力 者 だっ たら 衆人 環境 下 で 首吊り の 物真似 し て めちゃくちゃ 炎上 する やつ やり たい 。 全て の アニメ の 同名 キャラ と SEX できる 能力 が ある 時 に 指定 する 名字 ある ？ 。 イクイクイク 。 ド S 女 を 大 逆転 スーパーハメハメエクスタシー してやり たい 。 。 @ 自殺 予定 者 卒 論 書い た ？ 自殺 学部 は 卒論 提出 必須 だ ぞ 。 ベテルギウス の γ線 バースト を 全て 受け 切っ た 男 。 
+
+None
+</code></pre>
+<p>Noneしかできねえ…</p>
+<p>joinする範囲広げるとkeyErrorになってmodel生成こけたりもするし、joinで区切る記号によってもこけたりして意味不明。</p>
+<p>今回はここまで</p>
+<p>[終]</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/python/">python</a>
+  
+  <a class="badge badge-light" href="">マルコフ連鎖</a>
+  
+  <a class="badge badge-light" href="/tags/twitter/">twitter</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/kusotwi_markov/&amp;text=%e3%82%af%e3%82%bd%e3%83%84%e3%82%a4%e3%82%92%e8%87%aa%e5%8b%95%e7%94%9f%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f%20%28%e3%81%9d%e3%81%ae1%29" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/kusotwi_markov/&amp;t=%e3%82%af%e3%82%bd%e3%83%84%e3%82%a4%e3%82%92%e8%87%aa%e5%8b%95%e7%94%9f%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f%20%28%e3%81%9d%e3%81%ae1%29" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=%e3%82%af%e3%82%bd%e3%83%84%e3%82%a4%e3%82%92%e8%87%aa%e5%8b%95%e7%94%9f%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f%20%28%e3%81%9d%e3%81%ae1%29&amp;body=/post/kusotwi_markov/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/kusotwi_markov/&amp;title=%e3%82%af%e3%82%bd%e3%83%84%e3%82%a4%e3%82%92%e8%87%aa%e5%8b%95%e7%94%9f%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f%20%28%e3%81%9d%e3%81%ae1%29" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=%e3%82%af%e3%82%bd%e3%83%84%e3%82%a4%e3%82%92%e8%87%aa%e5%8b%95%e7%94%9f%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f%20%28%e3%81%9d%e3%81%ae1%29%20/post/kusotwi_markov/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/kusotwi_markov/&amp;title=%e3%82%af%e3%82%bd%e3%83%84%e3%82%a4%e3%82%92%e8%87%aa%e5%8b%95%e7%94%9f%e6%88%90%e3%81%97%e3%81%a6%e3%81%bf%e3%81%9f%20%28%e3%81%9d%e3%81%ae1%29" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu7fc2e79e972bdba5a18bad113fa0485d_43083_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">ゲッタ〜</a></h5>
+      <h6 class="card-subtitle">システムエンジニア</h6>
+      <p class="card-text"></p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:kokuyokugetter@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/kokuyokugetter" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://qiita.com/kokuyokugetter" target="_blank" rel="noopener">
+        <i class="fas fa-link"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://atcoder.jp/users/kokuyokugetter" target="_blank" rel="noopener">
+        <i class="fas fa-link"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kokuyokugetter" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
