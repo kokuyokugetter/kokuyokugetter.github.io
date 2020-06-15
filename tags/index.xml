@@ -5,7 +5,7 @@
     <link>/tags/</link>
       <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 20 Mar 2020 11:45:52 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 15 Jun 2020 19:32:07 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
@@ -13,18 +13,18 @@
     </image>
     
     <item>
-      <title>ZOZOMAT</title>
-      <link>/tags/zozomat/</link>
-      <pubDate>Fri, 20 Mar 2020 11:45:52 +0900</pubDate>
-      <guid>/tags/zozomat/</guid>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Mon, 15 Jun 2020 19:32:07 +0900</pubDate>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>python</title>
-      <link>/tags/python/</link>
-      <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
-      <guid>/tags/python/</guid>
+      <title>ZOZOMAT</title>
+      <link>/tags/zozomat/</link>
+      <pubDate>Fri, 20 Mar 2020 11:45:52 +0900</pubDate>
+      <guid>/tags/zozomat/</guid>
       <description></description>
     </item>
     

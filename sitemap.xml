@@ -4,22 +4,42 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-03-20T11:45:52+09:00</lastmod>
+    <lastmod>2020-06-15T19:32:07+09:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-03-20T11:45:52+09:00</lastmod>
+    <lastmod>2020-06-15T19:32:07+09:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-03-20T11:45:52+09:00</lastmod>
+    <lastmod>2020-06-15T19:32:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/python/</loc>
+    <lastmod>2020-06-15T19:32:07+09:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-03-20T11:45:52+09:00</lastmod>
+    <lastmod>2020-06-15T19:32:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/dogma/</loc>
+    <lastmod>2020-06-15T19:32:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/%E3%83%8D%E3%82%BF/</loc>
+    <lastmod>2020-06-15T19:32:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/%E6%8A%80%E8%A1%93/</loc>
+    <lastmod>2020-06-15T19:32:07+09:00</lastmod>
   </url>
   
   <url>
@@ -38,11 +58,6 @@
   </url>
   
   <url>
-    <loc>/tags/python/</loc>
-    <lastmod>2020-02-28T20:48:42+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/twitter/</loc>
     <lastmod>2020-02-28T20:48:42+09:00</lastmod>
   </url>
@@ -54,11 +69,6 @@
   
   <url>
     <loc>/tags/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96/</loc>
-    <lastmod>2020-02-28T20:48:42+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/%E6%8A%80%E8%A1%93/</loc>
     <lastmod>2020-02-28T20:48:42+09:00</lastmod>
   </url>
   
