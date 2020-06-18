@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | kokuyokugetter</title>
+    <title>Tags | ゲッタ〜のHP</title>
     <link>/tags/</link>
       <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
@@ -29,7 +29,7 @@
     </item>
     
     <item>
-      <title>twitter</title>
+      <title>Twitter</title>
       <link>/tags/twitter/</link>
       <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
       <guid>/tags/twitter/</guid>
