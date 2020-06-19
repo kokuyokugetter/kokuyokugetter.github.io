@@ -206,6 +206,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170093437-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-170093437-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -1175,15 +1213,7 @@ AtCoderの現在の色は緑、水色までは上げたいと思っている。
 
     
     <div class="article-style">
-      流行りの ドグマブレードシミュレーターを作りました。
-ご確認よろしくお願いいたします。
-ドグマガイ何枚SSした？？
-3枚
-マジエク何枚伏せた？？
-2枚
-墓地の魔法カード何枚？？
-29枚
-ドグマブレード先攻1キル成功！18600ダメー …
+      pythonでドグマブレード計算しただけ、ドグマガイのライフ半減時の四捨五入未実装のため現実とのズレあり
     </div>
     
 
