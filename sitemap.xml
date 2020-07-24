@@ -4,26 +4,46 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-07-19T22:45:02+09:00</lastmod>
+    <lastmod>2020-07-24T22:03:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/disqus/</loc>
+    <lastmod>2020-07-24T22:03:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2020-07-24T22:03:45+09:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-07-19T22:45:02+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/python/</loc>
-    <lastmod>2020-07-19T22:45:02+09:00</lastmod>
+    <lastmod>2020-07-24T22:03:45+09:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-07-19T22:45:02+09:00</lastmod>
+    <lastmod>2020-07-24T22:03:45+09:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
+    <lastmod>2020-07-24T22:03:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/disqus/</loc>
+    <lastmod>2020-07-24T22:03:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/%E6%8A%80%E8%A1%93/</loc>
+    <lastmod>2020-07-24T22:03:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/python/</loc>
     <lastmod>2020-07-19T22:45:02+09:00</lastmod>
   </url>
   
@@ -64,11 +84,6 @@
   
   <url>
     <loc>/tags/markdown/</loc>
-    <lastmod>2020-06-20T22:34:10+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/%E6%8A%80%E8%A1%93/</loc>
     <lastmod>2020-06-20T22:34:10+09:00</lastmod>
   </url>
   
@@ -114,11 +129,6 @@
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2020-02-24T19:46:57+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/hugo/</loc>
     <lastmod>2020-02-24T19:46:57+09:00</lastmod>
   </url>
   
