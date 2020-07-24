@@ -685,6 +685,14 @@
 <p>（追記）</p>
 <p>一応コメントは出来てるっぽいが、disqusは登録がいるみたいなので、登録したくない人用にも一応投書箱みたいなの置いておきます。</p>
 <p><a href="https://odaibako.net/u/kokuyokugetter">https://odaibako.net/u/kokuyokugetter</a></p>
+<br>
+<p>（さらに追記）</p>
+<p>お題箱はそのまま放置するにしても、せめてもう少しハードルの低いコメントツール（しかも完全無料でトラッキングや広告とかもやらないやつ）を置きたいので、
+<a href="https://utteranc.es/" target="_blank" rel="noopener">utteranc.es</a>に変えました。</p>
+<p>どうやらgithubのissueを利用するみたいなので、githubアカウントがあればコメントできるっぽい？</p>
+<p>
+<a href="https://mscipio.github.io/post/utterances-comment-engine/" target="_blank" rel="noopener">導入の参考にしたページ（英語です）</a></p>
+<p>よろしくお願いします。</p>
 
     </div>
 
@@ -699,6 +707,8 @@
   <a class="badge badge-light" href="/tags/hugo/">hugo</a>
   
   <a class="badge badge-light" href="/tags/disqus/">disqus</a>
+  
+  <a class="badge badge-light" href="/tags/utteranc.es/">utteranc.es</a>
   
 </div>
 
@@ -852,6 +862,14 @@
 
 
 
+<script src="https://utteranc.es/client.js"
+        repo="kokuyokugetter/kokuyokugetter.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="photon-dark"
+        crossorigin="anonymous"
+        async>
+</script>
 
 
 
@@ -872,26 +890,7 @@
 
   </div>
 
-  <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "kokuyokugetter" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
 
 </article>
 
