@@ -147,7 +147,7 @@
   </url>
   
   <url>
-    <loc>https://kokuyokugetter.github.io/false/</loc>
+    <loc>https://kokuyokugetter.github.io/kokuyokugetter.github.io/</loc>
   </url>
   
   <url>
@@ -160,6 +160,10 @@
   
   <url>
     <loc>https://kokuyokugetter.github.io/talk/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/true/</loc>
   </url>
   
 </urlset>
