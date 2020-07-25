@@ -147,6 +147,10 @@
   </url>
   
   <url>
+    <loc>https://kokuyokugetter.github.io/false/</loc>
+  </url>
+  
+  <url>
     <loc>https://kokuyokugetter.github.io/publication_types/</loc>
   </url>
   
@@ -156,10 +160,6 @@
   
   <url>
     <loc>https://kokuyokugetter.github.io/talk/</loc>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/true/</loc>
   </url>
   
 </urlset>
