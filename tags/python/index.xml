@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python | ゲッタ〜のHP</title>
-    <link>/tags/python/</link>
-      <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <description>Python</description>
+    <title>python | ゲッタ〜のHP</title>
+    <link>https://kokuyokugetter.github.io/tags/python/</link>
+      <atom:link href="https://kokuyokugetter.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <description>python</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 19 Jul 2020 22:45:02 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Python</title>
-      <link>/tags/python/</link>
+      <title>python</title>
+      <link>https://kokuyokugetter.github.io/tags/python/</link>
     </image>
     
     <item>
       <title>夢日記(2017/05/19 - 2020/07/16)</title>
-      <link>/post/dreams/</link>
+      <link>https://kokuyokugetter.github.io/post/dreams/</link>
       <pubDate>Sun, 19 Jul 2020 22:45:02 +0900</pubDate>
-      <guid>/post/dreams/</guid>
+      <guid>https://kokuyokugetter.github.io/post/dreams/</guid>
       <description>&lt;br&gt;
 &lt;p&gt;
 &lt;a href=&#34;http://dreamgetter.hatenablog.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ゲッタ〜の夢日記&lt;/a&gt;&lt;/p&gt;
@@ -1408,9 +1408,9 @@ Wiki見たらキモかった&lt;/p&gt;
     
     <item>
       <title>ドグマブレードシミュレーターの作者です。真実をお話しします。</title>
-      <link>/post/dogma/</link>
+      <link>https://kokuyokugetter.github.io/post/dogma/</link>
       <pubDate>Mon, 15 Jun 2020 19:32:07 +0900</pubDate>
-      <guid>/post/dogma/</guid>
+      <guid>https://kokuyokugetter.github.io/post/dogma/</guid>
       <description>&lt;p&gt;流行りの
 &lt;a href=&#34;https://tsd0313.github.io/ygo-DogmaBlade/dist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ドグマブレードシミュレーター&lt;/a&gt;を作りました。&lt;/p&gt;
 &lt;p&gt;ご確認よろしくお願いいたします。&lt;/p&gt;
@@ -1502,9 +1502,9 @@ comfirming_tweet(s)
     
     <item>
       <title>クソツイを自動生成してみた (その1)</title>
-      <link>/post/kusotwi_markov/</link>
+      <link>https://kokuyokugetter.github.io/post/kusotwi_markov/</link>
       <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
-      <guid>/post/kusotwi_markov/</guid>
+      <guid>https://kokuyokugetter.github.io/post/kusotwi_markov/</guid>
       <description>&lt;p&gt;とあるルートから某クソツイ垢の全てのツイートをGETしたので、マルコフ連鎖でクソツイ生成してみる。&lt;/p&gt;
 &lt;p&gt;2020/02/27最新の全件を取得したら、昔は
 &lt;a href=&#34;https://www.howtonote.jp/twitter/helpful/index1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSVで入手できた&lt;/a&gt;のに、js(tweet.js)で渡されるようになったみたい。

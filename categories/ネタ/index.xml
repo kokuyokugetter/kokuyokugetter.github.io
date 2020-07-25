@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ネタ | ゲッタ〜のHP</title>
-    <link>/categories/%E3%83%8D%E3%82%BF/</link>
-      <atom:link href="/categories/%E3%83%8D%E3%82%BF/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kokuyokugetter.github.io/categories/%E3%83%8D%E3%82%BF/</link>
+      <atom:link href="https://kokuyokugetter.github.io/categories/%E3%83%8D%E3%82%BF/index.xml" rel="self" type="application/rss+xml" />
     <description>ネタ</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 19 Jul 2020 22:45:02 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>ネタ</title>
-      <link>/categories/%E3%83%8D%E3%82%BF/</link>
+      <link>https://kokuyokugetter.github.io/categories/%E3%83%8D%E3%82%BF/</link>
     </image>
     
     <item>
       <title>夢日記(2017/05/19 - 2020/07/16)</title>
-      <link>/post/dreams/</link>
+      <link>https://kokuyokugetter.github.io/post/dreams/</link>
       <pubDate>Sun, 19 Jul 2020 22:45:02 +0900</pubDate>
-      <guid>/post/dreams/</guid>
+      <guid>https://kokuyokugetter.github.io/post/dreams/</guid>
       <description>&lt;br&gt;
 &lt;p&gt;
 &lt;a href=&#34;http://dreamgetter.hatenablog.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ゲッタ〜の夢日記&lt;/a&gt;&lt;/p&gt;
@@ -1408,9 +1408,9 @@ Wiki見たらキモかった&lt;/p&gt;
     
     <item>
       <title>ドグマブレードシミュレーターの作者です。真実をお話しします。</title>
-      <link>/post/dogma/</link>
+      <link>https://kokuyokugetter.github.io/post/dogma/</link>
       <pubDate>Mon, 15 Jun 2020 19:32:07 +0900</pubDate>
-      <guid>/post/dogma/</guid>
+      <guid>https://kokuyokugetter.github.io/post/dogma/</guid>
       <description>&lt;p&gt;流行りの
 &lt;a href=&#34;https://tsd0313.github.io/ygo-DogmaBlade/dist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ドグマブレードシミュレーター&lt;/a&gt;を作りました。&lt;/p&gt;
 &lt;p&gt;ご確認よろしくお願いいたします。&lt;/p&gt;

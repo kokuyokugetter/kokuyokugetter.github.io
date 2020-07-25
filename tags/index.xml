@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | ゲッタ〜のHP</title>
-    <link>/tags/</link>
-      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kokuyokugetter.github.io/tags/</link>
+      <atom:link href="https://kokuyokugetter.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 24 Jul 2020 22:03:45 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
-      <link>/tags/</link>
+      <link>https://kokuyokugetter.github.io/tags/</link>
     </image>
     
     <item>
       <title>disqus</title>
-      <link>/tags/disqus/</link>
+      <link>https://kokuyokugetter.github.io/tags/disqus/</link>
       <pubDate>Fri, 24 Jul 2020 22:03:45 +0900</pubDate>
-      <guid>/tags/disqus/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/disqus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>/tags/hugo/</link>
+      <link>https://kokuyokugetter.github.io/tags/hugo/</link>
       <pubDate>Fri, 24 Jul 2020 22:03:45 +0900</pubDate>
-      <guid>/tags/hugo/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>utteranc.es</title>
-      <link>/tags/utteranc.es/</link>
+      <link>https://kokuyokugetter.github.io/tags/utteranc.es/</link>
       <pubDate>Fri, 24 Jul 2020 22:03:45 +0900</pubDate>
-      <guid>/tags/utteranc.es/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/utteranc.es/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Python</title>
-      <link>/tags/python/</link>
+      <title>python</title>
+      <link>https://kokuyokugetter.github.io/tags/python/</link>
       <pubDate>Sun, 19 Jul 2020 22:45:02 +0900</pubDate>
-      <guid>/tags/python/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>映画</title>
-      <link>/tags/%E6%98%A0%E7%94%BB/</link>
+      <link>https://kokuyokugetter.github.io/tags/%E6%98%A0%E7%94%BB/</link>
       <pubDate>Wed, 15 Jul 2020 00:49:47 +0900</pubDate>
-      <guid>/tags/%E6%98%A0%E7%94%BB/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/%E6%98%A0%E7%94%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>/tags/markdown/</link>
+      <link>https://kokuyokugetter.github.io/tags/markdown/</link>
       <pubDate>Sat, 20 Jun 2020 22:34:10 +0900</pubDate>
-      <guid>/tags/markdown/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ZOZOMAT</title>
-      <link>/tags/zozomat/</link>
+      <link>https://kokuyokugetter.github.io/tags/zozomat/</link>
       <pubDate>Fri, 20 Mar 2020 11:45:52 +0900</pubDate>
-      <guid>/tags/zozomat/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/zozomat/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Twitter</title>
-      <link>/tags/twitter/</link>
+      <title>twitter</title>
+      <link>https://kokuyokugetter.github.io/tags/twitter/</link>
       <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
-      <guid>/tags/twitter/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/twitter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>マルコフ連鎖</title>
-      <link>/tags/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96/</link>
+      <link>https://kokuyokugetter.github.io/tags/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96/</link>
       <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
-      <guid>/tags/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96/</guid>
       <description></description>
     </item>
     
     <item>
       <title>academic</title>
-      <link>/tags/academic/</link>
+      <link>https://kokuyokugetter.github.io/tags/academic/</link>
       <pubDate>Mon, 24 Feb 2020 19:46:57 +0900</pubDate>
-      <guid>/tags/academic/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/academic/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>markdown | ゲッタ〜のHP</title>
-    <link>/tags/markdown/</link>
-      <atom:link href="/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kokuyokugetter.github.io/tags/markdown/</link>
+      <atom:link href="https://kokuyokugetter.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <description>markdown</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 20 Jun 2020 22:34:10 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>markdown</title>
-      <link>/tags/markdown/</link>
+      <link>https://kokuyokugetter.github.io/tags/markdown/</link>
     </image>
     
     <item>
       <title>googleドライブの画像をmarkdownに載せる</title>
-      <link>/post/google_drive_markdown/</link>
+      <link>https://kokuyokugetter.github.io/post/google_drive_markdown/</link>
       <pubDate>Sat, 20 Jun 2020 22:34:10 +0900</pubDate>
-      <guid>/post/google_drive_markdown/</guid>
+      <guid>https://kokuyokugetter.github.io/post/google_drive_markdown/</guid>
       <description>&lt;br&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://qiita.com/kokuyokugetter/items/3b75f4daac73331b2cc4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Qiitaで一番伸びた記事&lt;/a&gt;のセルフカバーです。&lt;/p&gt;

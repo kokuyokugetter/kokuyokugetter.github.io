@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ゲッタ〜のHP</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kokuyokugetter.github.io/</link>
+      <atom:link href="https://kokuyokugetter.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>ゲッタ〜のHP</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 24 Jul 2020 22:03:45 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>ゲッタ〜のHP</title>
-      <link>/</link>
+      <link>https://kokuyokugetter.github.io/</link>
     </image>
     
     <item>
       <title>コメント欄をつけました</title>
-      <link>/post/disqus/</link>
+      <link>https://kokuyokugetter.github.io/post/disqus/</link>
       <pubDate>Fri, 24 Jul 2020 22:03:45 +0900</pubDate>
-      <guid>/post/disqus/</guid>
+      <guid>https://kokuyokugetter.github.io/post/disqus/</guid>
       <description>&lt;br&gt;
 &lt;p&gt;まあ誰もコメント残してくれなさそうだけど、ブログにはあったほうがいいよねって感じで。&lt;/p&gt;
 &lt;p&gt;やったこと&lt;/p&gt;
@@ -41,9 +41,9 @@
     
     <item>
       <title>夢日記(2017/05/19 - 2020/07/16)</title>
-      <link>/post/dreams/</link>
+      <link>https://kokuyokugetter.github.io/post/dreams/</link>
       <pubDate>Sun, 19 Jul 2020 22:45:02 +0900</pubDate>
-      <guid>/post/dreams/</guid>
+      <guid>https://kokuyokugetter.github.io/post/dreams/</guid>
       <description>&lt;br&gt;
 &lt;p&gt;
 &lt;a href=&#34;http://dreamgetter.hatenablog.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ゲッタ〜の夢日記&lt;/a&gt;&lt;/p&gt;
@@ -1435,9 +1435,9 @@ Wiki見たらキモかった&lt;/p&gt;
     
     <item>
       <title>『イップ・マン 完結』を観ました</title>
-      <link>/post/ipman/</link>
+      <link>https://kokuyokugetter.github.io/post/ipman/</link>
       <pubDate>Wed, 15 Jul 2020 00:49:47 +0900</pubDate>
-      <guid>/post/ipman/</guid>
+      <guid>https://kokuyokugetter.github.io/post/ipman/</guid>
       <description>&lt;br&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://gaga.ne.jp/ipman4/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;公式サイト&lt;/a&gt;&lt;/p&gt;
@@ -1499,9 +1499,9 @@ Wiki見たらキモかった&lt;/p&gt;
     
     <item>
       <title>googleドライブの画像をmarkdownに載せる</title>
-      <link>/post/google_drive_markdown/</link>
+      <link>https://kokuyokugetter.github.io/post/google_drive_markdown/</link>
       <pubDate>Sat, 20 Jun 2020 22:34:10 +0900</pubDate>
-      <guid>/post/google_drive_markdown/</guid>
+      <guid>https://kokuyokugetter.github.io/post/google_drive_markdown/</guid>
       <description>&lt;br&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://qiita.com/kokuyokugetter/items/3b75f4daac73331b2cc4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Qiitaで一番伸びた記事&lt;/a&gt;のセルフカバーです。&lt;/p&gt;
@@ -1581,9 +1581,9 @@ Wiki見たらキモかった&lt;/p&gt;
     
     <item>
       <title>ドグマブレードシミュレーターの作者です。真実をお話しします。</title>
-      <link>/post/dogma/</link>
+      <link>https://kokuyokugetter.github.io/post/dogma/</link>
       <pubDate>Mon, 15 Jun 2020 19:32:07 +0900</pubDate>
-      <guid>/post/dogma/</guid>
+      <guid>https://kokuyokugetter.github.io/post/dogma/</guid>
       <description>&lt;p&gt;流行りの
 &lt;a href=&#34;https://tsd0313.github.io/ygo-DogmaBlade/dist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ドグマブレードシミュレーター&lt;/a&gt;を作りました。&lt;/p&gt;
 &lt;p&gt;ご確認よろしくお願いいたします。&lt;/p&gt;
@@ -1675,9 +1675,9 @@ comfirming_tweet(s)
     
     <item>
       <title>ZOZOMATが届いたのでasicsで計った結果と比較してみた</title>
-      <link>/post/zozomat/</link>
+      <link>https://kokuyokugetter.github.io/post/zozomat/</link>
       <pubDate>Fri, 20 Mar 2020 11:45:52 +0900</pubDate>
-      <guid>/post/zozomat/</guid>
+      <guid>https://kokuyokugetter.github.io/post/zozomat/</guid>
       <description>&lt;p&gt;ZOZOMATが届きました。&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;きました &lt;a href=&#34;https://t.co/SQuB4lTTpZ&#34;&gt;pic.twitter.com/SQuB4lTTpZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ∿∿ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1240144382210211841?ref_src=twsrc%5Etfw&#34;&gt;March 18, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
@@ -1696,9 +1696,9 @@ comfirming_tweet(s)
     
     <item>
       <title>クソツイを自動生成してみた (その1)</title>
-      <link>/post/kusotwi_markov/</link>
+      <link>https://kokuyokugetter.github.io/post/kusotwi_markov/</link>
       <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
-      <guid>/post/kusotwi_markov/</guid>
+      <guid>https://kokuyokugetter.github.io/post/kusotwi_markov/</guid>
       <description>&lt;p&gt;とあるルートから某クソツイ垢の全てのツイートをGETしたので、マルコフ連鎖でクソツイ生成してみる。&lt;/p&gt;
 &lt;p&gt;2020/02/27最新の全件を取得したら、昔は
 &lt;a href=&#34;https://www.howtonote.jp/twitter/helpful/index1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSVで入手できた&lt;/a&gt;のに、js(tweet.js)で渡されるようになったみたい。
@@ -3134,9 +3134,9 @@ None
     
     <item>
       <title>このサイトを作った目的（という建前でTweet貼る練習）</title>
-      <link>/post/tweet/</link>
+      <link>https://kokuyokugetter.github.io/post/tweet/</link>
       <pubDate>Tue, 25 Feb 2020 20:17:56 +0900</pubDate>
-      <guid>/post/tweet/</guid>
+      <guid>https://kokuyokugetter.github.io/post/tweet/</guid>
       <description>&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://www.trhrkmk.com/posts/hugo-amp-twitter-embedded-shortcode/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo(AMP対応)にTwitterのツイートを埋め込む時のメモ&lt;/a&gt;&lt;/p&gt;
@@ -3152,9 +3152,9 @@ None
     
     <item>
       <title>このサイトを作った時のメモ</title>
-      <link>/post/hello/</link>
+      <link>https://kokuyokugetter.github.io/post/hello/</link>
       <pubDate>Mon, 24 Feb 2020 19:46:57 +0900</pubDate>
-      <guid>/post/hello/</guid>
+      <guid>https://kokuyokugetter.github.io/post/hello/</guid>
       <description>&lt;p&gt;投稿テストも兼ねて&lt;/p&gt;
 &lt;p&gt;summaryのQiita見たら大体できるけど、作りながらメモしてたのをそのまま載せる。
 結局academicというテーマ？を使っているので、6.からが実質的な作業。5.までは結局無意味&lt;/p&gt;

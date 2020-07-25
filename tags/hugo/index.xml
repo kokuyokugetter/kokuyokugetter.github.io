@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo | ゲッタ〜のHP</title>
-    <link>/tags/hugo/</link>
-      <atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://kokuyokugetter.github.io/tags/hugo/</link>
+      <atom:link href="https://kokuyokugetter.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <description>hugo</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 24 Jul 2020 22:03:45 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>hugo</title>
-      <link>/tags/hugo/</link>
+      <link>https://kokuyokugetter.github.io/tags/hugo/</link>
     </image>
     
     <item>
       <title>コメント欄をつけました</title>
-      <link>/post/disqus/</link>
+      <link>https://kokuyokugetter.github.io/post/disqus/</link>
       <pubDate>Fri, 24 Jul 2020 22:03:45 +0900</pubDate>
-      <guid>/post/disqus/</guid>
+      <guid>https://kokuyokugetter.github.io/post/disqus/</guid>
       <description>&lt;br&gt;
 &lt;p&gt;まあ誰もコメント残してくれなさそうだけど、ブログにはあったほうがいいよねって感じで。&lt;/p&gt;
 &lt;p&gt;やったこと&lt;/p&gt;
@@ -41,9 +41,9 @@
     
     <item>
       <title>このサイトを作った時のメモ</title>
-      <link>/post/hello/</link>
+      <link>https://kokuyokugetter.github.io/post/hello/</link>
       <pubDate>Mon, 24 Feb 2020 19:46:57 +0900</pubDate>
-      <guid>/post/hello/</guid>
+      <guid>https://kokuyokugetter.github.io/post/hello/</guid>
       <description>&lt;p&gt;投稿テストも兼ねて&lt;/p&gt;
 &lt;p&gt;summaryのQiita見たら大体できるけど、作りながらメモしてたのをそのまま載せる。
 結局academicというテーマ？を使っているので、6.からが実質的な作業。5.までは結局無意味&lt;/p&gt;
