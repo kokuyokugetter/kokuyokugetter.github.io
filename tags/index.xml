@@ -5,7 +5,7 @@
     <link>https://kokuyokugetter.github.io/tags/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jul 2020 00:22:53 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 07 Aug 2020 00:09:12 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
@@ -13,18 +13,42 @@
     </image>
     
     <item>
-      <title>MNG</title>
-      <link>https://kokuyokugetter.github.io/tags/mng/</link>
-      <pubDate>Wed, 29 Jul 2020 00:22:53 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/tags/mng/</guid>
+      <title>iPad</title>
+      <link>https://kokuyokugetter.github.io/tags/ipad/</link>
+      <pubDate>Fri, 07 Aug 2020 00:09:12 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/tags/ipad/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>革靴</title>
-      <link>https://kokuyokugetter.github.io/tags/%E9%9D%A9%E9%9D%B4/</link>
+      <title>machine-learning</title>
+      <link>https://kokuyokugetter.github.io/tags/machine-learning/</link>
+      <pubDate>Fri, 07 Aug 2020 00:09:12 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://kokuyokugetter.github.io/tags/python/</link>
+      <pubDate>Fri, 07 Aug 2020 00:09:12 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>leather-shoes</title>
+      <link>https://kokuyokugetter.github.io/tags/leather-shoes/</link>
       <pubDate>Wed, 29 Jul 2020 00:22:53 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/tags/%E9%9D%A9%E9%9D%B4/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/leather-shoes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MNG</title>
+      <link>https://kokuyokugetter.github.io/tags/mng/</link>
+      <pubDate>Wed, 29 Jul 2020 00:22:53 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/tags/mng/</guid>
       <description></description>
     </item>
     
@@ -53,18 +77,10 @@
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://kokuyokugetter.github.io/tags/python/</link>
-      <pubDate>Sun, 19 Jul 2020 22:45:02 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>映画</title>
-      <link>https://kokuyokugetter.github.io/tags/%E6%98%A0%E7%94%BB/</link>
+      <title>movie</title>
+      <link>https://kokuyokugetter.github.io/tags/movie/</link>
       <pubDate>Wed, 15 Jul 2020 00:49:47 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/tags/%E6%98%A0%E7%94%BB/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/movie/</guid>
       <description></description>
     </item>
     
@@ -85,18 +101,18 @@
     </item>
     
     <item>
-      <title>Twitter</title>
-      <link>https://kokuyokugetter.github.io/tags/twitter/</link>
+      <title>markov-chain</title>
+      <link>https://kokuyokugetter.github.io/tags/markov-chain/</link>
       <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/tags/twitter/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/markov-chain/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>マルコフ連鎖</title>
-      <link>https://kokuyokugetter.github.io/tags/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96/</link>
+      <title>Twitter</title>
+      <link>https://kokuyokugetter.github.io/tags/twitter/</link>
       <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/tags/%E3%83%9E%E3%83%AB%E3%82%B3%E3%83%95%E9%80%A3%E9%8E%96/</guid>
+      <guid>https://kokuyokugetter.github.io/tags/twitter/</guid>
       <description></description>
     </item>
     

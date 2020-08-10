@@ -1,0 +1,1902 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tech | ゲッタ〜のHP</title>
+    <link>https://kokuyokugetter.github.io/categories/tech/</link>
+      <atom:link href="https://kokuyokugetter.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <description>tech</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 07 Aug 2020 00:09:12 +0900</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>tech</title>
+      <link>https://kokuyokugetter.github.io/categories/tech/</link>
+    </image>
+    
+    <item>
+      <title>ipadで機械学習ができるiOS/iPadOSアプリの「Juno」を買いました。</title>
+      <link>https://kokuyokugetter.github.io/post/juno/</link>
+      <pubDate>Fri, 07 Aug 2020 00:09:12 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/juno/</guid>
+      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#junoについて&#34;&gt;Junoについて&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#動作チェック&#34;&gt;動作チェック&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;junoについて&#34;&gt;Junoについて&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://apps.apple.com/jp/app/juno/id1462586500&#34;&gt;https://apps.apple.com/jp/app/juno/id1462586500&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;appstoreで1840円でJunoというアプリを購入しました。&lt;/p&gt;
+&lt;p&gt;このアプリ自体は昔からあるんですが、最近のアプデでついにscikit-learnが使えるようになったということで購入しました。&lt;/p&gt;
+&lt;p&gt;このアプリ、基本的にはiOS/iPadOSでJupyterNotebookを編集できるというアプリになっていて、&lt;/p&gt;
+&lt;p&gt;以前は同様にJupyterが使える無料の
+&lt;a href=&#34;https://apps.apple.com/jp/app/carnets-jupyter/id1450994949&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;carnets&lt;/a&gt;を使ってiPadでちょっとグラフ作ったりとかしてました。&lt;/p&gt;
+&lt;p&gt;こちらもpandasやnumpyなど色々使えたので、機械学習関係のもの以外は普通に使えました。&lt;/p&gt;
+&lt;p&gt;まあでもscimitar-learnが使えるならお金払ってでも、色々勉強できる幅も増えるでしょってことで、乗り換えることにしました。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;動作チェック&#34;&gt;動作チェック&lt;/h2&gt;
+&lt;p&gt;動作チェックは
+&lt;a href=&#34;https://qiita.com/ao_log/items/fe9bd42fd249c2a7ee7a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;これ&lt;/a&gt;をそのままやっていくので、特にNotebookの提供等はありません。&lt;/p&gt;
+&lt;p&gt;結論から言うと、全て動作します。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=18qDVdtB2c94OSrQazoXbABvS-deDkZHd&#34; width=&#34;&#34; alt=&#34;img1&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;メイン画面はこんな感じ。テーマは白背景と黒背景選べます。&lt;/p&gt;
+&lt;p&gt;当然sklearnがインポートできていますね。このdatasetsが通るのが大きくて、ネットに繋いでデータを持ってこなくても分析の勉強ができるようになったわけですね。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1UTbtjPztzV9SpauVPl-_JfvAPBGflMjt&#34; width=&#34;&#34; alt=&#34;img2&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;補完も効きます。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=11mAeToHjSz5cn-B9Rte6ggqe0NtWdNC4&#34; width=&#34;&#34; alt=&#34;img3&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;pandasの表も綺麗に表示されます。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1uh8pEEzUsTPDPyVB_CESRmJVmJeEPlZT&#34; width=&#34;&#34; alt=&#34;img4&#34;&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1fEqSgBENKJqe7YLSeUe_wCA7gzZTqWMj&#34; width=&#34;&#34; alt=&#34;img5&#34;&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1RsGlzMwW9btSEelWHwbW2TcvlbuuolmH&#34; width=&#34;&#34; alt=&#34;img6&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;iPad専用のapple公式キーボードだとescキーがないですが、escキーを&amp;rsquo;@&amp;lsquo;などに割り当てたりすることもでき、ホットキーも充実しています。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1uw_glCspv6u1LPXjcvRY47cF5foXnq-d&#34; width=&#34;&#34; alt=&#34;img7&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;当然グラフも描けて、分類もできています。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1amdoPdsu1V4jeMKk7evHA4u_ESg23T8s&#34; width=&#34;&#34; alt=&#34;img8&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;shellコマンドは打てなくなった（？）ようです。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=11Q_a25P9PFM3fhElZLBE0ZcLwNLY6HtF&#34; width=&#34;&#34; alt=&#34;img9&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;OS13からある機能のファイルで見られる好きなところのNotebookを開くことができます。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1x2ffWMcm35HaM0d80SleARN4e43zv1pQ&#34; width=&#34;&#34; alt=&#34;img10&#34;&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1iA4rt8StsiA7BII1IOHFn-lf_3r2ZAUq&#34; width=&#34;&#34; alt=&#34;img11&#34;&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1LxkCd2jcMhkuaJGrE_-4pw-vXPn-tSdK&#34; width=&#34;&#34; alt=&#34;img12&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;最初seabornが使えなくて、shellコマンドも使えないし、pairplotは諦めかと思いましたが、ファイル名のところを押すとメニューが出てきて、Install Python Packageからseabornのインストールもできました。（標準ではseabornは入っていません）&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1vq1sKjUk3dCyoWAh6aY1wGvx9ZOYq1la&#34; width=&#34;&#34; alt=&#34;img13&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;保存形式としては画像の通り、主要な物はありそう？&lt;/p&gt;
+&lt;p&gt;形式を選択すると、AirDrop等でmac等にももちろん送ることができます。&lt;/p&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>コメント欄をつけました</title>
+      <link>https://kokuyokugetter.github.io/post/disqus/</link>
+      <pubDate>Fri, 24 Jul 2020 22:03:45 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/disqus/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;まあ誰もコメント残してくれなさそうだけど、ブログにはあったほうがいいよねって感じで。&lt;/p&gt;
+&lt;p&gt;やったこと&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://michimani.net/post/blog-install-disqus-to-hugo/&#34;&gt;https://michimani.net/post/blog-install-disqus-to-hugo/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;これそのまま&lt;/p&gt;
+&lt;p&gt;shortnameがよく分からないのでできているか不安。&lt;/p&gt;
+&lt;p&gt;この記事はテストも兼ねているので、適当にコメントしてくれると嬉しいです。&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;（追記）&lt;/p&gt;
+&lt;p&gt;一応コメントは出来てるっぽいが、disqusは登録がいるみたいなので、登録したくない人用にも一応投書箱みたいなの置いておきます。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://odaibako.net/u/kokuyokugetter&#34;&gt;https://odaibako.net/u/kokuyokugetter&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;（さらに追記）&lt;/p&gt;
+&lt;p&gt;お題箱はそのまま放置するにしても、せめてもう少しハードルの低いコメントツール（しかも完全無料でトラッキングや広告とかもやらないやつ）を置きたいので、
+&lt;a href=&#34;https://utteranc.es/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;utteranc.es&lt;/a&gt;に変えました。&lt;/p&gt;
+&lt;p&gt;どうやらgithubのissueを利用するみたいなので、githubアカウントがあればコメントできるっぽい？&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://mscipio.github.io/post/utterances-comment-engine/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;導入の参考にしたページ（英語です）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;よろしくお願いします。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>googleドライブの画像をmarkdownに載せる</title>
+      <link>https://kokuyokugetter.github.io/post/google_drive_markdown/</link>
+      <pubDate>Sat, 20 Jun 2020 22:34:10 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/google_drive_markdown/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://qiita.com/kokuyokugetter/items/3b75f4daac73331b2cc4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Qiitaで一番伸びた記事&lt;/a&gt;のセルフカバーです。&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;ただ書くネタがなかったわけではなくて、googleドライブの仕様が若干変わっていたので自分用のメモという意味でも書きます。&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;メリット&#34;&gt;メリット&lt;/h2&gt;
+&lt;p&gt;人にmarkdownのまま渡しても（ネット環境があれば）画像再現可能。&lt;/p&gt;
+&lt;p&gt;人に渡すことが想定される場合にわざわざPDFにする必要もない。ファイル容量も軽くなる（リンクしているだけなので）。&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
+&lt;p&gt;&lt;del&gt;Google Driveにて共有のリンクを取得する&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/open?id=0B4rx4mxoPiX1MWlObXYwcjlpSUk&#34;&gt;https://drive.google.com/open?id=0B4rx4mxoPiX1MWlObXYwcjlpSUk&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;（以前は上の形式でURLが取得できていたが、仕様が変わったらしく、取得できるURLは、https://drive.google.com/file/d/1fnypieC6im8Olgm4qXZn6Nbm6N6JZerZ/view?usp=sharing のような形式になっている）&lt;/p&gt;
+&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;そのままリンクすると&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://drive.google.com/file/d/1fnypieC6im8Olgm4qXZn6Nbm6N6JZerZ/view?usp=sharing&#34; alt=&#34;表示されない画像&#34;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;↑表示されない&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;共有のリンクのURLを変更する&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;open?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;となっている部分を&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;uc?export=view&amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;に変更する&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;→当然これで上手くいかなくなっているので、（そもそもopen?が存在しない）&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;https://drive.google.com/uc?export=view&amp;amp;id=hogehoge
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;の&lt;code&gt;hogehoge&lt;/code&gt;の部分に取得したURLの&lt;code&gt;file/d/&lt;/code&gt;と&lt;code&gt;/view&lt;/code&gt;で囲まれた部分（id）を入れる。&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;以下には&lt;code&gt;![◯◯◯◯](https://drive.google.com/uc?export=view&amp;amp;id=1fnypieC6im8Olgm4qXZn6Nbm6N6JZerZ)&lt;/code&gt; という形で入力しています。&lt;/p&gt;
+&lt;p&gt;↓実行例&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;amp;id=1fnypieC6im8Olgm4qXZn6Nbm6N6JZerZ&#34; alt=&#34;◯◯◯◯&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[◯◯◯◯]&lt;/code&gt;は画像が取得できない場合に画像の代わりに表示される文字&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;markdownはhtmlタグも使えるので、imgタグでも同様の方法で画像が貼れる。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;https://drive.google.com/uc?export=view&amp;amp;id=1fnypieC6im8Olgm4qXZn6Nbm6N6JZerZ&amp;quot; width=&amp;quot;64&amp;quot; alt=&amp;quot;getter_icon&amp;quot;&amp;gt;&lt;/code&gt;とすると&lt;/p&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1fnypieC6im8Olgm4qXZn6Nbm6N6JZerZ&#34; width=&#34;64&#34; alt=&#34;getter_icon&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;画像のリンクさえすれば良いので、Twitterの動画のサムネやTwitterの画像も貼り付けられる。&lt;/p&gt;
+&lt;p&gt;例えばこのツイート↓からPCの右クリックで画像アドレスをコピーして、画像リンクとして貼り付ける。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;test &lt;a href=&#34;https://t.co/K8RKGXQrRk&#34;&gt;pic.twitter.com/K8RKGXQrRk&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ∿∿ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1274219400300646400?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;img src=&#34;https://pbs.twimg.com/ext_tw_video_thumb/1274219374744702978/pu/img/itj3fyBT-gIbAOne?format=jpg&amp;amp;name=medium&#34; alt=&#34;thumbnail&#34;&gt;&lt;/p&gt;
+&lt;p&gt;動画サムネが出力できる。&lt;/p&gt;
+  &lt;br&gt;
+&lt;p&gt;また、普通の画像ツイート↓も同様にして、&lt;/p&gt;
+  &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;test2 &lt;a href=&#34;https://t.co/r9tytpSctW&#34;&gt;pic.twitter.com/r9tytpSctW&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ∿∿ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1274219539513794561?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;img src=&#34;https://pbs.twimg.com/media/Ea7v6o7UEAMkn0-?format=jpg&amp;amp;name=large&#34; alt=&#34;a&#34;&gt;&lt;/p&gt;
+&lt;p&gt;画像をDLしなくても貼り付けられるので、画像の所有者に特に断りを入れず利用できる（特に問題がなければツイートをそのまま貼り付けた方が良いとは思うが）。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ドグマブレードシミュレーターの作者です。真実をお話しします。</title>
+      <link>https://kokuyokugetter.github.io/post/dogma/</link>
+      <pubDate>Mon, 15 Jun 2020 19:32:07 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/dogma/</guid>
+      <description>&lt;p&gt;流行りの
+&lt;a href=&#34;https://tsd0313.github.io/ygo-DogmaBlade/dist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ドグマブレードシミュレーター&lt;/a&gt;を作りました。&lt;/p&gt;
+&lt;p&gt;ご確認よろしくお願いいたします。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマガイ何枚SSした？？&lt;br&gt;3枚&lt;br&gt;マジエク何枚伏せた？？&lt;br&gt;2枚&lt;br&gt;墓地の魔法カード何枚？？&lt;br&gt;29枚&lt;br&gt;ドグマブレード先攻1キル成功！18600ダメージ！&lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ∿∿ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271828996561334272?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;ほうほう？&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;うおおおおお&lt;br&gt;ドグマブレードシミュレーターキツアアアアア &lt;a href=&#34;https://t.co/bCEQVNGmxD&#34;&gt;pic.twitter.com/bCEQVNGmxD&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ∿∿ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271608597315645440?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;ん？？&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマブレード先攻1キル成功！2000000000ダメージ！ マジエク5000枚発動/墓地の魔法カード2000枚  &lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ∿∿ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271757347694624768?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;？？？？&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;ドグマブレードシミュレーターのプログラム&lt;/summary&gt;&lt;div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sys
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; tweet_w_API &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; tweeting
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;comfirming_tweet&lt;/span&gt;(s):
+    flg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(flg):
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ツイートする？&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+        o &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; input()
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; o &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Y&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;or&lt;/span&gt; o &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;y&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;:
+            tweeting(s &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;#DogmaBladeSimulator&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+            flg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; o &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;N&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;or&lt;/span&gt; o &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;:
+            flg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+
+LP &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;8000&lt;/span&gt;
+
+s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ドグマガイ何枚SSした？？&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(s)
+_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; input()
+s &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{k}枚&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(k&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;_)
+K &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(_)
+
+_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;マジエク何枚伏せた？？&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(_)
+s &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; _
+_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; input()
+s &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{n}枚&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(n&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;_)
+N &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(_)
+
+_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;墓地の魔法カード何枚？？&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(_)
+s &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; _
+_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; input()
+s &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{n}枚&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(n&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;_)
+M &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int(_)
+
+L &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (LP &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; (LP &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; K))) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (N &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; M &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; L &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;8000&lt;/span&gt;:
+    _ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ドグマブレード先攻1キル成功！{L}ダメージ！&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;format(L&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;L)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(_)
+    s&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; _
+&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+    _ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;YOU LOSE...&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(_)
+    s &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; _
+
+comfirming_tweet(s)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;まあ
+&lt;a href=&#34;https://tsd0313.github.io/ygo-DogmaBlade/dist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;本家&lt;/a&gt;はダメージ18600が最大らしいけどこっちはいくらでもいけるんで、実質勝ちです。&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;……どこでとりでまんと差がついた……？&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;いったいどこで……&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;これ俺の事？ &lt;a href=&#34;https://t.co/UJuhl5azIA&#34;&gt;pic.twitter.com/UJuhl5azIA&lt;/a&gt;&lt;/p&gt;&amp;mdash; とりで (@toride0313) &lt;a href=&#34;https://twitter.com/toride0313/status/1272018412496019458?ref_src=twsrc%5Etfw&#34;&gt;June 14, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;クソッ、調子に乗ってやがる……&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;欲しいか…&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;力が…&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;力が欲しいか…&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;ウオオオオオオオオオオオオオオオオオオオ！！！！！！！&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1JH_WOVCWyvRxnR9hSq6EQThEX_qhx6by&#34; width=&#34;500&#34; height=&#34;&#34; alt=&#34;TSD_vs_getter&#34;&gt;
+&lt;p&gt;I won !!!!!!!!!!!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>クソツイを自動生成してみた (その1)</title>
+      <link>https://kokuyokugetter.github.io/post/kusotwi_markov/</link>
+      <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/kusotwi_markov/</guid>
+      <description>&lt;p&gt;とあるルートから某クソツイ垢の全てのツイートをGETしたので、マルコフ連鎖でクソツイ生成してみる。&lt;/p&gt;
+&lt;p&gt;2020/02/27最新の全件を取得したら、昔は
+&lt;a href=&#34;https://www.howtonote.jp/twitter/helpful/index1.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSVで入手できた&lt;/a&gt;のに、js(tweet.js)で渡されるようになったみたい。
+まずは加工からスタート。&lt;/p&gt;
+&lt;p&gt;とりあえず適当に読み込んでみる&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;path &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;./twitter-2020-02-27-63146bc9cef271669caea3d761c8f484a1ce32324272beffd822fcb71adcdcc7/tweet.js&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; open(path) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; f:
+    l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;readlines()
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(l[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;]))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;window.YTD.tweet.part0 = [ {
+  &amp;quot;tweet&amp;quot; : {
+    &amp;quot;retweeted&amp;quot; : false,
+    &amp;quot;source&amp;quot; : &amp;quot;&amp;lt;a href=\&amp;quot;http://twitter.com/download/iphone\&amp;quot; rel=\&amp;quot;nofollow\&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&amp;quot;,
+    &amp;quot;entities&amp;quot; : {
+      &amp;quot;hashtags&amp;quot; : [ ],
+      &amp;quot;symbols&amp;quot; : [ ],
+      &amp;quot;user_mentions&amp;quot; : [ ],
+      &amp;quot;urls&amp;quot; : [ ]
+    },
+    &amp;quot;display_text_range&amp;quot; : [ &amp;quot;0&amp;quot;, &amp;quot;22&amp;quot; ],
+    &amp;quot;favorite_count&amp;quot; : &amp;quot;0&amp;quot;,
+    &amp;quot;id_str&amp;quot; : &amp;quot;1232937395412058114&amp;quot;,
+    &amp;quot;truncated&amp;quot; : false,
+    &amp;quot;retweet_count&amp;quot; : &amp;quot;0&amp;quot;,
+    &amp;quot;id&amp;quot; : &amp;quot;1232937395412058114&amp;quot;,
+    &amp;quot;created_at&amp;quot; : &amp;quot;Thu Feb 27 07:55:56 +0000 2020&amp;quot;,
+    &amp;quot;favorited&amp;quot; : false,
+    &amp;quot;full_text&amp;quot; : &amp;quot;任天堂オールスター大乱闘スマッシュブラザーズ&amp;quot;,
+    &amp;quot;lang&amp;quot; : &amp;quot;ja&amp;quot;
+  }
+}, {
+  &amp;quot;tweet&amp;quot; : {
+    &amp;quot;retweeted&amp;quot; : false,
+    &amp;quot;source&amp;quot; : &amp;quot;&amp;lt;a href=\&amp;quot;http://twitter.com/download/iphone\&amp;quot; rel=\&amp;quot;nofollow\&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&amp;quot;,
+    &amp;quot;entities&amp;quot; : {
+      &amp;quot;hashtags&amp;quot; : [ ],
+      &amp;quot;symbols&amp;quot; : [ ],
+      &amp;quot;user_mentions&amp;quot; : [ ],
+      &amp;quot;urls&amp;quot; : [ ]
+    },
+    &amp;quot;display_text_range&amp;quot; : [ &amp;quot;0&amp;quot;, &amp;quot;15&amp;quot; ],
+    &amp;quot;favorite_count&amp;quot; : &amp;quot;1&amp;quot;,
+    &amp;quot;id_str&amp;quot; : &amp;quot;1232934754539884544&amp;quot;,
+    &amp;quot;truncated&amp;quot; : false,
+    &amp;quot;retweet_count&amp;quot; : &amp;quot;0&amp;quot;,
+    &amp;quot;id&amp;quot; : &amp;quot;1232934754539884544&amp;quot;,
+    &amp;quot;created_at&amp;quot; : &amp;quot;Thu Feb 27 07:45:26 +0000 2020&amp;quot;,
+    &amp;quot;favorited&amp;quot; : false,
+    &amp;quot;full_text&amp;quot; : &amp;quot;今の会社から学べる事無くなった&amp;quot;,
+    &amp;quot;lang&amp;quot; : &amp;quot;ja&amp;quot;
+  }
+}, {
+  &amp;quot;tweet&amp;quot; : {
+    &amp;quot;retweeted&amp;quot; : false,
+    &amp;quot;source&amp;quot; : &amp;quot;&amp;lt;a href=\&amp;quot;http://twitter.com/download/iphone\&amp;quot; rel=\&amp;quot;nofollow\&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&amp;quot;,
+    &amp;quot;entities&amp;quot; : {
+      &amp;quot;hashtags&amp;quot; : [ ],
+      &amp;quot;symbols&amp;quot; : [ ],
+      &amp;quot;user_mentions&amp;quot; : [ ],
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;まあいわゆるJSON形式ってやつだと思う。&lt;/p&gt;
+&lt;p&gt;full_textにツイートがあるし、&lt;del&gt;retweetedがfalseなら自分のツイートだなって感じだと推測できる。&lt;/del&gt; → 違ったぽいけど何かわからん。&lt;/p&gt;
+&lt;p&gt;とりあえず表形式にしたいのでする。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;window.YTD.tweet.part0 = &lt;/code&gt;は要らなそうなので直接消す。一応jsファイルのコピーは残す。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; open(path) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; f:
+    l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;readlines()
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(l[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;]))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[ {
+  &amp;quot;tweet&amp;quot; : {
+    &amp;quot;retweeted&amp;quot; : false,
+    &amp;quot;source&amp;quot; : &amp;quot;&amp;lt;a href=\&amp;quot;http://twitter.com/download/iphone\&amp;quot; rel=\&amp;quot;nofollow\&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&amp;quot;,
+    &amp;quot;entities&amp;quot; : {
+      &amp;quot;hashtags&amp;quot; : [ ],
+      &amp;quot;symbols&amp;quot; : [ ],
+      &amp;quot;user_mentions&amp;quot; : [ ],
+      &amp;quot;urls&amp;quot; : [ ]
+    },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;消した&lt;/p&gt;
+&lt;p&gt;jsonとして処理する。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; json
+json_open &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; open(path, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+json_load &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;load(json_open)
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(json_load[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;{&#39;tweet&#39;: {&#39;retweeted&#39;: False, &#39;source&#39;: &#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/iphone&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&#39;, &#39;entities&#39;: {&#39;hashtags&#39;: [], &#39;symbols&#39;: [], &#39;user_mentions&#39;: [], &#39;urls&#39;: []}, &#39;display_text_range&#39;: [&#39;0&#39;, &#39;22&#39;], &#39;favorite_count&#39;: &#39;0&#39;, &#39;id_str&#39;: &#39;1232937395412058114&#39;, &#39;truncated&#39;: False, &#39;retweet_count&#39;: &#39;0&#39;, &#39;id&#39;: &#39;1232937395412058114&#39;, &#39;created_at&#39;: &#39;Thu Feb 27 07:55:56 +0000 2020&#39;, &#39;favorited&#39;: False, &#39;full_text&#39;: &#39;任天堂オールスター大乱闘スマッシュブラザーズ&#39;, &#39;lang&#39;: &#39;ja&#39;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(json_load[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;keys())
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(json_load[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;items())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;dict_keys([&#39;tweet&#39;])
+dict_items([(&#39;retweeted&#39;, False), (&#39;source&#39;, &#39;&amp;lt;a href=&amp;quot;http://twitter.com/download/iphone&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;Twitter for iPhone&amp;lt;/a&amp;gt;&#39;), (&#39;entities&#39;, {&#39;hashtags&#39;: [], &#39;symbols&#39;: [], &#39;user_mentions&#39;: [], &#39;urls&#39;: []}), (&#39;display_text_range&#39;, [&#39;0&#39;, &#39;22&#39;]), (&#39;favorite_count&#39;, &#39;0&#39;), (&#39;id_str&#39;, &#39;1232937395412058114&#39;), (&#39;truncated&#39;, False), (&#39;retweet_count&#39;, &#39;0&#39;), (&#39;id&#39;, &#39;1232937395412058114&#39;), (&#39;created_at&#39;, &#39;Thu Feb 27 07:55:56 +0000 2020&#39;), (&#39;favorited&#39;, False), (&#39;full_text&#39;, &#39;任天堂オールスター大乱闘スマッシュブラザーズ&#39;), (&#39;lang&#39;, &#39;ja&#39;)])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;entitiesの中まで拾うのだるくね？&lt;/p&gt;
+&lt;p&gt;pandas変換するか&lt;/p&gt;
+&lt;p&gt;ちょうどいいのがあった→
+&lt;a href=&#34;https://note.nkmk.me/python-pandas-json-normalize/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pandasのjson_normalizeで辞書のリストをDataFrameに変換&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+df &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;io&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;json&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;json_normalize(json_load)
+pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_option(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;display.max_columns&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;)
+df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;tweet.created_at&lt;/th&gt;
+      &lt;th&gt;tweet.display_text_range&lt;/th&gt;
+      &lt;th&gt;tweet.entities.hashtags&lt;/th&gt;
+      &lt;th&gt;tweet.entities.media&lt;/th&gt;
+      &lt;th&gt;tweet.entities.symbols&lt;/th&gt;
+      &lt;th&gt;tweet.entities.urls&lt;/th&gt;
+      &lt;th&gt;tweet.entities.user_mentions&lt;/th&gt;
+      &lt;th&gt;tweet.extended_entities.media&lt;/th&gt;
+      &lt;th&gt;tweet.favorite_count&lt;/th&gt;
+      &lt;th&gt;tweet.favorited&lt;/th&gt;
+      &lt;th&gt;tweet.full_text&lt;/th&gt;
+      &lt;th&gt;tweet.id&lt;/th&gt;
+      &lt;th&gt;tweet.id_str&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_screen_name&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_status_id&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_status_id_str&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_user_id&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_user_id_str&lt;/th&gt;
+      &lt;th&gt;tweet.lang&lt;/th&gt;
+      &lt;th&gt;tweet.possibly_sensitive&lt;/th&gt;
+      &lt;th&gt;tweet.retweet_count&lt;/th&gt;
+      &lt;th&gt;tweet.retweeted&lt;/th&gt;
+      &lt;th&gt;tweet.source&lt;/th&gt;
+      &lt;th&gt;tweet.truncated&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;Thu Feb 27 07:55:56 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 22]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;任天堂オールスター大乱闘スマッシュブラザーズ&lt;/td&gt;
+      &lt;td&gt;1232937395412058114&lt;/td&gt;
+      &lt;td&gt;1232937395412058114&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Thu Feb 27 07:45:26 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 15]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;今の会社から学べる事無くなった&lt;/td&gt;
+      &lt;td&gt;1232934754539884544&lt;/td&gt;
+      &lt;td&gt;1232934754539884544&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 23:11:36 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 32]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;ポジティブな事を言うよりも死ねとかSEXとか言ってる回数のが多い&lt;/td&gt;
+      &lt;td&gt;1232805442415255554&lt;/td&gt;
+      &lt;td&gt;1232805442415255554&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 11:04:15 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 18]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;6V性格おとなしいン・ゾスあります。&lt;/td&gt;
+      &lt;td&gt;1232622399671025664&lt;/td&gt;
+      &lt;td&gt;1232622399671025664&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 09:13:20 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 15]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;セックスに積極的な女の子募集中&lt;/td&gt;
+      &lt;td&gt;1232594485655134212&lt;/td&gt;
+      &lt;td&gt;1232594485655134212&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;5&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 09:00:41 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 14]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;早く俺もおっぱいで射精したい&lt;/td&gt;
+      &lt;td&gt;1232591301310201859&lt;/td&gt;
+      &lt;td&gt;1232591301310201859&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;6&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 03:56:37 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 7]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;クソツイ考察班&lt;/td&gt;
+      &lt;td&gt;1232514780004372480&lt;/td&gt;
+      &lt;td&gt;1232514780004372480&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;7&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 01:25:55 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 50]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[{&#39;expanded_url&#39;: &#39;https://twitter.com/lw_ru/s...&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[{&#39;name&#39;: &#39;LW&#39;, &#39;screen_name&#39;: &#39;lw_ru&#39;, &#39;indic...&lt;/td&gt;
+      &lt;td&gt;[{&#39;expanded_url&#39;: &#39;https://twitter.com/lw_ru/s...&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;RT @lw_ru: @getter_kusotwi https://t.co/nIO6Vb...&lt;/td&gt;
+      &lt;td&gt;1232476857016078336&lt;/td&gt;
+      &lt;td&gt;1232476857016078336&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;und&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;8&lt;/th&gt;
+      &lt;td&gt;Tue Feb 25 13:43:48 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 95]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[{&#39;name&#39;: &#39;みんどら&#39;, &#39;screen_name&#39;: &#39;mindora0&#39;, &#39;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;RT @mindora0: @getter_kusotwi \nミッドサマーのここがオススメ...&lt;/td&gt;
+      &lt;td&gt;1232300164028583936&lt;/td&gt;
+      &lt;td&gt;1232300164028583936&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;9&lt;/th&gt;
+      &lt;td&gt;Tue Feb 25 12:07:48 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 82]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[{&#39;name&#39;: &#39;ひろ&#39;, &#39;screen_name&#39;: &#39;hiroyp_&#39;, &#39;ind...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;RT @hiroyp_: @getter_kusotwi ゲッタ〜のキャノジョ「今夜は寝かせ...&lt;/td&gt;
+      &lt;td&gt;1232276005152157697&lt;/td&gt;
+      &lt;td&gt;1232276005152157697&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;完全に余談&#34;&gt;完全に余談&lt;/h3&gt;
+&lt;p&gt;RT数が1以上のツイート&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_rted &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.retweet_count&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+df_rted[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.full_text&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;67      kashidecにkashidecにkashidecにkashidecにkashidecにk...
+125                                         @toride0313 仏
+331       青い空が\n澄んだ風が\nたとえ星が\n裏切っても\n\nkashidecだけは絶対裏切らない
+1054                                 kashidecを撒き餌にサメ釣ってる。
+1098                              でも日本には四季とkashidecがあるから…
+1133                          またkashidecが精神病院からツイートしています。
+1176              kashidecと会う時は握手は断ってください。実はヤバいことをされています。
+1265                     異世界転生kashidec「ふむ、換気を重視してみてはどうかな」
+1269                   カシデックって人、全然ツイートしてないのにファボしてて気持ち悪ｗｗｗ
+1328    kashidecガチ信者はkashidecの市議選出馬を楽しみに毎日生きているが、kashi...
+1411                       kashidecガチ信者だから3秒に1回歯の定期検診してる。
+1501                                        #オナニー見てくれる人RT
+1502                                       #オナニー見せてくれる人RT
+1504      kashidecガチ信者なろう小説\n「ふむ、それではヨシケイを頼んでみてはどうだろうか？ｗ」
+1548                  法で取り締まって欲しいものリスト\n・パチンコ\n・タバコ\n・オリパ
+1565    ブン回ったアンデシンクロ漫談「ゴヨウガーディアン、ゴヨウガーディアン、一つ飛ばしてゴヨウガー...
+1612                           kashidecドヤ街に住んでみたシリーズ第一弾寿町
+1682     全盛期のkashidecがポルトガルに行ったときにありがちなこと、ポルトガルにそもそも行かない。
+1691                                     パクチー無いからカメムシ食べてる
+1735                                           オワッタクカシデッナ
+1740                                   kashidecは実際クズっぽいよな
+1796                                  KSU kashidecの家キャンパス
+1883    終わりの世界のナベアツ「1の倍数の時だけ1の倍数の代わりに、この現代社会を生き抜くために我々...
+1884       KSUで薬物で死んだ人リスト\n・kashidec（治験新薬）\n・とりでまん（コンサータ）
+1886               映画、『範馬の子』にありがちなこと、「今から地震がとまるよ、チェリアアッッ」
+1888    【都市伝説】○アニの犯人はkashidec信者らしい - kashidecガチアンチ速報 h...
+1891    大学前飯屋が会社前に転生した時にありがちなこと\n\n「何って、350円で死ぬほど腹一杯にな...
+1919            kashidecガチアンチ「kashidec生きてる意味ない…俺以外にとってはな」
+1923                                         N国の佐藤恵理子とSEX
+1938                                     動くな、俺はkashidecだ。
+1944    ガチアンチ。兵庫県出身。大阪神天才大学卒業。在学中にkashidecガチアンチ検定1級に当時...
+1952    【驚愕】kashidecの「信じてください。」は「信じて（お金を）くださいだった」 - ka...
+1979    kashidecとカラオケに行った時にありがちなこと\n\nkashidec「私のお墓のお墓...
+1993                               kashiがdecすぎるとツイッターで話題に
+2001                               どうしてそんなにエッチなファボばかりするの？
+2026          赤ちゃん→可愛い😍\n製造→凄い😮\nミルク→美味しい😋\n\n赤ちゃん製造ミルク→🤔
+2059    エロファボしてるkashidec「エロファボをしてください。kashidickからのお願いです。」
+2344    2018年、クソツイランキング～～～～！！！\n\n3位、「50音を言っていって、ンコを足し...
+2392               引いてしまうkashidecの異常行動ｗｗｗｗｗｗ\n\nスマホを投げて遊ぶ
+2615    kashidecかなーやっぱりww 自分は思わないんだけど周りにkashidecに似てるって...
+2626    ←kashidec前期      kashidec後期→\n\n※画像はイメージです htt...
+2633    カシデックと貸していくで韻が踏める\nヒモニート酷い人で韻が踏める\n\nこの韻はフィクショ...
+2635                              https://t.co/tylQ8pGpID
+2636                        ミュージカル『全てkashi06が悪い』を開演いたします。
+2656                      ザーメン大好き小泉さんという同人誌が1000000000%出る
+2687    ゲッタークソツイの墓場が2018年を大胆予想！！！！\n\n・何かが流行る！！！\n\n・ニ...
+2707                   キズナ・アイ主催のデスゲーム、バーチャルユーチューバーのコロシ・アイ
+2792    チュイイイイイイイイイイイン！！\nガキン！\nガキン！\nTUEEEEEEEEEEEッッッ...
+3121                           カシデック靴でしか、回文パーツとしてお使いください。
+3231                              https://t.co/pdVxW6qZyC
+3238    @toride0313 @peroshirako  https://t.co/zWzq5RFN3W
+3239                    20年後の遊戯王のCS\n「CS優勝しました！使用AIは○○です」
+3242            もうすぐ #kashidec生誕祭 https://t.co/Rg06fY0Dik
+3362                              https://t.co/oyzAlScCj0
+3364                              https://t.co/I7e4WQWvpR
+Name: tweet.full_text, dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;kashidecばっかりじゃねーか&lt;/p&gt;
+&lt;h3 id=&#34;閑話休題&#34;&gt;閑話休題&lt;/h3&gt;
+&lt;p&gt;マルコフ連鎖&lt;/p&gt;
+&lt;p&gt;参考→
+&lt;a href=&#34;https://qiita.com/shge/items/fbfce6b54d2e0cc1b382&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[Python] MeCab とマルコフ連鎖ライブラリ markovify を使い、文章を学習して自動生成する方法&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; MeCab
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; markovify
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;なんか他人のRTとか日本語判定になってないツイートは除いたりしとく&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;str&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.entities.user_mentions&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;astype(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;unicode&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;str&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;str2&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.entities.hashtags&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;astype(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;unicode&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;str2&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.lang&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ja&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;]
+df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head(&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;取り除いた↓&lt;/p&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;tweet.created_at&lt;/th&gt;
+      &lt;th&gt;tweet.display_text_range&lt;/th&gt;
+      &lt;th&gt;tweet.entities.hashtags&lt;/th&gt;
+      &lt;th&gt;tweet.entities.media&lt;/th&gt;
+      &lt;th&gt;tweet.entities.symbols&lt;/th&gt;
+      &lt;th&gt;tweet.entities.urls&lt;/th&gt;
+      &lt;th&gt;tweet.entities.user_mentions&lt;/th&gt;
+      &lt;th&gt;tweet.extended_entities.media&lt;/th&gt;
+      &lt;th&gt;tweet.favorite_count&lt;/th&gt;
+      &lt;th&gt;tweet.favorited&lt;/th&gt;
+      &lt;th&gt;tweet.full_text&lt;/th&gt;
+      &lt;th&gt;tweet.id&lt;/th&gt;
+      &lt;th&gt;tweet.id_str&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_screen_name&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_status_id&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_status_id_str&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_user_id&lt;/th&gt;
+      &lt;th&gt;tweet.in_reply_to_user_id_str&lt;/th&gt;
+      &lt;th&gt;tweet.lang&lt;/th&gt;
+      &lt;th&gt;tweet.possibly_sensitive&lt;/th&gt;
+      &lt;th&gt;tweet.retweet_count&lt;/th&gt;
+      &lt;th&gt;tweet.retweeted&lt;/th&gt;
+      &lt;th&gt;tweet.source&lt;/th&gt;
+      &lt;th&gt;tweet.truncated&lt;/th&gt;
+      &lt;th&gt;str&lt;/th&gt;
+      &lt;th&gt;str2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;Thu Feb 27 07:55:56 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 22]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;任天堂オールスター大乱闘スマッシュブラザーズ&lt;/td&gt;
+      &lt;td&gt;1232937395412058114&lt;/td&gt;
+      &lt;td&gt;1232937395412058114&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Thu Feb 27 07:45:26 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 15]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;今の会社から学べる事無くなった&lt;/td&gt;
+      &lt;td&gt;1232934754539884544&lt;/td&gt;
+      &lt;td&gt;1232934754539884544&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 23:11:36 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 32]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;ポジティブな事を言うよりも死ねとかSEXとか言ってる回数のが多い&lt;/td&gt;
+      &lt;td&gt;1232805442415255554&lt;/td&gt;
+      &lt;td&gt;1232805442415255554&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 11:04:15 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 18]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;6V性格おとなしいン・ゾスあります。&lt;/td&gt;
+      &lt;td&gt;1232622399671025664&lt;/td&gt;
+      &lt;td&gt;1232622399671025664&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 09:13:20 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 15]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;セックスに積極的な女の子募集中&lt;/td&gt;
+      &lt;td&gt;1232594485655134212&lt;/td&gt;
+      &lt;td&gt;1232594485655134212&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;5&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 09:00:41 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 14]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;早く俺もおっぱいで射精したい&lt;/td&gt;
+      &lt;td&gt;1232591301310201859&lt;/td&gt;
+      &lt;td&gt;1232591301310201859&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;6&lt;/th&gt;
+      &lt;td&gt;Wed Feb 26 03:56:37 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 7]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;クソツイ考察班&lt;/td&gt;
+      &lt;td&gt;1232514780004372480&lt;/td&gt;
+      &lt;td&gt;1232514780004372480&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;11&lt;/th&gt;
+      &lt;td&gt;Tue Feb 25 08:54:54 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 42]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;俺が浮遊能力者だったら衆人環境下で首吊りの物真似してめちゃくちゃ炎上するやつやりたい&lt;/td&gt;
+      &lt;td&gt;1232227460143439873&lt;/td&gt;
+      &lt;td&gt;1232227460143439873&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;12&lt;/th&gt;
+      &lt;td&gt;Tue Feb 25 07:18:35 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 35]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;全てのアニメの同名キャラとSEXできる能力がある時に指定する名字ある？&lt;/td&gt;
+      &lt;td&gt;1232203221319372800&lt;/td&gt;
+      &lt;td&gt;1232203221319372800&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;13&lt;/th&gt;
+      &lt;td&gt;Tue Feb 25 07:17:51 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 6]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;イクイクイク&lt;/td&gt;
+      &lt;td&gt;1232203035310321664&lt;/td&gt;
+      &lt;td&gt;1232203035310321664&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;17&lt;/th&gt;
+      &lt;td&gt;Mon Feb 24 09:20:52 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 28]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;ドS女を大逆転スーパーハメハメエクスタシーしてやりたい。&lt;/td&gt;
+      &lt;td&gt;1231871603522162688&lt;/td&gt;
+      &lt;td&gt;1231871603522162688&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;20&lt;/th&gt;
+      &lt;td&gt;Mon Feb 24 03:25:09 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 26]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;@自殺予定者 卒論書いた？自殺学部は卒論提出必須だぞ&lt;/td&gt;
+      &lt;td&gt;1231782084538036226&lt;/td&gt;
+      &lt;td&gt;1231782084538036226&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;21&lt;/th&gt;
+      &lt;td&gt;Mon Feb 24 01:03:13 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 22]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;ベテルギウスのγ線バーストを全て受け切った男&lt;/td&gt;
+      &lt;td&gt;1231746366881189889&lt;/td&gt;
+      &lt;td&gt;1231746366881189889&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;22&lt;/th&gt;
+      &lt;td&gt;Sun Feb 23 14:34:46 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 24]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;エロ漫画はすぐSEXするからなぁ…(´･_･`)&lt;/td&gt;
+      &lt;td&gt;1231588212864217090&lt;/td&gt;
+      &lt;td&gt;1231588212864217090&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;26&lt;/th&gt;
+      &lt;td&gt;Sat Feb 22 11:48:29 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 14]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;わたてん見ながら彼女とSEX&lt;/td&gt;
+      &lt;td&gt;1231183977290985472&lt;/td&gt;
+      &lt;td&gt;1231183977290985472&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;27&lt;/th&gt;
+      &lt;td&gt;Sat Feb 22 11:26:13 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 9]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;エロ部の部長です。&lt;/td&gt;
+      &lt;td&gt;1231178374812291072&lt;/td&gt;
+      &lt;td&gt;1231178374812291072&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;32&lt;/th&gt;
+      &lt;td&gt;Sat Feb 22 00:12:21 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 19]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;映像研にも手を出してしまうほどの性豪。&lt;/td&gt;
+      &lt;td&gt;1231008791702822914&lt;/td&gt;
+      &lt;td&gt;1231008791702822914&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;33&lt;/th&gt;
+      &lt;td&gt;Fri Feb 21 11:32:12 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 22]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;けんぷファーのアニメってなんだったんですか？&lt;/td&gt;
+      &lt;td&gt;1230817494580903936&lt;/td&gt;
+      &lt;td&gt;1230817494580903936&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;34&lt;/th&gt;
+      &lt;td&gt;Fri Feb 21 11:25:20 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 19]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;お前ら…全員俺が幸せにしてやるからな…&lt;/td&gt;
+      &lt;td&gt;1230815763855896576&lt;/td&gt;
+      &lt;td&gt;1230815763855896576&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;35&lt;/th&gt;
+      &lt;td&gt;Fri Feb 21 10:56:57 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 6]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;青い鯨RTA&lt;/td&gt;
+      &lt;td&gt;1230808622906494977&lt;/td&gt;
+      &lt;td&gt;1230808622906494977&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;37&lt;/th&gt;
+      &lt;td&gt;Fri Feb 21 10:39:26 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 4]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;あ、イク&lt;/td&gt;
+      &lt;td&gt;1230804213644398592&lt;/td&gt;
+      &lt;td&gt;1230804213644398592&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;43&lt;/th&gt;
+      &lt;td&gt;Thu Feb 20 10:17:26 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 20]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;お片付け！お片付け！（るろうに剣心の話）&lt;/td&gt;
+      &lt;td&gt;1230436290929184769&lt;/td&gt;
+      &lt;td&gt;1230436290929184769&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;44&lt;/th&gt;
+      &lt;td&gt;Thu Feb 20 08:16:07 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 14]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;可愛い女の子に生まれ変わるぬ&lt;/td&gt;
+      &lt;td&gt;1230405757474000896&lt;/td&gt;
+      &lt;td&gt;1230405757474000896&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;45&lt;/th&gt;
+      &lt;td&gt;Thu Feb 20 07:07:04 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 33]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;JKだからレッグエクステンションのことをレグエクちゃんって呼んでる&lt;/td&gt;
+      &lt;td&gt;1230388382531870721&lt;/td&gt;
+      &lt;td&gt;1230388382531870721&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;46&lt;/th&gt;
+      &lt;td&gt;Thu Feb 20 01:48:12 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 6]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;バードカフェ&lt;/td&gt;
+      &lt;td&gt;1230308137774616577&lt;/td&gt;
+      &lt;td&gt;1230308137774616577&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;48&lt;/th&gt;
+      &lt;td&gt;Thu Feb 20 00:39:44 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 16]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;触らなくても、射精ちゃったね…♡&lt;/td&gt;
+      &lt;td&gt;1230290905115922432&lt;/td&gt;
+      &lt;td&gt;1230290905115922432&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;49&lt;/th&gt;
+      &lt;td&gt;Wed Feb 19 13:59:08 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 11]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;いつメンで女装しねえ？&lt;/td&gt;
+      &lt;td&gt;1230129693120053248&lt;/td&gt;
+      &lt;td&gt;1230129693120053248&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;54&lt;/th&gt;
+      &lt;td&gt;Thu Jan 23 03:46:52 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 16]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;テクマクマヤコンをご存知でない？&lt;/td&gt;
+      &lt;td&gt;1220191140911075328&lt;/td&gt;
+      &lt;td&gt;1220191140911075328&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;55&lt;/th&gt;
+      &lt;td&gt;Thu Jan 23 03:29:59 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 31]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;ナビエストークス方程式の中にいるカワイコチャンとラブラブする〜&lt;/td&gt;
+      &lt;td&gt;1220186891175116801&lt;/td&gt;
+      &lt;td&gt;1220186891175116801&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;56&lt;/th&gt;
+      &lt;td&gt;Wed Jan 22 23:13:18 +0000 2020&lt;/td&gt;
+      &lt;td&gt;[0, 12]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;ガキの陰茎やあらへんで！&lt;/td&gt;
+      &lt;td&gt;1220122294560772096&lt;/td&gt;
+      &lt;td&gt;1220122294560772096&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;ja&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;&amp;lt;a href=&#34;http://twitter.com/download/iphone&#34; r...&lt;/td&gt;
+      &lt;td&gt;False&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+      &lt;td&gt;[]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;。&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;join(df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tweet.full_text&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;][:&lt;span style=&#34;color:#ae81ff&#34;&gt;13&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;。&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+parsed_s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; MeCab&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Tagger(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;-Owakati&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parse(s)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(parsed_s)
+text_model &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; markovify&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Text(parsed_s, state_size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; _ &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;):
+    sentence &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; text_model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;make_short_sentence(&lt;span style=&#34;color:#ae81ff&#34;&gt;140&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, tries&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(sentence)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;任天堂 オールスター 大 乱闘 スマッシュブラザーズ 。 今 の 会社 から 学べる 事 無くなっ た 。 ポジティブ な 事 を 言う より も 死ね とか SEX とか 言っ てる 回数 の が 多い 。 6 V 性格 おとなしい ン・ゾス あり ます 。 。 セックス に 積極 的 な 女の子 募集 中 。 早く 俺 も おっぱい で 射精 し たい 。 クソツイ 考察 班 。 俺 が 浮遊 能力 者 だっ たら 衆人 環境 下 で 首吊り の 物真似 し て めちゃくちゃ 炎上 する やつ やり たい 。 全て の アニメ の 同名 キャラ と SEX できる 能力 が ある 時 に 指定 する 名字 ある ？ 。 イクイクイク 。 ド S 女 を 大 逆転 スーパーハメハメエクスタシー してやり たい 。 。 @ 自殺 予定 者 卒 論 書い た ？ 自殺 学部 は 卒論 提出 必須 だ ぞ 。 ベテルギウス の γ線 バースト を 全て 受け 切っ た 男 。 
+
+None
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Noneしかできねえ…&lt;/p&gt;
+&lt;p&gt;joinする範囲広げるとkeyErrorになってmodel生成こけたりもするし、joinで区切る記号によってもこけたりして意味不明。&lt;/p&gt;
+&lt;p&gt;今回はここまで&lt;/p&gt;
+&lt;p&gt;[終]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>このサイトを作った目的（という建前でTweet貼る練習）</title>
+      <link>https://kokuyokugetter.github.io/post/tweet/</link>
+      <pubDate>Tue, 25 Feb 2020 20:17:56 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/tweet/</guid>
+      <description>&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.trhrkmk.com/posts/hugo-amp-twitter-embedded-shortcode/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo(AMP対応)にTwitterのツイートを埋め込む時のメモ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Twitterの自己紹介雑魚くて、ホームページのリンクにもQiitaのリンクしか貼ってなかったので、ポートフォリオサイト作った。&lt;a href=&#34;https://t.co/LgamCm3g4F&#34;&gt;https://t.co/LgamCm3g4F&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ∿∿ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1230116459562430466?ref_src=twsrc%5Etfw&#34;&gt;February 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;br&gt;
+&lt;p&gt;↑ {{% twitter 1230116459562430466 %}}と書いています。&lt;/p&gt;
+&lt;p&gt;何も設定しなくてもacademicにはスクリプトがちゃんと書かれてるっぽいですね。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>このサイトを作った時のメモ</title>
+      <link>https://kokuyokugetter.github.io/post/hello/</link>
+      <pubDate>Mon, 24 Feb 2020 19:46:57 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/hello/</guid>
+      <description>&lt;p&gt;投稿テストも兼ねて&lt;/p&gt;
+&lt;p&gt;summaryのQiita見たら大体できるけど、作りながらメモしてたのをそのまま載せる。
+結局academicというテーマ？を使っているので、6.からが実質的な作業。5.までは結局無意味&lt;/p&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;参考にした&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://kohki.hatenablog.jp/entry/hugo-portfolio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo + GitHub Pagesでポートフォリオを作る&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://qiita.com/k_k_hogetaro/items/1a650678dc4f0ad43468&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;さよならQiita、こんにちはhugo × github pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.smartbowwow.com/2019/02/github-pageshugo.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub PagesとHugoでポートフォリオサイトを作った&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://qiita.com/harumaxy/items/58e7e4273c61e7e260b3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo + Academic テーマを使ったブログの作り方&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://qiita.com/shimech/items/ce079040e58f4b9dd7bf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HugoのAcademicテーマでポートフォリオサイトを作った話&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Hugoをインストール&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;==&amp;gt; &lt;code&gt;brew cleanup&lt;/code&gt; has not been run in 30 days, running now&amp;hellip;
+Removing: /Users/ME/Library/Caches/Homebrew/go&amp;ndash;1.13.3.catalina.bottle.tar.gz&amp;hellip; (148MB)
+Removing: /Users/ME/Library/Caches/Homebrew/readline&amp;ndash;8.0.1.mojave.bottle.tar.gz&amp;hellip; (517.9KB)
+Removing: /Users/ME/Library/Logs/Homebrew/go&amp;hellip; (64B)
+Error: Permission denied @ apply2files - /usr/local/share/ghostscript/9.16/Resource/CIDFSubst/AppleGothic.ttf&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;これはよくわからんけど、もう一度実行したらもうインストールされてるって出たからOK&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hugo実行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new site getter_portfolio
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Congratulations! Your new Hugo site is created in /Users/ME/works/getter_portfolio.&lt;/p&gt;
+&lt;p&gt;Just a few more steps and you&amp;rsquo;re ready to go:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download a theme into the same-named folder.
+Choose a theme from &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;https://themes.gohugo.io/&lt;/a&gt; or
+create your own with the &amp;ldquo;hugo new theme &lt;THEMENAME&gt;&amp;rdquo; command.&lt;/li&gt;
+&lt;li&gt;Perhaps you want to add some content. You can add single files
+with &amp;ldquo;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Start the built-in live server via &amp;ldquo;hugo server&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Visit &lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt; for quickstart guide and full documentation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;サーバー実行してみる&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Building sites … WARN 2020/02/11 13:04:24 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/02/11 13:04:24 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;home&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/02/11 13:04:24 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;               | EN  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;ndash;
+Pages            |  3&lt;br&gt;
+Paginator pages  |  0&lt;br&gt;
+Non-page files   |  0&lt;br&gt;
+Static files     |  0&lt;br&gt;
+Processed images |  0&lt;br&gt;
+Aliases          |  0&lt;br&gt;
+Sitemaps         |  1&lt;br&gt;
+Cleaned          |  0&lt;/p&gt;
+&lt;p&gt;Built in 10 ms
+Watching for changes in /Users/ME/works/getter_portfolio/{archetypes,content,data,layouts,static}
+Watching for config changes in /Users/ME/works/getter_portfolio/config.toml
+Environment: &amp;ldquo;development&amp;rdquo;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server &amp;ndash;disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+WARN 2020/02/11 13:04:41 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;home&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;http://localhost:1313/にも何も出ないけど接続はできてる&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ビルド&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;Building sites … WARN 2020/02/11 13:07:59 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/02/11 13:07:59 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;home&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2020/02/11 13:07:59 found no layout file for &amp;ldquo;HTML&amp;rdquo; for kind &amp;ldquo;taxonomyTerm&amp;rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;               | EN  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;ndash;
+Pages            |  3&lt;br&gt;
+Paginator pages  |  0&lt;br&gt;
+Non-page files   |  0&lt;br&gt;
+Static files     |  0&lt;br&gt;
+Processed images |  0&lt;br&gt;
+Aliases          |  0&lt;br&gt;
+Sitemaps         |  1&lt;br&gt;
+Cleaned          |  0&lt;/p&gt;
+&lt;p&gt;Total in 16 ms&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一応Publicが生成された&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;公開設定&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;config.tomlに &lt;code&gt;publishDir = &amp;quot;docs&amp;quot;&lt;/code&gt; を追記してください。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;テーマ適用&lt;/p&gt;
+&lt;p&gt;themes内で&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/gcushen/hugo-academic.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;いやよくわからん&lt;/p&gt;
+&lt;p&gt;もしかしてここまでの作業全部無意味？（多分hugoのインストール終わっていればここからでOK）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;これだけでいいんじゃないか？&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd My_Website
+git submodule update --init --recursive
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;で普通にAcademicのデフォルトの画面がhttp://localhost:1313/で表示された。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中身書き換えていく&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;基本的に content/home/ の中のMarkdownファイルを書き換えることでコンテンツの作成が可能です。（Homeだけは、 content/authors/admin/_index.md です。）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;demo.mdは&lt;code&gt; active = false&lt;/code&gt;とした。&lt;/p&gt;
+&lt;p&gt;省略…&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;公開&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;githubに {username}.github.io という名前のリポジトリを作成します。
+その後、CLIで、&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;hugo
+cd public
+git init
+git add .
+git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
+git remote add origin https://github.com/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;username&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;username&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;.github.io.git
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;とし、 https://{username}.github.io/ にアクセスすると、ビルドしたページが表示されます。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;めっちゃ簡単だった…&lt;/p&gt;
+&lt;!-- &lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1il1w7xijH3ESFJRVUtztySa9gWxDZaZl&#34; width=&#34;60%&#34; height=&#34;&#34; alt=&#34;abc&#34;&gt; --&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

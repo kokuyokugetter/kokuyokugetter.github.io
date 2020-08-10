@@ -5,12 +5,87 @@
     <link>https://kokuyokugetter.github.io/post/</link>
       <atom:link href="https://kokuyokugetter.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jul 2020 00:22:53 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 07 Aug 2020 00:09:12 +0900</lastBuildDate>
     <image>
       <url>https://kokuyokugetter.github.io/post/featured.png</url>
       <title>Posts</title>
       <link>https://kokuyokugetter.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>ipadで機械学習ができるiOS/iPadOSアプリの「Juno」を買いました。</title>
+      <link>https://kokuyokugetter.github.io/post/juno/</link>
+      <pubDate>Fri, 07 Aug 2020 00:09:12 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/juno/</guid>
+      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#junoについて&#34;&gt;Junoについて&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#動作チェック&#34;&gt;動作チェック&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;junoについて&#34;&gt;Junoについて&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://apps.apple.com/jp/app/juno/id1462586500&#34;&gt;https://apps.apple.com/jp/app/juno/id1462586500&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;appstoreで1840円でJunoというアプリを購入しました。&lt;/p&gt;
+&lt;p&gt;このアプリ自体は昔からあるんですが、最近のアプデでついにscikit-learnが使えるようになったということで購入しました。&lt;/p&gt;
+&lt;p&gt;このアプリ、基本的にはiOS/iPadOSでJupyterNotebookを編集できるというアプリになっていて、&lt;/p&gt;
+&lt;p&gt;以前は同様にJupyterが使える無料の
+&lt;a href=&#34;https://apps.apple.com/jp/app/carnets-jupyter/id1450994949&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;carnets&lt;/a&gt;を使ってiPadでちょっとグラフ作ったりとかしてました。&lt;/p&gt;
+&lt;p&gt;こちらもpandasやnumpyなど色々使えたので、機械学習関係のもの以外は普通に使えました。&lt;/p&gt;
+&lt;p&gt;まあでもscimitar-learnが使えるならお金払ってでも、色々勉強できる幅も増えるでしょってことで、乗り換えることにしました。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;動作チェック&#34;&gt;動作チェック&lt;/h2&gt;
+&lt;p&gt;動作チェックは
+&lt;a href=&#34;https://qiita.com/ao_log/items/fe9bd42fd249c2a7ee7a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;これ&lt;/a&gt;をそのままやっていくので、特にNotebookの提供等はありません。&lt;/p&gt;
+&lt;p&gt;結論から言うと、全て動作します。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=18qDVdtB2c94OSrQazoXbABvS-deDkZHd&#34; width=&#34;&#34; alt=&#34;img1&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;メイン画面はこんな感じ。テーマは白背景と黒背景選べます。&lt;/p&gt;
+&lt;p&gt;当然sklearnがインポートできていますね。このdatasetsが通るのが大きくて、ネットに繋いでデータを持ってこなくても分析の勉強ができるようになったわけですね。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1UTbtjPztzV9SpauVPl-_JfvAPBGflMjt&#34; width=&#34;&#34; alt=&#34;img2&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;補完も効きます。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=11mAeToHjSz5cn-B9Rte6ggqe0NtWdNC4&#34; width=&#34;&#34; alt=&#34;img3&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;pandasの表も綺麗に表示されます。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1uh8pEEzUsTPDPyVB_CESRmJVmJeEPlZT&#34; width=&#34;&#34; alt=&#34;img4&#34;&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1fEqSgBENKJqe7YLSeUe_wCA7gzZTqWMj&#34; width=&#34;&#34; alt=&#34;img5&#34;&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1RsGlzMwW9btSEelWHwbW2TcvlbuuolmH&#34; width=&#34;&#34; alt=&#34;img6&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;iPad専用のapple公式キーボードだとescキーがないですが、escキーを&amp;rsquo;@&amp;lsquo;などに割り当てたりすることもでき、ホットキーも充実しています。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1uw_glCspv6u1LPXjcvRY47cF5foXnq-d&#34; width=&#34;&#34; alt=&#34;img7&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;当然グラフも描けて、分類もできています。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1amdoPdsu1V4jeMKk7evHA4u_ESg23T8s&#34; width=&#34;&#34; alt=&#34;img8&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;shellコマンドは打てなくなった（？）ようです。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=11Q_a25P9PFM3fhElZLBE0ZcLwNLY6HtF&#34; width=&#34;&#34; alt=&#34;img9&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;OS13からある機能のファイルで見られる好きなところのNotebookを開くことができます。&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1x2ffWMcm35HaM0d80SleARN4e43zv1pQ&#34; width=&#34;&#34; alt=&#34;img10&#34;&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1iA4rt8StsiA7BII1IOHFn-lf_3r2ZAUq&#34; width=&#34;&#34; alt=&#34;img11&#34;&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1LxkCd2jcMhkuaJGrE_-4pw-vXPn-tSdK&#34; width=&#34;&#34; alt=&#34;img12&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;最初seabornが使えなくて、shellコマンドも使えないし、pairplotは諦めかと思いましたが、ファイル名のところを押すとメニューが出てきて、Install Python Packageからseabornのインストールもできました。（標準ではseabornは入っていません）&lt;/p&gt;
+&lt;br&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1vq1sKjUk3dCyoWAh6aY1wGvx9ZOYq1la&#34; width=&#34;&#34; alt=&#34;img13&#34;&gt;
+&lt;br&gt;
+&lt;p&gt;保存形式としては画像の通り、主要な物はありそう？&lt;/p&gt;
+&lt;p&gt;形式を選択すると、AirDrop等でmac等にももちろん送ることができます。&lt;/p&gt;
+&lt;br&gt;
+</description>
+    </item>
     
     <item>
       <title>8万円の革靴を買いました。</title>
