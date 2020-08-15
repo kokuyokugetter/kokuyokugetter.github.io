@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="システムエンジニア">
+  <meta name="description" content="pythonの組み込み関数でできるならそうした方がいい">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kokuyokugetter.github.io/tags/twitter/">
+  <link rel="alternate" hreflang="en-us" href="https://kokuyokugetter.github.io/post/abc169-b/">
 
   
 
@@ -248,14 +248,12 @@
 
 
   
-  <link rel="alternate" href="/tags/twitter/index.xml" type="application/rss+xml" title="ゲッタ〜のHP">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://kokuyokugetter.github.io/tags/twitter/">
+  <link rel="canonical" href="https://kokuyokugetter.github.io/post/abc169-b/">
 
   
   
@@ -263,35 +261,86 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="ゲッタ〜のHP">
-  <meta property="og:url" content="https://kokuyokugetter.github.io/tags/twitter/">
-  <meta property="og:title" content="twitter | ゲッタ〜のHP">
-  <meta property="og:description" content="システムエンジニア"><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
-  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="https://kokuyokugetter.github.io/post/abc169-b/">
+  <meta property="og:title" content="ABC169のB問題にnumpy.prod()を使うと不正解になった件 | ゲッタ〜のHP">
+  <meta property="og:description" content="pythonの組み込み関数でできるならそうした方がいい"><meta property="og:image" content="https://kokuyokugetter.github.io/post/abc169-b/featured.png">
+  <meta property="twitter:image" content="https://kokuyokugetter.github.io/post/abc169-b/featured.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2020-02-28T20:48:42&#43;09:00">
+    
+      <meta property="article:published_time" content="2020-08-15T16:24:32&#43;09:00">
+    
+    <meta property="article:modified_time" content="2020-08-15T16:24:32&#43;09:00">
   
-
-  
-
-
-
 
   
 
 
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kokuyokugetter.github.io/post/abc169-b/"
+  },
+  "headline": "ABC169のB問題にnumpy.prod()を使うと不正解になった件",
+  
+  "image": [
+    "https://kokuyokugetter.github.io/post/abc169-b/featured.png"
+  ],
+  
+  "datePublished": "2020-08-15T16:24:32+09:00",
+  "dateModified": "2020-08-15T16:24:32+09:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "ゲッタ〜"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "ゲッタ〜のHP",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kokuyokugetter.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "pythonの組み込み関数でできるならそうした方がいい"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
   
 
 
 
 
 
-  <title>twitter | ゲッタ〜のHP</title>
+  <title>ABC169のB問題にnumpy.prod()を使うと不正解になった件 | ゲッタ〜のHP</title>
 
 </head>
 
@@ -539,73 +588,342 @@
 </nav>
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
+  <article class="article">
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
+
+
+<div class="article-container pt-3">
+  <h1>ABC169のB問題にnumpy.prod()を使うと不正解になった件</h1>
+
   
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
+    
+      
+    
+    Aug 15, 2020
+  </span>
   
-<div class="universal-wrapper pt-3">
-  <h1>twitter</h1>
 
   
 
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/tech/">tech</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 369px; max-height: 255px;">
+  <div style="position: relative">
+    <img src="/post/abc169-b/featured.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p><strong>B問題</strong> <a href="https://atcoder.jp/contests/abc169/tasks/abc169_b">https://atcoder.jp/contests/abc169/tasks/abc169_b</a></p>
+<p>この問題を読んで、全部掛け算する、sumの掛け算版の関数があれば一発でできると思い、調べるとnumpy.prod()がそれにあたるということで、使ってみたら、WAでした。</p>
+<p><strong>WA</strong> <a href="https://atcoder.jp/contests/abc169/submissions/15692265">https://atcoder.jp/contests/abc169/submissions/15692265</a></p>
+<p>で、普通にfor文で掛け算してAC。大きい数の掛け算は遅くなるそうなので、範囲超えたらすぐbreakするようにしています。</p>
+<p><strong>AC</strong> <a href="https://atcoder.jp/contests/abc169/submissions/15692483">https://atcoder.jp/contests/abc169/submissions/15692483</a></p>
+<p>numpy.prodについて調査した。</p>
+<br>
+<script src="https://gist.github.com/kokuyokugetter/0b3718a7b0bd0adf8f3c0f6f6e483b9e.js"></script>
+<br>
+<p>最後の2セルを比較すると、1~20までの総積までは同じで、21からnumpy.prod()がズレているのが分かる。</p>
+<p>numpyはC言語やfortranで実装されているそうなので、64bitの整数の符号ありの最大値9223372036854775807 を 1~20の総積2432902008176640000 で割った値が約3.8であるので、21以降でズレるというのは違和感がない。</p>
+<p>その後1~20の総積に4を掛けてもズレたので、最大値が9223372036854775807というのもおそらく正しい。</p>
+<p>bitがどう変化して負になったりするのか調べたらもっと確実なことが言えそうですが、競プロ的には総積はpythonの組み込みだけで真面目にやりましょうって感じで終わりです。</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/atcoder/">AtCoder</a>
+  
+  <a class="badge badge-light" href="/tags/python/">Python</a>
+  
+  <a class="badge badge-light" href="/tags/numpy/">NumPy</a>
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
-
-  
-  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-    
-    
-    <div>
-      <h2><a href="/post/kusotwi_markov/" >クソツイを自動生成してみた (その1)</a></h2>
-      <div class="article-style">
+      
+      
+      
         
-          マルコフ連鎖のやつです
-        
-      </div>
-    </div>
-  
+      
+      
+      
+      <li>
+        <a href="http://twitter.com/intent/tweet?text=%C2%BB&#43;ABC169%e3%81%aeB%e5%95%8f%e9%a1%8c%e3%81%abnumpy.prod%28%29%e3%82%92%e4%bd%bf%e3%81%86%e3%81%a8%e4%b8%8d%e6%ad%a3%e8%a7%a3%e3%81%ab%e3%81%aa%e3%81%a3%e3%81%9f%e4%bb%b6&#43;%7C&#43;%e3%82%b2%e3%83%83%e3%82%bf%e3%80%9c%e3%81%aeHP&amp;url=https://kokuyokugetter.github.io/post/abc169-b/" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
-    
-    
-    <div>
-      <h2><a href="/post/tweet/" >このサイトを作った目的（という建前でTweet貼る練習）</a></h2>
-      <div class="article-style">
-        
-          参考  Hugo(AMP対応)にTwitterのツイートを埋め込む時のメモ
-
-結果 Twitterの自己紹介雑魚くて、ホームページのリンクにもQiitaのリンクしか貼ってなかったので、ポートフォリオサイト作った。https://t.co/LgamCm3g4F
-&mdash; ゲッタ∿∿ (@kokuyokugetter) February 19, 2020  ↑ {{% twitter 1230116459562430466 %}}と書いています。
-何も設定しなくてもacademicにはスクリプトがちゃんと書かれてるっぽいですね。
-        
-      </div>
-    </div>
-  
-
-  
-
+  </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hud3fb04779196eb89622e1c7b7eaa47c4_354302_270x270_fill_lanczos_center_2.PNG" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://kokuyokugetter.github.io/">ゲッタ〜</a></h5>
+      <h6 class="card-subtitle">システムエンジニア</h6>
+      <p class="card-text">プログラミングが好き</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:kokuyokugetter@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/kokuyokugetter" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://qiita.com/kokuyokugetter" target="_blank" rel="noopener">
+        <i class="fas fa-link"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://atcoder.jp/users/kokuyokugetter" target="_blank" rel="noopener">
+        <i class="fas fa-link"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kokuyokugetter" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://odaibako.net/u/kokuyokugetter" target="_blank" rel="noopener">
+        <i class="fas fa-box-open"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="kokuyokugetter/kokuyokugetter.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="photon-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/juno/">ipadで機械学習ができるiOS/iPadOSアプリの「Juno」を買いました。</a></li>
+      
+      <li><a href="/post/dreams/">夢日記(2017/05/19 - 2020/07/16)</a></li>
+      
+      <li><a href="/post/dogma/">ドグマブレードシミュレーターの作者です。真実をお話しします。</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+
+  
+
+</article>
 
       
 

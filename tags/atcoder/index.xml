@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AtCoder | ゲッタ〜のHP</title>
+    <link>https://kokuyokugetter.github.io/tags/atcoder/</link>
+      <atom:link href="https://kokuyokugetter.github.io/tags/atcoder/index.xml" rel="self" type="application/rss+xml" />
+    <description>AtCoder</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 15 Aug 2020 16:24:32 +0900</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>AtCoder</title>
+      <link>https://kokuyokugetter.github.io/tags/atcoder/</link>
+    </image>
+    
+    <item>
+      <title>ABC169のB問題にnumpy.prod()を使うと不正解になった件</title>
+      <link>https://kokuyokugetter.github.io/post/abc169-b/</link>
+      <pubDate>Sat, 15 Aug 2020 16:24:32 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/abc169-b/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;B問題&lt;/strong&gt; &lt;a href=&#34;https://atcoder.jp/contests/abc169/tasks/abc169_b&#34;&gt;https://atcoder.jp/contests/abc169/tasks/abc169_b&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;この問題を読んで、全部掛け算する、sumの掛け算版の関数があれば一発でできると思い、調べるとnumpy.prod()がそれにあたるということで、使ってみたら、WAでした。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WA&lt;/strong&gt; &lt;a href=&#34;https://atcoder.jp/contests/abc169/submissions/15692265&#34;&gt;https://atcoder.jp/contests/abc169/submissions/15692265&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;で、普通にfor文で掛け算してAC。大きい数の掛け算は遅くなるそうなので、範囲超えたらすぐbreakするようにしています。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AC&lt;/strong&gt; &lt;a href=&#34;https://atcoder.jp/contests/abc169/submissions/15692483&#34;&gt;https://atcoder.jp/contests/abc169/submissions/15692483&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;numpy.prodについて調査した。&lt;/p&gt;
+&lt;br&gt;
+&lt;script src=&#34;https://gist.github.com/kokuyokugetter/0b3718a7b0bd0adf8f3c0f6f6e483b9e.js&#34;&gt;&lt;/script&gt;
+&lt;br&gt;
+&lt;p&gt;最後の2セルを比較すると、1~20までの総積までは同じで、21からnumpy.prod()がズレているのが分かる。&lt;/p&gt;
+&lt;p&gt;numpyはC言語やfortranで実装されているそうなので、64bitの整数の符号ありの最大値9223372036854775807 を 1~20の総積2432902008176640000 で割った値が約3.8であるので、21以降でズレるというのは違和感がない。&lt;/p&gt;
+&lt;p&gt;その後1~20の総積に4を掛けてもズレたので、最大値が9223372036854775807というのもおそらく正しい。&lt;/p&gt;
+&lt;p&gt;bitがどう変化して負になったりするのか調べたらもっと確実なことが言えそうですが、競プロ的には総積はpythonの組み込みだけで真面目にやりましょうって感じで終わりです。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
