@@ -34,12 +34,17 @@
 &lt;a href=&#34;https://yolo-kiyoshi.com/2020/06/11/post-1903/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Streamlitで確率分布のシミュレーションアプリを作ってみた&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
+&lt;br&gt;
 &lt;h2 id=&#34;できたもの&#34;&gt;できたもの&lt;/h2&gt;
 &lt;script src=&#34;https://gist.github.com/kokuyokugetter/1a7ec1243f469be03fa4574c05bf5018.js&#34;&gt;&lt;/script&gt;
 &lt;p&gt;↑ブログのダークテーマとめちゃくちゃ相性悪くて草&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;色々試しながら書いてたのを消すのもアレだったので、試行錯誤の部分や参考サイトのコードがそのまま載っていたりしますが、コメント部分（特に前半）は気にしないでください。&lt;/p&gt;
 &lt;br&gt;
+&lt;p&gt;文字が「和の平均値」って意味不明になっています（今気づいた）が、これは最初は和だったのを平均値に変えた名残です。&lt;/p&gt;
+&lt;p&gt;numpy.histogramとstreamlit.barchartで最初やってたら、グラフがめちゃくちゃになったのでやめたのもソースから伺えます。&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;整数値を取り扱うとnumpyで厳密性が損なわれるのだろうか？&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;動いてるところを動画にしました。&lt;/p&gt;
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/WFV-cBQARbQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -47,9 +52,16 @@
 &lt;p&gt;サイコロをいくつか振った時の平均値のグラフがサイコロの数を増やすと正規分布に近くという
 &lt;a href=&#34;https://ja.wikipedia.org/wiki/%E4%B8%AD%E5%BF%83%E6%A5%B5%E9%99%90%E5%AE%9A%E7%90%86&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;中心極限定理&lt;/a&gt;のデモアプリです。&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;文字が「和の平均値」って意味不明になっています（今気づいた）が、これは最初は和だったのを平均値に変えた名残です。&lt;/p&gt;
-&lt;p&gt;numpy.histogramとstreamlit.barchartで最初やってたら、グラフがめちゃくちゃになったのでやめたのもソースから伺えます。&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;整数値を取り扱うとnumpyで厳密性が損なわれるのだろうか？&lt;/del&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;このアプリを試したい方へ&#34;&gt;このアプリを試したい方へ&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://gist.github.com/kokuyokugetter/1a7ec1243f469be03fa4574c05bf5018&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gist&lt;/a&gt;でソースコードを公開しているので、Streamlitをインストールすれば誰でも手元で実行できます。&lt;/p&gt;
+&lt;p&gt;インストール方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;pip streamlit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;実行方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;streamlit run https://gist.githubusercontent.com/kokuyokugetter/1a7ec1243f469be03fa4574c05bf5018/raw/a49ca69a2f33a9945602caddd607898e2bf0b0ac/clt_demo_dice.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;要するに&lt;code&gt;streamlit run&lt;/code&gt; の後にソースコードを食わせれば良いっぽいです。gistは上げたコードのRawデータのページを呼び出せるので、そのリンクから実行可能です。&lt;/p&gt;
+&lt;br&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 &lt;p&gt;変数をスライダーで変えながらグラフに描画できるので、jupyterとかでいちいち変数の値を変えて再度実行とするより効果的な場面は出てきそうです。&lt;/p&gt;
