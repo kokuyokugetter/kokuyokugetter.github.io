@@ -5,12 +5,90 @@
     <link>https://kokuyokugetter.github.io/post/</link>
       <atom:link href="https://kokuyokugetter.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 28 Sep 2020 20:39:59 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 17 Oct 2020 20:58:10 +0900</lastBuildDate>
     <image>
       <url>https://kokuyokugetter.github.io/post/featured.png</url>
       <title>Posts</title>
       <link>https://kokuyokugetter.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>人工パーセプトロンの実装をpythonでやってみた</title>
+      <link>https://kokuyokugetter.github.io/post/perceptron/</link>
+      <pubDate>Sat, 17 Oct 2020 20:58:10 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/perceptron/</guid>
+      <description>&lt;p&gt;数式も込みでJupiter notebookを上手く表示させる方法がよく分からないので(調べたら出てきたが、ステップ関数のような式を表示できなかったので)、gistをそのまま表示します。&lt;/p&gt;
+&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/4295003379/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4295003379&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      [第2版]Python 機械学習プログラミング 達人データサイエンティストによる理論と実践 (impress top gear)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;↑ちょっとデータを変えて色々遊んでいますが、基本的にはこの本の2章をそのままやっただけです。&lt;/p&gt;
+&lt;script src=&#34;https://gist.github.com/kokuyokugetter/01b7f66540c0103e987bab246df3b51f.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;次はADALINEをやります。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>2020年9月に買ったもの</title>

@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kokuyokugetter.github.io/post/202009buy/</loc>
-    <lastmod>2020-09-28T22:15:59+09:00</lastmod>
+    <loc>https://kokuyokugetter.github.io/categories/</loc>
+    <lastmod>2020-10-17T20:58:10+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kokuyokugetter.github.io/categories/</loc>
+    <loc>https://kokuyokugetter.github.io/tags/machine-learning/</loc>
+    <lastmod>2020-10-17T20:58:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/post/</loc>
+    <lastmod>2020-10-17T20:58:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/tags/python/</loc>
+    <lastmod>2020-10-17T20:58:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/tags/</loc>
+    <lastmod>2020-10-17T20:58:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/categories/tech/</loc>
+    <lastmod>2020-10-17T20:58:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/</loc>
+    <lastmod>2020-10-17T20:58:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/post/perceptron/</loc>
+    <lastmod>2020-10-17T20:58:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/post/202009buy/</loc>
     <lastmod>2020-09-28T22:15:59+09:00</lastmod>
   </url>
   
@@ -23,28 +58,8 @@
   </url>
   
   <url>
-    <loc>https://kokuyokugetter.github.io/post/</loc>
-    <lastmod>2020-09-28T22:15:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/tags/</loc>
-    <lastmod>2020-09-28T22:15:59+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/</loc>
-    <lastmod>2020-09-28T22:15:59+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kokuyokugetter.github.io/post/desk_chair/</loc>
     <lastmod>2020-09-06T23:07:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/tags/python/</loc>
-    <lastmod>2020-09-02T20:13:28+09:00</lastmod>
   </url>
   
   <url>
@@ -54,11 +69,6 @@
   
   <url>
     <loc>https://kokuyokugetter.github.io/tags/statistics/</loc>
-    <lastmod>2020-09-02T20:13:28+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/categories/tech/</loc>
     <lastmod>2020-09-02T20:13:28+09:00</lastmod>
   </url>
   
@@ -94,11 +104,6 @@
   
   <url>
     <loc>https://kokuyokugetter.github.io/post/juno/</loc>
-    <lastmod>2020-08-10T00:09:12+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/tags/machine-learning/</loc>
     <lastmod>2020-08-10T00:09:12+09:00</lastmod>
   </url>
   
