@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python | ゲッタ〜のHP</title>
+    <title>python | ゲッタ〜のHP</title>
     <link>https://kokuyokugetter.github.io/tags/python/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <description>Python</description>
+    <description>python</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 23 Oct 2020 00:18:58 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Python</title>
+      <title>python</title>
       <link>https://kokuyokugetter.github.io/tags/python/</link>
     </image>
     
@@ -430,6 +430,8 @@ plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
 &lt;p&gt;今までは他のアルゴリズムもブラックボックスのまま使っていたので、中身を知ることができたのは良かった。&lt;/p&gt;
 &lt;p&gt;サイゼミに向けて多層パーセプトロンとニューラルネットの話を見たいのでこの本は一旦12章まで飛んで、読んでいく。
 多分実装は間に合わないので、読むまでにとどめる。&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://gist.github.com/kokuyokugetter/284033769cf749aa94c6a5cdbf386135&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gist&lt;/a&gt;にnotebookを置いています。&lt;/p&gt;
 </description>
     </item>
     
