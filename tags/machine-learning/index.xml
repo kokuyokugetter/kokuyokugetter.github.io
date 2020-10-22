@@ -5,12 +5,433 @@
     <link>https://kokuyokugetter.github.io/tags/machine-learning/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>machine-learning</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 17 Oct 2020 20:58:10 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 23 Oct 2020 00:18:58 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>machine-learning</title>
       <link>https://kokuyokugetter.github.io/tags/machine-learning/</link>
     </image>
+    
+    <item>
+      <title>ADALINEの実装をPythonでやってみた</title>
+      <link>https://kokuyokugetter.github.io/post/adaline/</link>
+      <pubDate>Fri, 23 Oct 2020 00:18:58 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/adaline/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://kokuyokugetter.github.io/post/perceptron/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;前回&lt;/a&gt;の続き&lt;/p&gt;
+&lt;h2 id=&#34;24-adalineと学習の収束&#34;&gt;2.4 ADALINEと学習の収束&lt;/h2&gt;
+&lt;p&gt;前のパーセプトロンとの違いは、
+重みの更新に単位ステップ関数ではなく、線形活性化関数を用いる点&lt;/p&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1s7ZPo6EiL4OqunQdZVMSSNsM06bK0kCL&#34; width=&#34;80%&#34; alt=&#34;fig1&#34;&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;25-勾配降下法によるコスト関数の最小化&#34;&gt;2.5 勾配降下法によるコスト関数の最小化&lt;/h2&gt;
+&lt;p&gt;$$ J(\mathbf{w}) = \frac{1}{2} \sum_{i} (y^{(i)} - \phi (z^{(i)}))^2 $$&lt;/p&gt;
+&lt;p&gt;コスト関数の極小値になるように学習を進めることで、学習を収束させることができる。&lt;/p&gt;
+&lt;p&gt;ADALINEは微分可能な活性化関数を用いることと、コスト関数に誤差平方和を使い凸関数にすることで、勾配降下法を用いてコスト関数を最小化する重みを見つけることができる。&lt;/p&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1rTqh6KAFAhloWcX2zJB-IS01n90v65DG&#34; width=&#34;80%&#34; alt=&#34;fig2&#34;&gt;
+&lt;p&gt;勾配降下法の原理を図にしたもの&lt;/p&gt;
+&lt;p&gt;勾配降下法を使って重みを更新するには、コスト関数 $ J(\mathbf{w}) $ の勾配 $ \nabla J(\mathbf{w}) $ に沿って逆方向に1ステップ進む&lt;/p&gt;
+&lt;p&gt;$$ \mathbf{w} := \mathbf{w} + \Delta \mathbf{w} $$&lt;/p&gt;
+&lt;p&gt;$$ \Delta \mathbf{w} = - \eta \nabla J(\mathbf{w}) $$&lt;/p&gt;
+&lt;p&gt;$$ \frac{\partial J}{\partial w_j} = - \sum_i (y^{(i)} - \phi (z^{(i)})) x_j^{(i)}  $$&lt;/p&gt;
+&lt;p&gt;なので&lt;/p&gt;
+&lt;p&gt;$$ \Delta w_j = - \eta \frac{\partial J}{\partial w_j} = \eta \sum_i (y^{(i)} - \phi (z^{(i)})) x_j^{(i)} $$&lt;/p&gt;
+&lt;h3 id=&#34;251-adalineをpythonで実装する&#34;&gt;2.5.1 ADALINEをPythonで実装する&lt;/h3&gt;
+&lt;p&gt;ADALINEの学習規則はパーセプトロンに良く似ている。以下で実装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AdalineGD&lt;/span&gt;(object):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ADAptive LInear NEuron 分類器&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    パラメータ&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    -----------&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    eta : float&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        学習率(0.0より大きく1.0以下の値)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    n_iter : int&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        トレーニングデータのトレーニング回数&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    random_state : int&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        重み初期化用乱数シード&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    属性&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    -----------&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    w_ : 1次元配列&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        適合後の重み&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    cost_ : リスト &amp;lt;- error_がcost_に変化&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        各エポックでの誤差平方和のコスト関数&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __init__(self, eta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt;, n_iter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, random_state&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;):
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;eta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; eta
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;n_iter &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n_iter
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random_state &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; random_state
+        
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fit&lt;/span&gt;(self, X, y):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;トレーニングデータに適合される&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        パラメータ&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        ------------&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        X : {配列のようなデータ構造}, shape = [n_samples, n_features]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            トレーニングデータ&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            n_samplesはサンプルの個数, n_featuresは特徴量の個数&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        y : 配列のようなデータ構造, shape = [n_samples]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            目的変数&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        戻り値&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        ------------&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        self : object&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        rgen &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;RandomState(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random_state)
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rgen&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;normal(loc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;, scale&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt;, size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; X&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; _ &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;n_iter): &lt;span style=&#34;color:#75715e&#34;&gt;# トレーニング回数分トレーニングデータを反復&lt;/span&gt;
+            net_input &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;net_input(X) &lt;span style=&#34;color:#75715e&#34;&gt;# パーセプトロンの実装のようにサンプルごとにループしなくても良い（なんでパーセプトロンではサンプルごとにループ回してたのかよくわからん）&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;# activationメソッドは単なる恒等関数であるため、&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;# このコードでは何の効果もない。単なる活性化関数の概念として実装。&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;# ロジスティック回帰の実装の場合はシグモイド関数に変更するだけで良いらしい。&lt;/span&gt;
+            output &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;activation(net_input)
+            &lt;span style=&#34;color:#75715e&#34;&gt;# 誤差 y^(i) - φ(z^(i)) の計算&lt;/span&gt;
+            errors &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; output
+            &lt;span style=&#34;color:#75715e&#34;&gt;# 重み w_1, ..., w_m の更新&lt;/span&gt;
+            self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;eta &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; X&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dot(errors)
+            &lt;span style=&#34;color:#75715e&#34;&gt;# 重み w_0 の更新&lt;/span&gt;
+            self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;eta &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; errors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum()
+            &lt;span style=&#34;color:#75715e&#34;&gt;# コスト関数の計算&lt;/span&gt;
+            cost &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (errors &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum() &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;# コストの格納&lt;/span&gt;
+            self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(cost)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; self
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;net_input&lt;/span&gt;(self, X):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;総入力を計算&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dot(X, self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# xiでループしなくとも良い&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;activation&lt;/span&gt;(self, X):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;線形活性化関数の出力を計算&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; X
+    
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;predict&lt;/span&gt;(self, X):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;1ステップ後のクラスラベルを返す&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;where(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;activation(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;net_input(X)) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;パーセプトロンの時のうまく分類できたデータで試す。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn.datasets &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; load_iris
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+iris &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; load_iris()
+df &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(iris&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;data, columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;iris&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;feature_names)
+df[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; iris&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;target
+df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;query(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;target != 1&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy() &lt;span style=&#34;color:#75715e&#34;&gt;# label 1を除外&lt;/span&gt;
+df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# ラベルを1と-1に揃える&lt;/span&gt;
+X &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;petal width (cm)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sepal width (cm)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;]]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;values
+Y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;values
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; plt
+fig, ax &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;subplots(nrows&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, ncols&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;, figsize&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;))
+
+ada1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AdalineGD(n_iter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, eta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X, Y)
+ax[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, len(ada1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_)&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;log10(ada1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_), marker&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;o&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+ax[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Epochs&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+ax[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;log(Sum-squared-error)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+ax[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_title(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Adaline - Learning rate 0.01&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+
+ada2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AdalineGD(n_iter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, eta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.0001&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X, Y)
+ax[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, len(ada2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_)&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), ada2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_, marker&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;o&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+ax[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Epochs&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+ax[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Sum-squared-error&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+ax[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_title(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Adaline - Learning rate 0.0001&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Text(0.5, 1.0, &#39;Adaline - Learning rate 0.0001&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;output_5_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;←は学習率0.01の場合のエポック数に対しての誤差平方和のlogをとったもの、 →は0.0001の時のエポック数に対しての誤差平方和&lt;/p&gt;
+&lt;p&gt;ηをうまく選択しないと、うまく収束しないことがわかる。&lt;/p&gt;
+&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1Dh-OctXkzWwoxTsYcAL45wBBU8ngUUa0&#34; width=&#34;50%&#34; alt=&#34;fig3&#34;&gt;
+&lt;p&gt;学習率が大きいと、図のように極小値を目指すが極小値を飛び超えて対岸に登ってしまう。&lt;/p&gt;
+&lt;h3 id=&#34;252-特徴量のスケーリングを通じて勾配降下法を改善する&#34;&gt;2.5.2 特徴量のスケーリングを通じて勾配降下法を改善する&lt;/h3&gt;
+&lt;p&gt;機械学習アルゴリズムの最適なパフォーマンスのために特徴量のスケーリングを行う。&lt;/p&gt;
+&lt;p&gt;今回は標準化 $ \mathbf{x}&#39;_j = \frac{\mathbf{x}_j - \mu_j}{\sigma_j} $&lt;/p&gt;
+&lt;p&gt;これによりデータに標準正規分布の特性を与え、学習を素早く収束させる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 標準化&lt;/span&gt;
+X_std &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy(X)
+X_std[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean()) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;std()
+X_std[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mean()) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;std()
+
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; preprocessing
+ss &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; preprocessing&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;StandardScaler()
+X_std2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ss&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit_transform(X)
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(X_std[:&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;])
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(X_std2[:&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;]) &lt;span style=&#34;color:#75715e&#34;&gt;# 同じ&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[[-1.02461719  0.71907625]
+ [-1.02461719 -0.4833924 ]
+ [-1.02461719 -0.00240494]]
+[[-1.02461719  0.71907625]
+ [-1.02461719 -0.4833924 ]
+ [-1.02461719 -0.00240494]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 前に実装した境界プロットの関数&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; matplotlib.colors &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; ListedColormap
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;plot_decision_regions&lt;/span&gt;(X, y, classifier, resolution&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.02&lt;/span&gt;):
+    
+    &lt;span style=&#34;color:#75715e&#34;&gt;# マーカーとカラーマップの準備&lt;/span&gt;
+    markers &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;s&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;o&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;^&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;v&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+    colors &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;red&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;blue&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;lightgreen&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;gray&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;cyan&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+    cmap &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ListedColormap(colors[:len(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unique(y))])
+    
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 決定領域のプロット&lt;/span&gt;
+    x1_min, x1_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;min() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;max() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+    x2_min, x2_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;min() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, X[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;max() &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;# グリッドポイントの生成&lt;/span&gt;
+    xx1, xx2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;meshgrid(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;arange(x1_min, x1_max, resolution),
+                           np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;arange(x2_min, x2_max, resolution))
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 各特徴量を1次元配列に変換して予測を実行&lt;/span&gt;
+    Z &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; classifier&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;predict(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;array([xx1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ravel(), xx2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ravel()])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T)
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 予測結果を元のグリッドポイントのデータサイズに変換&lt;/span&gt;
+    Z &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Z&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reshape(xx1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape)
+    &lt;span style=&#34;color:#75715e&#34;&gt;# グリッドポイントの等高線のプロット&lt;/span&gt;
+    plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;contourf(xx1, xx2, Z, alpha&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;, cmap&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;cmap)
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 軸の範囲の設定&lt;/span&gt;
+    plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlim(xx1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;min(), xx1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;max())
+    plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ylim(xx2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;min(), xx2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;max())
+    
+    &lt;span style=&#34;color:#75715e&#34;&gt;# クラスごとにサンプルをプロット&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; idx, cl &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; enumerate(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;unique(y)):
+        plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;scatter(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;X[y &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; cl, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;],
+                    y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;X[y &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; cl, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
+                    alpha&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.8&lt;/span&gt;,
+                    c&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;colors[idx],
+                    marker&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;markers[idx],
+                    label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;cl,
+                    edgecolor&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;black&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;ada &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AdalineGD(n_iter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;, eta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt;)
+ada&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X_std, Y)
+
+plot_decision_regions(X_std, Y, classifier&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ada)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;title(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Adaline - Gradient Descent&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;petal width [standardized]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sepal width [standardized]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;legend(loc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;upper left&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tight_layout()
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, len(ada&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), ada&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_, marker&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;o&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Epochs&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Sum-squared-error&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tight_layout()
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;output_9_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;output_9_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;収束し、分類の境界がしっかり引けているのがわかる。&lt;/p&gt;
+&lt;p&gt;同じ学習率で先ほどうまく収束していなかったことからも、標準化の効果が出ていることも確認可能。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;ada1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AdalineGD(n_iter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;, eta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt;)
+ada1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X, Y)
+
+plot_decision_regions(X, Y, classifier&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ada1)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;title(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Adaline - Gradient Descent&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;petal width [standardized]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sepal width [standardized]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;legend(loc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;upper left&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tight_layout()
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, len(ada1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), ada1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_, marker&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;o&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Epochs&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Sum-squared-error&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tight_layout()
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;output_11_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;output_11_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;↑標準化してないデータでやってみてもやっぱりダメでした。&lt;/p&gt;
+&lt;p&gt;あとは、前回分類できてなかったデータでやってみる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; plt
+df3 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;query(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;target != 0&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy() &lt;span style=&#34;color:#75715e&#34;&gt;# label 0を除外&lt;/span&gt;
+y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df3&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;values
+y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;where(y &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# label 1を-1に、その他（label 2）を1にする&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# plt.scatter(df3.iloc[:50, 1], df3.iloc[:50, 0], color=&amp;#39;orange&amp;#39;, marker=&amp;#39;o&amp;#39;, label=&amp;#39;versicolor&amp;#39;)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# plt.scatter(df3.iloc[50:, 1], df3.iloc[50:, 0], color=&amp;#39;green&amp;#39;, marker=&amp;#39;o&amp;#39;, label=&amp;#39;virginica&amp;#39;)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# plt.xlabel(&amp;#39;sepal width [cm]&amp;#39;)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# plt.ylabel(&amp;#39;sepal length [cm]&amp;#39;)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# plt.legend(loc=&amp;#39;upper left&amp;#39;)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# plt.show()&lt;/span&gt;
+
+X2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df3[[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sepal width (cm)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sepal length (cm)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;]]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;values
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sklearn &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; preprocessing
+sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; preprocessing&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;StandardScaler()
+X2_std &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit_transform(X2)
+
+ada2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AdalineGD(n_iter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;, eta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt;)
+ada2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X2_std, y)
+
+plot_decision_regions(X2_std, y, classifier&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ada2)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;title(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Adaline - Gradient Descent&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sepal width [standardized]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sepal length [standardized]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;legend(loc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;upper left&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tight_layout()
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, len(ada2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), ada2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_, marker&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;o&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Epochs&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Sum-squared-error&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tight_layout()
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;output_13_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;output_13_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;線形で完全に分離できることは当然ないが、妥当な位置に境界を引けているので、コストの極小値に収束したのだろう。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;26-大規模な機械学習と確率的勾配降下法&#34;&gt;2.6 大規模な機械学習と確率的勾配降下法&lt;/h2&gt;
+&lt;p&gt;データ数が多いとここまでの方法（バッチ勾配降下法）は計算コストが高くなる。&lt;/p&gt;
+&lt;p&gt;→確率的勾配降下法を使う&lt;/p&gt;
+&lt;p&gt;$$ \Delta \mathbf{w} = \eta \sum_i (y^{(i)} - \phi (z^{(i)})) \mathbf{x}^{(i)} $$&lt;/p&gt;
+&lt;p&gt;でなく、サンプルごとに段階的に重みを更新する&lt;/p&gt;
+&lt;p&gt;$$ \eta (y^{(i)} - \phi (z^{(i)})) \mathbf{x}^{(i)} $$&lt;/p&gt;
+&lt;p&gt;サンプルはランダムな順序に並び替えることが重要。
+この方法のメリットは、高速に収束すること、浅い極小値を簡単に抜け出せること（誤差曲面のノイズが多い）、オンライン学習に利用できること。&lt;/p&gt;
+&lt;p&gt;オンライン学習…新しいトレーニングデータが届いたときに、その場でトレーニングしモデルを更新する。素早く変化に適応できる。&lt;/p&gt;
+&lt;p&gt;以下で確率的勾配降下法を用いてADALINEを実装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; numpy.random &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; seed
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AdalineSGD&lt;/span&gt;(object):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ADAptive LInear NEuron 分類器&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    パラメータ&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    -----------&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    eta : float&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        学習率(0.0より大きく1.0以下の値)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    n_iter : int&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        トレーニングデータのトレーニング回数&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    shuffle : bool (デフォルトTrue)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        Trueの場合は循環を回避するためにエポックごとにトレーニングデータをシャッフル&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    random_state : int&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        重み初期化用乱数シード&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    属性&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    -----------&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    w_ : 1次元配列&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        適合後の重み&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    cost_ : リスト&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        各エポックで全てのトレーニングサンプルの平均を求める誤差平方和コスト関数&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __init__(self, eta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt;, n_iter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, shuffle&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, random_state&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None):
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;eta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; eta
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;n_iter &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n_iter
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_initialized &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; False &lt;span style=&#34;color:#75715e&#34;&gt;# 重みの初期化フラグ&lt;/span&gt;
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shuffle &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; shuffle
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random_state &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; random_state
+        
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fit&lt;/span&gt;(self, X, y):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;トレーニングデータに適合される&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        パラメータ&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        ------------&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        X : {配列のようなデータ構造}, shape = [n_samples, n_features]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            トレーニングデータ&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            n_samplesはサンプルの個数, n_featuresは特徴量の個数&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        y : 配列のようなデータ構造, shape = [n_samples]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            目的変数&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        戻り値&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        ------------&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        self : object&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;# 重みベクトルの生成&lt;/span&gt;
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_initialize_weights(X&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+        &lt;span style=&#34;color:#75715e&#34;&gt;# トレーニング回数分反復&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;n_iter):
+            &lt;span style=&#34;color:#75715e&#34;&gt;# 指定された場合はトレーニングデータをシャッフル&lt;/span&gt;
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shuffle:
+                X, y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_shuffle(X, y)
+            &lt;span style=&#34;color:#75715e&#34;&gt;# 各サンプルのコストを格納するリストの生成&lt;/span&gt;
+            cost &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+            &lt;span style=&#34;color:#75715e&#34;&gt;# 各サンプルに対する計算&lt;/span&gt;
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; xi, target &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; zip(X, y):
+                &lt;span style=&#34;color:#75715e&#34;&gt;# 特徴量xiと目的変数yを用いた重みの更新とコストの計算&lt;/span&gt;
+                cost&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_update_weights(xi, target))
+            &lt;span style=&#34;color:#75715e&#34;&gt;# サンプルの平均コストの計算&lt;/span&gt;
+            avg_cost &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sum(cost)&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;len(y)
+            &lt;span style=&#34;color:#75715e&#34;&gt;# 平均コストの格納&lt;/span&gt;
+            self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(avg_cost)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; self
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;partial_fit&lt;/span&gt;(self, X, y):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;重みを再初期化することなくトレーニングデータに適合させる&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;# 初期化されていない場合は初期化を実行&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_initialized:
+            self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_initialize_weights(X&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])
+        &lt;span style=&#34;color:#75715e&#34;&gt;# 目的変数yの要素数が2以上の場合は&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;# 各サンプルの特徴量xiとtargetで重みを更新&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; y&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ravel()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;shape[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; xi, target &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; zip(X, y):
+                self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_update_weights(xi, target)
+        &lt;span style=&#34;color:#75715e&#34;&gt;# 目的変数yの要素数が1の場合は&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;# サンプル全体の特徴量Xと目的変数yで重みを更新&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;_update_weights(X, y)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; self
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_shuffle&lt;/span&gt;(self, X, y):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;トレーニングデータをシャッフル&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rgen&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;permutation(len(y))
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; X[r], y[r] &lt;span style=&#34;color:#75715e&#34;&gt;# インデックスに配列を渡すことでシャッフルを実現できる&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_initialize_weights&lt;/span&gt;(self, m):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;重みを小さな乱数に初期化&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rgen &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;RandomState(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random_state)
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_ &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rgen&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;normal(loc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;, scale&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt;, size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; m)
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_initialized &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True
+        
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;_update_weights&lt;/span&gt;(self, xi, target):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ADALINEの学習規則を用いて重みを更新&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;# 活性化関数の出力の計算&lt;/span&gt;
+        output &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;activation(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;net_input(xi))
+        &lt;span style=&#34;color:#75715e&#34;&gt;# 誤差の計算&lt;/span&gt;
+        error &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; target &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; output
+        &lt;span style=&#34;color:#75715e&#34;&gt;# 重みの更新&lt;/span&gt;
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;eta &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; xi&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dot(error)
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;eta &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; error
+        &lt;span style=&#34;color:#75715e&#34;&gt;# コストの計算&lt;/span&gt;
+        cost &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; error&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; cost
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;net_input&lt;/span&gt;(self, X):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;総入力を計算&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dot(X, self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;w_[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;activation&lt;/span&gt;(self, X):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;線形活性化関数の出力を計算&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; X
+    
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;predict&lt;/span&gt;(self, X):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;1ステップ後のクラスラベルを返す&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;where(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;activation(self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;net_input(X)) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;ada &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AdalineSGD(n_iter&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;, eta&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.01&lt;/span&gt;, random_state&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+ada&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fit(X_std, y)
+plot_decision_regions(X_std, y, classifier&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ada)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;title(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Adaline - Stochastic Gradient Descent&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;petal width [standardized]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;sepal width [standardized]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;legend(loc&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;upper left&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tight_layout()
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, len(ada&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;), ada&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cost_, marker&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;o&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;xlabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Epochs&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ylabel(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Average Cost&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;output_17_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;output_17_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;すぐに平均コストが減少している。境界はバッチ勾配降下法と同じ。&lt;/p&gt;
+&lt;p&gt;オンライン学習の場合はpartial_fitを呼び出すと更新ができる。&lt;/p&gt;
+&lt;p&gt;パーセプトロンとADALINEを学んで、かなり理解が深まったので、今後他の機械学習アルゴリズムはこの応用で理解がしやすくなると思う。&lt;/p&gt;
+&lt;p&gt;今までは他のアルゴリズムもブラックボックスのまま使っていたので、中身を知ることができたのは良かった。&lt;/p&gt;
+&lt;p&gt;サイゼミに向けて多層パーセプトロンとニューラルネットの話を見たいのでこの本は一旦12章まで飛んで、読んでいく。
+多分実装は間に合わないので、読むまでにとどめる。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>人工パーセプトロンの実装をpythonでやってみた</title>

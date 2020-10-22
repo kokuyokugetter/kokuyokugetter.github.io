@@ -5,7 +5,7 @@
     <link>https://kokuyokugetter.github.io/tags/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 17 Oct 2020 20:58:10 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 23 Oct 2020 00:18:58 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
@@ -15,15 +15,15 @@
     <item>
       <title>machine-learning</title>
       <link>https://kokuyokugetter.github.io/tags/machine-learning/</link>
-      <pubDate>Sat, 17 Oct 2020 20:58:10 +0900</pubDate>
+      <pubDate>Fri, 23 Oct 2020 00:18:58 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>https://kokuyokugetter.github.io/tags/python/</link>
-      <pubDate>Sat, 17 Oct 2020 20:58:10 +0900</pubDate>
+      <pubDate>Fri, 23 Oct 2020 00:18:58 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/tags/python/</guid>
       <description></description>
     </item>
@@ -141,7 +141,7 @@
     </item>
     
     <item>
-      <title>twitter</title>
+      <title>Twitter</title>
       <link>https://kokuyokugetter.github.io/tags/twitter/</link>
       <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/tags/twitter/</guid>
