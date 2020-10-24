@@ -5,12 +5,96 @@
     <link>https://kokuyokugetter.github.io/</link>
       <atom:link href="https://kokuyokugetter.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>ゲッタ〜のHP</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 23 Oct 2020 00:18:58 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 25 Oct 2020 00:00:41 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>ゲッタ〜のHP</title>
       <link>https://kokuyokugetter.github.io/</link>
     </image>
+    
+    <item>
+      <title>AppleWatchSEを買って1ヶ月経ったのでレビュー</title>
+      <link>https://kokuyokugetter.github.io/post/applewatchse/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:41 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/applewatchse/</guid>
+      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#よかった点&#34;&gt;よかった点&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#悪かった点&#34;&gt;悪かった点&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#まとめ&#34;&gt;まとめ&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p&gt;Apple Watch SE(+ Series 6)の発表と注文開始が9月16日で、9月24日に届きました。&lt;/p&gt;
+&lt;p&gt;大体1ヶ月くらい使用したので、ガジェットブロガーとしても感想を書きます。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;よかった点&#34;&gt;よかった点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Apple Watch Series 3(以下S3)を既に持っていたのですが、速度が段違いに早い。
+&lt;ul&gt;
+&lt;li&gt;S3は通知もちょっともっさりしてたり、Siriが一生反応しなかったりしてたけど、そういったことはSEでは起こってません。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;容量に余裕あり
+&lt;ul&gt;
+&lt;li&gt;これまたS3との比較ですが、S3は元々8GBのストレージで、特にアプリケーション増やしたつもりはないのですが、もうアップデートできないくらい容量がなくて（なんで？）、SEは32GBあるので録音系のアプリを使ったとしても安心な容量です。容量が増してる分高いというわけでもなく、S3は2018年5月に買ったのですが、その時のS3よりSEの方が安いです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;画面が広い
+&lt;ul&gt;
+&lt;li&gt;S3の小さいサイズからSEの小さいサイズへ変わり、ベゼルも細くなったこともあり、かなり画面が広くタップミスも発生しにくくなりました。腕が細いこともあって見た目のサイズ的にも、かなりちょうどいいなという感じです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;睡眠トラッキング
+&lt;ul&gt;
+&lt;li&gt;S3との2台持ちになったことで常にApple Watchを着けることができるようになりました。運動状況や座りっぱなしの警告が通知されたり（アクティビティ）、心拍数の測定、睡眠トラッキングなどのヘルスケア系アプリをフルに利用できるようになりました。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;もしもの時の機能
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://support.apple.com/ja-jp/HT208944&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Apple Watch で転倒検出機能を使う - Apple サポート&lt;/a&gt; にある通り、意識失ったりすると自動で通報してくれる。若いので起こらないとは思いますが、追加課金なしで保険に入っているのは気持ちが良い。あと、異常脈拍も通知してくれるそうです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ソロループが柔らかい
+&lt;ul&gt;
+&lt;li&gt;バンドが柔らかいので、つけ心地が良く、手首に力が入るような場面でも邪魔にならない。置くタイプの充電器で斜めに置いても全く問題なく充電できる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;悪かった点&#34;&gt;悪かった点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2台持ちの弊害
+&lt;ul&gt;
+&lt;li&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Apple Watch2台を毎日交互に着ける弊害のSuica持ち忘れるがついに起こってしまった。気にはしてたんだがなー&lt;/p&gt;&amp;mdash; ゲッタ〰︎ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1314171577647259649?ref_src=twsrc%5Etfw&#34;&gt;October 8, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;一応これ以降は家ではS3、外ではSEみたいな運用で回避するようにしています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Macのロック解除に使えない！？
+&lt;ul&gt;
+&lt;li&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;» Apple WatchでMacのロック解除ができない？Appleサポートに複数報告 - iPhone Mania &lt;a href=&#34;https://t.co/OcrnxavkZA&#34;&gt;https://t.co/OcrnxavkZA&lt;/a&gt; &lt;br&gt;&lt;br&gt;Apple WatchSEが設定できないのコレか？&lt;/p&gt;&amp;mdash; ゲッタ〰︎ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1308928484895383552?ref_src=twsrc%5Etfw&#34;&gt;September 24, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;どっちみちS3がストレージ詰んでたからSEの購入は必然だった。&lt;/li&gt;
+&lt;li&gt;S6より安いし、S6のみで使える血中酸素濃度や常時点灯とか全く要らないのでSEで良い。&lt;/li&gt;
+&lt;li&gt;よかった点を色々書いたが、結局メインで使う機能はApple Payと通知なのでストレージ等に問題がないのであればS3のままでも別に問題はない。&lt;/li&gt;
+&lt;li&gt;Macのロック解除できないのはなかなかにマイナスなので早く直してほしい。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>ADALINEの実装をPythonでやってみた</title>
