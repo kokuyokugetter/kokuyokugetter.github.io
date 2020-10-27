@@ -5,12 +5,510 @@
     <link>https://kokuyokugetter.github.io/categories/diary/</link>
       <atom:link href="https://kokuyokugetter.github.io/categories/diary/index.xml" rel="self" type="application/rss+xml" />
     <description>diary</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 25 Oct 2020 00:00:41 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 27 Oct 2020 12:00:00 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>diary</title>
       <link>https://kokuyokugetter.github.io/categories/diary/</link>
     </image>
+    
+    <item>
+      <title>2020年10月に買ったもの</title>
+      <link>https://kokuyokugetter.github.io/post/202010buy/</link>
+      <pubDate>Tue, 27 Oct 2020 12:00:00 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/202010buy/</guid>
+      <description>&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#ガジェット&#34;&gt;ガジェット&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#pc周辺機器&#34;&gt;PC周辺機器&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#ソフトウェア&#34;&gt;ソフトウェア&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#本&#34;&gt;本&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#その他&#34;&gt;その他&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;br&gt;
+&lt;h2 id=&#34;ガジェット&#34;&gt;ガジェット&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.apple.com/jp/ipad-mini/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;iPad mini&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;iPad Proはあるけど、どこでも雑に使える読書用として追加購入。電子書籍（特に技術書）をローカルダウンロードしたり、漫画アプリなどを入れるつもり。漫画はスマホでも問題ないが、技術書をスマホで読むのは文字が小さくて辛かった。Proは重い（作業もできるようにSmart keyboard folioもついてるのでマジで重い）ので横になって読むのには相応しくないし、iPad miniで読みながらProでメモ取るのも可能になったのが良い。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;pc周辺機器&#34;&gt;PC周辺機器&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B07N8PM7N5/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07N8PM7N5&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Anker PowerWave&amp;#43; Pad with Watch Holder（Apple Watch ホルダー付 5W / 7.5W / 10W ワイヤレス急速充電器）【Qi認証取得 / QC 3.0対応急速充電器付属】Apple Watch Series 4 / 3 / 2、 iPhone 11 / 11 Pro / 11 Pro Max / XS / XS Max / XR / X / 8 / 8 Plus　その他Qi対応機種各種対応
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;机の上にiPad、Macbook、Apple Watch、lightningのケーブルが散乱しているので、Apple Watchとlightningくらいはまとめてしまいたいということで購入。Apple Watchは当然として、lightningについてもiPhoneを充電するというよりはAirPodsの充電兼置き場という感じなのでワイヤレス充電でいいだろうという感じ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B009GETF2A/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B009GETF2A&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      BUNKER RING 3 (全5色) バンカーリング iPhone/iPad/iPod/Galaxy/Xperia/スマートフォン・タブレットPCを指1本で保持・落下防止・スタンド(ジェットブラック)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;前述のiPad miniを1週間使っていて、手が小さいこともあって片手で画面を隠さずに持つのは難しいので、空中に保持するためのヘルパーとして購入。剥がして何度も貼れるそうなので、微調整が利きそうなのが嬉しい。その分接着強度は低いかもしれないが、常に手に持って振り回すようなスマホ用ではなく、読書用iPadなので問題ない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B07B9W56GM/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07B9W56GM&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Bauhutte(バウヒュッテ) 昇降式 L字デスク タワー (幅32×奥行67㎝) ブラック BHD-670T-BK
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ゲーミング用品を取り扱う有名メーカーのラック。ゲーミングPCを置くというよりは、デスクの横にちょうどいいサイズの棚が欲しかったので購入。もちろんそのうちゲーミングPCを買うつもりはそれなりにあるので、最下段にはそれを置いたり、中段にモデムやルーターを置いたり、さらなる理想の環境構築を目指していく。組み立て時のドライバー回しが大変すぎた…マメもできた。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B00XXOZDUW/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B00XXOZDUW&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      エレコム 電源タップ 一括&amp;amp;個別スイッチ 省エネ スイングプラグ 6個口 1m ホワイト T-E7A-2610WH
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;昇降デスクに置く電源タップが3mだったけど、昇降するにしても1mあれば足りそうなことが判明したので、クソ邪魔な3mのものと交換する。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B08BG5TN4C/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B08BG5TN4C&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      WORKOOL （2個セット） モニター台 モニタースタンド 机上台 電話台 プリンター台 デスク収納 キーボード収納 高さ調整可能 2個セット …
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;モニター台が欲しくて購入。後々モニターを2台にするつもりなので、2個セット。モニター台が欲しかった理由は、前にノートパソコン等があるとモニターの下半分が隠れるのと、モニターベタ置きだとスペースを食うため。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;ソフトウェア&#34;&gt;ソフトウェア&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://apps.apple.com/jp/app/autosleep-watch%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E7%9D%A1%E7%9C%A0%E3%82%92%E8%87%AA%E5%8B%95%E3%81%A7%E8%BF%BD%E8%B7%A1%E3%81%97%E3%81%BE%E3%81%99/id1164801111&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AutoSleep&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Apple Watch単体で着けていても、睡眠トラッキングがあんまりうまくいってないみたいだったので購入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;本&#34;&gt;本&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b389amcmg00911/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;せっかくチートを貰って異世界に転移したんだから、好きなように生きてみたい THE COMIC 4&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;エロ漫画だと思ってたら普通の漫画みたいになってきて終わった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000ahftx09286/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ナナマル サンバツ(19)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;続き。クイズ漫画です。面白いです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds00155/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;うちの師匠はしっぽがない （4）&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;続き。Twitterでバズってた落語の話です。面白かった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b355gakta04373/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;六道の悪女たち 22&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;続き。オタクがモテモテになる話です。続きが気になる。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b064bcmcm01823/?dmmref=library&amp;amp;i3_ord=4&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;母性天使マザカルカノン 1&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;この作者のTwitterでの漫画好きだから買ったけど、Twitterで貼ってるやつの方が面白いです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds00171/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;レベル1だけどユニークスキルで最強です （5）&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;続き。異世界系。最初は強くなり方がユニークで良かったけど、もう飽きてきたかもしれん。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds00174/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;こいつらの正体が女だと俺だけが知っている （3）&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;続き。学園ラブコメ、内容はタイトルの感じのまま。まあ別に読まなくていいです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b132amggd01736/?dmmref=librarySeries&amp;amp;i3_ord=5&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;女装してめんどくさい事になってるネクラとヤンキーの両片想い 1巻〜2巻&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitterバズ（1年半以上前のツイートだったけど最近見た）。1巻は83％オフだったので購入。普通に続きも買いたいけど、3巻以降割引ないから次のセール待ちになりそう。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b388atabd00328/?dmmref=librarySeries&amp;amp;i3_ord=8&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜 1〜3巻&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜 1 - 男性コミック(漫画) - 無料で試し読み！DMM電子書籍&lt;br&gt;&lt;br&gt;神の漫画やん &lt;a href=&#34;https://t.co/kqOxAkjo9q&#34;&gt;https://t.co/kqOxAkjo9q&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰︎ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1316339410086973440?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b312ahbsy04867/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;妻、小学生になる。 6巻 【紙・電子共通おまけ付き】&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;続き。エロ漫画とかではなく、真面目な話です。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b600ysgk04620/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;葬送のフリーレン （2）&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;続き。Twitterバズで1巻は買ってたけど、この漫画マジでおすすめです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b355gakta04595/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;科学的に存在しうるクリーチャー娘の観察日誌 7&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;これ実はかなり設定作り込んでるし、異世界は科学が発展してない代わりに哲学や倫理で現世より進んでるってのが面白くておすすめです。　&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000ahftx09582/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;とある魔術の禁書目録外伝 とある科学の超電磁砲 （16）&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;続き。中学生の頃から『と禁』の小説は買ってたけど、今ではレールガン以外の『とある』は何も買ってない。レールガンはオリジナリティー高くてキャラみんな可愛くて良いよね。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;回線工事(16000円程度？)
+&lt;ul&gt;
+&lt;li&gt;部屋内で別のコンセントからインターネット回線を取ってこられるように工事を頼んだ。コレによってデスクの隣でSwitchで有線接続したり、ゲーミングPCを買った際も無理なく有線接続ができるようになった。前の位置だと3m程度のLANケーブルを無理やり引っ張る必要があって、かなり汚くなりそうだったので、仕方ない。元々前の位置にしたのは今の部屋配置にする前だったので、タイミングも良くなかった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>AppleWatchSEを買って1ヶ月経ったのでレビュー</title>
