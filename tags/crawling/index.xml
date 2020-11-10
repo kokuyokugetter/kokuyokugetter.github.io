@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>crawling | ゲッタ〜のHP</title>
+    <link>https://kokuyokugetter.github.io/tags/crawling/</link>
+      <atom:link href="https://kokuyokugetter.github.io/tags/crawling/index.xml" rel="self" type="application/rss+xml" />
+    <description>crawling</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 10 Nov 2020 18:00:05 +0900</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>crawling</title>
+      <link>https://kokuyokugetter.github.io/tags/crawling/</link>
+    </image>
+    
+    <item>
+      <title>Python&#43;SeleniumでDMM電子書籍の購入済み書籍の一覧を取得</title>
+      <link>https://kokuyokugetter.github.io/post/dmmbooks/</link>
+      <pubDate>Tue, 10 Nov 2020 18:00:05 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/dmmbooks/</guid>
+      <description>&lt;p&gt;前々から買った本の一覧を見たかったのだが、以前試行錯誤しても全く上手くいかなかったので、&lt;/p&gt;
+&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/4297107384/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4297107384&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Pythonクローリング&amp;amp;スクレイピング[増補改訂版] -データ収集・解析のための実践開発ガイド
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;を読んで勉強して再トライした&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#実際のコードと実行結果&#34;&gt;実際のコードと実行結果&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#参考リンク&#34;&gt;参考リンク&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;実際のコードと実行結果&#34;&gt;実際のコードと実行結果&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; selenium &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; webdriver
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; time
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; dmm_user_pass
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# ユーザー名、パスワードを漏洩しないための簡易的な方法&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# (同ディレクトリのdmm_user_pass.pyを絶対公開しないようにする)&lt;/span&gt;
+USER &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dmm_user_pass&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;USER
+PASS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dmm_user_pass&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;PASS
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# PhantomJSのドライバーを得る&lt;/span&gt;
+browser &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; webdriver&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;PhantomJS()
+browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;implicitly_wait(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# ログインページにアクセス(ログインすると即購入済みページに遷移されるはず)&lt;/span&gt;
+url_login &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;https://accounts.dmm.com/service/login/password&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(url_login)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ログインページにアクセスしました&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# テキストボックスに文字を入力&lt;/span&gt;
+e &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;find_element_by_id(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;login_id&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;clear()
+e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;send_keys(USER)
+e &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;find_element_by_id(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;password&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;clear()
+e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;send_keys(PASS)
+&lt;span style=&#34;color:#75715e&#34;&gt;# フォームを送信&lt;/span&gt;
+browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;find_element_by_xpath(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;//form[@name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;loginForm&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;]//input[@type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;submit&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;click()
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;情報を入力してログインボタンを押しました&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+time&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sleep(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# DMM電子書籍の購入済みページを表示&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# page1からloopで存在しないページになった場合にはurlが自動的に、&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# https://book.dmm.com/library/?age_limit=all&amp;amp;expired=1になる(遷移したいページとcurrent urlが不一致)&lt;/span&gt;
+url_purchased &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;https://book.dmm.com/library/?age_limit=all&amp;amp;expired=1&amp;amp;sort=old&amp;amp;page=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;):
+    page_i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; url_purchased &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; str(i)
+    browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(page_i)
+    time&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sleep(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; page_i &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;current_url:
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 上のコメント通りに抜ける処理&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 購入済みのタイトルを列挙&lt;/span&gt;
+    links &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;find_elements_by_css_selector(
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.m-boxListBookProductBlock__main__info__ttl &amp;gt; a&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; links:
+        title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;text
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, title)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;/usr/local/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+  warnings.warn(&#39;Selenium support for PhantomJS has been deprecated, please use headless &#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;ログインページにアクセスしました
+情報を入力してログインボタンを押しました
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; モブサイコ100
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; おしえて！ ギャル子ちゃん
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 無邪気の楽園
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; とんでもスキルで異世界放浪メシ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界でスキルを解体したらチートな嫁が増殖しました 概念交差のストラクチャー
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ブラウンシュガァデイズ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ウメハラ FIGHTING GAMERS！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; なれる！SE
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 神達に拾われた男
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 失格紋の最強賢者 〜世界最強の賢者が更に強くなるために転生しました〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 世界最強の後衛 〜迷宮国の新人探索者〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ニートだけどハロワにいったら異世界につれてかれた
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 無職転生 〜ロキシーだって本気です〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 宝くじで40億当たったんだけど異世界に移住する
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ゴブリンスレイヤー
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ゴブリンスレイヤー外伝:イヤーワン
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 転生したらドラゴンの卵だった〜イバラのドラゴンロード
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 転生したら剣でした
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 骸骨騎士様、只今異世界へお出掛け中
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; なんでここに先生が！？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 強くてニューサーガ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 冒険者になりたいと都に出て行った娘がSランクになってた 黒髪の戦乙女
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界魔法は遅れてる！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 即死チートが最強すぎて、異世界のやつらがまるで相手にならないんですが。-ΑΩ-
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; THENEWGATE
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界チート魔術師
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; シロクマ転生 森の守護神になったぞ伝説
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 蜘蛛ですが、なにか？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界のんびり農家
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 没落予定なので、鍛冶職人を目指す
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 無職転生 〜異世界行ったら本気だす〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; スライムライフ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; とあるおっさんのVRMMO活動記
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 29歳独身中堅冒険者の日常
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 100万の命の上に俺は立っている ワケあり無料版 5
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 最強の職業は勇者でも賢者でもなく鑑定士（仮）らしいですよ？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 野生のラスボスが現れた！黒翼の覇王
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 100万の命の上に俺は立っている
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 獣医さんのお仕事in異世界
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 月が導く異世界道中
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ブサメンガチファイター
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 平兵士は過去を夢見る
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 自重しない元勇者の強くて楽しいニューゲーム
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 努力しすぎた世界最強の武闘家は、魔法世界を余裕で生き抜く。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 最強呪族転生〜魔術オタクの理想郷（ユートピア）〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 魔拳のデイドリーマー
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界で『黒の癒し手』って呼ばれています
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; のんびりVRMMO記
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界でカフェを開店しました。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 邪竜転生
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 望まぬ不死の冒険者
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 黒の召喚士
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 村人ですが何か？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; アルゲートオンライン
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 効率厨魔導師、第二の人生で魔導を極める
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ワールド・カスタマイズ・クリエー
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 成長チートでなんでもできるようになったが、無職だけは辞められないようです
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; マズ飯エルフと遊牧暮らし
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 賢者の弟子を名乗る賢者 THE COMIC
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界で最強の杖に転生した俺が嫌がる少女をムリヤリ魔法少女にPする！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 剣士を目指して入学したのに魔法適性9999なんですけど！？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 俺の家が魔力スポットだった件 〜住んでいるだけで世界最強〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界迷宮でハーレムを
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 欲望パンドラ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 転生しちゃったよ（いや、ごめん）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; さようなら竜生、こんにちは人生
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 素材採取家の異世界旅行記
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ヤンキーは異世界で精霊に愛されます。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 俺と蛙さんの異世界放浪記
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 軍オタが魔法世界に転生したら、現代兵器で軍隊ハーレムを作っちゃいました！？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 真の仲間じゃないと勇者のパーティーを追い出されたので、辺境でスローライフすることにしました
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ありふれた日常で世界最強
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ありふれた職業で世界最強
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界を制御魔法で切り開け！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; アルマディアノス英雄伝
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界転生騒動記
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; じょしラク！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 駆除人
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界で孤児院を開いたけど、なぜか誰一人巣立とうとしない件【カラー増量版】
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界おじさん
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 辺境の老騎士 バルド・ローエン
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 宝石の国
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; うちの娘の為ならば、俺はもしかしたら魔王も倒せるかもしれない。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; てのひら開拓村で異世界建国記
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ガチャを回して仲間を増やす 最強の美少女軍団を作り上げろ THE COMIC
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 二度目の勇者は復讐の道を嗤い歩む
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 四度目は嫌な死属性魔術師
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界ゆるり紀行 〜子育てしながら冒険者します〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界支配のスキルテイカー ゼロから始める奴隷ハーレム
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 聖女の魔力は万能です
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 神さまSHOPでチートの香り
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 転生貴族の異世界冒険録
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 食べるだけでレベルアップ！ 〜駄女神といっしょに異世界無双〜（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ワンワン物語 〜金持ちの犬にしてとは言ったが、フェンリルにしろとは言ってねえ！〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; おっさんのリメイク冒険日記
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界ですが魔物栽培しています。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 二度目の人生を異世界で
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界の迷宮都市で治癒魔法使いやってます（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 魔王になったので、ダンジョン造って人外娘とほのぼのする
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 最果てのパラディン
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 魔王様の街づくり！ 〜最強のダンジョンは近代都市〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ダンジョンシーカー
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; マギクラフト・マイスター
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界温泉に転生した俺の効能がとんでもすぎる
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 物語の中の人
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 地方騎士ハンスの受難
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; LV999の村人
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 精霊達の楽園と理想の異世界生活
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; モノノケ！！！！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; どうやら私の身体は完全無敵のようですね
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 魔王の始め方 THE COMIC
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; マージナル・オペレーション
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 転生王子はダラけたい
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 豚公爵に転生したから、今度は君に好きと言いたい
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; レディローズは平民になりたい
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; モンスターがあふれる世界になったので、好きに生きたいと思います
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Sランクモンスターの《ベヒーモス》だけど、猫と間違われてエルフ娘の騎士（ペット）として暮らしてます
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Re:Monster
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 俺だけ入れる隠しダンジョン 〜こっそり鍛えて世界最強〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Only Sense Online ―オンリーセンス・オンライン―
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ヤングジャンプ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ヒストリエ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 専門学校JK Ctrl＋Z （1）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 大家さんと僕
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 専門学校JK
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 理想のヒモ生活
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Lv2からチートだった元勇者候補のまったり異世界ライフ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 僕の部屋がダンジョンの休憩所になってしまった件【パートカラー版】
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; おっさん冒険者ケインの善行
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 陰の実力者になりたくて！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界系ファンタジー ガンガンいこうぜ！大ボリューム試し読みパック
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 史上最強の大魔王、 村人Aに転生する
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 機械学習のエッセンス 実装しながら学ぶPython、数学、アルゴリズム
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; データサイエンティスト養成読本 ビジネス活用編
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド―
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 絶対にヤッてはいけない異世界召喚
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 水女神は今日も恋をするか？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ［第2版］Python機械学習プログラミング 達人データサイエンティストによる理論と実践
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Rによるやさしい統計学
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 暗殺者である俺のステータスが勇者よりも明らかに強いのだが
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 少女奴●スクール
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ボコボコりんっ！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 早乙女選手、ひたかくす
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Kaggleで勝つデータ分析の技術
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; リビドーハンタータケル
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ヤクザの大親分が幼女に生まれ変わった話 1巻
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; いきのこれ！ 社畜ちゃん 〜後輩ちゃんオタ活動記〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 魔王様、リトライ！（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; アラフォー社畜のゴーレムマスター（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ガイシューイッショク！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 紀元前1万年のオタ デジタルモザイク版
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ここは俺に任せて先に行けと言ってから10年がたったら伝説になっていた。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異種族レビュアーズコミックアンソロジー 〜ダークネス〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; うれしょん！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ギリギリアウト
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; やんちゃギャルの安城さん
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 佐伯さんは眠ってる
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; Kiss×sis
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ハンツー×トラッシュ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 小学生がママでもいいですか？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 【悲報】会社の行き遅れBBA孕ませた
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 自称！平凡魔族の英雄ライフ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; デスラバ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 咲 -Saki-
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 魔法使いの印刷所
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 大上さん、だだ漏れです。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 都合が良くて可愛いメス。【FANZA限定特典付き】
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ヒトモエ委員会 デジタル版
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; マナさんと母屋を離れて…
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; JKハルは異世界で娼婦になった
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 今まで一度も女扱いされたことがない女騎士を女扱いする漫画
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 着たい服がある
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ライドンキング
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界ソープランド輝夜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ヤンキーJKの異常な愛情
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 【FANZA限定版】モンスター娘の堕とし方
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ばけものえっち【FANZA限定版】
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異種恋愛【電子特装版】【FANZA限定】
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 鬼ヶ島の許婚
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 痛いのは嫌なので防御力に極振りしたいと思います。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 化けネコ葉月の姉妹事情
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界でもふもふなでなでするためにがんばってます。（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 人間以外じゃダメですか？ 人外っ娘・あそーと
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; モンスター娘との交合
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 効果検証入門〜正しい比較のための因果推論/計量経済学の基礎
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 酷幻想をアイテムチートで生き抜く THE COMIC 1
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ぜつりん！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; クラスが異世界召喚されたなか俺だけ残ったんですが
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 変な知識に詳しい彼女 高床式草子さん
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; お姉さんは女子小学生に興味があります。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 女声男子
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; プラナス・ガール
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; おじさんはカワイイものがお好き。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 冒険家になろう！〜スキルボードでダンジョン攻略〜（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ゆうべはお楽しみでしたね
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 変愛彼女〜やだ彼氏のが他の娘に入っちゃってるう〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界で失敗しない100の方法
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 田舎のホームセンター男の自由な異世界生活
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; チート薬師のスローライフ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 図書館の大魔術師
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; アラフォー男の異世界通販生活
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界で 上前はねて 生きていく〜再生魔法使いのゆるふわ人材派遣生活〜（コミック） 1
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 商人勇者は異世界を牛耳る！〜栽培スキルでなんでも増やしちゃいます〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ポーション頼みで生き延びます！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 老後に備えて異世界で8万枚の金貨を貯めます
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 事情を知らない転校生がグイグイくる。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ちょっぴり年上でも彼女にしてくれますか？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 魔術学院を首席で卒業した俺が冒険者を始めるのはそんなにおかしいだろうか
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界チートサバイバル飯
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 完全回避ヒーラーの軌跡
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 剥かせて！竜ケ崎さん
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; いきのこれ！ 社畜ちゃん
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ギャルごはん
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 農民関連のスキルばっか上げてたら何故か強くなった。（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界召喚は二度目です（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界で神様になったので、だいたい何でもできる！！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ハズレ枠の【状態異常スキル】で最強になった俺がすべてを蹂躙するまで
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; リワールド・フロンティア（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 復讐完遂者の人生二周目異世界譚 THE COMIC
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 奴隷商人しか選択肢がないですよ？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ぼっち・ざ・ろっく！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 寄生獣リバーシ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 転生したらスライムだった件
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 暴食のベルセルク〜俺だけレベルという概念を突破する〜 THE COMIC
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; もふもふを知らなかったら人生の半分は無駄にしていた
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 悪役令嬢の取り巻きやめようと思います
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 金貨1枚で変わる冒険者生活 1巻
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 最後にひとつだけお願いしてもよろしいでしょうか 1
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; おちこぼれフルーツタルト
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 脱オタしてはみたものの
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 社畜と少女の1800日
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; サキちゃんは今夜もぺこぺこ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; デスサイズぷるるん
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 最弱テイマーはゴミ拾いの旅を始めました。@COMIC 第1巻
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 史上最強オークさんの楽しい異世界ハーレムづくり
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; あせとせっけん
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; レベル1の最強賢者 〜呪いで最下級魔法しか使えないけど、神の勘違いで無限の魔力を手に入れ最強に〜 1 【電子版特典イラスト付き】（コミックポルカ）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; フェンリル母さんとあったかご飯（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 幼女戦記
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; アタマの中のアレを食べたい
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; アスペル・カノジョ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界ちゃんこ〜横綱目前に召喚されたんだが
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 1年A組のモンスター
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; サメガール
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 召喚された賢者は異世界を往く 〜最強なのは不要在庫のアイテムでした〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 聖者無双
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 先生、俺にかまわずイッてください！！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ふたりソロキャンプ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 娘の友達
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; メイドインアビス
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 実践Data Scienceシリーズ PythonではじめるKaggleスタートブック
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; モンスターのご主人様（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; おしかけツインテール
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 進化の実〜知らないうちに勝ち組人生〜（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 俺はロリコンじゃない！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界転生…されてねぇ！（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 永世乙女の戦い方
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 境界迷宮と異界の魔術師
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ひとりぼっちの異世界攻略
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ポンコツ女神の異世界創世録
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ゲーム オブ ファミリア-家族戦記-
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ヤンデレ系乙女ゲーの世界に転生してしまったようです
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 魔女と淫魔とカワイイお弟子（単話）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 田舎に帰るとやけになついた褐色ポニテショタがいる
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 俺んちに来た女騎士と田舎暮らしすることになった件
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; アラフォーリーマンのシンデレラ転生 1巻
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 転生魔女よ、暁を謳え （1）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 千のスキルを持つ男 異世界で召喚獣はじめました！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ワールド・ティーチャー 異世界式教育エージェント
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異世界でも風俗嬢やってみた
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異種族巨少女セクステット！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ティアムーン帝国物語（コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; おかしな転生
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 捨てられた皇妃
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 継続は魔力なり〜無能魔法が便利魔法に進化を遂げました〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 悪役令嬢の怠惰な溜め息 1【電子限定特典付き】
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; フリクションガール
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 人間不信の冒険者たちが世界を救うようです
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 訳あり悪役令嬢は、婚約破棄後の人生を自由に生きる
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 雪女と蟹を食う
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ドM女子とがっかり女王様 （1）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 異種族レビュアーズ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 世界を救うために亜人と朝チュンできますか？
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; レジェンド
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 16bitセンセーション 1 私とみんなが作った美少女ゲーム
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 魔導士LV99は空気が読めない
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 彼女、お借りします
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 愛しの国玉 1【電子限定特典付き】
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 古見さんは、コミュ症です。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 史上最強の魔法剣士、Fランク冒険者に転生する 〜剣聖と魔帝、2つの前世を持った男の英雄譚〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 出来損ないと呼ばれた元英雄は、実家から追放されたので好き勝手に生きることにした （コミック）
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 僕の心のヤバイやつ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; せっかくチートを貰って異世界に転移したんだから、好きなように生きてみたい THE COMIC
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; うちの師匠はしっぽがない
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 六道の悪女たち
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 母性天使マザカルカノン 1
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; こいつらの正体が女だと俺だけが知っている
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; レベル1だけどユニークスキルで最強です
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 女装してめんどくさい事になってるネクラとヤンキーの両片想い
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 妻、小学生になる。
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 葬送のフリーレン
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 科学的に存在しうるクリーチャー娘の観察日誌
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; とある科学の超電磁砲
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 武士スタント逢坂くん！
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; ナナマル サンバツ
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 声がだせない少女は「彼女が優しすぎる」と思っている
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; 女神のスプリンター【DMM限定特典付き】
+&lt;span style=&#34;color:#66d9ef&#34;&gt;-&lt;/span&gt; じょしラク！ 〜 2 Years Later〜（単話）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;今までにDMM電子書籍で購入した本の一覧を購入日が古い順で全て取得できた。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;もう少し工夫すればリンクを取得したり、金額を持ってくるようなことも可能だと思うが、時間もかかるし面倒なので今回はやらない。&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;元々はrequestsモジュールでクローリングしようと思ったが、ログインが上手くいかなくてやめた。&lt;/p&gt;
+&lt;p&gt;seleniumは実際の操作をコードに起こすだけなので、ユーザー名・パスワード・ログインボタンの位置(htmlタグのclassやidで特定)さえ分かれば、内部でどんな処理が行われていようとログインできるはずなので、ログインが必要なサイトのクローリングは全部Seleniumでいいんじゃねーかなという気がしている。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;参考リンク&#34;&gt;参考リンク&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://qiita.com/syunyo/items/36af8bcb501baf8c7014&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;【Python3】ログイン機能付サイトでスクレイピング【requests】【BeautifulSoup】&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;続きの
+&lt;a href=&#34;https://qiita.com/syunyo/items/09cc636344212112a6fc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;【Python3】ブラウザを経由したスクレイピング(動的なページなど)【Selenium】&lt;/a&gt;の方も参考にした&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://zokibayashi.hatenablog.com/entry/2019/08/30/011556&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;デイリーパチンコに接続するコンテナを作った話&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DMMログインの部分をまんま拝借&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://qiita.com/orangain/items/db4594113c04e8801aad&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SeleniumからHeadless Chromeを使ってみた&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead&lt;/code&gt;の警告が出ていたので、PhantomJSからChromeに変える際に参考にした。特に
+&lt;a href=&#34;https://qiita.com/orangain/items/db4594113c04e8801aad#%E6%BA%96%E5%82%99&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;準備&lt;/a&gt;の部分を参考にした。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;実際のコードはほとんど変化ない&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Python&#34; data-lang=&#34;Python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# # PhantomJSのドライバーを得る&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# browser = webdriver.PhantomJS()&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# browser.implicitly_wait(5)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# ↓&lt;/span&gt;
+    
+&lt;span style=&#34;color:#75715e&#34;&gt;# Chromeのドライバーを得る&lt;/span&gt;
+options &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; webdriver&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ChromeOptions()
+options&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_argument(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;--headless&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# 画面を表示しないオプション&lt;/span&gt;
+browser &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; webdriver&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Chrome(options&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;options)
+browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;implicitly_wait(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;本当に読んだけど、実際は参考リンクの方が役に立った。この本は法律や規約などのことについても触れられているのでタメになる。 &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;ちなみにDMM電子書籍は巻数が複数あるものはひとまとめにしているので、実際の冊数はこの一覧よりも多くなっている。 &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;やばいエロ漫画があっても気にしないでください &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

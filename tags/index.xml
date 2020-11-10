@@ -5,12 +5,36 @@
     <link>https://kokuyokugetter.github.io/tags/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 27 Oct 2020 12:00:00 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 10 Nov 2020 18:00:05 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
       <link>https://kokuyokugetter.github.io/tags/</link>
     </image>
+    
+    <item>
+      <title>crawling</title>
+      <link>https://kokuyokugetter.github.io/tags/crawling/</link>
+      <pubDate>Tue, 10 Nov 2020 18:00:05 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/tags/crawling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://kokuyokugetter.github.io/tags/python/</link>
+      <pubDate>Tue, 10 Nov 2020 18:00:05 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scraping</title>
+      <link>https://kokuyokugetter.github.io/tags/scraping/</link>
+      <pubDate>Tue, 10 Nov 2020 18:00:05 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/tags/scraping/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>MNG</title>
@@ -33,14 +57,6 @@
       <link>https://kokuyokugetter.github.io/tags/machine-learning/</link>
       <pubDate>Fri, 23 Oct 2020 00:18:58 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://kokuyokugetter.github.io/tags/python/</link>
-      <pubDate>Fri, 23 Oct 2020 00:18:58 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/tags/python/</guid>
       <description></description>
     </item>
     
@@ -149,7 +165,7 @@
     </item>
     
     <item>
-      <title>twitter</title>
+      <title>Twitter</title>
       <link>https://kokuyokugetter.github.io/tags/twitter/</link>
       <pubDate>Fri, 28 Feb 2020 20:48:42 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/tags/twitter/</guid>
