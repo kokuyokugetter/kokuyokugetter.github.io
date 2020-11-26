@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python | ゲッタ〜のHP</title>
+    <title>python | ゲッタ〜のHP</title>
     <link>https://kokuyokugetter.github.io/tags/python/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <description>Python</description>
+    <description>python</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 10 Nov 2020 18:00:05 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Python</title>
+      <title>python</title>
       <link>https://kokuyokugetter.github.io/tags/python/</link>
     </image>
     
