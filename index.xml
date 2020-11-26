@@ -5,12 +5,471 @@
     <link>https://kokuyokugetter.github.io/</link>
       <atom:link href="https://kokuyokugetter.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>ゲッタ〜のHP</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 10 Nov 2020 18:00:05 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 26 Nov 2020 09:11:43 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>ゲッタ〜のHP</title>
       <link>https://kokuyokugetter.github.io/</link>
     </image>
+    
+    <item>
+      <title>2020年11月に買ったもの</title>
+      <link>https://kokuyokugetter.github.io/post/202011buy/</link>
+      <pubDate>Thu, 26 Nov 2020 09:11:43 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/202011buy/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://www.amazon.co.jp/blackfriday/ref=as_li_ss_tl?ref_=gwd_bfcm20lu&amp;amp;pf_rd_r=3ZJAFWEM49HPWK25WBKX&amp;amp;pf_rd_p=56353172-a3eb-45b5-b821-f06027ddd6e8&amp;amp;linkCode=ll2&amp;amp;tag=kokuyokugette-22&amp;amp;linkId=a0ce2a6fced30bafe247a613b77d4dc1&amp;amp;language=ja_JP&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Amazonのセール&lt;/a&gt;前だけど、セールで買うものも先に載せてしまう。&lt;/p&gt;
+&lt;p&gt;Amazonで買い物するときに
+&lt;a href=&#34;https://www.amazon.co.jp/blackfriday/ref=as_li_ss_tl?ref_=gwd_bfcm20lu&amp;amp;pf_rd_r=3ZJAFWEM49HPWK25WBKX&amp;amp;pf_rd_p=56353172-a3eb-45b5-b821-f06027ddd6e8&amp;amp;linkCode=ll2&amp;amp;tag=kokuyokugette-22&amp;amp;linkId=a0ce2a6fced30bafe247a613b77d4dc1&amp;amp;language=ja_JP&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;このリンク&lt;/a&gt;や記事中の商品のリンクから買い物していただければ僕に広告収入が入りますのでよろしくお願いします（全然記事と関係ない商品を購入しても問題ないです）。&lt;/p&gt;
+&lt;p&gt;今月は漫画の購入が多かったのと、Amazonのブラックフライデーセール、ふるさと納税が中心。&lt;/p&gt;
+&lt;p&gt;M1 mac miniはめちゃくちゃ買いたかったけど、今持ってるMacBookと差別化できないのでやめました。&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#pc周辺機器デスク周り&#34;&gt;PC周辺機器（＋デスク周り）&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#健康&#34;&gt;健康&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#飯&#34;&gt;飯&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#ゲーム関連&#34;&gt;ゲーム関連&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#本dmm電子書籍&#34;&gt;本(DMM電子書籍)&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;br&gt;
+&lt;h2 id=&#34;pc周辺機器デスク周り&#34;&gt;PC周辺機器（＋デスク周り）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B077SHM6W6/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B077SHM6W6&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      BenQ ゲーミングモニター 24インチ 144Hz 1ms ブルーライト軽減 ZOWIE XL2411P フルHD HDMI DisplayPort DVI端子 ディスプレイ
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;モニター2台目。前のはたまに画面が消えるので、こっちをゲーム用にして、今のはPC用にする。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B00XXOZDUW/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B00XXOZDUW&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      エレコム 電源タップ 一括&amp;amp;個別スイッチ 省エネ スイングプラグ 6個口 1m ホワイト T-E7A-2610WH
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;モニターとか買い増すとどんどんコンセントが足りなくなる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B014I8SSD0/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B014I8SSD0&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Amazonベーシック ハイスピードHDMIケーブル - 1.8m (タイプAオス - タイプAオス)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;今SwitchとPCでいちいち付け替えてるが、抜き差しはケーブルの寿命的にも良くないし、めんどくさいので。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B08F9VWNLT/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B08F9VWNLT&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      cheero CLIP Plus 万能 クリップ ボード シリコン スマホスタンド タブレットスタンド CHE-330 ブルー
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;外でスマホやタブレットをいい感じの角度に置く方法が欲しかったので。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;健康&#34;&gt;健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://camp-fire.jp/projects/view/342423?utm_campaign=342423&amp;amp;utm_medium=stepmail&amp;amp;utm_source=patron&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;枕難民の方に理想の睡眠体験をお届け、プルンプルンの新感覚枕【Fit Nek】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;クラファン超早割支援で。今の安い枕に不満があったので、即買いしてしまった（これが俺にハマるとは限らないのに衝動買い）。結構早め（2021年1月）に届く予定みたいなので楽しみ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;飯&#34;&gt;飯&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.satofull.jp/products/detail.php?product_id=1094283&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;いくら醤油漬け　600g(150g×4P入)小分けタイプ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.satofull.jp/products/detail.php?product_id=3028304&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;エゾバフンウニ塩水パック60～70g×2P[2021年2月上旬以降発送] A-24007&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.satofull.jp/products/detail.php?product_id=3011518&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;オホーツク産大粒ホタテ(1.2kg)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ふるさと納税の返礼品。&lt;/p&gt;
+&lt;p&gt;後甘海老も頼む予定ですが、殻の処理がめんどくさいので年末の休み前くらいに頼もうかと思います。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;ゲーム関連&#34;&gt;ゲーム関連&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.yodobashi.com/product/100000001005854270/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;角刈書店 不謹慎王 [ボードゲーム]&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitterで見かけて。KSUで最強の不謹慎王を決めないか？（面白くするのが難しそうなので、一生やらなそうな気がしている）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;本dmm電子書籍&#34;&gt;本(DMM電子書籍)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b600ysgk05213/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;武士スタント逢坂くん！ （4）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;続き。面白いです&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000ahftx09709/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;【電子特別版】ナナマル サンバツ （20）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;完結しました&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds01062/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;女神のスプリンター （5）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;第1章完って感じで、完結するのかと思ったけど、まだ続くようで良かった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b355gakta04732/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;声がだせない少女は「彼女が優しすぎる」と思っている 2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitterバズかなんかで買って続き&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.dmm.com/service/-/exchange/=/url=DRVESRUMTh1aCl5THVILWk8GWRhaSUtdBxZWD15KU10IDFdmVAZYCxdaVVVeRANRXAlfVEJYFkAxB0UPVxYRWVY*X0sCC1AUUVZuSlZQW1sIFkI_/direct=1/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;じょしラク！ 〜2Years Later〜 （14）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;無印じょしラクは最高のエロ漫画だけど、このシリーズは良だが最高ではない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k077bscsh01302/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JKハルは異世界で娼婦になった 3巻【電子特典イラスト付き】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;2巻までの雰囲気と違った感じの話をしていて、まあって感じになってきた。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds01135/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;今まで一度も女扱いされたことがない女騎士を女扱いする漫画 （6）【電子限定描きおろしペーパー付き】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;最初はありがちなラブコメなんだろ？って思ったが、普通に面白くなってきている自分がいる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds01175/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;娘の友達 （6）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;この漫画昔世間でめちゃくちゃバズってて買ったような気がする。まあそんなにめちゃくちゃ面白くはないですよ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds01140/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;アスペル・カノジョ （9）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;この漫画の続きはかなり楽しみにしている。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b132amggd02655/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;商人勇者は異世界を牛耳る！ 〜栽培スキルでなんでも増やしちゃいます〜 3巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;実は一番チートなんじゃないかって感じだが、意外とちゃんとやってるので見ちゃう。Web無料掲載に追いついたので、今後は買わない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds01355/?dmmref=library&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JSのトリセツ （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;クジラックスがベタ褒めしてたので購入。普通に保健の教科書みたいでいいと思う&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b312ahbsy04955/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;社畜と少女の1800日 13巻 【紙・電子共通おまけ付き】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;完結した。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds01419/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;彼女、お借りします （18）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;20巻までには完結してほしい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b600ysgk06176/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;古見さんは、コミュ症です。 （19）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;まだ読める&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds01426/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;あせとせっけん （9）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;普通にハラハラしながらすごいペースで読んでしまった。ハマってるわ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b073bktcm02600/?dmmref=librarySeries&amp;amp;i3_ord=3&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JKからやり直すシルバープラン 1〜3&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitterバズかなんかで見かけたのかな？悪役令嬢が人生やり直す（異世界ではない）。普通に悪役令嬢系の中でも最上位だと思う。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b999asqex06572/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;事情を知らない転校生がグイグイくる。 7巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;なんかもう読まなくてもいい気がしてしまった。前の巻とかで見たような話が無限に繰り広げられてるだけなような…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b163bijt202272/?dmmref=library&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ふたりエスケープ （1）【イラスト特典付】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitterバズ。尊い&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000bhftx00027/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;田舎のホームセンター男の自由な異世界生活 （5）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;どんな話だっけ、と思って1巻から読み直したけど面白かったです。やっぱり国（や街）を作るみたいな話は面白くなりがち&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Python&#43;SeleniumでDMM電子書籍の購入済み書籍の一覧を取得</title>
