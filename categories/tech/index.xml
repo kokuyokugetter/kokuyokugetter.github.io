@@ -5,12 +5,47 @@
     <link>https://kokuyokugetter.github.io/categories/tech/</link>
       <atom:link href="https://kokuyokugetter.github.io/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     <description>tech</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 10 Nov 2020 18:00:05 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 04 Dec 2020 00:00:10 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>tech</title>
       <link>https://kokuyokugetter.github.io/categories/tech/</link>
     </image>
+    
+    <item>
+      <title>Rで地球を回す</title>
+      <link>https://kokuyokugetter.github.io/post/globe_rotate_w_r/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:10 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/globe_rotate_w_r/</guid>
+      <description>&lt;p&gt;この記事は
+&lt;a href=&#34;https://qiita.com/advent-calendar/2020/rlang&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Advent Calendar 2020&lt;/a&gt;の5日目の記事です。&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;まずはコードを載せる&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;library&lt;/span&gt;(rgl)
+
+world &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;read.table&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;./world_50m.txt&amp;#34;&lt;/span&gt;, header &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; F)  &lt;span style=&#34;color:#75715e&#34;&gt;#edge of world&lt;/span&gt;
+R &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6371&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;^3
+
+x_one &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; R&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sin&lt;/span&gt;((world&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;V2&lt;span style=&#34;color:#ae81ff&#34;&gt;-90&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;pi&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;180&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cos&lt;/span&gt;((world&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;V1)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;pi&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;180&lt;/span&gt;))
+y_one &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; R&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sin&lt;/span&gt;((world&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;V2&lt;span style=&#34;color:#ae81ff&#34;&gt;-90&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;pi&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;180&lt;/span&gt;))&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sin&lt;/span&gt;((world&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;V1)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;pi&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;180&lt;/span&gt;))
+z_one &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; R&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cos&lt;/span&gt;((world&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;V2&lt;span style=&#34;color:#ae81ff&#34;&gt;-90&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;pi&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;180&lt;/span&gt;))
+
+&lt;span style=&#34;color:#a6e22e&#34;&gt;plot3d&lt;/span&gt;(x_one, y_one, z_one, xlim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;R,R), ylim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;R,R), zlim &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;R,R), xlab &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+       , ylab &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, zlab &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, col &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;black&amp;#34;&lt;/span&gt;, size &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;1&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;title3d&lt;/span&gt;(main &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;globe&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;spheres3d&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,radius &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; R, color &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;ivory&amp;#34;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;p&gt;実行結果&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/lzepy3H368I&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;p&gt;world_50m.txtは &lt;a href=&#34;http://www.gnuplotting.org/tag/4-6/&#34;&gt;http://www.gnuplotting.org/tag/4-6/&lt;/a&gt; から拝借したデータです。&lt;/p&gt;
+&lt;p&gt;本コードではそれぞれの角度のデータから直交座標に変換してプロットしている。&lt;/p&gt;
+&lt;p&gt;Rは一応地球の半径にしている。&lt;/p&gt;
+&lt;p&gt;あとはrglと3dplotで3次元プロットすれば手元で動かせる地球儀が完成する。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Python&#43;SeleniumでDMM電子書籍の購入済み書籍の一覧を取得</title>
