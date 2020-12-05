@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python | ゲッタ〜のHP</title>
+    <title>python | ゲッタ〜のHP</title>
     <link>https://kokuyokugetter.github.io/tags/python/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <description>Python</description>
+    <description>python</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 10 Nov 2020 18:00:05 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Python</title>
+      <title>python</title>
       <link>https://kokuyokugetter.github.io/tags/python/</link>
     </image>
     
@@ -70,9 +70,9 @@
 }
 &lt;/style&gt;
 &lt;div class=&#34;amazon-widget&#34;&gt;
-  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/4297107384/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/4297107384/?tag=&#34;&gt;&lt;/a&gt;
   &lt;div class=&#34;amazon-widget-img&#34;&gt;
-    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4297107384&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4297107384&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
   &lt;/div&gt;
   &lt;div class=&#34;amazon-widget-info&#34;&gt;
     &lt;span class=&#34;amazon-widget-title&#34;&gt;
@@ -1003,9 +1003,9 @@ plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
 }
 &lt;/style&gt;
 &lt;div class=&#34;amazon-widget&#34;&gt;
-  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/4295003379/?tag=kokuyokugette-22&#34;&gt;&lt;/a&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/4295003379/?tag=&#34;&gt;&lt;/a&gt;
   &lt;div class=&#34;amazon-widget-img&#34;&gt;
-    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4295003379&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=kokuyokugette-22&#34; /&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4295003379&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
   &lt;/div&gt;
   &lt;div class=&#34;amazon-widget-info&#34;&gt;
     &lt;span class=&#34;amazon-widget-title&#34;&gt;
