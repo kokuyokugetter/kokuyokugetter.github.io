@@ -5,12 +5,28 @@
     <link>https://kokuyokugetter.github.io/categories/</link>
       <atom:link href="https://kokuyokugetter.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 04 Dec 2020 00:00:10 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 15 Dec 2020 00:13:13 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Categories</title>
       <link>https://kokuyokugetter.github.io/categories/</link>
     </image>
+    
+    <item>
+      <title>diary</title>
+      <link>https://kokuyokugetter.github.io/categories/diary/</link>
+      <pubDate>Tue, 15 Dec 2020 00:13:13 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/categories/diary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>impression</title>
+      <link>https://kokuyokugetter.github.io/categories/impression/</link>
+      <pubDate>Tue, 15 Dec 2020 00:13:13 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/categories/impression/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>tech</title>
@@ -21,26 +37,10 @@
     </item>
     
     <item>
-      <title>diary</title>
-      <link>https://kokuyokugetter.github.io/categories/diary/</link>
-      <pubDate>Thu, 26 Nov 2020 09:11:43 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/categories/diary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>joke</title>
       <link>https://kokuyokugetter.github.io/categories/joke/</link>
       <pubDate>Sun, 19 Jul 2020 22:45:02 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/categories/joke/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>impression</title>
-      <link>https://kokuyokugetter.github.io/categories/impression/</link>
-      <pubDate>Wed, 15 Jul 2020 00:49:47 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/categories/impression/</guid>
       <description></description>
     </item>
     
