@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kokuyokugetter.github.io/categories/</loc>
+    <lastmod>2021-01-07T18:07:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/categories/diary/</loc>
+    <lastmod>2021-01-07T18:07:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/post/</loc>
+    <lastmod>2021-01-07T18:07:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/tags/</loc>
+    <lastmod>2021-01-07T18:07:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/tags/travel/</loc>
+    <lastmod>2021-01-07T18:07:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/</loc>
+    <lastmod>2021-01-07T18:07:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/post/minamibousou/</loc>
+    <lastmod>2021-01-07T18:07:36+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kokuyokugetter.github.io/post/202012buy/</loc>
     <lastmod>2020-12-25T23:11:43+09:00</lastmod>
   </url>
@@ -13,32 +48,7 @@
   </url>
   
   <url>
-    <loc>https://kokuyokugetter.github.io/categories/</loc>
-    <lastmod>2020-12-25T23:11:43+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/categories/diary/</loc>
-    <lastmod>2020-12-25T23:11:43+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kokuyokugetter.github.io/tags/mng/</loc>
-    <lastmod>2020-12-25T23:11:43+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/post/</loc>
-    <lastmod>2020-12-25T23:11:43+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/tags/</loc>
-    <lastmod>2020-12-25T23:11:43+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/</loc>
     <lastmod>2020-12-25T23:11:43+09:00</lastmod>
   </url>
   
@@ -145,11 +155,6 @@
   <url>
     <loc>https://kokuyokugetter.github.io/tags/statistics/</loc>
     <lastmod>2020-09-02T20:13:28+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/tags/travel/</loc>
-    <lastmod>2020-08-25T22:02:32+09:00</lastmod>
   </url>
   
   <url>
