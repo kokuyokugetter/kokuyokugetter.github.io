@@ -5,12 +5,29 @@
     <link>https://kokuyokugetter.github.io/post/</link>
       <atom:link href="https://kokuyokugetter.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 07 Jan 2021 18:07:36 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 22 Jan 2021 23:30:52 +0900</lastBuildDate>
     <image>
       <url>https://kokuyokugetter.github.io/post/featured.png</url>
       <title>Posts</title>
       <link>https://kokuyokugetter.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>ちょっとしたことを調べたいときに見るページを公開しました。</title>
+      <link>https://kokuyokugetter.github.io/post/tools/</link>
+      <pubDate>Fri, 22 Jan 2021 23:30:52 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/tools/</guid>
+      <description>&lt;p&gt;タイトル通り、
+&lt;a href=&#34;https://kokuyokugetter.github.io/tools/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ちょっとしたことを調べるときに使えそうなページ&lt;/a&gt;を作りました。&lt;/p&gt;
+&lt;p&gt;webページとして公開したいけど、サーバー立てるのは面倒だったので、github pagesで公開しました。&lt;/p&gt;
+&lt;p&gt;というわけで慣れ親しんだPythonは使えないので、&lt;/p&gt;
+&lt;p&gt;JavaScript素人／jQuery初見、の状態で作成しました。&lt;/p&gt;
+&lt;p&gt;jQueryについてはいまだによく分かっていません。&lt;/p&gt;
+&lt;p&gt;もちろんcssもよく知らないのでカスみたいな見た目してます。　&lt;/p&gt;
+&lt;p&gt;こういうの追加してほしいとかあれば可能な限りで追加してみます。&lt;/p&gt;
+&lt;p&gt;あとcssもアドバイスあれば嬉しいです。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>南房総オタク8人旅行記</title>
@@ -212,11 +229,7 @@
     &lt;li&gt;&lt;a href=&#34;#pc周辺機器&#34;&gt;PC周辺機器&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#飯&#34;&gt;飯&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#健康&#34;&gt;健康&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#衣服&#34;&gt;衣服&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#衣服&#34;&gt;衣服&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#本&#34;&gt;本&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
@@ -316,7 +329,6 @@
 &lt;p&gt;なくなるたびに買ってる(11回購入)安いプロテイン。無味なので杏仁霜や甘いプロテインとかと混ぜて低脂肪乳で溶いて飲んでます。&lt;/p&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;衣服&#34;&gt;衣服&lt;/h2&gt;
-&lt;h4 id=&#34;ユニクロ&#34;&gt;ユニクロ&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;

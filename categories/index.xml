@@ -5,12 +5,20 @@
     <link>https://kokuyokugetter.github.io/categories/</link>
       <atom:link href="https://kokuyokugetter.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 07 Jan 2021 18:07:36 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 22 Jan 2021 23:30:52 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Categories</title>
       <link>https://kokuyokugetter.github.io/categories/</link>
     </image>
+    
+    <item>
+      <title>tech</title>
+      <link>https://kokuyokugetter.github.io/categories/tech/</link>
+      <pubDate>Fri, 22 Jan 2021 23:30:52 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/categories/tech/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>diary</title>
@@ -25,14 +33,6 @@
       <link>https://kokuyokugetter.github.io/categories/impression/</link>
       <pubDate>Tue, 15 Dec 2020 00:13:13 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/categories/impression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tech</title>
-      <link>https://kokuyokugetter.github.io/categories/tech/</link>
-      <pubDate>Fri, 04 Dec 2020 00:00:10 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/categories/tech/</guid>
       <description></description>
     </item>
     
