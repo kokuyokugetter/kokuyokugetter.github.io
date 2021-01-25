@@ -637,7 +637,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    3 min read
   </span>
   
 
@@ -679,13 +679,96 @@
     <div class="article-style">
       <p>タイトル通り、
 <a href="https://kokuyokugetter.github.io/tools/" target="_blank" rel="noopener">ちょっとしたことを調べるときに使えそうなページ</a>を作りました。</p>
+<ul>
+<li>BMI調べたいとか</li>
+<li>テレビ買う時とかにインチって何センチだっけとか</li>
+<li>今年西暦／和暦何年で干支は何で自分は何歳なんだっけ</li>
+</ul>
+<p>とかたま〜〜に気になるようなことを知ることができます。</p>
+<br>
 <p>webページとして公開したいけど、サーバー立てるのは面倒だったので、github pagesで公開しました。</p>
 <p>というわけで慣れ親しんだPythonは使えないので、</p>
-<p>JavaScript素人／jQuery初見、の状態で作成しました。</p>
+<p>JavaScript素人／jQuery初見、の状態でなんとか色々調べながら作成しました。</p>
 <p>jQueryについてはいまだによく分かっていません。</p>
 <p>もちろんcssもよく知らないのでカスみたいな見た目してます。　</p>
 <p>こういうの追加してほしいとかあれば可能な限りで追加してみます。</p>
 <p>あとcssもアドバイスあれば嬉しいです。</p>
+<h2 id="追記20210125">追記（2021/01/25）</h2>
+<p>内容なさすぎたし、Qiitaの方でそのままコピペして載せたらコード書けって言われて確かにとなったので追記します。</p>
+<p>コード全部載せるのはアレなんで、見たい方はgithubで見てください。</p>
+<p>
+<a href="https://github.com/kokuyokugetter/tools" target="_blank" rel="noopener">kokuyokugetter/tools - github</a></p>
+<p>ここでは作成時に気にしてたことを一つだけ書きます。</p>
+<p>今回こちらのサイトを作成する際には、レスポンシブデザインを気にして作成していました。</p>
+<p>safariにはレスポンシブデザインモードがあり、そこで逐一タブレットやスマホでの表示をチェックしながら作成していました。</p>
+<p>PCでは3列表示で、全コンテンツを一度に表示するように見れ、</p>
+<p>スマホ表示ではそれだと小さすぎるので、一列に表示するようにしているのですが、</p>
+<p>PCの場合の3列表示したいときに、普通に</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;leftside&#34;</span>&gt;
+    左中身
+  &lt;/<span style="color:#f92672">div</span>&gt;
+
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;center&#34;</span>&gt;
+      中央中身
+  &lt;/<span style="color:#f92672">div</span>&gt;
+
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rightside&#34;</span>&gt;
+      右中身
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  
+</code></pre></div><p>として</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    #leftside {
+        <span style="color:#66d9ef">float</span>:<span style="color:#66d9ef">left</span>;
+        <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">29</span><span style="color:#66d9ef">%</span>;
+    }
+
+    #center {
+ 
+    }
+    #rightside {
+        <span style="color:#66d9ef">float</span>:<span style="color:#66d9ef">right</span>;
+        <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">29</span><span style="color:#66d9ef">%</span>;
+    }
+</code></pre></div><p>とかってやるとrightsideの要素がcenterの要素の右下に来てしまいました。（確か）</p>
+<p>centerが普通に表示した後に、<code>float:right</code>が効いてるからでしょうか。</p>
+<p>htmlでcenterとrightsideの要素を逆にすればちゃんとなりましたが、今度はスマホにしたときにcenterがrightsideの後ろにきて気持ち悪いです。</p>
+<p>ということで、自分は以下のようにしました。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;leftside&#34;</span>&gt;
+    左中身
+  &lt;/<span style="color:#f92672">div</span>&gt;
+
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;center-right&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;centerside&#34;</span>&gt;
+      中央中身
+    &lt;/<span style="color:#f92672">div</span>&gt;
+
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rightside&#34;</span>&gt;
+      右中身
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">    #leftside {
+        <span style="color:#66d9ef">float</span>:<span style="color:#66d9ef">left</span>;
+        <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">29</span><span style="color:#66d9ef">%</span>;
+    }
+
+    #center-right {
+        <span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">right</span>;
+        <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">70</span><span style="color:#66d9ef">%</span>;
+    }
+    #centerside {
+        <span style="color:#66d9ef">float</span>:<span style="color:#66d9ef">left</span>;
+        <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">49</span><span style="color:#66d9ef">%</span>;
+       
+    }
+    #rightside {
+        <span style="color:#66d9ef">float</span>:<span style="color:#66d9ef">right</span>;
+        <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">49</span><span style="color:#66d9ef">%</span>;
+    }
+
+</code></pre></div><p>centerとrightsideをまとめた要素を作ってそれを右寄せして、その中でまた左右に分けることで、2列表示のやり方を入れ子にすることで、上の問題を解決できました。</p>
+<p>自分で思いついたのは偉いと自画自賛していますが、</p>
+<p>CSSのスペシャリスト的に、もっといい3列表示の方法があれば教えてください。</p>
 
     </div>
 

@@ -19,13 +19,96 @@
       <guid>https://kokuyokugetter.github.io/post/tools/</guid>
       <description>&lt;p&gt;タイトル通り、
 &lt;a href=&#34;https://kokuyokugetter.github.io/tools/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ちょっとしたことを調べるときに使えそうなページ&lt;/a&gt;を作りました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BMI調べたいとか&lt;/li&gt;
+&lt;li&gt;テレビ買う時とかにインチって何センチだっけとか&lt;/li&gt;
+&lt;li&gt;今年西暦／和暦何年で干支は何で自分は何歳なんだっけ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;とかたま〜〜に気になるようなことを知ることができます。&lt;/p&gt;
+&lt;br&gt;
 &lt;p&gt;webページとして公開したいけど、サーバー立てるのは面倒だったので、github pagesで公開しました。&lt;/p&gt;
 &lt;p&gt;というわけで慣れ親しんだPythonは使えないので、&lt;/p&gt;
-&lt;p&gt;JavaScript素人／jQuery初見、の状態で作成しました。&lt;/p&gt;
+&lt;p&gt;JavaScript素人／jQuery初見、の状態でなんとか色々調べながら作成しました。&lt;/p&gt;
 &lt;p&gt;jQueryについてはいまだによく分かっていません。&lt;/p&gt;
 &lt;p&gt;もちろんcssもよく知らないのでカスみたいな見た目してます。　&lt;/p&gt;
 &lt;p&gt;こういうの追加してほしいとかあれば可能な限りで追加してみます。&lt;/p&gt;
 &lt;p&gt;あとcssもアドバイスあれば嬉しいです。&lt;/p&gt;
+&lt;h2 id=&#34;追記20210125&#34;&gt;追記（2021/01/25）&lt;/h2&gt;
+&lt;p&gt;内容なさすぎたし、Qiitaの方でそのままコピペして載せたらコード書けって言われて確かにとなったので追記します。&lt;/p&gt;
+&lt;p&gt;コード全部載せるのはアレなんで、見たい方はgithubで見てください。&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/kokuyokugetter/tools&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kokuyokugetter/tools - github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ここでは作成時に気にしてたことを一つだけ書きます。&lt;/p&gt;
+&lt;p&gt;今回こちらのサイトを作成する際には、レスポンシブデザインを気にして作成していました。&lt;/p&gt;
+&lt;p&gt;safariにはレスポンシブデザインモードがあり、そこで逐一タブレットやスマホでの表示をチェックしながら作成していました。&lt;/p&gt;
+&lt;p&gt;PCでは3列表示で、全コンテンツを一度に表示するように見れ、&lt;/p&gt;
+&lt;p&gt;スマホ表示ではそれだと小さすぎるので、一列に表示するようにしているのですが、&lt;/p&gt;
+&lt;p&gt;PCの場合の3列表示したいときに、普通に&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;leftside&amp;#34;&lt;/span&gt;&amp;gt;
+    左中身
+  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+
+  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;center&amp;#34;&lt;/span&gt;&amp;gt;
+      中央中身
+  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+
+  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rightside&amp;#34;&lt;/span&gt;&amp;gt;
+      右中身
+  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;として&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;    #leftside {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;:&lt;span style=&#34;color:#66d9ef&#34;&gt;left&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;width&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;%&lt;/span&gt;;
+    }
+
+    #center {
+ 
+    }
+    #rightside {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;:&lt;span style=&#34;color:#66d9ef&#34;&gt;right&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;width&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;%&lt;/span&gt;;
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;とかってやるとrightsideの要素がcenterの要素の右下に来てしまいました。（確か）&lt;/p&gt;
+&lt;p&gt;centerが普通に表示した後に、&lt;code&gt;float:right&lt;/code&gt;が効いてるからでしょうか。&lt;/p&gt;
+&lt;p&gt;htmlでcenterとrightsideの要素を逆にすればちゃんとなりましたが、今度はスマホにしたときにcenterがrightsideの後ろにきて気持ち悪いです。&lt;/p&gt;
+&lt;p&gt;ということで、自分は以下のようにしました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;leftside&amp;#34;&lt;/span&gt;&amp;gt;
+    左中身
+  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+
+  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;center-right&amp;#34;&lt;/span&gt;&amp;gt;
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;centerside&amp;#34;&lt;/span&gt;&amp;gt;
+      中央中身
+    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rightside&amp;#34;&lt;/span&gt;&amp;gt;
+      右中身
+    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;    #leftside {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;:&lt;span style=&#34;color:#66d9ef&#34;&gt;left&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;width&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;%&lt;/span&gt;;
+    }
+
+    #center-right {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;right&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;width&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;70&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;%&lt;/span&gt;;
+    }
+    #centerside {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;:&lt;span style=&#34;color:#66d9ef&#34;&gt;left&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;width&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;49&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;%&lt;/span&gt;;
+       
+    }
+    #rightside {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;float&lt;/span&gt;:&lt;span style=&#34;color:#66d9ef&#34;&gt;right&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;width&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;49&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;%&lt;/span&gt;;
+    }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;centerとrightsideをまとめた要素を作ってそれを右寄せして、その中でまた左右に分けることで、2列表示のやり方を入れ子にすることで、上の問題を解決できました。&lt;/p&gt;
+&lt;p&gt;自分で思いついたのは偉いと自画自賛していますが、&lt;/p&gt;
+&lt;p&gt;CSSのスペシャリスト的に、もっといい3列表示の方法があれば教えてください。&lt;/p&gt;
 </description>
     </item>
     
