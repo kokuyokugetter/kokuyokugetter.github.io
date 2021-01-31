@@ -5,7 +5,7 @@
     <link>https://kokuyokugetter.github.io/tags/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 24 Jan 2021 18:07:14 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 31 Jan 2021 22:28:30 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
@@ -13,18 +13,26 @@
     </image>
     
     <item>
-      <title>buy</title>
-      <link>https://kokuyokugetter.github.io/tags/buy/</link>
-      <pubDate>Sun, 24 Jan 2021 18:07:14 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/tags/buy/</guid>
+      <title>Apple</title>
+      <link>https://kokuyokugetter.github.io/tags/apple/</link>
+      <pubDate>Sun, 31 Jan 2021 22:28:30 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/tags/apple/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MNG</title>
       <link>https://kokuyokugetter.github.io/tags/mng/</link>
-      <pubDate>Sun, 24 Jan 2021 18:07:14 +0900</pubDate>
+      <pubDate>Sun, 31 Jan 2021 22:28:30 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/tags/mng/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>buy</title>
+      <link>https://kokuyokugetter.github.io/tags/buy/</link>
+      <pubDate>Sun, 24 Jan 2021 18:07:14 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/tags/buy/</guid>
       <description></description>
     </item>
     
@@ -77,7 +85,7 @@
     </item>
     
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>https://kokuyokugetter.github.io/tags/python/</link>
       <pubDate>Tue, 10 Nov 2020 18:00:05 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/tags/python/</guid>
@@ -89,14 +97,6 @@
       <link>https://kokuyokugetter.github.io/tags/scraping/</link>
       <pubDate>Tue, 10 Nov 2020 18:00:05 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/tags/scraping/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Apple</title>
-      <link>https://kokuyokugetter.github.io/tags/apple/</link>
-      <pubDate>Sun, 25 Oct 2020 00:00:41 +0900</pubDate>
-      <guid>https://kokuyokugetter.github.io/tags/apple/</guid>
       <description></description>
     </item>
     
