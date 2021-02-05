@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kokuyokugetter.github.io/post/</loc>
+    <lastmod>2021-02-02T18:28:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/</loc>
+    <lastmod>2021-02-02T18:28:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kokuyokugetter.github.io/post/web_comic_notification/</loc>
+    <lastmod>2021-02-02T18:28:30+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kokuyokugetter.github.io/tags/apple/</loc>
     <lastmod>2021-01-31T22:28:30+09:00</lastmod>
   </url>
@@ -28,22 +43,12 @@
   </url>
   
   <url>
-    <loc>https://kokuyokugetter.github.io/post/</loc>
-    <lastmod>2021-01-31T22:28:30+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kokuyokugetter.github.io/tags/</loc>
     <lastmod>2021-01-31T22:28:30+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kokuyokugetter.github.io/categories/tech/</loc>
-    <lastmod>2021-01-31T22:28:30+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kokuyokugetter.github.io/</loc>
     <lastmod>2021-01-31T22:28:30+09:00</lastmod>
   </url>
   
