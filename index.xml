@@ -5,12 +5,539 @@
     <link>https://kokuyokugetter.github.io/</link>
       <atom:link href="https://kokuyokugetter.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>ゲッタ〜のHP</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 31 Jul 2021 19:47:55 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 27 Aug 2021 22:47:55 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>ゲッタ〜のHP</title>
       <link>https://kokuyokugetter.github.io/</link>
     </image>
+    
+    <item>
+      <title>2021年08月に買ったもの</title>
+      <link>https://kokuyokugetter.github.io/post/202108buy/</link>
+      <pubDate>Fri, 27 Aug 2021 22:47:55 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/202108buy/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;DMMセールでめっちゃ漫画買ったかな。&lt;/p&gt;
+&lt;p&gt;あとはずっと繋げてなかったマイクのオーディオインターフェース（？）をポイントアップキャンペーン期間に購入した。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#pc周辺機器&#34;&gt;PC周辺機器&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#健康&#34;&gt;健康&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#生活&#34;&gt;生活&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#書籍&#34;&gt;書籍&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#dmm&#34;&gt;DMM&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#dmm外&#34;&gt;DMM外&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;pc周辺機器&#34;&gt;PC周辺機器&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B07JKLMDGX/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07JKLMDGX&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      ROLAND VT-4 Voice Transformer ボイストランスフォーマー
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ついにマイクから始まってマイクスタンド、オーディオインターフェースの音声入力機器一式が揃った。オーディオインターフェース安くても6000円くらいだしまあ24000円は誤差（？）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B01FVDERUY/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B01FVDERUY&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      エレコム AVケーブル/音楽伝送/A-Bケーブル/USB2.0/1.0m
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;VT-4 to macの接続用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;健康&#34;&gt;健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B004PEHCZS/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B004PEHCZS&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      ディアナチュラ カルシウム・マグネシウム・亜鉛・ビタミンD 180粒 (30日分)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;定期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;生活&#34;&gt;生活&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B07THRMPB7/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07THRMPB7&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      [ハピタス] 2in1枕 豊富な柄 コンパクト クッション 33 cm 0.24kg
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ハンモック用枕でビーズクッション試し。なんか結局100均の枕でいいような気がしてきて泣いてます。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;書籍&#34;&gt;書籍&lt;/h2&gt;
+&lt;h3 id=&#34;dmm&#34;&gt;DMM&lt;/h3&gt;
+&lt;p&gt;なんか映画もそうだけど、漫画もちょい昔の名作を見ようみたいな期間がちょっとあったかもしれない。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000ahftx08872/?dmmref=library&amp;amp;i3_ord=17&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;カラオケ行こ！&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;アメトーークの紹介を見て、暇だし読んでみるか〜って買ってる。この後に下に書く漫画も同じ感じ「&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b508akaeb04721/?dmmref=librarySeries&amp;amp;i3_ord=5&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;北北西に曇と往け 1巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1~5巻購入。上に同じ。まあ普通に面白いっす&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b647asodn04118/?dmmref=librarySeries&amp;amp;i3_ord=2&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;女の園の星 （1）【電子限定特典付】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1~2巻購入。上に同じ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds09636/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;よくわからないけれど異世界に転生していたようです （7） 【電子限定描きおろしペーパー付き】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds09600/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;聖者無双 （8）【電子限定描きおろしペーパー付き】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds09635/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;時間停止勇者 （6）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000bhftx03680/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ゲーム オブ ファミリア-家族戦記- 07&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;上4つの異世界転生は更新をかなり楽しみにしてる方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds09631/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;うちの師匠はしっぽがない （6）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;アニメ化も決まったらしい。結構面白いのでおすすめです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b350dftdb03917/?dmmref=librarySeries&amp;amp;i3_ord=3&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;最強陰陽師の異世界転生記〜下僕の妖怪どもに比べてモンスターが弱すぎるんだが〜（コミック） 1&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1~3巻購入？覚えてない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b330etksb02104/?dmmref=librarySeries&amp;amp;i3_ord=5&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;魔法少女にあこがれて【電子限定特典付き】 （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1~5巻購入。かなり神&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b073bktcm02874/?dmmref=librarySeries&amp;amp;i3_ord=2&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;女装パンデミック 1&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1~2巻完結だしまあまあ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b163bijt204801/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1年A組のモンスター （7）【イラスト特典付】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;昔広告で見て買ってしまってからダラダラ読んでるが、結構微妙&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b388atabd00576/?dmmref=librarySeries&amp;amp;i3_ord=5&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;領民0人スタートの辺境領主様 〜青のディアスと蒼角の乙女〜 1&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1~5巻購入。普通に面白い&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b355gakta09336/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;異世界NTR〜親友のオンナを最強スキルで堕とす方法〜【電子単行本】 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b350dftdb07239/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;冒険家になろう！〜スキルボードでダンジョン攻略〜（コミック） 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b350dftdb07240/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;魔欠落者の収納魔法〜フェンリルが住み着きました〜（コミック） 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b999asqex08417/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;不徳のギルド 8巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;エッチめでコメディテイストでおすすめです。かなり楽しみにしてる方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b600nsgk00005/?dmmref=librarySeries&amp;amp;i3_ord=20&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;史上最強の弟子ケンイチ （42）~(61)&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;サンデーうぇぶりで41巻まで読んだ（てか全部あると思ってたらうぇぶりには41巻までしかなくて泣いた）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b330etksb06689/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;魔剣師の魔剣による魔剣のためのハーレムライフ （3）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;神絵師だが内容は相変わらず微妙&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900vkds04737/?dmmref=librarySeries&amp;amp;i3_ord=3&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;異世界からの企業進出！？ 〜元社畜が異世界転職して成り上がる！ 勇者が攻略できない迷宮を作り上げろ〜 （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;面白いのに、作者病気とかで第一部完結という体の打ち切りで泣いてる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900tkds03463/?dmmref=librarySeries&amp;amp;i3_ord=6&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;アダマスの魔女たち （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1〜6巻購入。エロいけど結構面白い。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900wkds09994/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;彼女、お借りします （22）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;25巻までに終わってくれ〜〜〜&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b950ushes09085/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;失業賢者の成り上がり〜嫌われた才能は世界最強でした〜 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b950ushes09076/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;復讐を希う最強勇者は、闇の力で殲滅無双する 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b950ushes09077/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;史上最強の魔法剣士、Fランク冒険者に転生する 〜剣聖と魔帝、2つの前世を持った男の英雄譚〜 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b189bsngh03768/?dmmref=librarySeries&amp;amp;i3_ord=2&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;悪役令嬢転生おじさん （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;ニコニコ漫画で人気っぽいが、2巻で結構微妙になってきたわ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900pkds01267/?dmmref=librarySeries&amp;amp;i3_ord=11&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;渡くんの××が崩壊寸前 （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1~11巻購入。なんかヤンジャンの『少年のアビス』とか『青年少女よ、春を貪れ。』とかみたいな、闇がある系の漫画のような雰囲気を匂わせた割に何もなくて11巻まで買わされてしまった…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b999asqex03087/?dmmref=librarySeries&amp;amp;i3_ord=9&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ラグナクリムゾン 1巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1~9巻購入。ツイッターで面白いよって言ったら、りっぷるも喜んでくれたみたいでよかった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b163bijt204643/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;思春期ちゃんのしつけかた （5）【描き下ろしイラスト特典付】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;ヒロインが小動物的に可愛すぎるのでおすすめです&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k371aflxc01097/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;おじさんはカワイイものがお好き。 （6）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;もうマジでつまんなくなってる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900xkds00035/?dmmref=library&amp;amp;i3_ord=7&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;るなしい （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitterバズで購入。まあ読んでもいいと思う&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b600zsgk09382/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;古見さんは、コミュ症です。 （22）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;もう終わってくれ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900mkds02731/?dmmref=librarySeries&amp;amp;i3_ord=2&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ザ・ファブル （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1〜22巻の第一部完結まで全巻購入。めっちゃ面白かった。第二部も始まったみたいで楽しみにしてる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b073bktcm03785/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;酷幻想をアイテムチートで生き抜く THE COMIC 3&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;なんかちゃんと買いてるっぽいけど、もうよく分からん。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k153adena01590/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;俺んちに来た女騎士と田舎暮らしすることになった件 （7）【DMM限定特典付き】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;おもん無いわけじゃないが終わってもいい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000bhftx04341/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;魔法使いの印刷所 （6）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;完結した〜&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k804annbn03412/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ニートくノ一となぜか同棲はじめました （5）【フルカラー完全版】&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;単話だが結構楽しみにしてた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dmm外&#34;&gt;DMM外&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.sunday-webry.com/detail.php?title_id=964&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;任侠転生&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;サンデーうぇぶりにて読んでる。かな〜り面白いので転生系好きな人はおすすめ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://shonenjumpplus.com/episode/13932016480029111789&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;左利きのエレン&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;ジャンぷらで。今更読んだけどまだ結構完結遠そう？原作はさすがに読む気しない。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+</description>
+    </item>
     
     <item>
       <title>2021年07月に買ったもの</title>
@@ -3976,7 +4503,7 @@
 &lt;/nav&gt;
 &lt;br&gt;
 &lt;p&gt;My New Gear&amp;hellip;&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;キツアアア &lt;a href=&#34;https://t.co/m7OZykkrdK&#34;&gt;pic.twitter.com/m7OZykkrdK&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1355706427554242561?ref_src=twsrc%5Etfw&#34;&gt;January 31, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;キツアアア &lt;a href=&#34;https://t.co/m7OZykkrdK&#34;&gt;pic.twitter.com/m7OZykkrdK&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1355706427554242561?ref_src=twsrc%5Etfw&#34;&gt;January 31, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;買うかどうかず〜〜っと悩んでたので、Amazonのセールに合わせて買ってしまいました。&lt;/p&gt;
 &lt;p&gt;今日は毎週行ってるジムも行かずに色々セッティングしてたので、周辺機器等買ったものや初期設定を書いていきます。&lt;/p&gt;
@@ -3991,7 +4518,7 @@
 &lt;br&gt;
 &lt;p&gt;M1 Mac miniは排熱本当にないですが、スタンドスタイルの方が排熱がいいのと、USB等のポートへのアクセスがしやすい、場所を取らないということでスタンドスタイルにしています。&lt;/p&gt;
 &lt;br&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Mac mini スタンド買った &lt;a href=&#34;https://t.co/xEftZiWLDg&#34;&gt;pic.twitter.com/xEftZiWLDg&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1355437304324603904?ref_src=twsrc%5Etfw&#34;&gt;January 30, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Mac mini スタンド買った &lt;a href=&#34;https://t.co/xEftZiWLDg&#34;&gt;pic.twitter.com/xEftZiWLDg&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1355437304324603904?ref_src=twsrc%5Etfw&#34;&gt;January 30, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;br&gt;
 &lt;p&gt;これはダイソーのまな板スタンドですが、Mac miniがちょうどハマるサイズなのでおすすめです。（表面に傷がつく可能性があるので、気になる人はやめておいた方がいいです）&lt;/p&gt;
@@ -4765,7 +5292,7 @@
 &lt;ul&gt;
 &lt;li&gt;前から欲しかったので購入。これでミンチ肉買わなくて自分でミンチにしたりできるかな。↓は海老油をとった後の海老の頭をペースト状にして色々な料理に使っていこうというやつです。先日チゲ鍋に入れたらお店の味にグッと近づいた。&lt;/li&gt;
 &lt;li&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;My new gear... &lt;a href=&#34;https://t.co/qSeBH7Fywj&#34;&gt;pic.twitter.com/qSeBH7Fywj&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1351465199849463808?ref_src=twsrc%5Etfw&#34;&gt;January 19, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;My new gear... &lt;a href=&#34;https://t.co/qSeBH7Fywj&#34;&gt;pic.twitter.com/qSeBH7Fywj&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1351465199849463808?ref_src=twsrc%5Etfw&#34;&gt;January 19, 2021&lt;/a&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -5185,7 +5712,7 @@
 &lt;li&gt;
 &lt;a href=&#34;https://book.dmm.com/detail/b900vkds04960/?dmmref=librarySeries&amp;amp;i3_ord=4&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;よくわからないけれど異世界に転生していたようです （1）〜（4）&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;TS異世界転生増えてきたな。俺はか〜〜なり好き &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;めちゃくちゃオナニー始めたが &lt;a href=&#34;https://t.co/I2bgeYH2KU&#34;&gt;pic.twitter.com/I2bgeYH2KU&lt;/a&gt;&lt;/p&gt;— ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1347442413237719042?ref_src=twsrc%5Etfw&#34;&gt;January 8, 2021&lt;/a&gt;&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;TS異世界転生増えてきたな。俺はか〜〜なり好き &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;めちゃくちゃオナニー始めたが &lt;a href=&#34;https://t.co/I2bgeYH2KU&#34;&gt;pic.twitter.com/I2bgeYH2KU&lt;/a&gt;&lt;/p&gt;— ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1347442413237719042?ref_src=twsrc%5Etfw&#34;&gt;January 8, 2021&lt;/a&gt;&lt;/blockquote&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -5431,7 +5958,7 @@
 &lt;p&gt;10時秋葉集合&lt;/p&gt;
 &lt;p&gt;腹痛くなるも無事間に合う&lt;/p&gt;
 &lt;p&gt;草津はバックパックで辛かったのでキャリーバッグで&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;自粛警察にやられそうな格好してる &lt;a href=&#34;https://t.co/fAGZ9slZHZ&#34;&gt;pic.twitter.com/fAGZ9slZHZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342625867227299841?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;自粛警察にやられそうな格好してる &lt;a href=&#34;https://t.co/fAGZ9slZHZ&#34;&gt;pic.twitter.com/fAGZ9slZHZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342625867227299841?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;車で4,4に分かれる。&lt;/p&gt;
 &lt;p&gt;免許保持者は結構いたが、実質的な運転可能者は2名だったので、この旅の全ての運転は二人に任せた。感謝。&lt;/p&gt;
@@ -5443,10 +5970,10 @@
 &lt;p&gt;もっとめちゃくちゃになることを期待していたが、「めっちゃ遅刻する」と言いつつ15分程度だったのでギリセーフか&lt;/p&gt;
 &lt;p&gt;秋葉から川崎→アクアラインを通るルートで向かった。&lt;/p&gt;
 &lt;p&gt;とみうらで晩のツマミのくじらとか買って飯&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ここどこ！？ &lt;a href=&#34;https://t.co/GVIowMFCJV&#34;&gt;pic.twitter.com/GVIowMFCJV&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342660576569221120?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ここどこ！？ &lt;a href=&#34;https://t.co/GVIowMFCJV&#34;&gt;pic.twitter.com/GVIowMFCJV&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342660576569221120?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;12:00、地魚の海鮮丼を食った&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;房総半島の地魚キツアアア &lt;a href=&#34;https://t.co/eoPXkiM1dJ&#34;&gt;pic.twitter.com/eoPXkiM1dJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342664032654827525?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;房総半島の地魚キツアアア &lt;a href=&#34;https://t.co/eoPXkiM1dJ&#34;&gt;pic.twitter.com/eoPXkiM1dJ&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342664032654827525?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;その後13:00くらいに館山の（多分）適当なスーパーで明日の昼までの酒や食い物を買って宿へ向かう&lt;/p&gt;
 &lt;p&gt;チェックイン時間まで余裕あったので近くの広場でソフトテニスボールでキャッチボール（この晩には肩筋肉痛になった）&lt;/p&gt;
@@ -5462,23 +5989,23 @@
 &lt;p&gt;1戦目終わったところでいい時間になったので飯に行く&lt;/p&gt;
 &lt;p&gt;車ではソシャゲの話とかした&lt;/p&gt;
 &lt;p&gt;寿司ウマー&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;寿司キツアアア &lt;a href=&#34;https://t.co/OXeTcVkciU&#34;&gt;pic.twitter.com/OXeTcVkciU&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342783530003152897?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;寿司キツアアア &lt;a href=&#34;https://t.co/OXeTcVkciU&#34;&gt;pic.twitter.com/OXeTcVkciU&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342783530003152897?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;風呂へは里見の湯にきた。湯気がすごくて何も見えなかった。帰って酒飲むために風呂上がりの水分を我慢した（？）&lt;/p&gt;
 &lt;p&gt;22時半くらいに帰ってタルキール続きして&lt;/p&gt;
 &lt;p&gt;結果1-2&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;und&#34; dir=&#34;ltr&#34;&gt;1−2 &lt;a href=&#34;https://t.co/O5RGbD59tw&#34;&gt;pic.twitter.com/O5RGbD59tw&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342855229314801664?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;und&#34; dir=&#34;ltr&#34;&gt;1−2 &lt;a href=&#34;https://t.co/O5RGbD59tw&#34;&gt;pic.twitter.com/O5RGbD59tw&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342855229314801664?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;ドラフト終わって0:30くらいなのでもう新しい大きいアクティビティはできないということで、&lt;/p&gt;
 &lt;p&gt;4人はEDH、2人はゲートルーラー、1人はなんか観戦、1人はダーツみたいな感じでグダグダやってた。&lt;/p&gt;
 &lt;p&gt;俺はゲートルーラーやってた、クソゲーだった&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ゲートルーラークソつまんないわ &lt;a href=&#34;https://t.co/6zxHgMtOH7&#34;&gt;pic.twitter.com/6zxHgMtOH7&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342879898168225792?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ゲートルーラークソつまんないわ &lt;a href=&#34;https://t.co/6zxHgMtOH7&#34;&gt;pic.twitter.com/6zxHgMtOH7&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342879898168225792?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;2：30くらいに就寝&lt;/p&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;2日目&#34;&gt;2日目&lt;/h2&gt;
 &lt;p&gt;俺は7:30くらいに起きたけど誰も起きてないので、毎月末にやる、その月の更新漫画読むやつやってた&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;そういうことすな &lt;a href=&#34;https://t.co/bmwRW0l1kH&#34;&gt;pic.twitter.com/bmwRW0l1kH&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342972098264723456?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;そういうことすな &lt;a href=&#34;https://t.co/bmwRW0l1kH&#34;&gt;pic.twitter.com/bmwRW0l1kH&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1342972098264723456?ref_src=twsrc%5Etfw&#34;&gt;December 26, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;こんなツイートもしてた&lt;/p&gt;
 &lt;p&gt;ゴッシーがバスケやりだす8:00&lt;/p&gt;
@@ -5486,15 +6013,15 @@
 &lt;p&gt;朝飯食う8:45&lt;/p&gt;
 &lt;p&gt;俺もバスケ一瞬やったけど下手すぎておもんなくてやめた9:00&lt;/p&gt;
 &lt;p&gt;9:30くらいから統率者ドラフトスタート&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;統率者ドラフトスタート &lt;a href=&#34;https://t.co/mvcFTp8Gty&#34;&gt;pic.twitter.com/mvcFTp8Gty&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343018322418274305?ref_src=twsrc%5Etfw&#34;&gt;December 27, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;統率者ドラフトスタート &lt;a href=&#34;https://t.co/mvcFTp8Gty&#34;&gt;pic.twitter.com/mvcFTp8Gty&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343018322418274305?ref_src=twsrc%5Etfw&#34;&gt;December 27, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;スフィンクスの統率者のドローデッキ完成&lt;/p&gt;
 &lt;p&gt;昼飯は1試合目中に昨日買った冷凍食品で済ませる&lt;/p&gt;
 &lt;p&gt;1試合目は序盤目立たずにチマチマリソース集めて無事1位&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;なんかすごいことに &lt;a href=&#34;https://t.co/3vvlBUvdbW&#34;&gt;pic.twitter.com/3vvlBUvdbW&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343061111629746178?ref_src=twsrc%5Etfw&#34;&gt;December 27, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;なんかすごいことに &lt;a href=&#34;https://t.co/3vvlBUvdbW&#34;&gt;pic.twitter.com/3vvlBUvdbW&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343061111629746178?ref_src=twsrc%5Etfw&#34;&gt;December 27, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;2試合目はマリガン雑すぎて土地事故して序盤あまりにカスすぎて殴られすぎた結果、ライフが無くて頓死した3位&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;統率者ドラフト1戦目1位、上位卓3位 &lt;a href=&#34;https://t.co/i5aLX6VPoj&#34;&gt;pic.twitter.com/i5aLX6VPoj&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343109598610264065?ref_src=twsrc%5Etfw&#34;&gt;December 27, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;統率者ドラフト1戦目1位、上位卓3位 &lt;a href=&#34;https://t.co/i5aLX6VPoj&#34;&gt;pic.twitter.com/i5aLX6VPoj&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343109598610264065?ref_src=twsrc%5Etfw&#34;&gt;December 27, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;ブースター買わなくてもまたドラフトできるように写真撮る→最後に元のパックの姿に戻すやつやった。&lt;/p&gt;
 &lt;p&gt;パック化して晩飯をどうするか相談。18:00くらい&lt;/p&gt;
@@ -5524,9 +6051,9 @@
 &lt;p&gt;萌え絵マダミスやる&lt;/p&gt;
 &lt;p&gt;ボコボコにされて死んだ。マジで無理ゲーだった…どうやって勝てばよかったんだ…&lt;/p&gt;
 &lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=1uYwR_3vlNNZUsxA14gJySRmjDP-jie6c&#34; width=&#34;&#34; alt=&#34;fig10&#34;&gt; 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ショタガキ &lt;a href=&#34;https://t.co/ABpwiCkpmE&#34;&gt;pic.twitter.com/ABpwiCkpmE&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343576498414833664?ref_src=twsrc%5Etfw&#34;&gt;December 28, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ショタガキ &lt;a href=&#34;https://t.co/ABpwiCkpmE&#34;&gt;pic.twitter.com/ABpwiCkpmE&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343576498414833664?ref_src=twsrc%5Etfw&#34;&gt;December 28, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;メス堕ちしそう &lt;a href=&#34;https://t.co/MCYFP53w6n&#34;&gt;pic.twitter.com/MCYFP53w6n&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343576581155930114?ref_src=twsrc%5Etfw&#34;&gt;December 28, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;メス堕ちしそう &lt;a href=&#34;https://t.co/MCYFP53w6n&#34;&gt;pic.twitter.com/MCYFP53w6n&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343576581155930114?ref_src=twsrc%5Etfw&#34;&gt;December 28, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;LWが人狼完全に理解した&lt;/p&gt;
 &lt;p&gt;就寝&lt;/p&gt;
@@ -5538,7 +6065,7 @@
 &lt;p&gt;バトルラインやってたりした横で、俺はゲートルーラーやった&lt;/p&gt;
 &lt;p&gt;アビスシンフォニアだけはちょっと楽しくて評価したくなってきた&lt;/p&gt;
 &lt;p&gt;ボディーメンテうまい。Twitterしながらダラダラしてた&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ちっちゃいサボテン接写しがちっていう女子あるあるやってる &lt;a href=&#34;https://t.co/8ilP50LX9e&#34;&gt;pic.twitter.com/8ilP50LX9e&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343723488540991488?ref_src=twsrc%5Etfw&#34;&gt;December 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ちっちゃいサボテン接写しがちっていう女子あるあるやってる &lt;a href=&#34;https://t.co/8ilP50LX9e&#34;&gt;pic.twitter.com/8ilP50LX9e&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343723488540991488?ref_src=twsrc%5Etfw&#34;&gt;December 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;カップ麺食いたいが我慢&lt;/p&gt;
 &lt;p&gt;クジラ食うウィンナー食う、美味い。クジラは見た目コゲ肉みたいだけど美味い。&lt;/p&gt;
@@ -5548,7 +6075,7 @@
 &lt;p&gt;テニスモチベあるグループと、他グループで4-4に分かれて一旦解散。晩飯にはまた集合ということになった。&lt;/p&gt;
 &lt;p&gt;夜は食べ放題だったが、運動もするので昼飯は軽くコンビニで済ませた。&lt;/p&gt;
 &lt;p&gt;テニスめっちゃ楽しかったけど、身体がジジイになってるのを実感した&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;テニス部活動中 &lt;a href=&#34;https://t.co/AnSD0mHgC9&#34;&gt;pic.twitter.com/AnSD0mHgC9&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343804535135850498?ref_src=twsrc%5Etfw&#34;&gt;December 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;テニス部活動中 &lt;a href=&#34;https://t.co/AnSD0mHgC9&#34;&gt;pic.twitter.com/AnSD0mHgC9&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1343804535135850498?ref_src=twsrc%5Etfw&#34;&gt;December 29, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;飯の時間まで若干時間が空いたので、新宿の塩湯で汗を流すことに。&lt;/p&gt;
 &lt;p&gt;銭湯なのにシャンプーボディーソープ完備で嬉しいが、年齢層が高いからか全風呂熱々だった。&lt;/p&gt;
@@ -5732,7 +6259,7 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;8万円のものを。福袋とは名ばかりで、ただの年末年始セールでした。通常価格5〜6万円（税抜）相当を2セットで8万円（税抜）で購入できました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;テレワークだったら着ないけど、テレワーク終わったらスーツ確実に着るし、カススーツ2着を実家に送り返して実家から会社出る時があればそれ着て、基本はオーダースーツ3着をローテーションできるのが良い&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1340200868004564992?ref_src=twsrc%5Etfw&#34;&gt;December 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;テレワークだったら着ないけど、テレワーク終わったらスーツ確実に着るし、カススーツ2着を実家に送り返して実家から会社出る時があればそれ着て、基本はオーダースーツ3着をローテーションできるのが良い&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1340200868004564992?ref_src=twsrc%5Etfw&#34;&gt;December 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -7747,7 +8274,7 @@ browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;implicitly_wait(&
 &lt;li&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://book.dmm.com/detail/b388atabd00328/?dmmref=librarySeries&amp;amp;i3_ord=8&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜 1〜3巻&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜 1 - 男性コミック(漫画) - 無料で試し読み！DMM電子書籍&lt;br&gt;&lt;br&gt;神の漫画やん &lt;a href=&#34;https://t.co/kqOxAkjo9q&#34;&gt;https://t.co/kqOxAkjo9q&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1316339410086973440?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜 1 - 男性コミック(漫画) - 無料で試し読み！DMM電子書籍&lt;br&gt;&lt;br&gt;神の漫画やん &lt;a href=&#34;https://t.co/kqOxAkjo9q&#34;&gt;https://t.co/kqOxAkjo9q&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1316339410086973440?ref_src=twsrc%5Etfw&#34;&gt;October 14, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
@@ -7849,7 +8376,7 @@ browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;implicitly_wait(&
 &lt;li&gt;2台持ちの弊害
 &lt;ul&gt;
 &lt;li&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Apple Watch2台を毎日交互に着ける弊害のSuica持ち忘れるがついに起こってしまった。気にはしてたんだがなー&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1314171577647259649?ref_src=twsrc%5Etfw&#34;&gt;October 8, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Apple Watch2台を毎日交互に着ける弊害のSuica持ち忘れるがついに起こってしまった。気にはしてたんだがなー&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1314171577647259649?ref_src=twsrc%5Etfw&#34;&gt;October 8, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -7860,7 +8387,7 @@ browser&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;implicitly_wait(&
 &lt;li&gt;Macのロック解除に使えない！？
 &lt;ul&gt;
 &lt;li&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;» Apple WatchでMacのロック解除ができない？Appleサポートに複数報告 - iPhone Mania &lt;a href=&#34;https://t.co/OcrnxavkZA&#34;&gt;https://t.co/OcrnxavkZA&lt;/a&gt; &lt;br&gt;&lt;br&gt;Apple WatchSEが設定できないのコレか？&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1308928484895383552?ref_src=twsrc%5Etfw&#34;&gt;September 24, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;» Apple WatchでMacのロック解除ができない？Appleサポートに複数報告 - iPhone Mania &lt;a href=&#34;https://t.co/OcrnxavkZA&#34;&gt;https://t.co/OcrnxavkZA&lt;/a&gt; &lt;br&gt;&lt;br&gt;Apple WatchSEが設定できないのコレか？&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1308928484895383552?ref_src=twsrc%5Etfw&#34;&gt;September 24, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -9503,7 +10030,7 @@ plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
 &lt;/nav&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;動機&#34;&gt;動機&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ゲーミングチェア手当欲しい。ビーズクッションで仕事するの辛い&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1295894183576662016?ref_src=twsrc%5Etfw&#34;&gt;August 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ゲーミングチェア手当欲しい。ビーズクッションで仕事するの辛い&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1295894183576662016?ref_src=twsrc%5Etfw&#34;&gt;August 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;br&gt;
 &lt;p&gt;元々ビーズクッションとローテーブルで過ごしていて、前からもAtCoderとかするときは、姿勢がビーズクッションに寝るか、完全に体起こして机に向き合うかの二択で、ちょっと辛かったけど、せいぜい週1で1時間半とかだし、YouTube見るときとかはビーズクッションはむしろ心地いいから不満はありませんでした。&lt;/p&gt;
@@ -9800,7 +10327,7 @@ plt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
 &lt;p&gt;環境が整ったのでテレワークとかブログの更新頑張ります。&lt;/p&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;その後&#34;&gt;その後&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;来ました &lt;a href=&#34;https://t.co/pNB7afZeft&#34;&gt;pic.twitter.com/pNB7afZeft&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1302524017195192320?ref_src=twsrc%5Etfw&#34;&gt;September 6, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;来ました &lt;a href=&#34;https://t.co/pNB7afZeft&#34;&gt;pic.twitter.com/pNB7afZeft&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1302524017195192320?ref_src=twsrc%5Etfw&#34;&gt;September 6, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;br&gt;
 &lt;p&gt;
@@ -11729,7 +12256,7 @@ Wiki見たらキモかった&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;画像のリンクさえすれば良いので、Twitterの動画のサムネやTwitterの画像も貼り付けられる。&lt;/p&gt;
 &lt;p&gt;例えばこのツイート↓からPCの右クリックで画像アドレスをコピーして、画像リンクとして貼り付ける。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;test &lt;a href=&#34;https://t.co/K8RKGXQrRk&#34;&gt;pic.twitter.com/K8RKGXQrRk&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1274219400300646400?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;test &lt;a href=&#34;https://t.co/K8RKGXQrRk&#34;&gt;pic.twitter.com/K8RKGXQrRk&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1274219400300646400?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
@@ -11737,7 +12264,7 @@ Wiki見たらキモかった&lt;/p&gt;
 &lt;p&gt;動画サムネが出力できる。&lt;/p&gt;
   &lt;br&gt;
 &lt;p&gt;また、普通の画像ツイート↓も同様にして、&lt;/p&gt;
-  &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;test2 &lt;a href=&#34;https://t.co/r9tytpSctW&#34;&gt;pic.twitter.com/r9tytpSctW&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1274219539513794561?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
+  &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;test2 &lt;a href=&#34;https://t.co/r9tytpSctW&#34;&gt;pic.twitter.com/r9tytpSctW&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1274219539513794561?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;&lt;img src=&#34;https://pbs.twimg.com/media/Ea7v6o7UEAMkn0-?format=jpg&amp;amp;name=large&#34; alt=&#34;a&#34;&gt;&lt;/p&gt;
 &lt;p&gt;画像をDLしなくても貼り付けられるので、画像の所有者に特に断りを入れず利用できる（特に問題がなければツイートをそのまま貼り付けた方が良いとは思うが）。&lt;/p&gt;
@@ -11752,13 +12279,13 @@ Wiki見たらキモかった&lt;/p&gt;
       <description>&lt;p&gt;流行りの
 &lt;a href=&#34;https://tsd0313.github.io/ygo-DogmaBlade/dist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ドグマブレードシミュレーター&lt;/a&gt;を作りました。&lt;/p&gt;
 &lt;p&gt;ご確認よろしくお願いいたします。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマガイ何枚SSした？？&lt;br&gt;3枚&lt;br&gt;マジエク何枚伏せた？？&lt;br&gt;2枚&lt;br&gt;墓地の魔法カード何枚？？&lt;br&gt;29枚&lt;br&gt;ドグマブレード先攻1キル成功！18600ダメージ！&lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271828996561334272?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマガイ何枚SSした？？&lt;br&gt;3枚&lt;br&gt;マジエク何枚伏せた？？&lt;br&gt;2枚&lt;br&gt;墓地の魔法カード何枚？？&lt;br&gt;29枚&lt;br&gt;ドグマブレード先攻1キル成功！18600ダメージ！&lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271828996561334272?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;ほうほう？&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;うおおおおお&lt;br&gt;ドグマブレードシミュレーターキツアアアアア &lt;a href=&#34;https://t.co/bCEQVNGmxD&#34;&gt;pic.twitter.com/bCEQVNGmxD&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271608597315645440?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;うおおおおお&lt;br&gt;ドグマブレードシミュレーターキツアアアアア &lt;a href=&#34;https://t.co/bCEQVNGmxD&#34;&gt;pic.twitter.com/bCEQVNGmxD&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271608597315645440?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;ん？？&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマブレード先攻1キル成功！2000000000ダメージ！ マジエク5000枚発動/墓地の魔法カード2000枚  &lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271757347694624768?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマブレード先攻1キル成功！2000000000ダメージ！ マジエク5000枚発動/墓地の魔法カード2000枚  &lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271757347694624768?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;？？？？&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
@@ -11844,7 +12371,7 @@ comfirming_tweet(s)
       <pubDate>Fri, 20 Mar 2020 11:45:52 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/post/zozomat/</guid>
       <description>&lt;p&gt;ZOZOMATが届きました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;きました &lt;a href=&#34;https://t.co/SQuB4lTTpZ&#34;&gt;pic.twitter.com/SQuB4lTTpZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1240144382210211841?ref_src=twsrc%5Etfw&#34;&gt;March 18, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;きました &lt;a href=&#34;https://t.co/SQuB4lTTpZ&#34;&gt;pic.twitter.com/SQuB4lTTpZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1240144382210211841?ref_src=twsrc%5Etfw&#34;&gt;March 18, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;で早速測定。結果は&lt;/p&gt;
 &lt;img src=&#34;https://drive.google.com/uc?export=view&amp;id=16KGvOMnKlLvQScKp-r9RZIWgy6iqTtvH&#34; width=&#34;500&#34; height=&#34;&#34; alt=&#34;zozomat&#34;&gt;
@@ -13307,7 +13834,7 @@ None
 &lt;a href=&#34;https://www.trhrkmk.com/posts/hugo-amp-twitter-embedded-shortcode/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo(AMP対応)にTwitterのツイートを埋め込む時のメモ&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Twitterの自己紹介雑魚くて、ホームページのリンクにもQiitaのリンクしか貼ってなかったので、ポートフォリオサイト作った。&lt;a href=&#34;https://t.co/LgamCm3g4F&#34;&gt;https://t.co/LgamCm3g4F&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ⌇ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1230116459562430466?ref_src=twsrc%5Etfw&#34;&gt;February 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;Twitterの自己紹介雑魚くて、ホームページのリンクにもQiitaのリンクしか貼ってなかったので、ポートフォリオサイト作った。&lt;a href=&#34;https://t.co/LgamCm3g4F&#34;&gt;https://t.co/LgamCm3g4F&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰 (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1230116459562430466?ref_src=twsrc%5Etfw&#34;&gt;February 19, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;br&gt;
 &lt;p&gt;↑ {{% twitter 1230116459562430466 %}}と書いています。&lt;/p&gt;
