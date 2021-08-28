@@ -39,7 +39,8 @@
 &lt;br&gt;
 &lt;h2 id=&#34;pc周辺機器&#34;&gt;PC周辺機器&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;style&gt;
+&lt;li&gt;
+&lt;style&gt;
 .amazon-widget {
     margin: 2rem 0;
     max-width: 480px;
@@ -106,10 +107,26 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;ついにマイクから始まってマイクスタンド、オーディオインターフェースの音声入力機器一式が揃った。オーディオインターフェース安くても6000円くらいだしまあ24000円は誤差（？）&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ついにマイクから始まってマイクスタンド、オーディオインターフェースの音声入力機器一式が揃った。オーディオインターフェース安くても6000円くらいだしまあ24000円は誤差（？）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;↓youtubeの配信で遊んだ回。&lt;/p&gt;
+&lt;p&gt;この時は音声が二重になる問題があったが、
+&lt;a href=&#34;https://apps.apple.com/jp/app/ladiocast/id411213048?mt=12&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ladiocast&lt;/a&gt;と
+&lt;a href=&#34;https://existential.audio/blackhole/?pk_campaign=github&amp;amp;pk_kwd=readme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blackhole&lt;/a&gt;という仮想オーディオインターフェースを挟むことで解消されたっぽい。&lt;/p&gt;
+&lt;p&gt;Vのアバターについては
+&lt;a href=&#34;https://qiita.com/kotoriyoui/items/b8582e0c48c7957ac8c7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Macでお気軽にVTuberになる方法（REALITYアバターを使ってYoutube配信する）&lt;/a&gt;をそのまま実践。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;style&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/-lwD83go31k?start=385&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;style&gt;
 .amazon-widget {
     margin: 2rem 0;
     max-width: 480px;
