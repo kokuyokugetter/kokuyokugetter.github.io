@@ -5,12 +5,355 @@
     <link>https://kokuyokugetter.github.io/</link>
       <atom:link href="https://kokuyokugetter.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>ゲッタ〜のHP</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 27 Aug 2021 22:47:55 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 25 Sep 2021 22:47:55 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>ゲッタ〜のHP</title>
       <link>https://kokuyokugetter.github.io/</link>
     </image>
+    
+    <item>
+      <title>2021年09月に買ったもの</title>
+      <link>https://kokuyokugetter.github.io/post/202109buy/</link>
+      <pubDate>Sat, 25 Sep 2021 22:47:55 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/202109buy/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;今月大して買ってないような気がするが、漫画は一気に買ったりもしたか…&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#食&#34;&gt;食&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#pc周辺機器&#34;&gt;PC周辺機器&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#書籍&#34;&gt;書籍&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;食&#34;&gt;食&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B07M74ZWMX/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07M74ZWMX&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      イタリア産グラナパダーノ(パルメザンチーズ)500g parmesan cheese Grana Padano70％
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;自分で削らなくていいから使いやすい粉チーズ。それでかつ味が美味い（多分）&lt;/li&gt;
+&lt;li&gt;実はチーズあんまり好きじゃないから味分かってない（買う意味あるのか？）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B01BEPNPF6/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B01BEPNPF6&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      [Amazon限定ブランド] キリン LAKURASHI アルカリイオンの水 PET (2L×9本)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;毎日スーパーで水買うのダルすぎるので、2週間に1回の定期お得便でこれ買うことにした。若干高いが、家まで届くので許容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;pc周辺機器&#34;&gt;PC周辺機器&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B088K63B4S/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B088K63B4S&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      C two Q スマホスタンド ホルダー タブレットスタンド アルミ 軽量 角度調整 可能 スマホ スタンド おりたたみ ホルダー 携帯スタンド 卓上スタンド 充電スタンド 撮影用スタンド スマートフォン スタンド (001.シルバー)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Vtuber配信する際にスマホを使ってるが、スタンドを使わないと、USBケーブルがグネ〜ってなるので購入。なお、購入以降配信はしていない模様（ネタがないため）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;書籍&#34;&gt;書籍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b350dftdb07403/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;学園騎士のレベルアップ！レベル1000超えの転生者、落ちこぼれクラスに入学。そして、（コミック） 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.dmm.com/service/-/exchange/?direct=1&amp;amp;url=https%3A%2F%2Fbook.dmm.co.jp%2Fdetail%2Fb241bktur00533%2F%3Fdmmref%3DlibrarySeries%26i3_ord%3D1%26i3_ref%3Dlist&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;別冊コミックアンリアル 貞操観念逆転編 デジタル版 Vol.2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b950ushes08198/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;地下室ダンジョン 〜貧乏兄妹は娯楽を求めて最強へ〜 2&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1,2巻購入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b600asgk00618/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ヒーローガール×ヒーラーボーイ〜TOUCH or DEATH〜 （3）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;エロさが毎巻上がっていく&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000bhftx04601/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;悪役令嬢の怠惰な溜め息 3【電子限定特典付き】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000bhftx04620/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;セックス＆ダンジョン！！ （5）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b355hakta01232/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;声がだせない少女は「彼女が優しすぎる」と思っている 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k916akmda00168/?dmmref=librarySeries&amp;amp;i3_ord=6&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;異世界婚活〜魔王を倒したアラサー女戦士が婚活をはじめました〜 （1）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000bhftx04664/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;レジェンド （11）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b600asgk01057/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;魔王です。女勇者の母親と再婚したので、女勇者が義理の娘になりました。@comic （6）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;完結した。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000bhftx04665/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;世界を救うために亜人と朝チュンできますか？ 5&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;終わりそうで終わらない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k077ascsh04327/?dmmref=librarySeries&amp;amp;i3_ord=8&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;極主夫道 1巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;おもろそうだなと思ったが、1巻だけ買って終わったわ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b132amggd03277/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;女装してめんどくさい事になってるネクラとヤンキーの両片想い 7巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;キモいけど見てまう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b999asqex06734/?dmmref=librarySeries&amp;amp;i3_ord=4&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;殲滅魔導の最強賢者 無才の賢者、魔導を極め最強へ至る 1巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;失格紋のパロディかと思ったけど、同じ作者だったわ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b350dftdb07558/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ハズレ判定から始まったチート魔術士生活（コミック） 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k284ahhms00582/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;千のスキルを持つ男 異世界で召喚獣はじめました！ （ポルカコミックス） 【電子版特典イラスト付】 5&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;なんかだれてきた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b312ahbsy00304/?dmmref=librarySeries&amp;amp;i3_ord=10&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;信長のシェフ 1巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1~30巻購入。面白い。しかも濃密なので、読むのに時間がかかる方だが、苦痛じゃないので、コスパが良いとも言える。歴史変える方向になったときに上手くまとめられるのか、それとも歴史は変わらないのか、今後に注目。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900rkds00282/?dmmref=librarySeries&amp;amp;i3_ord=15&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;マイホームヒーロー （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;この前のアメトークで紹介されていて、無料分のみ購入（無料なので買ってない）。まだ読んでいない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b330etksb07078/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;チート薬師のスローライフ （6）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;アニメは炎上してるみたいですね？まあまあ楽しみにしている&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b355gakta08233/?dmmref=librarySeries&amp;amp;i3_ord=2&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;バキ外伝 烈海王は異世界転生しても一向にかまわんッッ 1&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;アメトークで紹介されてたので読んだ。バキは読んでないが普通に面白い。（ある程度の知識はあります）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b900vkds08251/?dmmref=librarySeries&amp;amp;i3_ord=4&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ケンシロウによろしく （1）&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;アメトーク。かなり面白い。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b316bgtsy03936/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;奴隷商人しか選択肢がないですよ？ （5） 〜ハーレム？なにそれおいしいの？〜 【電子限定おまけ付き】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b999asqex08708/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;史上最強の大魔王、 村人Aに転生する 5巻&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b000bhftx05242/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;田舎のホームセンター男の自由な異世界生活 （7）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>2021年08月に買ったもの</title>
