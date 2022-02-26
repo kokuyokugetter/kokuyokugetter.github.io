@@ -5,7 +5,7 @@
     <link>https://kokuyokugetter.github.io/categories/</link>
       <atom:link href="https://kokuyokugetter.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 28 Jan 2022 19:47:55 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 26 Feb 2022 19:47:55 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Categories</title>
@@ -15,7 +15,7 @@
     <item>
       <title>diary</title>
       <link>https://kokuyokugetter.github.io/categories/diary/</link>
-      <pubDate>Fri, 28 Jan 2022 19:47:55 +0900</pubDate>
+      <pubDate>Sat, 26 Feb 2022 19:47:55 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/categories/diary/</guid>
       <description></description>
     </item>
