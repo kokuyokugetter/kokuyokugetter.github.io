@@ -633,9 +633,15 @@
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#趣味&#34;&gt;趣味&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#書籍&#34;&gt;書籍&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;趣味&#34;&gt;趣味&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MTGのカード、EDHのティムトラデッキを組むために持ってないカード2万円ちょい&lt;/li&gt;
+&lt;/ul&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;書籍&#34;&gt;書籍&lt;/h2&gt;
 &lt;ul&gt;
