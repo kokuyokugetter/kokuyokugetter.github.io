@@ -18,7 +18,8 @@
       <pubDate>Wed, 02 Sep 2020 20:13:28 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/post/streamlit-demo/</guid>
       <description>&lt;br&gt;
-&lt;p&gt;公式サイト： &lt;a href=&#34;https://www.streamlit.io/&#34;&gt;https://www.streamlit.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;公式サイト： 
+&lt;a href=&#34;https://www.streamlit.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.streamlit.io/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;データサイエンティストや機械学習エンジニアが、数時間で美しくて良いパフォーマンスのアプリを作成する一番簡単な方法だそうです。&lt;/p&gt;
 &lt;p&gt;単純に面白そうなのでやってみました。&lt;/p&gt;
 &lt;br&gt;
@@ -57,10 +58,10 @@
 &lt;p&gt;
 &lt;a href=&#34;https://gist.github.com/kokuyokugetter/1a7ec1243f469be03fa4574c05bf5018&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gist&lt;/a&gt;でソースコードを公開しているので、Streamlitをインストールすれば誰でも手元で実行できます。&lt;/p&gt;
 &lt;p&gt;インストール方法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;pip streamlit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;実行方法&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;streamlit run https://gist.githubusercontent.com/kokuyokugetter/1a7ec1243f469be03fa4574c05bf5018/raw/a49ca69a2f33a9945602caddd607898e2bf0b0ac/clt_demo_dice.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;要するに&lt;code&gt;streamlit run&lt;/code&gt; の後にソースコードを食わせれば良いっぽいです。gistは上げたコードのRawデータのページを呼び出せるので、そのリンクから実行可能です。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip streamlit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;実行方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;streamlit run https://gist.githubusercontent.com/kokuyokugetter/1a7ec1243f469be03fa4574c05bf5018/raw/a49ca69a2f33a9945602caddd607898e2bf0b0ac/clt_demo_dice.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;要するに&lt;code&gt;streamlit run&lt;/code&gt; の後にソースコードを食わせれば良いっぽいです。gistは上げたコードのRawデータのページを呼び出せるので、そのリンクから実行可能です。&lt;/p&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;

@@ -31,7 +31,8 @@
 &lt;br&gt;
 &lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
 &lt;p&gt;&lt;del&gt;Google Driveにて共有のリンクを取得する&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://drive.google.com/open?id=0B4rx4mxoPiX1MWlObXYwcjlpSUk&#34;&gt;https://drive.google.com/open?id=0B4rx4mxoPiX1MWlObXYwcjlpSUk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://drive.google.com/open?id=0B4rx4mxoPiX1MWlObXYwcjlpSUk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://drive.google.com/open?id=0B4rx4mxoPiX1MWlObXYwcjlpSUk&lt;/a&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;（以前は上の形式でURLが取得できていたが、仕様が変わったらしく、取得できるURLは、https://drive.google.com/file/d/1fnypieC6im8Olgm4qXZn6Nbm6N6JZerZ/view?usp=sharing のような形式になっている）&lt;/p&gt;
 &lt;br&gt;
@@ -57,7 +58,7 @@
 &lt;p&gt;→当然これで上手くいかなくなっているので、（そもそもopen?が存在しない）&lt;/p&gt;
 &lt;br&gt;
 &lt;br&gt;
-&lt;pre&gt;&lt;code&gt;https://drive.google.com/uc?export=view&amp;amp;id=hogehoge
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;https://drive.google.com/uc?export=view&amp;amp;id=hogehoge
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;の&lt;code&gt;hogehoge&lt;/code&gt;の部分に取得したURLの&lt;code&gt;file/d/&lt;/code&gt;と&lt;code&gt;/view&lt;/code&gt;で囲まれた部分（id）を入れる。&lt;/p&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -80,17 +81,17 @@
 &lt;p&gt;画像のリンクさえすれば良いので、Twitterの動画のサムネやTwitterの画像も貼り付けられる。&lt;/p&gt;
 &lt;p&gt;例えばこのツイート↓からPCの右クリックで画像アドレスをコピーして、画像リンクとして貼り付ける。&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;test &lt;a href=&#34;https://t.co/K8RKGXQrRk&#34;&gt;pic.twitter.com/K8RKGXQrRk&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰︎ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1274219400300646400?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;&lt;img src=&#34;https://pbs.twimg.com/ext_tw_video_thumb/1274219374744702978/pu/img/itj3fyBT-gIbAOne?format=jpg&amp;amp;name=medium&#34; alt=&#34;thumbnail&#34;&gt;&lt;/p&gt;
 &lt;p&gt;動画サムネが出力できる。&lt;/p&gt;
-  &lt;br&gt;
+&lt;br&gt;
 &lt;p&gt;また、普通の画像ツイート↓も同様にして、&lt;/p&gt;
-  &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;test2 &lt;a href=&#34;https://t.co/r9tytpSctW&#34;&gt;pic.twitter.com/r9tytpSctW&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰︎ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1274219539513794561?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;test2 &lt;a href=&#34;https://t.co/r9tytpSctW&#34;&gt;pic.twitter.com/r9tytpSctW&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰︎ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1274219539513794561?ref_src=twsrc%5Etfw&#34;&gt;June 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;&lt;img src=&#34;https://pbs.twimg.com/media/Ea7v6o7UEAMkn0-?format=jpg&amp;amp;name=large&#34; alt=&#34;a&#34;&gt;&lt;/p&gt;
 &lt;p&gt;画像をDLしなくても貼り付けられるので、画像の所有者に特に断りを入れず利用できる（特に問題がなければツイートをそのまま貼り付けた方が良いとは思うが）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

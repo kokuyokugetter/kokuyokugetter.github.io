@@ -250,8 +250,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://kokuyokugetter.github.io/post/hello/">
 
@@ -308,7 +308,7 @@
   
   "author": {
     "@type": "Person",
-    "name": "ゲッタ〜のHP"
+    "name": "Authors"
   },
   
   "publisher": {
@@ -316,7 +316,7 @@
     "name": "ゲッタ〜のHP",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://kokuyokugetter.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+      "url": "https://kokuyokugetter.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "https://qiita.com/shimech/items/ce079040e58f4b9dd7bf を見てやればほぼ終わり"
@@ -626,7 +626,7 @@
 
 
   
-  <span></span>
+  <span><a href="/authors/"></a></span>
 
   </div>
   
@@ -708,8 +708,8 @@
 <ol>
 <li>
 <p>Hugoをインストール</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><blockquote>
 <p>==&gt; <code>brew cleanup</code> has not been run in 30 days, running now&hellip;
 Removing: /Users/ME/Library/Caches/Homebrew/go&ndash;1.13.3.catalina.bottle.tar.gz&hellip; (148MB)
 Removing: /Users/ME/Library/Caches/Homebrew/readline&ndash;8.0.1.mojave.bottle.tar.gz&hellip; (517.9KB)
@@ -720,25 +720,27 @@ Error: Permission denied @ apply2files - /usr/local/share/ghostscript/9.16/Resou
 </li>
 <li>
 <p>Hugo実行</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site getter_portfolio
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site getter_portfolio
+</span></span></code></pre></div><blockquote>
 <p>Congratulations! Your new Hugo site is created in /Users/ME/works/getter_portfolio.</p>
 <p>Just a few more steps and you&rsquo;re ready to go:</p>
 <ol>
 <li>Download a theme into the same-named folder.
-Choose a theme from <a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a> or
+Choose a theme from 
+<a href="https://themes.gohugo.io/" target="_blank" rel="noopener">https://themes.gohugo.io/</a> or
 create your own with the &ldquo;hugo new theme <THEMENAME>&rdquo; command.</li>
 <li>Perhaps you want to add some content. You can add single files
 with &ldquo;hugo new <SECTIONNAME>/<FILENAME>.<FORMAT>&rdquo;.</li>
 <li>Start the built-in live server via &ldquo;hugo server&rdquo;.</li>
 </ol>
-<p>Visit <a href="https://gohugo.io/">https://gohugo.io/</a> for quickstart guide and full documentation.</p>
+<p>Visit 
+<a href="https://gohugo.io/" target="_blank" rel="noopener">https://gohugo.io/</a> for quickstart guide and full documentation.</p>
 </blockquote>
 </li>
 <li>
 <p>サーバー実行してみる</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo server
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><blockquote>
 <p>Building sites … WARN 2020/02/11 13:04:24 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;taxonomyTerm&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:04:24 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;home&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:04:24 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;taxonomyTerm&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.</p>
@@ -767,7 +769,7 @@ WARN 2020/02/11 13:04:41 found no layout file for &ldquo;HTML&rdquo; for kind &l
 </li>
 <li>
 <p>ビルド</p>
-<pre><code>hugo
+<pre tabindex="0"><code>hugo
 </code></pre><blockquote>
 <p>Building sites … WARN 2020/02/11 13:07:59 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;taxonomyTerm&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2020/02/11 13:07:59 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;home&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
@@ -796,14 +798,14 @@ Cleaned          |  0</p>
 <li>
 <p>テーマ適用</p>
 <p>themes内で</p>
-<pre><code>git clone https://github.com/gcushen/hugo-academic.git
+<pre tabindex="0"><code>git clone https://github.com/gcushen/hugo-academic.git
 </code></pre><p>いやよくわからん</p>
 <p>もしかしてここまでの作業全部無意味？（多分hugoのインストール終わっていればここからでOK）</p>
-<pre><code>git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
+<pre tabindex="0"><code>git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
 </code></pre><p>これだけでいいんじゃないか？</p>
-<pre><code>cd My_Website
+<pre tabindex="0"><code>cd My_Website
 git submodule update --init --recursive
-</code></pre><pre><code>hugo server
+</code></pre><pre tabindex="0"><code>hugo server
 </code></pre><p>で普通にAcademicのデフォルトの画面がhttp://localhost:1313/で表示された。</p>
 </li>
 <li>
@@ -819,14 +821,14 @@ git submodule update --init --recursive
 <blockquote>
 <p>githubに {username}.github.io という名前のリポジトリを作成します。
 その後、CLIで、</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">hugo
-cd public
-git init
-git add .
-git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
-git remote add origin https://github.com/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>.github.io.git
-git push -u origin master
-</code></pre></div><p>とし、 https://{username}.github.io/ にアクセスすると、ビルドしたページが表示されます。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>cd public
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;first commit&#34;</span>
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>/<span style="color:#f92672">{</span>username<span style="color:#f92672">}</span>.github.io.git
+</span></span><span style="display:flex;"><span>git push -u origin master
+</span></span></code></pre></div><p>とし、 https://{username}.github.io/ にアクセスすると、ビルドしたページが表示されます。</p>
 </blockquote>
 </li>
 </ol>
@@ -890,6 +892,25 @@ git push -u origin master
 
 
 
+
+  
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
 
 
 
@@ -1026,7 +1047,7 @@ git push -u origin master
     
     
     
-    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+    <script src="/js/academic.min.1870b43f3f31b03f115267a02162711a.js"></script>
 
     
 

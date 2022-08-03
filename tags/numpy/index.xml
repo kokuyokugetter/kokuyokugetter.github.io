@@ -17,11 +17,14 @@
       <link>https://kokuyokugetter.github.io/post/abc169-b/</link>
       <pubDate>Sat, 15 Aug 2020 16:24:32 +0900</pubDate>
       <guid>https://kokuyokugetter.github.io/post/abc169-b/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;B問題&lt;/strong&gt; &lt;a href=&#34;https://atcoder.jp/contests/abc169/tasks/abc169_b&#34;&gt;https://atcoder.jp/contests/abc169/tasks/abc169_b&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;B問題&lt;/strong&gt; 
+&lt;a href=&#34;https://atcoder.jp/contests/abc169/tasks/abc169_b&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://atcoder.jp/contests/abc169/tasks/abc169_b&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;この問題を読んで、全部掛け算する、sumの掛け算版の関数があれば一発でできると思い、調べるとnumpy.prod()がそれにあたるということで、使ってみたら、WAでした。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;WA&lt;/strong&gt; &lt;a href=&#34;https://atcoder.jp/contests/abc169/submissions/15692265&#34;&gt;https://atcoder.jp/contests/abc169/submissions/15692265&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WA&lt;/strong&gt; 
+&lt;a href=&#34;https://atcoder.jp/contests/abc169/submissions/15692265&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://atcoder.jp/contests/abc169/submissions/15692265&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;で、普通にfor文で掛け算してAC。大きい数の掛け算は遅くなるそうなので、範囲超えたらすぐbreakするようにしています。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;AC&lt;/strong&gt; &lt;a href=&#34;https://atcoder.jp/contests/abc169/submissions/15692483&#34;&gt;https://atcoder.jp/contests/abc169/submissions/15692483&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AC&lt;/strong&gt; 
+&lt;a href=&#34;https://atcoder.jp/contests/abc169/submissions/15692483&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://atcoder.jp/contests/abc169/submissions/15692483&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;numpy.prodについて調査した。&lt;/p&gt;
 &lt;br&gt;
 &lt;script src=&#34;https://gist.github.com/kokuyokugetter/0b3718a7b0bd0adf8f3c0f6f6e483b9e.js&#34;&gt;&lt;/script&gt;

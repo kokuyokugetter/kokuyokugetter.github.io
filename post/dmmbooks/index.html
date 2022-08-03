@@ -250,8 +250,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://kokuyokugetter.github.io/post/dmmbooks/">
 
@@ -319,7 +319,7 @@
     "name": "ゲッタ〜のHP",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://kokuyokugetter.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+      "url": "https://kokuyokugetter.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "ログインが必要なページのクローリングはSeleniumが便利だった。"
@@ -755,369 +755,369 @@
 </nav>
 <br>
 <h2 id="実際のコードと実行結果">実際のコードと実行結果</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
-<span style="color:#f92672">import</span> time
-<span style="color:#f92672">import</span> dmm_user_pass
-
-<span style="color:#75715e"># ユーザー名、パスワードを漏洩しないための簡易的な方法</span>
-<span style="color:#75715e"># (同ディレクトリのdmm_user_pass.pyを絶対公開しないようにする)</span>
-USER <span style="color:#f92672">=</span> dmm_user_pass<span style="color:#f92672">.</span>USER
-PASS <span style="color:#f92672">=</span> dmm_user_pass<span style="color:#f92672">.</span>PASS
-
-<span style="color:#75715e"># PhantomJSのドライバーを得る</span>
-browser <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>PhantomJS()
-browser<span style="color:#f92672">.</span>implicitly_wait(<span style="color:#ae81ff">5</span>)
-
-<span style="color:#75715e"># ログインページにアクセス(ログインすると即購入済みページに遷移されるはず)</span>
-url_login <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://accounts.dmm.com/service/login/password</span><span style="color:#e6db74">&#34;</span>
-browser<span style="color:#f92672">.</span>get(url_login)
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">ログインページにアクセスしました</span><span style="color:#e6db74">&#34;</span>)
-
-<span style="color:#75715e"># テキストボックスに文字を入力</span>
-e <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">login_id</span><span style="color:#e6db74">&#34;</span>)
-e<span style="color:#f92672">.</span>clear()
-e<span style="color:#f92672">.</span>send_keys(USER)
-e <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">password</span><span style="color:#e6db74">&#34;</span>)
-e<span style="color:#f92672">.</span>clear()
-e<span style="color:#f92672">.</span>send_keys(PASS)
-<span style="color:#75715e"># フォームを送信</span>
-browser<span style="color:#f92672">.</span>find_element_by_xpath(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">//form[@name=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">loginForm</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">]//input[@type=</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">submit</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">]</span><span style="color:#e6db74">&#34;</span>)<span style="color:#f92672">.</span>click()
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">情報を入力してログインボタンを押しました</span><span style="color:#e6db74">&#34;</span>)
-time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">10</span>)
-
-<span style="color:#75715e"># DMM電子書籍の購入済みページを表示</span>
-<span style="color:#75715e"># page1からloopで存在しないページになった場合にはurlが自動的に、</span>
-<span style="color:#75715e"># https://book.dmm.com/library/?age_limit=all&amp;expired=1になる(遷移したいページとcurrent urlが不一致)</span>
-url_purchased <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">https://book.dmm.com/library/?age_limit=all&amp;expired=1&amp;sort=old&amp;page=</span><span style="color:#e6db74">&#39;</span>
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>):
-    page_i <span style="color:#f92672">=</span> url_purchased <span style="color:#f92672">+</span> str(i)
-    browser<span style="color:#f92672">.</span>get(page_i)
-    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">5</span>)
-    <span style="color:#66d9ef">if</span> page_i <span style="color:#f92672">!=</span> browser<span style="color:#f92672">.</span>current_url:
-        <span style="color:#66d9ef">break</span> <span style="color:#75715e"># 上のコメント通りに抜ける処理</span>
-    <span style="color:#75715e"># 購入済みのタイトルを列挙</span>
-    links <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_elements_by_css_selector(
-        <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">.m-boxListBookProductBlock__main__info__ttl &gt; a</span><span style="color:#e6db74">&#34;</span>)
-    <span style="color:#66d9ef">for</span> a <span style="color:#f92672">in</span> links:
-        title <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>text
-        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">-</span><span style="color:#e6db74">&#34;</span>, title)
-</code></pre></div><pre><code>/usr/local/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> dmm_user_pass
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ユーザー名、パスワードを漏洩しないための簡易的な方法</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (同ディレクトリのdmm_user_pass.pyを絶対公開しないようにする)</span>
+</span></span><span style="display:flex;"><span>USER <span style="color:#f92672">=</span> dmm_user_pass<span style="color:#f92672">.</span>USER
+</span></span><span style="display:flex;"><span>PASS <span style="color:#f92672">=</span> dmm_user_pass<span style="color:#f92672">.</span>PASS
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PhantomJSのドライバーを得る</span>
+</span></span><span style="display:flex;"><span>browser <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>PhantomJS()
+</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>implicitly_wait(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ログインページにアクセス(ログインすると即購入済みページに遷移されるはず)</span>
+</span></span><span style="display:flex;"><span>url_login <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://accounts.dmm.com/service/login/password&#34;</span>
+</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>get(url_login)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;ログインページにアクセスしました&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># テキストボックスに文字を入力</span>
+</span></span><span style="display:flex;"><span>e <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#e6db74">&#34;login_id&#34;</span>)
+</span></span><span style="display:flex;"><span>e<span style="color:#f92672">.</span>clear()
+</span></span><span style="display:flex;"><span>e<span style="color:#f92672">.</span>send_keys(USER)
+</span></span><span style="display:flex;"><span>e <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#e6db74">&#34;password&#34;</span>)
+</span></span><span style="display:flex;"><span>e<span style="color:#f92672">.</span>clear()
+</span></span><span style="display:flex;"><span>e<span style="color:#f92672">.</span>send_keys(PASS)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># フォームを送信</span>
+</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>find_element_by_xpath(<span style="color:#e6db74">&#34;//form[@name=&#39;loginForm&#39;]//input[@type=&#39;submit&#39;]&#34;</span>)<span style="color:#f92672">.</span>click()
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;情報を入力してログインボタンを押しました&#34;</span>)
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># DMM電子書籍の購入済みページを表示</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># page1からloopで存在しないページになった場合にはurlが自動的に、</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># https://book.dmm.com/library/?age_limit=all&amp;expired=1になる(遷移したいページとcurrent urlが不一致)</span>
+</span></span><span style="display:flex;"><span>url_purchased <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://book.dmm.com/library/?age_limit=all&amp;expired=1&amp;sort=old&amp;page=&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>):
+</span></span><span style="display:flex;"><span>    page_i <span style="color:#f92672">=</span> url_purchased <span style="color:#f92672">+</span> str(i)
+</span></span><span style="display:flex;"><span>    browser<span style="color:#f92672">.</span>get(page_i)
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> page_i <span style="color:#f92672">!=</span> browser<span style="color:#f92672">.</span>current_url:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span> <span style="color:#75715e"># 上のコメント通りに抜ける処理</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 購入済みのタイトルを列挙</span>
+</span></span><span style="display:flex;"><span>    links <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_elements_by_css_selector(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;.m-boxListBookProductBlock__main__info__ttl &gt; a&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> a <span style="color:#f92672">in</span> links:
+</span></span><span style="display:flex;"><span>        title <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>text
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;-&#34;</span>, title)
+</span></span></code></pre></div><pre><code>/usr/local/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
   warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">ログインページにアクセスしました
-情報を入力してログインボタンを押しました
-<span style="color:#66d9ef">-</span> モブサイコ100
-<span style="color:#66d9ef">-</span> おしえて！ ギャル子ちゃん
-<span style="color:#66d9ef">-</span> 無邪気の楽園
-<span style="color:#66d9ef">-</span> とんでもスキルで異世界放浪メシ
-<span style="color:#66d9ef">-</span> 異世界でスキルを解体したらチートな嫁が増殖しました 概念交差のストラクチャー
-<span style="color:#66d9ef">-</span> ブラウンシュガァデイズ
-<span style="color:#66d9ef">-</span> ウメハラ FIGHTING GAMERS！
-<span style="color:#66d9ef">-</span> なれる！SE
-<span style="color:#66d9ef">-</span> 神達に拾われた男
-<span style="color:#66d9ef">-</span> 失格紋の最強賢者 〜世界最強の賢者が更に強くなるために転生しました〜
-<span style="color:#66d9ef">-</span> 世界最強の後衛 〜迷宮国の新人探索者〜
-<span style="color:#66d9ef">-</span> ニートだけどハロワにいったら異世界につれてかれた
-<span style="color:#66d9ef">-</span> 無職転生 〜ロキシーだって本気です〜
-<span style="color:#66d9ef">-</span> 宝くじで40億当たったんだけど異世界に移住する
-<span style="color:#66d9ef">-</span> ゴブリンスレイヤー
-<span style="color:#66d9ef">-</span> ゴブリンスレイヤー外伝:イヤーワン
-<span style="color:#66d9ef">-</span> 転生したらドラゴンの卵だった〜イバラのドラゴンロード
-<span style="color:#66d9ef">-</span> 転生したら剣でした
-<span style="color:#66d9ef">-</span> 骸骨騎士様、只今異世界へお出掛け中
-<span style="color:#66d9ef">-</span> なんでここに先生が！？
-<span style="color:#66d9ef">-</span> 強くてニューサーガ
-<span style="color:#66d9ef">-</span> 冒険者になりたいと都に出て行った娘がSランクになってた 黒髪の戦乙女
-<span style="color:#66d9ef">-</span> 異世界魔法は遅れてる！
-<span style="color:#66d9ef">-</span> 即死チートが最強すぎて、異世界のやつらがまるで相手にならないんですが。-ΑΩ-
-<span style="color:#66d9ef">-</span> THENEWGATE
-<span style="color:#66d9ef">-</span> 異世界チート魔術師
-<span style="color:#66d9ef">-</span> シロクマ転生 森の守護神になったぞ伝説
-<span style="color:#66d9ef">-</span> 蜘蛛ですが、なにか？
-<span style="color:#66d9ef">-</span> 異世界のんびり農家
-<span style="color:#66d9ef">-</span> 没落予定なので、鍛冶職人を目指す
-<span style="color:#66d9ef">-</span> 無職転生 〜異世界行ったら本気だす〜
-<span style="color:#66d9ef">-</span> スライムライフ
-<span style="color:#66d9ef">-</span> とあるおっさんのVRMMO活動記
-<span style="color:#66d9ef">-</span> 29歳独身中堅冒険者の日常
-<span style="color:#66d9ef">-</span> 100万の命の上に俺は立っている ワケあり無料版 5
-<span style="color:#66d9ef">-</span> 最強の職業は勇者でも賢者でもなく鑑定士（仮）らしいですよ？
-<span style="color:#66d9ef">-</span> 野生のラスボスが現れた！黒翼の覇王
-<span style="color:#66d9ef">-</span> 100万の命の上に俺は立っている
-<span style="color:#66d9ef">-</span> 獣医さんのお仕事in異世界
-<span style="color:#66d9ef">-</span> 月が導く異世界道中
-<span style="color:#66d9ef">-</span> ブサメンガチファイター
-<span style="color:#66d9ef">-</span> 平兵士は過去を夢見る
-<span style="color:#66d9ef">-</span> 自重しない元勇者の強くて楽しいニューゲーム
-<span style="color:#66d9ef">-</span> 努力しすぎた世界最強の武闘家は、魔法世界を余裕で生き抜く。
-<span style="color:#66d9ef">-</span> 最強呪族転生〜魔術オタクの理想郷（ユートピア）〜
-<span style="color:#66d9ef">-</span> 魔拳のデイドリーマー
-<span style="color:#66d9ef">-</span> 異世界で『黒の癒し手』って呼ばれています
-<span style="color:#66d9ef">-</span> のんびりVRMMO記
-<span style="color:#66d9ef">-</span> 異世界でカフェを開店しました。
-<span style="color:#66d9ef">-</span> 邪竜転生
-<span style="color:#66d9ef">-</span> 望まぬ不死の冒険者
-<span style="color:#66d9ef">-</span> 黒の召喚士
-<span style="color:#66d9ef">-</span> 村人ですが何か？
-<span style="color:#66d9ef">-</span> アルゲートオンライン
-<span style="color:#66d9ef">-</span> 効率厨魔導師、第二の人生で魔導を極める
-<span style="color:#66d9ef">-</span> ワールド・カスタマイズ・クリエー
-<span style="color:#66d9ef">-</span> 乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…
-<span style="color:#66d9ef">-</span> 成長チートでなんでもできるようになったが、無職だけは辞められないようです
-<span style="color:#66d9ef">-</span> マズ飯エルフと遊牧暮らし
-<span style="color:#66d9ef">-</span> 賢者の弟子を名乗る賢者 THE COMIC
-<span style="color:#66d9ef">-</span> 異世界で最強の杖に転生した俺が嫌がる少女をムリヤリ魔法少女にPする！
-<span style="color:#66d9ef">-</span> 剣士を目指して入学したのに魔法適性9999なんですけど！？
-<span style="color:#66d9ef">-</span> 俺の家が魔力スポットだった件 〜住んでいるだけで世界最強〜
-<span style="color:#66d9ef">-</span> 異世界迷宮でハーレムを
-<span style="color:#66d9ef">-</span> 欲望パンドラ
-<span style="color:#66d9ef">-</span> 転生しちゃったよ（いや、ごめん）
-<span style="color:#66d9ef">-</span> さようなら竜生、こんにちは人生
-<span style="color:#66d9ef">-</span> 素材採取家の異世界旅行記
-<span style="color:#66d9ef">-</span> ヤンキーは異世界で精霊に愛されます。
-<span style="color:#66d9ef">-</span> 俺と蛙さんの異世界放浪記
-<span style="color:#66d9ef">-</span> 軍オタが魔法世界に転生したら、現代兵器で軍隊ハーレムを作っちゃいました！？
-<span style="color:#66d9ef">-</span> 真の仲間じゃないと勇者のパーティーを追い出されたので、辺境でスローライフすることにしました
-<span style="color:#66d9ef">-</span> ありふれた日常で世界最強
-<span style="color:#66d9ef">-</span> ありふれた職業で世界最強
-<span style="color:#66d9ef">-</span> 異世界を制御魔法で切り開け！
-<span style="color:#66d9ef">-</span> アルマディアノス英雄伝
-<span style="color:#66d9ef">-</span> 異世界転生騒動記
-<span style="color:#66d9ef">-</span> じょしラク！
-<span style="color:#66d9ef">-</span> 駆除人
-<span style="color:#66d9ef">-</span> 異世界で孤児院を開いたけど、なぜか誰一人巣立とうとしない件【カラー増量版】
-<span style="color:#66d9ef">-</span> 異世界おじさん
-<span style="color:#66d9ef">-</span> 辺境の老騎士 バルド・ローエン
-<span style="color:#66d9ef">-</span> 宝石の国
-<span style="color:#66d9ef">-</span> うちの娘の為ならば、俺はもしかしたら魔王も倒せるかもしれない。
-<span style="color:#66d9ef">-</span> てのひら開拓村で異世界建国記
-<span style="color:#66d9ef">-</span> ガチャを回して仲間を増やす 最強の美少女軍団を作り上げろ THE COMIC
-<span style="color:#66d9ef">-</span> 二度目の勇者は復讐の道を嗤い歩む
-<span style="color:#66d9ef">-</span> 四度目は嫌な死属性魔術師
-<span style="color:#66d9ef">-</span> 異世界ゆるり紀行 〜子育てしながら冒険者します〜
-<span style="color:#66d9ef">-</span> 異世界支配のスキルテイカー ゼロから始める奴隷ハーレム
-<span style="color:#66d9ef">-</span> 聖女の魔力は万能です
-<span style="color:#66d9ef">-</span> 神さまSHOPでチートの香り
-<span style="color:#66d9ef">-</span> 転生貴族の異世界冒険録
-<span style="color:#66d9ef">-</span> 食べるだけでレベルアップ！ 〜駄女神といっしょに異世界無双〜（コミック）
-<span style="color:#66d9ef">-</span> ワンワン物語 〜金持ちの犬にしてとは言ったが、フェンリルにしろとは言ってねえ！〜
-<span style="color:#66d9ef">-</span> おっさんのリメイク冒険日記
-<span style="color:#66d9ef">-</span> 異世界ですが魔物栽培しています。
-<span style="color:#66d9ef">-</span> 二度目の人生を異世界で
-<span style="color:#66d9ef">-</span> 異世界の迷宮都市で治癒魔法使いやってます（コミック）
-<span style="color:#66d9ef">-</span> 魔王になったので、ダンジョン造って人外娘とほのぼのする
-<span style="color:#66d9ef">-</span> 最果てのパラディン
-<span style="color:#66d9ef">-</span> 魔王様の街づくり！ 〜最強のダンジョンは近代都市〜
-<span style="color:#66d9ef">-</span> ダンジョンシーカー
-<span style="color:#66d9ef">-</span> マギクラフト・マイスター
-<span style="color:#66d9ef">-</span> 異世界温泉に転生した俺の効能がとんでもすぎる
-<span style="color:#66d9ef">-</span> 物語の中の人
-<span style="color:#66d9ef">-</span> 地方騎士ハンスの受難
-<span style="color:#66d9ef">-</span> LV999の村人
-<span style="color:#66d9ef">-</span> 精霊達の楽園と理想の異世界生活
-<span style="color:#66d9ef">-</span> モノノケ！！！！
-<span style="color:#66d9ef">-</span> どうやら私の身体は完全無敵のようですね
-<span style="color:#66d9ef">-</span> 魔王の始め方 THE COMIC
-<span style="color:#66d9ef">-</span> マージナル・オペレーション
-<span style="color:#66d9ef">-</span> 転生王子はダラけたい
-<span style="color:#66d9ef">-</span> 豚公爵に転生したから、今度は君に好きと言いたい
-<span style="color:#66d9ef">-</span> レディローズは平民になりたい
-<span style="color:#66d9ef">-</span> モンスターがあふれる世界になったので、好きに生きたいと思います
-<span style="color:#66d9ef">-</span> Sランクモンスターの《ベヒーモス》だけど、猫と間違われてエルフ娘の騎士（ペット）として暮らしてます
-<span style="color:#66d9ef">-</span> Re:Monster
-<span style="color:#66d9ef">-</span> 俺だけ入れる隠しダンジョン 〜こっそり鍛えて世界最強〜
-<span style="color:#66d9ef">-</span> Only Sense Online ―オンリーセンス・オンライン―
-<span style="color:#66d9ef">-</span> ヤングジャンプ
-<span style="color:#66d9ef">-</span> ヒストリエ
-<span style="color:#66d9ef">-</span> 専門学校JK Ctrl＋Z （1）
-<span style="color:#66d9ef">-</span> 大家さんと僕
-<span style="color:#66d9ef">-</span> 専門学校JK
-<span style="color:#66d9ef">-</span> 理想のヒモ生活
-<span style="color:#66d9ef">-</span> Lv2からチートだった元勇者候補のまったり異世界ライフ
-<span style="color:#66d9ef">-</span> 僕の部屋がダンジョンの休憩所になってしまった件【パートカラー版】
-<span style="color:#66d9ef">-</span> おっさん冒険者ケインの善行
-<span style="color:#66d9ef">-</span> 陰の実力者になりたくて！
-<span style="color:#66d9ef">-</span> 異世界系ファンタジー ガンガンいこうぜ！大ボリューム試し読みパック
-<span style="color:#66d9ef">-</span> 史上最強の大魔王、 村人Aに転生する
-<span style="color:#66d9ef">-</span> 機械学習のエッセンス 実装しながら学ぶPython、数学、アルゴリズム
-<span style="color:#66d9ef">-</span> データサイエンティスト養成読本 ビジネス活用編
-<span style="color:#66d9ef">-</span> Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド―
-<span style="color:#66d9ef">-</span> 絶対にヤッてはいけない異世界召喚
-<span style="color:#66d9ef">-</span> 水女神は今日も恋をするか？
-<span style="color:#66d9ef">-</span> ［第2版］Python機械学習プログラミング 達人データサイエンティストによる理論と実践
-<span style="color:#66d9ef">-</span> Rによるやさしい統計学
-<span style="color:#66d9ef">-</span> 暗殺者である俺のステータスが勇者よりも明らかに強いのだが
-<span style="color:#66d9ef">-</span> 少女奴●スクール
-<span style="color:#66d9ef">-</span> ボコボコりんっ！
-<span style="color:#66d9ef">-</span> 早乙女選手、ひたかくす
-<span style="color:#66d9ef">-</span> Kaggleで勝つデータ分析の技術
-<span style="color:#66d9ef">-</span> リビドーハンタータケル
-<span style="color:#66d9ef">-</span> ヤクザの大親分が幼女に生まれ変わった話 1巻
-<span style="color:#66d9ef">-</span> いきのこれ！ 社畜ちゃん 〜後輩ちゃんオタ活動記〜
-<span style="color:#66d9ef">-</span> 魔王様、リトライ！（コミック）
-<span style="color:#66d9ef">-</span> アラフォー社畜のゴーレムマスター（コミック）
-<span style="color:#66d9ef">-</span> ガイシューイッショク！
-<span style="color:#66d9ef">-</span> 紀元前1万年のオタ デジタルモザイク版
-<span style="color:#66d9ef">-</span> ここは俺に任せて先に行けと言ってから10年がたったら伝説になっていた。
-<span style="color:#66d9ef">-</span> 異種族レビュアーズコミックアンソロジー 〜ダークネス〜
-<span style="color:#66d9ef">-</span> うれしょん！
-<span style="color:#66d9ef">-</span> ギリギリアウト
-<span style="color:#66d9ef">-</span> やんちゃギャルの安城さん
-<span style="color:#66d9ef">-</span> 佐伯さんは眠ってる
-<span style="color:#66d9ef">-</span> Kiss×sis
-<span style="color:#66d9ef">-</span> ハンツー×トラッシュ
-<span style="color:#66d9ef">-</span> 小学生がママでもいいですか？
-<span style="color:#66d9ef">-</span> 【悲報】会社の行き遅れBBA孕ませた
-<span style="color:#66d9ef">-</span> 自称！平凡魔族の英雄ライフ
-<span style="color:#66d9ef">-</span> デスラバ
-<span style="color:#66d9ef">-</span> 咲 -Saki-
-<span style="color:#66d9ef">-</span> 魔法使いの印刷所
-<span style="color:#66d9ef">-</span> 大上さん、だだ漏れです。
-<span style="color:#66d9ef">-</span> 都合が良くて可愛いメス。【FANZA限定特典付き】
-<span style="color:#66d9ef">-</span> ヒトモエ委員会 デジタル版
-<span style="color:#66d9ef">-</span> マナさんと母屋を離れて…
-<span style="color:#66d9ef">-</span> JKハルは異世界で娼婦になった
-<span style="color:#66d9ef">-</span> 今まで一度も女扱いされたことがない女騎士を女扱いする漫画
-<span style="color:#66d9ef">-</span> 着たい服がある
-<span style="color:#66d9ef">-</span> ライドンキング
-<span style="color:#66d9ef">-</span> 異世界ソープランド輝夜
-<span style="color:#66d9ef">-</span> ヤンキーJKの異常な愛情
-<span style="color:#66d9ef">-</span> 【FANZA限定版】モンスター娘の堕とし方
-<span style="color:#66d9ef">-</span> ばけものえっち【FANZA限定版】
-<span style="color:#66d9ef">-</span> 異種恋愛【電子特装版】【FANZA限定】
-<span style="color:#66d9ef">-</span> 鬼ヶ島の許婚
-<span style="color:#66d9ef">-</span> 痛いのは嫌なので防御力に極振りしたいと思います。
-<span style="color:#66d9ef">-</span> 化けネコ葉月の姉妹事情
-<span style="color:#66d9ef">-</span> 異世界でもふもふなでなでするためにがんばってます。（コミック）
-<span style="color:#66d9ef">-</span> 人間以外じゃダメですか？ 人外っ娘・あそーと
-<span style="color:#66d9ef">-</span> モンスター娘との交合
-<span style="color:#66d9ef">-</span> 効果検証入門〜正しい比較のための因果推論/計量経済学の基礎
-<span style="color:#66d9ef">-</span> 酷幻想をアイテムチートで生き抜く THE COMIC 1
-<span style="color:#66d9ef">-</span> ぜつりん！
-<span style="color:#66d9ef">-</span> クラスが異世界召喚されたなか俺だけ残ったんですが
-<span style="color:#66d9ef">-</span> 変な知識に詳しい彼女 高床式草子さん
-<span style="color:#66d9ef">-</span> お姉さんは女子小学生に興味があります。
-<span style="color:#66d9ef">-</span> 女声男子
-<span style="color:#66d9ef">-</span> プラナス・ガール
-<span style="color:#66d9ef">-</span> おじさんはカワイイものがお好き。
-<span style="color:#66d9ef">-</span> 冒険家になろう！〜スキルボードでダンジョン攻略〜（コミック）
-<span style="color:#66d9ef">-</span> ゆうべはお楽しみでしたね
-<span style="color:#66d9ef">-</span> 変愛彼女〜やだ彼氏のが他の娘に入っちゃってるう〜
-<span style="color:#66d9ef">-</span> 異世界で失敗しない100の方法
-<span style="color:#66d9ef">-</span> 田舎のホームセンター男の自由な異世界生活
-<span style="color:#66d9ef">-</span> チート薬師のスローライフ
-<span style="color:#66d9ef">-</span> 図書館の大魔術師
-<span style="color:#66d9ef">-</span> アラフォー男の異世界通販生活
-<span style="color:#66d9ef">-</span> 異世界で 上前はねて 生きていく〜再生魔法使いのゆるふわ人材派遣生活〜（コミック） 1
-<span style="color:#66d9ef">-</span> 古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック）
-<span style="color:#66d9ef">-</span> 商人勇者は異世界を牛耳る！〜栽培スキルでなんでも増やしちゃいます〜
-<span style="color:#66d9ef">-</span> ポーション頼みで生き延びます！
-<span style="color:#66d9ef">-</span> 老後に備えて異世界で8万枚の金貨を貯めます
-<span style="color:#66d9ef">-</span> 事情を知らない転校生がグイグイくる。
-<span style="color:#66d9ef">-</span> ちょっぴり年上でも彼女にしてくれますか？
-<span style="color:#66d9ef">-</span> 魔術学院を首席で卒業した俺が冒険者を始めるのはそんなにおかしいだろうか
-<span style="color:#66d9ef">-</span> 異世界チートサバイバル飯
-<span style="color:#66d9ef">-</span> 完全回避ヒーラーの軌跡
-<span style="color:#66d9ef">-</span> 剥かせて！竜ケ崎さん
-<span style="color:#66d9ef">-</span> いきのこれ！ 社畜ちゃん
-<span style="color:#66d9ef">-</span> ギャルごはん
-<span style="color:#66d9ef">-</span> 農民関連のスキルばっか上げてたら何故か強くなった。（コミック）
-<span style="color:#66d9ef">-</span> 異世界召喚は二度目です（コミック）
-<span style="color:#66d9ef">-</span> 異世界で神様になったので、だいたい何でもできる！！
-<span style="color:#66d9ef">-</span> ハズレ枠の【状態異常スキル】で最強になった俺がすべてを蹂躙するまで
-<span style="color:#66d9ef">-</span> リワールド・フロンティア（コミック）
-<span style="color:#66d9ef">-</span> 復讐完遂者の人生二周目異世界譚 THE COMIC
-<span style="color:#66d9ef">-</span> 奴隷商人しか選択肢がないですよ？
-<span style="color:#66d9ef">-</span> ぼっち・ざ・ろっく！
-<span style="color:#66d9ef">-</span> 寄生獣リバーシ
-<span style="color:#66d9ef">-</span> 転生したらスライムだった件
-<span style="color:#66d9ef">-</span> 暴食のベルセルク〜俺だけレベルという概念を突破する〜 THE COMIC
-<span style="color:#66d9ef">-</span> もふもふを知らなかったら人生の半分は無駄にしていた
-<span style="color:#66d9ef">-</span> 悪役令嬢の取り巻きやめようと思います
-<span style="color:#66d9ef">-</span> 金貨1枚で変わる冒険者生活 1巻
-<span style="color:#66d9ef">-</span> 最後にひとつだけお願いしてもよろしいでしょうか 1
-<span style="color:#66d9ef">-</span> おちこぼれフルーツタルト
-<span style="color:#66d9ef">-</span> 脱オタしてはみたものの
-<span style="color:#66d9ef">-</span> 社畜と少女の1800日
-<span style="color:#66d9ef">-</span> サキちゃんは今夜もぺこぺこ
-<span style="color:#66d9ef">-</span> デスサイズぷるるん
-<span style="color:#66d9ef">-</span> 最弱テイマーはゴミ拾いの旅を始めました。@COMIC 第1巻
-<span style="color:#66d9ef">-</span> 史上最強オークさんの楽しい異世界ハーレムづくり
-<span style="color:#66d9ef">-</span> あせとせっけん
-<span style="color:#66d9ef">-</span> レベル1の最強賢者 〜呪いで最下級魔法しか使えないけど、神の勘違いで無限の魔力を手に入れ最強に〜 1 【電子版特典イラスト付き】（コミックポルカ）
-<span style="color:#66d9ef">-</span> フェンリル母さんとあったかご飯（コミック）
-<span style="color:#66d9ef">-</span> 幼女戦記
-<span style="color:#66d9ef">-</span> アタマの中のアレを食べたい
-<span style="color:#66d9ef">-</span> アスペル・カノジョ
-<span style="color:#66d9ef">-</span> 異世界ちゃんこ〜横綱目前に召喚されたんだが
-<span style="color:#66d9ef">-</span> 1年A組のモンスター
-<span style="color:#66d9ef">-</span> サメガール
-<span style="color:#66d9ef">-</span> 召喚された賢者は異世界を往く 〜最強なのは不要在庫のアイテムでした〜
-<span style="color:#66d9ef">-</span> 聖者無双
-<span style="color:#66d9ef">-</span> 先生、俺にかまわずイッてください！！
-<span style="color:#66d9ef">-</span> ふたりソロキャンプ
-<span style="color:#66d9ef">-</span> 娘の友達
-<span style="color:#66d9ef">-</span> メイドインアビス
-<span style="color:#66d9ef">-</span> 実践Data Scienceシリーズ PythonではじめるKaggleスタートブック
-<span style="color:#66d9ef">-</span> モンスターのご主人様（コミック）
-<span style="color:#66d9ef">-</span> おしかけツインテール
-<span style="color:#66d9ef">-</span> 進化の実〜知らないうちに勝ち組人生〜（コミック）
-<span style="color:#66d9ef">-</span> 俺はロリコンじゃない！
-<span style="color:#66d9ef">-</span> 異世界転生…されてねぇ！（コミック）
-<span style="color:#66d9ef">-</span> 永世乙女の戦い方
-<span style="color:#66d9ef">-</span> 境界迷宮と異界の魔術師
-<span style="color:#66d9ef">-</span> ひとりぼっちの異世界攻略
-<span style="color:#66d9ef">-</span> ポンコツ女神の異世界創世録
-<span style="color:#66d9ef">-</span> ゲーム オブ ファミリア-家族戦記-
-<span style="color:#66d9ef">-</span> ヤンデレ系乙女ゲーの世界に転生してしまったようです
-<span style="color:#66d9ef">-</span> 魔女と淫魔とカワイイお弟子（単話）
-<span style="color:#66d9ef">-</span> 田舎に帰るとやけになついた褐色ポニテショタがいる
-<span style="color:#66d9ef">-</span> 俺んちに来た女騎士と田舎暮らしすることになった件
-<span style="color:#66d9ef">-</span> アラフォーリーマンのシンデレラ転生 1巻
-<span style="color:#66d9ef">-</span> 転生魔女よ、暁を謳え （1）
-<span style="color:#66d9ef">-</span> 千のスキルを持つ男 異世界で召喚獣はじめました！
-<span style="color:#66d9ef">-</span> ワールド・ティーチャー 異世界式教育エージェント
-<span style="color:#66d9ef">-</span> 異世界でも風俗嬢やってみた
-<span style="color:#66d9ef">-</span> 異種族巨少女セクステット！
-<span style="color:#66d9ef">-</span> ティアムーン帝国物語（コミック）
-<span style="color:#66d9ef">-</span> おかしな転生
-<span style="color:#66d9ef">-</span> 捨てられた皇妃
-<span style="color:#66d9ef">-</span> 継続は魔力なり〜無能魔法が便利魔法に進化を遂げました〜
-<span style="color:#66d9ef">-</span> 悪役令嬢の怠惰な溜め息 1【電子限定特典付き】
-<span style="color:#66d9ef">-</span> フリクションガール
-<span style="color:#66d9ef">-</span> 人間不信の冒険者たちが世界を救うようです
-<span style="color:#66d9ef">-</span> 訳あり悪役令嬢は、婚約破棄後の人生を自由に生きる
-<span style="color:#66d9ef">-</span> 雪女と蟹を食う
-<span style="color:#66d9ef">-</span> ドM女子とがっかり女王様 （1）
-<span style="color:#66d9ef">-</span> 異種族レビュアーズ
-<span style="color:#66d9ef">-</span> 世界を救うために亜人と朝チュンできますか？
-<span style="color:#66d9ef">-</span> レジェンド
-<span style="color:#66d9ef">-</span> 16bitセンセーション 1 私とみんなが作った美少女ゲーム
-<span style="color:#66d9ef">-</span> 魔導士LV99は空気が読めない
-<span style="color:#66d9ef">-</span> 彼女、お借りします
-<span style="color:#66d9ef">-</span> 愛しの国玉 1【電子限定特典付き】
-<span style="color:#66d9ef">-</span> 古見さんは、コミュ症です。
-<span style="color:#66d9ef">-</span> 史上最強の魔法剣士、Fランク冒険者に転生する 〜剣聖と魔帝、2つの前世を持った男の英雄譚〜
-<span style="color:#66d9ef">-</span> 出来損ないと呼ばれた元英雄は、実家から追放されたので好き勝手に生きることにした （コミック）
-<span style="color:#66d9ef">-</span> 僕の心のヤバイやつ
-<span style="color:#66d9ef">-</span> せっかくチートを貰って異世界に転移したんだから、好きなように生きてみたい THE COMIC
-<span style="color:#66d9ef">-</span> うちの師匠はしっぽがない
-<span style="color:#66d9ef">-</span> 六道の悪女たち
-<span style="color:#66d9ef">-</span> 母性天使マザカルカノン 1
-<span style="color:#66d9ef">-</span> こいつらの正体が女だと俺だけが知っている
-<span style="color:#66d9ef">-</span> レベル1だけどユニークスキルで最強です
-<span style="color:#66d9ef">-</span> 女装してめんどくさい事になってるネクラとヤンキーの両片想い
-<span style="color:#66d9ef">-</span> 妻、小学生になる。
-<span style="color:#66d9ef">-</span> 転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜
-<span style="color:#66d9ef">-</span> 葬送のフリーレン
-<span style="color:#66d9ef">-</span> 科学的に存在しうるクリーチャー娘の観察日誌
-<span style="color:#66d9ef">-</span> とある科学の超電磁砲
-<span style="color:#66d9ef">-</span> 武士スタント逢坂くん！
-<span style="color:#66d9ef">-</span> ナナマル サンバツ
-<span style="color:#66d9ef">-</span> 声がだせない少女は「彼女が優しすぎる」と思っている
-<span style="color:#66d9ef">-</span> 女神のスプリンター【DMM限定特典付き】
-<span style="color:#66d9ef">-</span> じょしラク！ 〜 2 Years Later〜（単話）
-</code></pre></div><p>今までにDMM電子書籍で購入した本の一覧を購入日が古い順で全て取得できた。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>ログインページにアクセスしました
+</span></span><span style="display:flex;"><span>情報を入力してログインボタンを押しました
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モブサイコ100
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おしえて！ ギャル子ちゃん
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 無邪気の楽園
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> とんでもスキルで異世界放浪メシ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界でスキルを解体したらチートな嫁が増殖しました 概念交差のストラクチャー
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ブラウンシュガァデイズ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ウメハラ FIGHTING GAMERS！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> なれる！SE
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 神達に拾われた男
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 失格紋の最強賢者 〜世界最強の賢者が更に強くなるために転生しました〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 世界最強の後衛 〜迷宮国の新人探索者〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ニートだけどハロワにいったら異世界につれてかれた
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 無職転生 〜ロキシーだって本気です〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 宝くじで40億当たったんだけど異世界に移住する
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ゴブリンスレイヤー
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ゴブリンスレイヤー外伝:イヤーワン
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生したらドラゴンの卵だった〜イバラのドラゴンロード
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生したら剣でした
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 骸骨騎士様、只今異世界へお出掛け中
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> なんでここに先生が！？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 強くてニューサーガ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 冒険者になりたいと都に出て行った娘がSランクになってた 黒髪の戦乙女
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界魔法は遅れてる！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 即死チートが最強すぎて、異世界のやつらがまるで相手にならないんですが。-ΑΩ-
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> THENEWGATE
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界チート魔術師
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> シロクマ転生 森の守護神になったぞ伝説
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 蜘蛛ですが、なにか？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界のんびり農家
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 没落予定なので、鍛冶職人を目指す
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 無職転生 〜異世界行ったら本気だす〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> スライムライフ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> とあるおっさんのVRMMO活動記
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 29歳独身中堅冒険者の日常
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 100万の命の上に俺は立っている ワケあり無料版 5
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最強の職業は勇者でも賢者でもなく鑑定士（仮）らしいですよ？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 野生のラスボスが現れた！黒翼の覇王
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 100万の命の上に俺は立っている
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 獣医さんのお仕事in異世界
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 月が導く異世界道中
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ブサメンガチファイター
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 平兵士は過去を夢見る
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 自重しない元勇者の強くて楽しいニューゲーム
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 努力しすぎた世界最強の武闘家は、魔法世界を余裕で生き抜く。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最強呪族転生〜魔術オタクの理想郷（ユートピア）〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔拳のデイドリーマー
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で『黒の癒し手』って呼ばれています
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> のんびりVRMMO記
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界でカフェを開店しました。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 邪竜転生
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 望まぬ不死の冒険者
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 黒の召喚士
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 村人ですが何か？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アルゲートオンライン
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 効率厨魔導師、第二の人生で魔導を極める
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ワールド・カスタマイズ・クリエー
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 成長チートでなんでもできるようになったが、無職だけは辞められないようです
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> マズ飯エルフと遊牧暮らし
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 賢者の弟子を名乗る賢者 THE COMIC
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で最強の杖に転生した俺が嫌がる少女をムリヤリ魔法少女にPする！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 剣士を目指して入学したのに魔法適性9999なんですけど！？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺の家が魔力スポットだった件 〜住んでいるだけで世界最強〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界迷宮でハーレムを
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 欲望パンドラ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生しちゃったよ（いや、ごめん）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> さようなら竜生、こんにちは人生
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 素材採取家の異世界旅行記
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤンキーは異世界で精霊に愛されます。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺と蛙さんの異世界放浪記
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 軍オタが魔法世界に転生したら、現代兵器で軍隊ハーレムを作っちゃいました！？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 真の仲間じゃないと勇者のパーティーを追い出されたので、辺境でスローライフすることにしました
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ありふれた日常で世界最強
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ありふれた職業で世界最強
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界を制御魔法で切り開け！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アルマディアノス英雄伝
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界転生騒動記
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> じょしラク！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 駆除人
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で孤児院を開いたけど、なぜか誰一人巣立とうとしない件【カラー増量版】
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界おじさん
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 辺境の老騎士 バルド・ローエン
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 宝石の国
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> うちの娘の為ならば、俺はもしかしたら魔王も倒せるかもしれない。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> てのひら開拓村で異世界建国記
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ガチャを回して仲間を増やす 最強の美少女軍団を作り上げろ THE COMIC
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 二度目の勇者は復讐の道を嗤い歩む
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 四度目は嫌な死属性魔術師
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界ゆるり紀行 〜子育てしながら冒険者します〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界支配のスキルテイカー ゼロから始める奴隷ハーレム
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 聖女の魔力は万能です
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 神さまSHOPでチートの香り
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生貴族の異世界冒険録
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 食べるだけでレベルアップ！ 〜駄女神といっしょに異世界無双〜（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ワンワン物語 〜金持ちの犬にしてとは言ったが、フェンリルにしろとは言ってねえ！〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おっさんのリメイク冒険日記
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界ですが魔物栽培しています。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 二度目の人生を異世界で
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界の迷宮都市で治癒魔法使いやってます（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔王になったので、ダンジョン造って人外娘とほのぼのする
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最果てのパラディン
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔王様の街づくり！ 〜最強のダンジョンは近代都市〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ダンジョンシーカー
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> マギクラフト・マイスター
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界温泉に転生した俺の効能がとんでもすぎる
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 物語の中の人
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 地方騎士ハンスの受難
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> LV999の村人
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 精霊達の楽園と理想の異世界生活
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モノノケ！！！！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> どうやら私の身体は完全無敵のようですね
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔王の始め方 THE COMIC
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> マージナル・オペレーション
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生王子はダラけたい
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 豚公爵に転生したから、今度は君に好きと言いたい
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> レディローズは平民になりたい
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モンスターがあふれる世界になったので、好きに生きたいと思います
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Sランクモンスターの《ベヒーモス》だけど、猫と間違われてエルフ娘の騎士（ペット）として暮らしてます
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Re:Monster
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺だけ入れる隠しダンジョン 〜こっそり鍛えて世界最強〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Only Sense Online ―オンリーセンス・オンライン―
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤングジャンプ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヒストリエ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 専門学校JK Ctrl＋Z （1）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 大家さんと僕
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 専門学校JK
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 理想のヒモ生活
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Lv2からチートだった元勇者候補のまったり異世界ライフ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 僕の部屋がダンジョンの休憩所になってしまった件【パートカラー版】
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おっさん冒険者ケインの善行
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 陰の実力者になりたくて！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界系ファンタジー ガンガンいこうぜ！大ボリューム試し読みパック
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 史上最強の大魔王、 村人Aに転生する
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 機械学習のエッセンス 実装しながら学ぶPython、数学、アルゴリズム
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> データサイエンティスト養成読本 ビジネス活用編
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド―
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 絶対にヤッてはいけない異世界召喚
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 水女神は今日も恋をするか？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ［第2版］Python機械学習プログラミング 達人データサイエンティストによる理論と実践
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Rによるやさしい統計学
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 暗殺者である俺のステータスが勇者よりも明らかに強いのだが
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 少女奴●スクール
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ボコボコりんっ！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 早乙女選手、ひたかくす
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Kaggleで勝つデータ分析の技術
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> リビドーハンタータケル
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤクザの大親分が幼女に生まれ変わった話 1巻
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> いきのこれ！ 社畜ちゃん 〜後輩ちゃんオタ活動記〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔王様、リトライ！（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アラフォー社畜のゴーレムマスター（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ガイシューイッショク！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 紀元前1万年のオタ デジタルモザイク版
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ここは俺に任せて先に行けと言ってから10年がたったら伝説になっていた。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異種族レビュアーズコミックアンソロジー 〜ダークネス〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> うれしょん！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ギリギリアウト
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> やんちゃギャルの安城さん
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 佐伯さんは眠ってる
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Kiss×sis
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ハンツー×トラッシュ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 小学生がママでもいいですか？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 【悲報】会社の行き遅れBBA孕ませた
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 自称！平凡魔族の英雄ライフ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> デスラバ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 咲 -Saki-
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔法使いの印刷所
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 大上さん、だだ漏れです。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 都合が良くて可愛いメス。【FANZA限定特典付き】
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヒトモエ委員会 デジタル版
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> マナさんと母屋を離れて…
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> JKハルは異世界で娼婦になった
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 今まで一度も女扱いされたことがない女騎士を女扱いする漫画
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 着たい服がある
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ライドンキング
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界ソープランド輝夜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤンキーJKの異常な愛情
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 【FANZA限定版】モンスター娘の堕とし方
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ばけものえっち【FANZA限定版】
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異種恋愛【電子特装版】【FANZA限定】
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 鬼ヶ島の許婚
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 痛いのは嫌なので防御力に極振りしたいと思います。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 化けネコ葉月の姉妹事情
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界でもふもふなでなでするためにがんばってます。（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 人間以外じゃダメですか？ 人外っ娘・あそーと
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モンスター娘との交合
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 効果検証入門〜正しい比較のための因果推論/計量経済学の基礎
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 酷幻想をアイテムチートで生き抜く THE COMIC 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ぜつりん！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> クラスが異世界召喚されたなか俺だけ残ったんですが
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 変な知識に詳しい彼女 高床式草子さん
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> お姉さんは女子小学生に興味があります。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 女声男子
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> プラナス・ガール
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おじさんはカワイイものがお好き。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 冒険家になろう！〜スキルボードでダンジョン攻略〜（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ゆうべはお楽しみでしたね
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 変愛彼女〜やだ彼氏のが他の娘に入っちゃってるう〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で失敗しない100の方法
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 田舎のホームセンター男の自由な異世界生活
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> チート薬師のスローライフ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 図書館の大魔術師
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アラフォー男の異世界通販生活
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で 上前はねて 生きていく〜再生魔法使いのゆるふわ人材派遣生活〜（コミック） 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 商人勇者は異世界を牛耳る！〜栽培スキルでなんでも増やしちゃいます〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ポーション頼みで生き延びます！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 老後に備えて異世界で8万枚の金貨を貯めます
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 事情を知らない転校生がグイグイくる。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ちょっぴり年上でも彼女にしてくれますか？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔術学院を首席で卒業した俺が冒険者を始めるのはそんなにおかしいだろうか
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界チートサバイバル飯
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 完全回避ヒーラーの軌跡
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 剥かせて！竜ケ崎さん
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> いきのこれ！ 社畜ちゃん
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ギャルごはん
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 農民関連のスキルばっか上げてたら何故か強くなった。（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界召喚は二度目です（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で神様になったので、だいたい何でもできる！！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ハズレ枠の【状態異常スキル】で最強になった俺がすべてを蹂躙するまで
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> リワールド・フロンティア（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 復讐完遂者の人生二周目異世界譚 THE COMIC
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 奴隷商人しか選択肢がないですよ？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ぼっち・ざ・ろっく！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 寄生獣リバーシ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生したらスライムだった件
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 暴食のベルセルク〜俺だけレベルという概念を突破する〜 THE COMIC
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> もふもふを知らなかったら人生の半分は無駄にしていた
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 悪役令嬢の取り巻きやめようと思います
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 金貨1枚で変わる冒険者生活 1巻
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最後にひとつだけお願いしてもよろしいでしょうか 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おちこぼれフルーツタルト
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 脱オタしてはみたものの
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 社畜と少女の1800日
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> サキちゃんは今夜もぺこぺこ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> デスサイズぷるるん
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最弱テイマーはゴミ拾いの旅を始めました。@COMIC 第1巻
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 史上最強オークさんの楽しい異世界ハーレムづくり
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> あせとせっけん
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> レベル1の最強賢者 〜呪いで最下級魔法しか使えないけど、神の勘違いで無限の魔力を手に入れ最強に〜 1 【電子版特典イラスト付き】（コミックポルカ）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> フェンリル母さんとあったかご飯（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 幼女戦記
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アタマの中のアレを食べたい
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アスペル・カノジョ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界ちゃんこ〜横綱目前に召喚されたんだが
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 1年A組のモンスター
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> サメガール
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 召喚された賢者は異世界を往く 〜最強なのは不要在庫のアイテムでした〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 聖者無双
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 先生、俺にかまわずイッてください！！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ふたりソロキャンプ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 娘の友達
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> メイドインアビス
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 実践Data Scienceシリーズ PythonではじめるKaggleスタートブック
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モンスターのご主人様（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おしかけツインテール
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 進化の実〜知らないうちに勝ち組人生〜（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺はロリコンじゃない！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界転生…されてねぇ！（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 永世乙女の戦い方
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 境界迷宮と異界の魔術師
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ひとりぼっちの異世界攻略
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ポンコツ女神の異世界創世録
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ゲーム オブ ファミリア-家族戦記-
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤンデレ系乙女ゲーの世界に転生してしまったようです
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔女と淫魔とカワイイお弟子（単話）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 田舎に帰るとやけになついた褐色ポニテショタがいる
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺んちに来た女騎士と田舎暮らしすることになった件
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アラフォーリーマンのシンデレラ転生 1巻
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生魔女よ、暁を謳え （1）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 千のスキルを持つ男 異世界で召喚獣はじめました！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ワールド・ティーチャー 異世界式教育エージェント
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界でも風俗嬢やってみた
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異種族巨少女セクステット！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ティアムーン帝国物語（コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おかしな転生
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 捨てられた皇妃
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 継続は魔力なり〜無能魔法が便利魔法に進化を遂げました〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 悪役令嬢の怠惰な溜め息 1【電子限定特典付き】
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> フリクションガール
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 人間不信の冒険者たちが世界を救うようです
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 訳あり悪役令嬢は、婚約破棄後の人生を自由に生きる
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 雪女と蟹を食う
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ドM女子とがっかり女王様 （1）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異種族レビュアーズ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 世界を救うために亜人と朝チュンできますか？
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> レジェンド
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 16bitセンセーション 1 私とみんなが作った美少女ゲーム
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔導士LV99は空気が読めない
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 彼女、お借りします
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 愛しの国玉 1【電子限定特典付き】
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 古見さんは、コミュ症です。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 史上最強の魔法剣士、Fランク冒険者に転生する 〜剣聖と魔帝、2つの前世を持った男の英雄譚〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 出来損ないと呼ばれた元英雄は、実家から追放されたので好き勝手に生きることにした （コミック）
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 僕の心のヤバイやつ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> せっかくチートを貰って異世界に転移したんだから、好きなように生きてみたい THE COMIC
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> うちの師匠はしっぽがない
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 六道の悪女たち
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 母性天使マザカルカノン 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> こいつらの正体が女だと俺だけが知っている
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> レベル1だけどユニークスキルで最強です
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 女装してめんどくさい事になってるネクラとヤンキーの両片想い
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 妻、小学生になる。
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 葬送のフリーレン
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 科学的に存在しうるクリーチャー娘の観察日誌
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> とある科学の超電磁砲
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 武士スタント逢坂くん！
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ナナマル サンバツ
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 声がだせない少女は「彼女が優しすぎる」と思っている
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 女神のスプリンター【DMM限定特典付き】
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> じょしラク！ 〜 2 Years Later〜（単話）
+</span></span></code></pre></div><p>今までにDMM電子書籍で購入した本の一覧を購入日が古い順で全て取得できた。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
 <p>もう少し工夫すればリンクを取得したり、金額を持ってくるようなことも可能だと思うが、時間もかかるし面倒なので今回はやらない。</p>
 <br>
 <p>元々はrequestsモジュールでクローリングしようと思ったが、ログインが上手くいかなくてやめた。</p>
@@ -1150,34 +1150,34 @@ url_purchased <span style="color:#f92672">=</span> <span style="color:#e6db74"><
 </li>
 <li>
 <p>実際のコードはほとんど変化ない</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># # PhantomJSのドライバーを得る</span>
-<span style="color:#75715e"># browser = webdriver.PhantomJS()</span>
-<span style="color:#75715e"># browser.implicitly_wait(5)</span>
-<span style="color:#75715e"># ↓</span>
-    
-<span style="color:#75715e"># Chromeのドライバーを得る</span>
-options <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>ChromeOptions()
-options<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">--headless</span><span style="color:#e6db74">&#39;</span>) <span style="color:#75715e"># 画面を表示しないオプション</span>
-browser <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Chrome(options<span style="color:#f92672">=</span>options)
-browser<span style="color:#f92672">.</span>implicitly_wait(<span style="color:#ae81ff">5</span>)
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># # PhantomJSのドライバーを得る</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># browser = webdriver.PhantomJS()</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># browser.implicitly_wait(5)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ↓</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Chromeのドライバーを得る</span>
+</span></span><span style="display:flex;"><span>options <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>ChromeOptions()
+</span></span><span style="display:flex;"><span>options<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--headless&#39;</span>) <span style="color:#75715e"># 画面を表示しないオプション</span>
+</span></span><span style="display:flex;"><span>browser <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Chrome(options<span style="color:#f92672">=</span>options)
+</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>implicitly_wait(<span style="color:#ae81ff">5</span>)
+</span></span></code></pre></div></li>
 </ul>
 </li>
 </ul>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p>本当に読んだけど、実際は参考リンクの方が役に立った。この本は法律や規約などのことについても触れられているのでタメになる。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:1">
+<p>本当に読んだけど、実際は参考リンクの方が役に立った。この本は法律や規約などのことについても触れられているのでタメになる。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
-<p>ちなみにDMM電子書籍は巻数が複数あるものはひとまとめにしているので、実際の冊数はこの一覧よりも多くなっている。 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:2">
+<p>ちなみにDMM電子書籍は巻数が複数あるものはひとまとめにしているので、実際の冊数はこの一覧よりも多くなっている。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
-<p>やばいエロ漫画があっても気にしないでください <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:3">
+<p>やばいエロ漫画があっても気にしないでください&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
     </div>
 
@@ -1246,7 +1246,7 @@ browser<span style="color:#f92672">.</span>implicitly_wait(<span style="color:#a
   <div class="media author-card content-widget-hr">
     
       
-      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hud3fb04779196eb89622e1c7b7eaa47c4_354302_270x270_fill_lanczos_center_2.PNG" alt="Avatar">
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hud3fb04779196eb89622e1c7b7eaa47c4_354302_270x270_fill_lanczos_center_3.PNG" alt="Avatar">
     
 
     <div class="media-body">
@@ -1529,7 +1529,7 @@ browser<span style="color:#f92672">.</span>implicitly_wait(<span style="color:#a
     
     
     
-    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+    <script src="/js/academic.min.1870b43f3f31b03f115267a02162711a.js"></script>
 
     
 

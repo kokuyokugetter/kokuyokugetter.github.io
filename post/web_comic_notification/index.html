@@ -250,8 +250,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://kokuyokugetter.github.io/post/web_comic_notification/">
 
@@ -319,7 +319,7 @@
     "name": "ゲッタ〜のHP",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://kokuyokugetter.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+      "url": "https://kokuyokugetter.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "[botはこちら](https://twitter.com/webbot17)"
@@ -724,85 +724,84 @@
 <p>また、前述の6分制限もあるので、スクリプト自体を分けて6分を超えないようにしつつ、どれがどのサイトのスクリプトかも分かりやすくする。</p>
 <br>
 <h2 id="スクリプト本体">スクリプト本体</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// @ts-nocheck
-</span><span style="color:#75715e"></span><span style="color:#75715e">// 認証用URL取得
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getOAuthURL</span>() {
-  <span style="color:#a6e22e">Logger</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">getService</span>().<span style="color:#a6e22e">authorize</span>());
-}
- 
-<span style="color:#75715e">// サービス取得
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getService</span>() {
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">OAuth1</span>.<span style="color:#a6e22e">createService</span>(<span style="color:#e6db74">&#39;Twitter&#39;</span>)
-      .<span style="color:#a6e22e">setAccessTokenUrl</span>(<span style="color:#e6db74">&#39;https://api.twitter.com/oauth/access_token&#39;</span>)
-      .<span style="color:#a6e22e">setRequestTokenUrl</span>(<span style="color:#e6db74">&#39;https://api.twitter.com/oauth/request_token&#39;</span>)
-      .<span style="color:#a6e22e">setAuthorizationUrl</span>(<span style="color:#e6db74">&#39;https://api.twitter.com/oauth/authorize&#39;</span>)
-      <span style="color:#75715e">// 設定した認証情報をセット
-</span><span style="color:#75715e"></span>      .<span style="color:#a6e22e">setConsumerKey</span>(<span style="color:#a6e22e">PropertiesService</span>.<span style="color:#a6e22e">getScriptProperties</span>().<span style="color:#a6e22e">getProperty</span>(<span style="color:#e6db74">&#34;CONSUMER_API_KEY&#34;</span>))
-      .<span style="color:#a6e22e">setConsumerSecret</span>(<span style="color:#a6e22e">PropertiesService</span>.<span style="color:#a6e22e">getScriptProperties</span>().<span style="color:#a6e22e">getProperty</span>(<span style="color:#e6db74">&#34;CONSUMER_API_SECRET&#34;</span>))
-      .<span style="color:#a6e22e">setCallbackFunction</span>(<span style="color:#e6db74">&#39;authCallback&#39;</span>)
-      <span style="color:#75715e">// 認証情報をプロパティストアにセット（これにより認証解除するまで再認証が不要になる）
-</span><span style="color:#75715e"></span>      .<span style="color:#a6e22e">setPropertyStore</span>(<span style="color:#a6e22e">PropertiesService</span>.<span style="color:#a6e22e">getUserProperties</span>());
-}
- 
-<span style="color:#75715e">//  認証成功時に呼び出される処理を定義
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">authCallback</span>(<span style="color:#a6e22e">request</span>) {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">service</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getService</span>();
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">authorized</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">handleCallback</span>(<span style="color:#a6e22e">request</span>);
-  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">authorized</span>) {
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">HtmlService</span>.<span style="color:#a6e22e">createHtmlOutput</span>(<span style="color:#e6db74">&#39;success!!&#39;</span>);
-  } <span style="color:#66d9ef">else</span> {
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">HtmlService</span>.<span style="color:#a6e22e">createHtmlOutput</span>(<span style="color:#e6db74">&#39;failed&#39;</span>);
-  }    
-}
-
-<span style="color:#75715e">// ツイート用のAPIを起動する関数
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">toTweet</span>(<span style="color:#a6e22e">text</span>) {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">twitterService</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getService</span>();
-  
-  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">twitterService</span>.<span style="color:#a6e22e">hasAccess</span>()) {
-    <span style="color:#75715e">// 投稿
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">twMethod</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;POST&#34;</span> };
-    <span style="color:#a6e22e">twMethod</span>.<span style="color:#a6e22e">payload</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">text</span> };
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">twitterService</span>.<span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#34;https://api.twitter.com/1.1/statuses/update.json&#34;</span>, <span style="color:#a6e22e">twMethod</span>);
-    
-    <span style="color:#a6e22e">Logger</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">getContentText</span>());
- 
-  } <span style="color:#66d9ef">else</span> {
-    <span style="color:#a6e22e">Logger</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">getLastError</span>());
-  }
-}
-
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">notify_update_cw</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">openById</span>(<span style="color:#e6db74">&#39;スプレッドシートのIDを入れる&#39;</span>);
-  <span style="color:#75715e">// var spreadsheet = SpreadsheetApp.getActiveSpreadsheet(); //これだとスプレッドシートを閉じてるときに使えない
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getSheetByName</span>(<span style="color:#e6db74">&#39;comic_walker&#39;</span>);
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">lastrow</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getLastRow</span>();
-  <span style="color:#75715e">// スプレッドシートの全行取得
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;A1:B&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">lastrow</span>);
-  <span style="color:#75715e">//昨日の日付を取得
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">yesterday</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">now</span>.<span style="color:#a6e22e">getFullYear</span>(), <span style="color:#a6e22e">now</span>.<span style="color:#a6e22e">getMonth</span>(), <span style="color:#a6e22e">now</span>.<span style="color:#a6e22e">getDate</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">year_str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">yesterday</span>.<span style="color:#a6e22e">getFullYear</span>();
-  <span style="color:#75715e">//月は0~11なので+1する
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">month_str</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">yesterday</span>.<span style="color:#a6e22e">getMonth</span>();
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">day_str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">yesterday</span>.<span style="color:#a6e22e">getDate</span>();
-  <span style="color:#75715e">// comic_walkerは0埋めが必要
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">yesterday_str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">year_str</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> (<span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">month_str</span>).<span style="color:#a6e22e">slice</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> (<span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">day_str</span>).<span style="color:#a6e22e">slice</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
-
-  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">lastrow</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">range</span>.<span style="color:#a6e22e">getValues</span>()[<span style="color:#a6e22e">i</span>];
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">getUrl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">l</span>[<span style="color:#ae81ff">1</span>];
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">UrlFetchApp</span>.<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">getUrl</span>).<span style="color:#a6e22e">getContentText</span>(<span style="color:#e6db74">&#39;UTF-8&#39;</span>);
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">update_date</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Parser</span>.<span style="color:#a6e22e">data</span>(<span style="color:#a6e22e">html</span>).<span style="color:#a6e22e">from</span>(<span style="color:#e6db74">&#39;&lt;span class=&#34;comicIndex-date&#34;&gt;&#39;</span>).<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#39;&lt;/span&gt;&#39;</span>).<span style="color:#a6e22e">iterate</span>()[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34; &#34;</span>)[<span style="color:#ae81ff">0</span>];
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">update_date</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">yesterday_str</span>) {
-      <span style="color:#a6e22e">toTweet</span>(<span style="color:#e6db74">&#34;昨日 &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">update_date</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; に更新されました。\n&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">l</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">l</span>[<span style="color:#ae81ff">1</span>]);
-    }
-    <span style="color:#a6e22e">Utilities</span>.<span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">10000</span>);
-  }
-}
-
-</code></pre></div><p>こちらはComic Walker版のスクリプト、他のサイト用のスクリプトもシートの指定と日付の形式とスクレイピングの要素を指定する部分以外は共通。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// @ts-nocheck
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 認証用URL取得
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getOAuthURL</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">Logger</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">getService</span>().<span style="color:#a6e22e">authorize</span>());
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// サービス取得
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getService</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">OAuth1</span>.<span style="color:#a6e22e">createService</span>(<span style="color:#e6db74">&#39;Twitter&#39;</span>)
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">setAccessTokenUrl</span>(<span style="color:#e6db74">&#39;https://api.twitter.com/oauth/access_token&#39;</span>)
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">setRequestTokenUrl</span>(<span style="color:#e6db74">&#39;https://api.twitter.com/oauth/request_token&#39;</span>)
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">setAuthorizationUrl</span>(<span style="color:#e6db74">&#39;https://api.twitter.com/oauth/authorize&#39;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// 設定した認証情報をセット
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      .<span style="color:#a6e22e">setConsumerKey</span>(<span style="color:#a6e22e">PropertiesService</span>.<span style="color:#a6e22e">getScriptProperties</span>().<span style="color:#a6e22e">getProperty</span>(<span style="color:#e6db74">&#34;CONSUMER_API_KEY&#34;</span>))
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">setConsumerSecret</span>(<span style="color:#a6e22e">PropertiesService</span>.<span style="color:#a6e22e">getScriptProperties</span>().<span style="color:#a6e22e">getProperty</span>(<span style="color:#e6db74">&#34;CONSUMER_API_SECRET&#34;</span>))
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">setCallbackFunction</span>(<span style="color:#e6db74">&#39;authCallback&#39;</span>)
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// 認証情報をプロパティストアにセット（これにより認証解除するまで再認証が不要になる）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      .<span style="color:#a6e22e">setPropertyStore</span>(<span style="color:#a6e22e">PropertiesService</span>.<span style="color:#a6e22e">getUserProperties</span>());
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//  認証成功時に呼び出される処理を定義
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">authCallback</span>(<span style="color:#a6e22e">request</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">service</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getService</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">authorized</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">handleCallback</span>(<span style="color:#a6e22e">request</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">authorized</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">HtmlService</span>.<span style="color:#a6e22e">createHtmlOutput</span>(<span style="color:#e6db74">&#39;success!!&#39;</span>);
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">HtmlService</span>.<span style="color:#a6e22e">createHtmlOutput</span>(<span style="color:#e6db74">&#39;failed&#39;</span>);
+</span></span><span style="display:flex;"><span>  }    
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ツイート用のAPIを起動する関数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">toTweet</span>(<span style="color:#a6e22e">text</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">twitterService</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getService</span>();
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">twitterService</span>.<span style="color:#a6e22e">hasAccess</span>()) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 投稿
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">twMethod</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;POST&#34;</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">twMethod</span>.<span style="color:#a6e22e">payload</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">text</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">twitterService</span>.<span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#34;https://api.twitter.com/1.1/statuses/update.json&#34;</span>, <span style="color:#a6e22e">twMethod</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Logger</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">getContentText</span>());
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Logger</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">service</span>.<span style="color:#a6e22e">getLastError</span>());
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">notify_update_cw</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">openById</span>(<span style="color:#e6db74">&#39;スプレッドシートのIDを入れる&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// var spreadsheet = SpreadsheetApp.getActiveSpreadsheet(); //これだとスプレッドシートを閉じてるときに使えない
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getSheetByName</span>(<span style="color:#e6db74">&#39;comic_walker&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">lastrow</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getLastRow</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// スプレッドシートの全行取得
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">range</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;A1:B&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">lastrow</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//昨日の日付を取得
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">yesterday</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">now</span>.<span style="color:#a6e22e">getFullYear</span>(), <span style="color:#a6e22e">now</span>.<span style="color:#a6e22e">getMonth</span>(), <span style="color:#a6e22e">now</span>.<span style="color:#a6e22e">getDate</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">year_str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">yesterday</span>.<span style="color:#a6e22e">getFullYear</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//月は0~11なので+1する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">month_str</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">yesterday</span>.<span style="color:#a6e22e">getMonth</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">day_str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">yesterday</span>.<span style="color:#a6e22e">getDate</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// comic_walkerは0埋めが必要
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">yesterday_str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">year_str</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> (<span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">month_str</span>).<span style="color:#a6e22e">slice</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#f92672">+</span> (<span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">day_str</span>).<span style="color:#a6e22e">slice</span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">lastrow</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">l</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">range</span>.<span style="color:#a6e22e">getValues</span>()[<span style="color:#a6e22e">i</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">getUrl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">l</span>[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">UrlFetchApp</span>.<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">getUrl</span>).<span style="color:#a6e22e">getContentText</span>(<span style="color:#e6db74">&#39;UTF-8&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">update_date</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Parser</span>.<span style="color:#a6e22e">data</span>(<span style="color:#a6e22e">html</span>).<span style="color:#a6e22e">from</span>(<span style="color:#e6db74">&#39;&lt;span class=&#34;comicIndex-date&#34;&gt;&#39;</span>).<span style="color:#a6e22e">to</span>(<span style="color:#e6db74">&#39;&lt;/span&gt;&#39;</span>).<span style="color:#a6e22e">iterate</span>()[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34; &#34;</span>)[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">update_date</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">yesterday_str</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">toTweet</span>(<span style="color:#e6db74">&#34;昨日 &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">update_date</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; に更新されました。\n&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">l</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">l</span>[<span style="color:#ae81ff">1</span>]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Utilities</span>.<span style="color:#a6e22e">sleep</span>(<span style="color:#ae81ff">10000</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>こちらはComic Walker版のスクリプト、他のサイト用のスクリプトもシートの指定と日付の形式とスクレイピングの要素を指定する部分以外は共通。</p>
 <p><code> notify_update_cw</code>より前は
 <a href="#%e5%8f%82%e8%80%83">参考</a>の通りにTwitterAPI周りの処理を記述。</p>
 <p><code> Utilities.sleep(10000);</code>は10秒間何もせずに止める操作で、6分制限のことを考えると一番きつい処理だが、
@@ -828,14 +827,14 @@
 </li>
 </ul>
 <br>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p>実行時間が17時前後なので、当日をキーにすると18時以降に更新された場合に拾い漏らす。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:1">
+<p>実行時間が17時前後なので、当日をキーにすると18時以降に更新された場合に拾い漏らす。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
     </div>
 
@@ -894,7 +893,7 @@
   <div class="media author-card content-widget-hr">
     
       
-      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hud3fb04779196eb89622e1c7b7eaa47c4_354302_270x270_fill_lanczos_center_2.PNG" alt="Avatar">
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hud3fb04779196eb89622e1c7b7eaa47c4_354302_270x270_fill_lanczos_center_3.PNG" alt="Avatar">
     
 
     <div class="media-body">
@@ -1160,7 +1159,7 @@
     
     
     
-    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+    <script src="/js/academic.min.1870b43f3f31b03f115267a02162711a.js"></script>
 
     
 
