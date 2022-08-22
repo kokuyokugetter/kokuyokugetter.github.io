@@ -5,12 +5,165 @@
     <link>https://kokuyokugetter.github.io/tags/python/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <description>Python</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 10 Nov 2020 18:00:05 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 22 Aug 2022 22:48:26 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Python</title>
       <link>https://kokuyokugetter.github.io/tags/python/</link>
     </image>
+    
+    <item>
+      <title>Nishikaの生鮮野菜のコンペで16位取るためにやったこと</title>
+      <link>https://kokuyokugetter.github.io/post/nishika_yasai/</link>
+      <pubDate>Mon, 22 Aug 2022 22:48:26 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/nishika_yasai/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.nishika.com/competitions/32/ranking&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;実際の順位表&lt;/a&gt;&lt;/p&gt;
+ &lt;img src=&#34;myRank.png&#34; width=&#34;&#34; alt=&#34;fig1&#34;&gt; 
+&lt;br&gt;
+&lt;p&gt;MLエンジニアに転職したのもあって勉強がてらいろんな方法を試していたらそこそこの順位になったので、&lt;/p&gt;
+&lt;p&gt;どんなことをやっていたか書き残していこうと思います。&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#データについて&#34;&gt;データについて&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#eda探索的データ分析ベースラインモデルの構築&#34;&gt;EDA（探索的データ分析）＋ベースラインモデルの構築&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#前加工&#34;&gt;前加工&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#作成したモデル&#34;&gt;作成したモデル&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#モデルの評価等&#34;&gt;モデルの評価等&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#提出前加工と提出しながら調整&#34;&gt;提出前加工と提出しながら調整&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#結果考察その他&#34;&gt;結果＋考察その他&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#やりたかったができなかったメモ&#34;&gt;やりたかったができなかったメモ&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;データについて&#34;&gt;データについて&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本コンペでは、生鮮野菜の価格予測をテーマにします。
+目的変数は、大田市場にて相対取引されている各野菜の日次の卸売価格とし、予測期間は最も多くの種類の野菜が市場に出ている2022年5月とします。
+予測対象の野菜は、以下16品目です。
+きゅうり,こまつな,じゃがいも,そらまめ,だいこん,なましいたけ,にんじん,ねぎ,はくさい,ほうれんそう,キャベツ,セルリー,トマト,ピーマン,ミニトマト,レタス&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.nishika.com/competitions/32/summary#description&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.nishika.com/competitions/32/summary#description&lt;/a&gt; より引用&lt;/p&gt;
+&lt;p&gt;今回のデータはテーブルデータなのですが&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;、titanic等とは違って時系列データになっているので、今までのtitanicなどの練習コンペとは一味違うデータとなっていました。&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;eda探索的データ分析ベースラインモデルの構築&#34;&gt;EDA（探索的データ分析）＋ベースラインモデルの構築&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;時系列データといえば、ARモデルやARIMAモデル、prophetなどを聞いたことがあったので、その辺を軽く試しつつ、EDAを手探りで行っていきました。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;とはいえ、時系列データのEDAって何をすればいいんだ？と思いながらデータを眺めたりしていました。グラフを書くにも時系列でプロットする方法に手こずったりしていました。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;それぞれtestデータに含まれる野菜の種類を抜き出して、価格の移動平均線をいろんな日数でプロットしたり、コレログラムを描いたりしました。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;また、statsmodels.tsa.seasonal.seasonal_decompose.plot()という時系列データを眺めるのに？便利な関数があることも分かったのは良かったと思います。
+&lt;img src=&#34;seasonal_decompose.png&#34; width=&#34;&#34; alt=&#34;fig2&#34;&gt; &lt;em&gt;こんな感じでトレンドとか季節成分とかをいい感じに分解してくれる&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ARモデル等それぞれのモデルでパラメータとか気にせずに適当にやった結果は以下の通り
+&lt;img src=&#34;AR.png&#34; width=&#34;&#34; alt=&#34;fig3&#34;&gt; &lt;em&gt;良さそう&lt;/em&gt;
+&lt;img src=&#34;ARIMA.png&#34; width=&#34;&#34; alt=&#34;fig4&#34;&gt; &lt;em&gt;う〜ん。。。&lt;/em&gt;
+&lt;img src=&#34;prophet.png&#34; width=&#34;&#34; alt=&#34;fig5&#34;&gt; &lt;em&gt;まあまあ&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;あとは生産地を考慮するかどうかでこういうプロットも描いたりした。
+&lt;img src=&#34;regional_difference.png&#34; width=&#34;&#34; alt=&#34;fig6&#34;&gt; &lt;em&gt;生産地の変化する点においても、ある程度連続的に見えたので地域差は気にしなくていいことにした&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;前加工&#34;&gt;前加工&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;前加工としては、公式のチュートリアルコードを参考に進めていきました。&lt;/li&gt;
+&lt;li&gt;まず、市場が開いてない日があるとprophet等の予測をどう解釈していいのか分かりにくかったのもあり&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;、（やっていいのかわからないですが）開いてない日の価格も線形補間したデータを作成しました。&lt;/li&gt;
+&lt;li&gt;データを見て、あまりに予測不可能そうな山／谷を過学習するのを緩和するために、移動平均をとったデータなども作成しました。&lt;/li&gt;
+&lt;li&gt;また、チュートリアルのデータは月平均（だったかな？）なので、そこは日次データに直して天気データとマージしたデータなどを作成しました。&lt;/li&gt;
+&lt;li&gt;予測するにあたって、ちょうどその時間の説明変数をそのまま使うことはできないので、価格データや天候のデータそれぞれについてラグ特徴量をとったものを作成しました。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;作成したモデル&#34;&gt;作成したモデル&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;prophetモデル&lt;/li&gt;
+&lt;li&gt;ARモデル
+上のベースラインモデル作成時において割と良さそうだったARとprophetは採用。&lt;/li&gt;
+&lt;li&gt;RandomForestモデル
+よく使われがちなRF。&lt;/li&gt;
+&lt;li&gt;SGDregressiorモデル&lt;/li&gt;
+&lt;li&gt;ElasticNetモデル
+ラグ特徴量を多くとっているので、変に過学習しないようにという意図で採用&lt;/li&gt;
+&lt;li&gt;lightGBMモデル
+よく使われがちなlightGBM。
+これらのモデルを最後にアンサンブルして提出しました。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;モデルの評価等&#34;&gt;モデルの評価等&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;評価用に202204のデータをsplitしました&lt;/li&gt;
+&lt;li&gt;全訓練データを使うと評価のスコアがイマイチになることがあり、スコアベースで適切な年から最新のデータまでを入れるようにしました。&lt;/li&gt;
+&lt;li&gt;テストデータを予測するときに時系列の一番近いはずのデータ（202204データ）を含めて再学習して予測しました。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;提出前加工と提出しながら調整&#34;&gt;提出前加工と提出しながら調整&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;色々アンサンブルとかブレンディング
+&lt;ul&gt;
+&lt;li&gt;それぞれのモデルが予測した結果の単純平均をとったもの -&amp;gt; 微妙&lt;/li&gt;
+&lt;li&gt;ノリで重みをつけて平均 -&amp;gt; 有効だが、低いモデルの予測がいらなくなって消えていく。それがいいのかわからない。&lt;/li&gt;
+&lt;li&gt;202204のデータを評価用にして、線形回帰で重みを計算 -&amp;gt; 負の係数が出てしまい、それぞれのモデルはピッタリ合うようにしていることを鑑みるとやっちゃダメな気がした。&lt;/li&gt;
+&lt;li&gt;scipy.optimize.nnlsで非負最小二乗法で重みを計算 -&amp;gt; 微妙だった&lt;/li&gt;
+&lt;li&gt;野菜の種別ごとに非負最小二乗法で重みを計算 -&amp;gt; 評価データに対してはメチャクチャ良かったが、testはだめだった&lt;/li&gt;
+&lt;li&gt;Public scoreベースで重みをつけたアンサンブル -&amp;gt; 結構有効だった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;実は途中までチュートリアルのPublic Scoreに全く勝てなかったのが辛かった。途中でラグ特徴量を大量採用しようやくチュートリアルのスコアを超えたので、チュートリアルの結果は最終的には採用しなかった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;結果考察その他&#34;&gt;結果＋考察その他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;最終的にPublic Scoreベースのアンサンブルと、ノリで重みつけした2モデルを提出し、天候と価格のラグ特徴量を全て使ったscoreベースのアンサンブルが13.903593のFinal Scoreで16位になりました。初銀メダル！&lt;/li&gt;
+&lt;li&gt;過去に出した全ての最終スコアの一覧を見ていると、ランダムフォレスト単体のモデルが12.98でこれを提出していれば5位になっていたようです。単体スコアも低くないので、やはりランダムフォレストは未だ現役だなと思いました。&lt;/li&gt;
+&lt;li&gt;最後の1ヶ月は他の勉強をしていたこともあり、なかなかコンペをやっていませんでしたが、4位解法(
+&lt;a href=&#34;https://www.nishika.com/competitions/32/topics/353&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.nishika.com/competitions/32/topics/353&lt;/a&gt;)を見ると、メチャクチャ単純なこともあり、自分が本気でラスト1ヶ月取り組んでも逆に複雑化して泥沼だっただろうなと思います。&lt;/li&gt;
+&lt;li&gt;まああとは時系列でデータもそんなに多くないのもあって、ある程度のScoreのブレはありそうなので、そこまで細かいことは言うまいかなとは思います。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;やりたかったができなかったメモ&#34;&gt;やりたかったができなかったメモ&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;天気のみデータで学習するとスコアは微妙そうだが、多様性は得られるのではないか。&lt;/li&gt;
+&lt;li&gt;RNNなどのディープラーニング手法も可能なら試したい&lt;/li&gt;
+&lt;li&gt;prophetに説明変数追加できるの知らなかったので追加してもいい -&amp;gt; 
+&lt;a href=&#34;https://qiita.com/japanesebonobo/items/e674359618a879a49c05&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://qiita.com/japanesebonobo/items/e674359618a879a49c05&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;時系列要素を残すために説明変数に基準日から数えて何日目かを追加していたので、線形補間してないデータで予測しても良かったかも&lt;/li&gt;
+&lt;li&gt;勾配降下法を用いる回帰で標準化するのを忘れていた。（elastic netやsgd）&lt;/li&gt;
+&lt;li&gt;今の野菜に対して今の気温データ等で当てはめるのはワンチャンあるはず。そして気温データ等は季節変動があることを考えると時系列モデルでの予測が容易に思われる。→気候データをARとかARIMA等でフィッティングしてからその気候データを使ってmode_priceを予測する。&lt;/li&gt;
+&lt;li&gt;市場が休みの前日は叩き売りするのではないか検証&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;画像処理等はマシンスペック的にもやりづらいということでテーブルデータかつactiveなコンペをいろんなサイト(kaggle, signate, nishika, probspace)で探しました。&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;この前に
+&lt;a href=&#34;https://signate.jp/competitions/737&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;【第23回_Tier限定コンペ】採血データを使った心不全予測&lt;/a&gt; もactiveなテーブルデータコンペでしたが、こちらは初心者用なのでtitanic的な立ち位置として消費しました。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;データ点が等間隔であることが仮定されているような予測結果になった気がしますが、ちゃんと調べていないので嘘かもしれません。&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Python&#43;SeleniumでDMM電子書籍の購入済み書籍の一覧を取得</title>
@@ -2883,13 +3036,13 @@ Wiki見たらキモかった&lt;/p&gt;
       <description>&lt;p&gt;流行りの
 &lt;a href=&#34;https://tsd0313.github.io/ygo-DogmaBlade/dist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ドグマブレードシミュレーター&lt;/a&gt;を作りました。&lt;/p&gt;
 &lt;p&gt;ご確認よろしくお願いいたします。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマガイ何枚SSした？？&lt;br&gt;3枚&lt;br&gt;マジエク何枚伏せた？？&lt;br&gt;2枚&lt;br&gt;墓地の魔法カード何枚？？&lt;br&gt;29枚&lt;br&gt;ドグマブレード先攻1キル成功！18600ダメージ！&lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰︎ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271828996561334272?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマガイ何枚SSした？？&lt;br&gt;3枚&lt;br&gt;マジエク何枚伏せた？？&lt;br&gt;2枚&lt;br&gt;墓地の魔法カード何枚？？&lt;br&gt;29枚&lt;br&gt;ドグマブレード先攻1キル成功！18600ダメージ！&lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ☡ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271828996561334272?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;ほうほう？&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;うおおおおお&lt;br&gt;ドグマブレードシミュレーターキツアアアアア &lt;a href=&#34;https://t.co/bCEQVNGmxD&#34;&gt;pic.twitter.com/bCEQVNGmxD&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰︎ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271608597315645440?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;うおおおおお&lt;br&gt;ドグマブレードシミュレーターキツアアアアア &lt;a href=&#34;https://t.co/bCEQVNGmxD&#34;&gt;pic.twitter.com/bCEQVNGmxD&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ☡ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271608597315645440?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;ん？？&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマブレード先攻1キル成功！2000000000ダメージ！ マジエク5000枚発動/墓地の魔法カード2000枚  &lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ〰︎ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271757347694624768?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;ドグマブレード先攻1キル成功！2000000000ダメージ！ マジエク5000枚発動/墓地の魔法カード2000枚  &lt;a href=&#34;https://twitter.com/hashtag/DogmaBladeSimulator?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DogmaBladeSimulator&lt;/a&gt;&lt;/p&gt;&amp;mdash; ゲッタ☡ (@kokuyokugetter) &lt;a href=&#34;https://twitter.com/kokuyokugetter/status/1271757347694624768?ref_src=twsrc%5Etfw&#34;&gt;June 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;？？？？&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
