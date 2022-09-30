@@ -5,12 +5,346 @@
     <link>https://kokuyokugetter.github.io/categories/diary/</link>
       <atom:link href="https://kokuyokugetter.github.io/categories/diary/index.xml" rel="self" type="application/rss+xml" />
     <description>diary</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 27 Aug 2022 17:47:55 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 30 Sep 2022 17:47:55 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>diary</title>
       <link>https://kokuyokugetter.github.io/categories/diary/</link>
     </image>
+    
+    <item>
+      <title>2022年09月に買ったもの</title>
+      <link>https://kokuyokugetter.github.io/post/202209buy/</link>
+      <pubDate>Fri, 30 Sep 2022 17:47:55 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/202209buy/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;Amazonのセールにて少々購入&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#食健康&#34;&gt;食・健康&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#pc周辺機器&#34;&gt;PC周辺機器&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#書籍&#34;&gt;書籍&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;食健康&#34;&gt;食・健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B09SYW2N7Y/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B09SYW2N7Y&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      モンデリーズ・ジャパン クロレッツXP　グレープフルーツボトルR 　ボトルガム 140g×6個
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ボトルガムは常に置いておこう。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B08QJHJR1V/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B08QJHJR1V&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      【ウマい プロテイン】 ウマテイン プロテイン ホエイプロテイン ストロベリー味 1kg 国産 グラスフェッド １１種類のビタミン配合
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B09MR1N7WZ/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B09MR1N7WZ&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      【ウマい プロテイン】 ウマテイン プロテイン ホエイプロテイン オレンジ味 1㎏ 国産 グラスフェッド １１種類のビタミン配合
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;美味いプロテイン略してウマテイン。果たして本当に美味いのか。次の筋トレの日に飲みます。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;pc周辺機器&#34;&gt;PC周辺機器&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B08P4B1YTF/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B08P4B1YTF&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      SanDisk SSD 外付け 2TB USB3.2Gen2 読出最大520MB/秒 SDSSDE30-2T00-GH25 ポータブルSSD Win Mac PS4 エコパッケージ 3年保証
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;M2 MacBook Proを買ったこともあって、一応バックアップ用のSSDを購入。昔買ったHDDもまだ元気っぽいけどまあ新しくて転送速度早そうだし、容量も大きめなほうがいいし。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;書籍&#34;&gt;書籍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k247asyuw01670/?dmmref=library&amp;amp;i3_ord=9&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;物体・画像認識と時系列データ処理入門 ［TensorFlow2/PyTorch対応第2版］ NumPy/TensorFlow2（Keras）/PyTorchによる実装ディープラーニング&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k992assmu00147/?dmmref=library&amp;amp;i3_ord=8&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;本質を捉えたデータ分析のための分析モデル入門 統計モデル、深層学習、強化学習等 用途・特徴から原理まで一気通貫！&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;会社の金（制度）で購入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/k077bscsh04881/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;クマ撃ちの女 9巻【電子特典付き】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b312ahbsy07887/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ぼっち・ざ・ろっく！ 4巻 【紙・電子共通おまけ付き】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b867atobk01635/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ティアムーン帝国物語〜断頭台から始まる、姫の転生逆転ストーリー〜@COMIC 第5巻&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b600csgk06448/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;葬送のフリーレン（9）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b163cijt200421/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;彩純ちゃんはレズ風俗に興味があります！: 3【イラスト特典付】&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b999bsqex01302/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;不徳のギルド 10巻&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/detail/b999bsqex01300/?dmmref=librarySeries&amp;amp;i3_ord=1&amp;amp;i3_ref=list&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SHIORI EXPERIENCE ジミなわたしとヘンなおじさん 19巻&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;一人旅の移動中に読むためにセールでもないのに漫画を購入。セールでもないので優先的に読みたいやつを購入したので、全ておすすめです。最新刊も面白かった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>2022年08月に買ったもの</title>
