@@ -5,12 +5,1050 @@
     <link>https://kokuyokugetter.github.io/</link>
       <atom:link href="https://kokuyokugetter.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>ゲッタ〜のHP</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 17:47:55 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 27 Jan 2023 17:47:55 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>ゲッタ〜のHP</title>
       <link>https://kokuyokugetter.github.io/</link>
     </image>
+    
+    <item>
+      <title>2023年01月に買ったもの</title>
+      <link>https://kokuyokugetter.github.io/post/202301buy/</link>
+      <pubDate>Fri, 27 Jan 2023 17:47:55 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/202301buy/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;フリー素材を使わずにAI絵をサムネにしてみようと思います。どうでしょうか。&lt;/p&gt;
+&lt;p&gt;今月はDMMのセールが終わる前に少し買った感じだと思います。&lt;/p&gt;
+&lt;p&gt;Amazonでも色々買いました。&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#食健康&#34;&gt;食・健康&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#生活&#34;&gt;生活&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#pc周辺機器ガジェット&#34;&gt;PC周辺機器・ガジェット&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#書籍&#34;&gt;書籍&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;食健康&#34;&gt;食・健康&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B004PEHCZS/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B004PEHCZS&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      ディアナチュラ カルシウム・マグネシウム・亜鉛・ビタミンD 180粒 (30日分)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;定期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B00YIEYKNM/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B00YIEYKNM&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      遠藤商事 業務用 TKG キッチンバサミ BHS3001
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;料理でまな板出すほどじゃない時に欲しい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B08H27BD14/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B08H27BD14&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      クロレッツXP マスカット&amp;amp;ミントボトル ガム 140g ×6個入
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;定期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;生活&#34;&gt;生活&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B01MTB24H1/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B01MTB24H1&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      サージカルマスク 50枚入 業務用 バリュータイプ 医療施設採用商品 マイスコ 外ゴムタイプ (ホワイト)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;コロナで死滅してた激安マスクを久々に購入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B002A7NCS8/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B002A7NCS8&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      [エム・モゥブレィ] 革靴用水性汚れ落とし ステインリムーバー 塩浮き スムースレザー クリーナー
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;革靴のケア用品。100mlくらいのやつがなくなったので。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;pc周辺機器ガジェット&#34;&gt;PC周辺機器・ガジェット&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B005E4TUZS/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B005E4TUZS&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      サンワサプライ WEB会議高感度USBマイク 無(全)指向性 MM-MCUSB22
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;サイゼミとかで配信するならいるかなと思い購入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B09B9F7439/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B09B9F7439&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Meta Quest 2—完全ワイヤレスのオールインワンVRヘッドセット—128GB
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B08F5TZW2J/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B08F5TZW2J&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Quest 2 Eliteストラップ
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;セールでEliteストラップがセット買いで無料だった。調整しやすくていいね。&lt;/li&gt;
+&lt;li&gt;VRはまだbeat saberとエッチビデオくらいしか見てないけど、VRの楽しさは分かってきて良かった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B08ML6NX32/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B08ML6NX32&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Meta/Oculus Quest 2/PICO 4/Pico Neo3 Linkに対応 小型収納ケース 携帯用ハードケース 大容量収納 ピコ/オキュラスクエスト2アクセサリー 耐衝撃 持ち運びやすい Yinke(ブラック）
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;quest2は埃とか直射日光がやばいので最初ビニール袋に入れてたけど、カスすぎてちゃんとした入れ物を購入。入れ物はあった方がいいです。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B07ZTR9K9Z/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07ZTR9K9Z&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Amazonベーシック パッチインターネットケーブル ギガビットイーサネット ハイスピード RJ45 Cat 7 ホワイト 約0.3m
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;switch用に短いの買ったら、高速なやつだからか、めっちゃケーブル太くて草&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B09XHQLFZM/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B09XHQLFZM&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      2022新版【USB3.0 MFi認証】iPhone usb 変換アダプタ lightning usbカメラアダプタ iphone 変換アダプタ 双方向 データ転送 写真/音声ファイル/ビデオ転送 iPhone/iPad対応 設定不要 ゲーム拡張スロット マウス/キーボード/チューナー/Uディスク接続
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;スマホとUSB接続用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B07XFVCW1S/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07XFVCW1S&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      エレコム トラベルポーチ ガジェットポーチ ガジェット ポーチ バックインバック 旅行 出張 収納 小物入れ グレー BMA-F01XGY
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;サイゼミにマイクやカメラ持って行くための大きめのガジェットポーチ。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.pc-koubou.jp/products/detail.php?product_id=852965&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TP-Link UB500&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;ゲーミングPC用のBluetoothインターフェース。macだとそんなことないのに、壁一枚で普通に途切れたりするし、もっと良い感じのはないんかね。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.pc-koubou.jp/products/detail.php?product_id=918096&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HIDISC HD-BCEX4BK&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;ワイヤレスイヤホン増やしたくて、骨伝導のイヤホンを試してみた。結構いい。耳栓はした方がいい。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.pc-koubou.jp/products/detail.php?product_id=760722&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RASTABANANA RTWS02WH&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;上同だが、左右分離型は左右の同期ずれがあるのか、かなり微妙っぽい。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.pc-koubou.jp/products/detail.php?product_id=761373&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AREA SD-U2MIC-Pi&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;スマホ用のマイクとして購入。まあジンバルも買ったので。。。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;書籍&#34;&gt;書籍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/4254116330/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4254116330&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      統計学のための数学入門30講 (科学のことばとしての数学)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;新人研修の講師の人におすすめされた数学の本。まだ積読だが&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4118042/k572aomus00800/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pythonではじめる数理最適化 ―ケーススタディでモデリングのスキルを身につけよう―&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;必要になりそうな気配を感じたので会社の金で購入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4096858/k572aomus00765/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BERTによる自然言語処理入門 ―Transformersを使った実践プログラミング―&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;会社の金で購入。これが必要になる領域に行きたいという気持ちがある。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4233588/k665aghrs02106/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vision Transformer入門&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;会社の金で購入。画像系そんなに興味ないが、さすがに流行りはキャッチアップしなくては。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/898968/k077bscsh05265/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JKハルは異世界で娼婦になった&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;次で最終巻。楽しみですね。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/760424/b900akds08982/?dmmref=shelf_Library&amp;amp;i3_ref=list&amp;amp;i3_ord=17&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;マイホームヒーロー&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/908820/b900akds09095/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;時間停止勇者&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/926861/b900bkds00311/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;パリピ孔明&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4006877/b355iakta06545/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ヤンキーJKクズハナちゃん&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/860373/b000dhftx09419/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;魔術学院を首席で卒業した俺が冒険者を始めるのはそんなにおかしいだろうか&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/926862/b900akds09414/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;忍者と極道&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4008499/b867atobk01848/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;異世界の貧乏農家に転生したので、レンガを作って城を建てることにしました（コミック）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/896988/b999bsqex01172/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;アラフォー男の異世界通販生活&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/766148/b900akds06864/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;彼女、お借りします&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;無理やり引き伸ばしてるんだろ？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/878924/b316bgtsy04261/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;異世界で土地を買って農場を作ろう&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;内容に対して絵が古臭くて好き&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/653483/b000dhftx02810/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;レジェンド&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;ガチでつまんないので次巻以降は買いません&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/730828/b600dsgk06246/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;舞妓さんちのまかないさん&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4005201/b350eftdb06871/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;魔王様、リトライ！R（コミック）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/104864/b900xkds01083/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;宇宙兄弟&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;知り合いに激推しされて読み始め（今15巻くらいまで無料で読めるのでどうぞ）、以降全巻購入してしまった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>2022年12月に買ったもの&amp;2022年ベストバイ</title>
