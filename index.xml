@@ -5,12 +5,485 @@
     <link>https://kokuyokugetter.github.io/</link>
       <atom:link href="https://kokuyokugetter.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>ゲッタ〜のHP</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Jul 2023 19:47:55 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 25 Aug 2023 19:47:55 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>ゲッタ〜のHP</title>
       <link>https://kokuyokugetter.github.io/</link>
     </image>
+    
+    <item>
+      <title>2023年08月に買ったもの</title>
+      <link>https://kokuyokugetter.github.io/post/202308buy/</link>
+      <pubDate>Fri, 25 Aug 2023 19:47:55 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/202308buy/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;DMMのセール（微妙）で色々購入&lt;/p&gt;
+&lt;p&gt;&amp;amp;&lt;/p&gt;
+&lt;p&gt;Amazonのファッションセールで衝動買い（ファッション関係ないけどポイントアップ対象ではあった）&lt;/p&gt;
+&lt;br&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#ガジェット&#34;&gt;ガジェット&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#生活&#34;&gt;生活&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#書籍基本最新刊のみの購入新規は&#34;&gt;書籍(基本最新刊のみの購入、新規は⭐️)&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;ガジェット&#34;&gt;ガジェット&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B09W9M89WS/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B09W9M89WS&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Anker 735 Charger (GaNPrime 65W) (USB PD 充電器 USB-A &amp;amp; USB-C 3ポート)【独自技術Anker GaNPrime採用 / PowerIQ 4.0 搭載 / PPS規格対応 / PSE技術基準適合 / 折りたたみ式プラグ】MacBook PD対応Windows PC iPad iPhone Galaxy Android スマートフォン ノートPC 各種 その他機器対応 (ブラック)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B09W9B6H61/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B09W9B6H61&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Anker 747 Charger (GaNPrime 150W) (USB PD 充電器 USB-A &amp;amp; USB-C 4ポート)【独自技術Anker GaNPrime採用 / PowerIQ 4.0 搭載 / PPS規格対応 / PSE技術基準適合 / 折りたたみ式プラグ】MacBook PD対応Windows PC iPad iPhone Galaxy Android スマートフォン ノートPC 各種 その他機器対応 (ブラック)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://goshi-goshi.hatenadiary.org/entry/2023/08/17/095346&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;合宿&lt;/a&gt;で充電器4つ持っていったの普通に頭おかしいことに気づき、複数port合ってコンパクトなGaNの充電器を購入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B07Y9LV3K8/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07Y9LV3K8&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      MOFT 【新アップグレード版】放熱穴付き ノートパソコンスタンド PCスタンド 二段階調整可能 超軽量 超極薄 折り畳式 人間工学設計 磁石設計 腰痛/猫背防止 Macbook Pro/Air/タブレット/その他ノートPC 最大15.6インチまで対応 (粘着式（224 × 170 × 3 mm）, スペースグレー)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;ノートパソコンに貼れるPCスタンド、面白いので購入。まだ2回くらいしか使ってないが、楽な気もする。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B09B3LX1C4/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B09B3LX1C4&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Anker 610 Magnetic Phone Grip (MagGo)(マグネット式スマホリング)【マグネット式/バンカーリング/スマホスタンド機能】MagSafe対応iPhoneシリーズ専用 (ブラック)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;MagSafeのバンカーリング、そもそもスマホケースできれば付けたくない（とはいえ落とすくらいならグリップのためにつける）が、素のままだとグリップできずに落としてしまうので、リングは欲しいということで購入。だが水のペットボトルで試した感じ、700gの重力で外れるくらいの磁力で外れることが判明したため、不安がある。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;生活&#34;&gt;生活&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;style&gt;
+.amazon-widget {
+    margin: 2rem 0;
+    max-width: 480px;
+    position: relative;
+}
+.amazon-widget a {
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.amazon-widget-img {
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+ }
+.amazon-widget-img img {
+    border: none;
+    margin: 0 auto;
+    max-height: 200px;
+    padding: 16px;
+}
+.amazon-widget-info {
+    border-right: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
+    border-left: 1px solid #E1E8ED;
+    padding:5px 10px 10px 10px;
+    border-radius:0 0 15px 15px;
+}
+.amazon-widget:hover .amazon-widget-info {
+    background-color: #E1E8ED;
+}
+.amazon-widget-title {
+    font-weight: bold;
+    display:block;
+}
+.amazon-widget-via {
+    color: #aaa;
+}
+.amazon-widget-via img {
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    vertical-align: text-bottom;
+}
+&lt;/style&gt;
+&lt;div class=&#34;amazon-widget&#34;&gt;
+  &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B0969JKVHC/?tag=&#34;&gt;&lt;/a&gt;
+  &lt;div class=&#34;amazon-widget-img&#34;&gt;
+    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B0969JKVHC&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;amazon-widget-info&#34;&gt;
+    &lt;span class=&#34;amazon-widget-title&#34;&gt;
+      Isaac Trading チラシ セールス 勧誘 お断り ステッカー 2色セット 郵便受けサイズ(140×30mm)(ダークブルー／ライトグレー)
+    &lt;/span&gt;
+    &lt;span class=&#34;amazon-widget-via&#34;&gt;
+      &lt;img src=&#34;https://www.amazon.co.jp/favicon.ico&#34; /&gt;
+      amazon.co.jp
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;チラシウザいしなんか効果あるらしいので購入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;書籍基本最新刊のみの購入新規は&#34;&gt;書籍(基本最新刊のみの購入、新規は⭐️)&lt;/h2&gt;
+&lt;p&gt;漫画読みたい欲が爆発し、異世界系の1巻無料とかを読んでまんまと続刊を買うなどしたのが後半に現れている。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/120876/b330ftksb01395/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;メイドインアビス&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/940000/b350eftdb12205/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;異世界で 上前はねて 生きていく〜再生魔法使いのゆるふわ人材派遣生活〜（コミック）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/938410/b600dsgk20457/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;らーめん再遊記&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/605169/b999bsqex03776/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;咲 -Saki-&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/860373/b000ehftx12309/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;魔術学院を首席で卒業した俺が冒険者を始めるのはそんなにおかしいだろうか&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/851688/b900bkds28072/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ふたりソロキャンプ&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;完結&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/924366/b900bkds27853/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;解雇された暗黒兵士（30代）のスローなセカンドライフ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/922872/b371khkss01379/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Get Ready？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4005525/b900bkds30302/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ケンシロウによろしく&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4128953/b900bkds30300/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ザ・ファブル The second contact&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4176131/b600dsgk20661/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;異世界不倫2〜導かれし人妻たちと不器用転生勇者〜&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/936666/b471abyjp02505/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;孤児院テイマー&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4060567/b600dsgk20662/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ヒーローガール×ヒーラーボーイ〜TOUCH or DEATH〜&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4156689/b000ehftx01857/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;⭐️とある魔術の禁書目録外伝 とある科学の心理掌握&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4349906/b000ehftx12299/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;⭐️RTA走者はゲーム世界から帰れない 1&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitterで見たが、読み切りっぽいネタなのにちゃんと続いてて結構面白い&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4013810/b999bsqex03789/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;⭐️異世界転移したのでチートを生かして魔法剣士やることにする&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4152579/k192astss07855/?dmmref=shelf_Library&amp;amp;i3_ref=list&amp;amp;i3_ord=14&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;⭐️不運からの最強男&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4224122/b900bkds21367/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;⭐️最弱な僕は＜壁抜けバグ＞で成り上がる〜壁をすり抜けたら、初回クリア報酬を無限回収できました！〜&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;ありがちなやつっぽいが、2巻からちょっと捻り加えてて、漫画も上手い。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4223259/b895ahirz01139/?dmmref=shelf_Library&amp;amp;i3_ref=list&amp;amp;i3_ord=12&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;⭐️元最強勇者の再就職&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/908820/b900bkds30478/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;時間停止勇者&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/760320/b000ehftx14009/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;異種族レビュアーズ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/812092/b867atobk03529/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;おかしな転生&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/941059/b950xshes10997/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;転生ゴブリンだけど質問ある？&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;転スラに近い気もするが面白い&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/903284/b330ftksb01513/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;魔法少女にあこがれて&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;アニメ楽しみ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4192399/b999bsqex04043/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;⭐️この勇者、元魔王につき&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;1巻無料でおもろいやんと思ったが、4巻で完結した。。。2巻終盤から終わりに向かっててまあって感じだった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4165998/b350eftdb12729/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;⭐️異世界クラフトぐらし〜自由気ままな生産職のほのぼのスローライフ〜（コミック）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4296745/b999bsqex04050/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;龍とカメレオン&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;面白いが、そろそろ本人の実力以上の漫画家を描けない問題にぶち当たりそう&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4349192/k281aminb03573/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;データサイエンティストのための特徴量エンジニアリング&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4338720/k572aomus01148/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pythonによる時系列分析 ―予測モデル構築と企業事例―&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://book.dmm.com/product/4224974/b900zkds04472/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;深層学習 改訂第2版&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;会社の金で購入。必要になったら読む感じになると思う。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>2023年07月に買ったもの</title>
