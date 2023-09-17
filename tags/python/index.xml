@@ -5,12 +5,110 @@
     <link>https://kokuyokugetter.github.io/tags/python/</link>
       <atom:link href="https://kokuyokugetter.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <description>Python</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 22 Aug 2022 22:48:26 +0900</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 17 Sep 2023 22:48:26 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Python</title>
       <link>https://kokuyokugetter.github.io/tags/python/</link>
     </image>
+    
+    <item>
+      <title>Nishika 金融時系列分析18位解法</title>
+      <link>https://kokuyokugetter.github.io/post/nishika_finance-ts/</link>
+      <pubDate>Sun, 17 Sep 2023 22:48:26 +0900</pubDate>
+      <guid>https://kokuyokugetter.github.io/post/nishika_finance-ts/</guid>
+      <description>&lt;br&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://competition.nishika.com/competitions/finance_ts/ranking&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;実際の順位表&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;ranking.png&#34; alt=&#34;myRank.png&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TLDR&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;基本的には
+&lt;a href=&#34;https://competition.nishika.com/competitions/finance_ts/topics/630&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;このトピック&lt;/a&gt;をそのまま丸パクリ。&lt;/li&gt;
+&lt;li&gt;加えて、説明変数のクラスタリングにより説明変数の総合得点化を行った。&lt;/li&gt;
+&lt;li&gt;クラスタ数・アンサンブルするモデル数・エポック数についてハイパーパラメータ探索を行った。その際の評価を慎重に行った。&lt;/li&gt;
+&lt;li&gt;Notebookは
+&lt;a href=&#34;https://competition.nishika.com/competitions/finance_ts/topics/640&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;こちら&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;コンペ概要&#34;&gt;コンペ概要&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本コンペでは、金融関連企業様のデータを用いて、数百の匿名特徴量を用い、金融に関する或るターゲット値を予測することをテーマとします。
+予測精度の評価はcosine similarityにて行います。
+このコンペティションでは、テストデータの約29%により暫定スコアが計算され、残りの約71%により最終スコアが計算されます。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://competition.nishika.com/competitions/finance_ts/summary&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://competition.nishika.com/competitions/finance_ts/summary&lt;/a&gt; より引用&lt;/p&gt;
+&lt;p&gt;特徴量が匿名であり、この項目はどういう意味があるのか、などの推測が難しくなっている。&lt;/p&gt;
+&lt;p&gt;また、評価指標がコサイン類似度であることもなかなか癖があり、難しい点と個人的には思う。&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;eda&#34;&gt;EDA&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;各説明変数は5段階になっている。アンケート的なものを想像し、似たような項目はまとめて総合得点化することが効果的かもしれないと考えた。&lt;/li&gt;
+&lt;li&gt;targetの値が10段階しかないことがわかる。
+&lt;ul&gt;
+&lt;li&gt;最終的には連続値として回帰を行ったが、multiclassで10クラスの確率を予測し、10クラスの値を予測確率で重みつき平均をとったものも効果的だったように思う。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://competition.nishika.com/competitions/finance_ts/topics/629&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;こちらのトピック&lt;/a&gt;より、スコアのばらつきが大きそうであることを確認。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;前加工モデル作成&#34;&gt;前加工＋モデル作成&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;説明変数の類似項目がどれかは匿名化によって一見では分からないため、
+&lt;a href=&#34;https://datadriven-rnd.com/hierarchical-clustering/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;こちらのブログ&lt;/a&gt;を参考に、相関係数（絶対値はかけなかった）で説明変数のクラスタリングを行った。
+&lt;ul&gt;
+&lt;li&gt;クラスタ数を後述のハイパーパラメータとして探索し、220を採用した。このクラスタ内の説明変数の和を新たな説明変数として用い、変数を220まで減らすことができた。
+&lt;ul&gt;
+&lt;li&gt;もちろん、説明変数を減らすことで情報が減っているので、やるべきかという問題はある。&lt;/li&gt;
+&lt;li&gt;絶対値をかけてクラスタリングを行い、その正負を考慮して和を取る方が良さそうだが、すぐには実装が思いつかなかったため断念。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://competition.nishika.com/competitions/finance_ts/topics/630&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;こちらのトピック&lt;/a&gt;より、以下の2点を丸パクリ。
+&lt;ul&gt;
+&lt;li&gt;グループ (id // 10,000) の追加。テストデータのグループは66に設定。&lt;/li&gt;
+&lt;li&gt;LightGBMでの回帰モデルを作成とバギングとアンサンブル&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;ハイパーパラメータの調整&#34;&gt;ハイパーパラメータの調整&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;クラスタ数・アンサンブルするモデル数・エポック数についてハイパーパラメータ探索を行った。
+&lt;ul&gt;
+&lt;li&gt;trainデータを40万件と26万件に分けてコサイン類似度のスコアを見て最も良さそうなパラメータを採用する。&lt;/li&gt;
+&lt;li&gt;その際に、±0.01程度スコアが前後することが分かっていたので、26万件からランダムに29%と71%に分けて1000回スコアを出してその分布（平均値）を見ることにより決定した。&lt;/li&gt;
+&lt;li&gt;また、publicスコアが低い（分布の下側にいる）場合にprivateスコアが高くなる（分布の上側にいる）傾向にあるような気がしたが、提出したpublicスコアが高いか低いかわからないしあまり意味はない？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
+&lt;p&gt;以上の方法により、Publicスコア0.049781、Privateスコア0.033341で18位となった。&lt;/p&gt;
+&lt;p&gt;（Publicスコアは黒魔術&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;入りのものが0.0565と自己ベストだったが、そちらのPrivateスコアは0.014404。）&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://competition.nishika.com/competitions/finance_ts/topics/640&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nishika内のトピックにnotebookアリ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;宝くじ・運ゲーコンペと噂されているように、偶然で上位に行く可能性が十分にあるコンペだと思われるので、今回の解法が良いものかは分からないが、実際大きなshakeが起きなかったので、ハイパーパラメータ探索などにおいて堅いものを選べたのではないかと思っている。&lt;/p&gt;
+&lt;br&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;単純に前処理も何もせず、shuffleありの5-foldで10クラスの分類をLightGBMで行い、重みつき平均を行ったものが、privateスコアは0.037098と2位相当のスコアになっていた。しかしpublicスコアが0.031396と少々低く、最終提出の中に含めることはできなかった。
+&lt;a href=&#34;https://competition.nishika.com/competitions/finance_ts/topics/651&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;実際のnotebook&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;丸パクリしたトピックに記載のある後処理。&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Nishikaの生鮮野菜のコンペで16位取るためにやったこと</title>

@@ -2,28 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kokuyokugetter.github.io/categories/</loc>
+    <lastmod>2023-09-17T22:48:26+09:00</lastmod>
+  </url><url>
+    <loc>https://kokuyokugetter.github.io/tags/competition/</loc>
+    <lastmod>2023-09-17T22:48:26+09:00</lastmod>
+  </url><url>
+    <loc>https://kokuyokugetter.github.io/tags/machine-learning/</loc>
+    <lastmod>2023-09-17T22:48:26+09:00</lastmod>
+  </url><url>
+    <loc>https://kokuyokugetter.github.io/post/nishika_finance-ts/</loc>
+    <lastmod>2023-09-17T22:48:26+09:00</lastmod>
+  </url><url>
+    <loc>https://kokuyokugetter.github.io/post/</loc>
+    <lastmod>2023-09-17T22:48:26+09:00</lastmod>
+  </url><url>
+    <loc>https://kokuyokugetter.github.io/tags/python/</loc>
+    <lastmod>2023-09-17T22:48:26+09:00</lastmod>
+  </url><url>
+    <loc>https://kokuyokugetter.github.io/tags/</loc>
+    <lastmod>2023-09-17T22:48:26+09:00</lastmod>
+  </url><url>
+    <loc>https://kokuyokugetter.github.io/categories/tech/</loc>
+    <lastmod>2023-09-17T22:48:26+09:00</lastmod>
+  </url><url>
+    <loc>https://kokuyokugetter.github.io/</loc>
+    <lastmod>2023-09-17T22:48:26+09:00</lastmod>
+  </url><url>
     <loc>https://kokuyokugetter.github.io/post/202308buy/</loc>
     <lastmod>2023-08-25T19:47:55+09:00</lastmod>
   </url><url>
     <loc>https://kokuyokugetter.github.io/tags/buy/</loc>
     <lastmod>2023-08-25T19:47:55+09:00</lastmod>
   </url><url>
-    <loc>https://kokuyokugetter.github.io/categories/</loc>
-    <lastmod>2023-08-25T19:47:55+09:00</lastmod>
-  </url><url>
     <loc>https://kokuyokugetter.github.io/categories/diary/</loc>
     <lastmod>2023-08-25T19:47:55+09:00</lastmod>
   </url><url>
     <loc>https://kokuyokugetter.github.io/tags/mng/</loc>
-    <lastmod>2023-08-25T19:47:55+09:00</lastmod>
-  </url><url>
-    <loc>https://kokuyokugetter.github.io/post/</loc>
-    <lastmod>2023-08-25T19:47:55+09:00</lastmod>
-  </url><url>
-    <loc>https://kokuyokugetter.github.io/tags/</loc>
-    <lastmod>2023-08-25T19:47:55+09:00</lastmod>
-  </url><url>
-    <loc>https://kokuyokugetter.github.io/</loc>
     <lastmod>2023-08-25T19:47:55+09:00</lastmod>
   </url><url>
     <loc>https://kokuyokugetter.github.io/post/202307buy/</loc>
@@ -62,19 +77,7 @@
     <loc>https://kokuyokugetter.github.io/post/202208buy/</loc>
     <lastmod>2022-08-27T17:47:55+09:00</lastmod>
   </url><url>
-    <loc>https://kokuyokugetter.github.io/tags/competition/</loc>
-    <lastmod>2022-08-22T22:48:26+09:00</lastmod>
-  </url><url>
-    <loc>https://kokuyokugetter.github.io/tags/machine-learning/</loc>
-    <lastmod>2022-08-22T22:48:26+09:00</lastmod>
-  </url><url>
     <loc>https://kokuyokugetter.github.io/post/nishika_yasai/</loc>
-    <lastmod>2022-08-22T22:48:26+09:00</lastmod>
-  </url><url>
-    <loc>https://kokuyokugetter.github.io/tags/python/</loc>
-    <lastmod>2022-08-22T22:48:26+09:00</lastmod>
-  </url><url>
-    <loc>https://kokuyokugetter.github.io/categories/tech/</loc>
     <lastmod>2022-08-22T22:48:26+09:00</lastmod>
   </url><url>
     <loc>https://kokuyokugetter.github.io/post/202207buy/</loc>
