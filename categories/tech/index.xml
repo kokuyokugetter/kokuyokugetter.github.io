@@ -313,6 +313,9 @@
     margin: 2rem 0;
     max-width: 480px;
     position: relative;
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 15px 15px;
+    padding: 12px;
 }
 .amazon-widget a {
     position: absolute;
@@ -321,23 +324,8 @@
     height: 100%;
     width: 100%;
 }
-.amazon-widget-img {
-    border: 1px solid #E1E8ED;
-    border-radius: 15px 15px 0 0;
-    text-align: center;
- }
-.amazon-widget-img img {
-    border: none;
-    margin: 0 auto;
-    max-height: 200px;
-    padding: 16px;
-}
 .amazon-widget-info {
-    border-right: 1px solid #E1E8ED;
-    border-bottom: 1px solid #E1E8ED;
-    border-left: 1px solid #E1E8ED;
-    padding:5px 10px 10px 10px;
-    border-radius:0 0 15px 15px;
+    border: none;
 }
 .amazon-widget:hover .amazon-widget-info {
     background-color: #E1E8ED;
@@ -345,14 +333,16 @@
 .amazon-widget-title {
     font-weight: bold;
     display:block;
+    font-size: 16px;
 }
 .amazon-widget-via {
     color: #aaa;
+    font-size: 10px;
 }
 .amazon-widget-via img {
     border: none;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     margin: 0;
     padding: 0;
     display: inline;
@@ -361,9 +351,6 @@
 &lt;/style&gt;
 &lt;div class=&#34;amazon-widget&#34;&gt;
   &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B016ZF8RDA/?tag=&#34;&gt;&lt;/a&gt;
-  &lt;div class=&#34;amazon-widget-img&#34;&gt;
-    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B016ZF8RDA&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
-  &lt;/div&gt;
   &lt;div class=&#34;amazon-widget-info&#34;&gt;
     &lt;span class=&#34;amazon-widget-title&#34;&gt;
       Apple Magic Keyboard - 日本語(JIS)
@@ -374,6 +361,8 @@
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 &lt;p&gt;今後Windowsマシンを購入するかもしれないですが、AppleのキーボードをWindowsで使いまわすのは出来そうですが、逆はうーんという感じなので、こちらを購入。&lt;/p&gt;
 &lt;br&gt;
 &lt;style&gt;
@@ -381,6 +370,9 @@
     margin: 2rem 0;
     max-width: 480px;
     position: relative;
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 15px 15px;
+    padding: 12px;
 }
 .amazon-widget a {
     position: absolute;
@@ -389,23 +381,8 @@
     height: 100%;
     width: 100%;
 }
-.amazon-widget-img {
-    border: 1px solid #E1E8ED;
-    border-radius: 15px 15px 0 0;
-    text-align: center;
- }
-.amazon-widget-img img {
-    border: none;
-    margin: 0 auto;
-    max-height: 200px;
-    padding: 16px;
-}
 .amazon-widget-info {
-    border-right: 1px solid #E1E8ED;
-    border-bottom: 1px solid #E1E8ED;
-    border-left: 1px solid #E1E8ED;
-    padding:5px 10px 10px 10px;
-    border-radius:0 0 15px 15px;
+    border: none;
 }
 .amazon-widget:hover .amazon-widget-info {
     background-color: #E1E8ED;
@@ -413,14 +390,16 @@
 .amazon-widget-title {
     font-weight: bold;
     display:block;
+    font-size: 16px;
 }
 .amazon-widget-via {
     color: #aaa;
+    font-size: 10px;
 }
 .amazon-widget-via img {
     border: none;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     margin: 0;
     padding: 0;
     display: inline;
@@ -429,9 +408,6 @@
 &lt;/style&gt;
 &lt;div class=&#34;amazon-widget&#34;&gt;
   &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B07D3GRQC8/?tag=&#34;&gt;&lt;/a&gt;
-  &lt;div class=&#34;amazon-widget-img&#34;&gt;
-    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B07D3GRQC8&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
-  &lt;/div&gt;
   &lt;div class=&#34;amazon-widget-info&#34;&gt;
     &lt;span class=&#34;amazon-widget-title&#34;&gt;
       Logicool G ゲーミングマウス 無線 G304 HEROセンサー LIGHTSPEED ワイヤレス 99g軽量 G304rWH 国内正規品
@@ -442,6 +418,8 @@
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 &lt;p&gt;マウスは別にAppleのじゃなくてもいいだろってことで今後ゲーミングPCを買っても使えるようなやつにした。&lt;/p&gt;
 &lt;p&gt;最初レシーバーの存在に気づけなくて、Macの一番最初のマウス連携できなくて絶望してた。&lt;/p&gt;
 &lt;p&gt;マウスはこれでも全然いいけど、やっぱりトラックパッドは欲しいな、買おうかな&lt;/p&gt;
@@ -451,6 +429,9 @@
     margin: 2rem 0;
     max-width: 480px;
     position: relative;
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 15px 15px;
+    padding: 12px;
 }
 .amazon-widget a {
     position: absolute;
@@ -459,23 +440,8 @@
     height: 100%;
     width: 100%;
 }
-.amazon-widget-img {
-    border: 1px solid #E1E8ED;
-    border-radius: 15px 15px 0 0;
-    text-align: center;
- }
-.amazon-widget-img img {
-    border: none;
-    margin: 0 auto;
-    max-height: 200px;
-    padding: 16px;
-}
 .amazon-widget-info {
-    border-right: 1px solid #E1E8ED;
-    border-bottom: 1px solid #E1E8ED;
-    border-left: 1px solid #E1E8ED;
-    padding:5px 10px 10px 10px;
-    border-radius:0 0 15px 15px;
+    border: none;
 }
 .amazon-widget:hover .amazon-widget-info {
     background-color: #E1E8ED;
@@ -483,14 +449,16 @@
 .amazon-widget-title {
     font-weight: bold;
     display:block;
+    font-size: 16px;
 }
 .amazon-widget-via {
     color: #aaa;
+    font-size: 10px;
 }
 .amazon-widget-via img {
     border: none;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     margin: 0;
     padding: 0;
     display: inline;
@@ -499,9 +467,6 @@
 &lt;/style&gt;
 &lt;div class=&#34;amazon-widget&#34;&gt;
   &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B01LPHLVR2/?tag=&#34;&gt;&lt;/a&gt;
-  &lt;div class=&#34;amazon-widget-img&#34;&gt;
-    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B01LPHLVR2&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
-  &lt;/div&gt;
   &lt;div class=&#34;amazon-widget-info&#34;&gt;
     &lt;span class=&#34;amazon-widget-title&#34;&gt;
       BLUPOW 4K60Hz HDR HDCP2.2対応 双方向 HDMI2.0 切替器 2入力1出力 1入力2出力 HDMIセレクター Blu-Ray・Xbox・PS4・Fire TVなど対応(ブラック)
@@ -512,6 +477,8 @@
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 &lt;p&gt;HDMIの切り替え器はこれ。サクラチェッカーでも悪くないスコア。普通に使えそう&lt;/p&gt;
 &lt;br&gt;
 &lt;style&gt;
@@ -519,6 +486,9 @@
     margin: 2rem 0;
     max-width: 480px;
     position: relative;
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 15px 15px;
+    padding: 12px;
 }
 .amazon-widget a {
     position: absolute;
@@ -527,23 +497,8 @@
     height: 100%;
     width: 100%;
 }
-.amazon-widget-img {
-    border: 1px solid #E1E8ED;
-    border-radius: 15px 15px 0 0;
-    text-align: center;
- }
-.amazon-widget-img img {
-    border: none;
-    margin: 0 auto;
-    max-height: 200px;
-    padding: 16px;
-}
 .amazon-widget-info {
-    border-right: 1px solid #E1E8ED;
-    border-bottom: 1px solid #E1E8ED;
-    border-left: 1px solid #E1E8ED;
-    padding:5px 10px 10px 10px;
-    border-radius:0 0 15px 15px;
+    border: none;
 }
 .amazon-widget:hover .amazon-widget-info {
     background-color: #E1E8ED;
@@ -551,14 +506,16 @@
 .amazon-widget-title {
     font-weight: bold;
     display:block;
+    font-size: 16px;
 }
 .amazon-widget-via {
     color: #aaa;
+    font-size: 10px;
 }
 .amazon-widget-via img {
     border: none;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     margin: 0;
     padding: 0;
     display: inline;
@@ -567,9 +524,6 @@
 &lt;/style&gt;
 &lt;div class=&#34;amazon-widget&#34;&gt;
   &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B014I8SP4W/?tag=&#34;&gt;&lt;/a&gt;
-  &lt;div class=&#34;amazon-widget-img&#34;&gt;
-    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B014I8SP4W&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
-  &lt;/div&gt;
   &lt;div class=&#34;amazon-widget-info&#34;&gt;
     &lt;span class=&#34;amazon-widget-title&#34;&gt;
       Amazonベーシック ハイスピードHDMIケーブル - 0.9m 2本セット(タイプAオス - タイプAオス)
@@ -580,6 +534,8 @@
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 &lt;p&gt;切り替え器につけるので２本セットで短めのが最高。できればもっと短くていいけど…&lt;/p&gt;
 &lt;br&gt;
 &lt;style&gt;
@@ -587,6 +543,9 @@
     margin: 2rem 0;
     max-width: 480px;
     position: relative;
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 15px 15px;
+    padding: 12px;
 }
 .amazon-widget a {
     position: absolute;
@@ -595,23 +554,8 @@
     height: 100%;
     width: 100%;
 }
-.amazon-widget-img {
-    border: 1px solid #E1E8ED;
-    border-radius: 15px 15px 0 0;
-    text-align: center;
- }
-.amazon-widget-img img {
-    border: none;
-    margin: 0 auto;
-    max-height: 200px;
-    padding: 16px;
-}
 .amazon-widget-info {
-    border-right: 1px solid #E1E8ED;
-    border-bottom: 1px solid #E1E8ED;
-    border-left: 1px solid #E1E8ED;
-    padding:5px 10px 10px 10px;
-    border-radius:0 0 15px 15px;
+    border: none;
 }
 .amazon-widget:hover .amazon-widget-info {
     background-color: #E1E8ED;
@@ -619,14 +563,16 @@
 .amazon-widget-title {
     font-weight: bold;
     display:block;
+    font-size: 16px;
 }
 .amazon-widget-via {
     color: #aaa;
+    font-size: 10px;
 }
 .amazon-widget-via img {
     border: none;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     margin: 0;
     padding: 0;
     display: inline;
@@ -635,9 +581,6 @@
 &lt;/style&gt;
 &lt;div class=&#34;amazon-widget&#34;&gt;
   &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/B08182WTRF/?tag=&#34;&gt;&lt;/a&gt;
-  &lt;div class=&#34;amazon-widget-img&#34;&gt;
-    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=B08182WTRF&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
-  &lt;/div&gt;
   &lt;div class=&#34;amazon-widget-info&#34;&gt;
     &lt;span class=&#34;amazon-widget-title&#34;&gt;
       uni USB Type C Displayport 変換ケーブル [4K@60Hz・2K@165Hz・1080p@240Hz / Thunderbolt 3 USB3.1 Type C / 0.9mのディスプレイポートケーブル DP1.2規格] USB C to Displayport 変換, MacBook Air Pro 2020 2019 2018 2017 2016/ iPad Pro 2018 2020 タイプC デバイスに対応 [スペースグレー]
@@ -648,6 +591,8 @@
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 &lt;p&gt;もう一枚のモニターに繋ぐためのUSB-C to DPケーブル、評判も悪くない。最初１０分くらいモニターのドット抜け？みたいな感じになって、不良品か？って思ったが今は問題なく映ってます。&lt;/p&gt;
 &lt;p&gt;Displayportにしたのは、このモニターのHDMIはSwitch用で埋まってるので。&lt;/p&gt;
 &lt;br&gt; 
@@ -834,6 +779,9 @@
     margin: 2rem 0;
     max-width: 480px;
     position: relative;
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 15px 15px;
+    padding: 12px;
 }
 .amazon-widget a {
     position: absolute;
@@ -842,23 +790,8 @@
     height: 100%;
     width: 100%;
 }
-.amazon-widget-img {
-    border: 1px solid #E1E8ED;
-    border-radius: 15px 15px 0 0;
-    text-align: center;
- }
-.amazon-widget-img img {
-    border: none;
-    margin: 0 auto;
-    max-height: 200px;
-    padding: 16px;
-}
 .amazon-widget-info {
-    border-right: 1px solid #E1E8ED;
-    border-bottom: 1px solid #E1E8ED;
-    border-left: 1px solid #E1E8ED;
-    padding:5px 10px 10px 10px;
-    border-radius:0 0 15px 15px;
+    border: none;
 }
 .amazon-widget:hover .amazon-widget-info {
     background-color: #E1E8ED;
@@ -866,14 +799,16 @@
 .amazon-widget-title {
     font-weight: bold;
     display:block;
+    font-size: 16px;
 }
 .amazon-widget-via {
     color: #aaa;
+    font-size: 10px;
 }
 .amazon-widget-via img {
     border: none;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     margin: 0;
     padding: 0;
     display: inline;
@@ -882,9 +817,6 @@
 &lt;/style&gt;
 &lt;div class=&#34;amazon-widget&#34;&gt;
   &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/4297107384/?tag=&#34;&gt;&lt;/a&gt;
-  &lt;div class=&#34;amazon-widget-img&#34;&gt;
-    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4297107384&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
-  &lt;/div&gt;
   &lt;div class=&#34;amazon-widget-info&#34;&gt;
     &lt;span class=&#34;amazon-widget-title&#34;&gt;
       Pythonクローリング&amp;amp;スクレイピング[増補改訂版] -データ収集・解析のための実践開発ガイド
@@ -895,6 +827,8 @@
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 &lt;p&gt;を読んで勉強して再トライした&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;br&gt;
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
@@ -1764,6 +1698,9 @@
     margin: 2rem 0;
     max-width: 480px;
     position: relative;
+    border: 1px solid #E1E8ED;
+    border-radius: 15px 15px 15px 15px;
+    padding: 12px;
 }
 .amazon-widget a {
     position: absolute;
@@ -1772,23 +1709,8 @@
     height: 100%;
     width: 100%;
 }
-.amazon-widget-img {
-    border: 1px solid #E1E8ED;
-    border-radius: 15px 15px 0 0;
-    text-align: center;
- }
-.amazon-widget-img img {
-    border: none;
-    margin: 0 auto;
-    max-height: 200px;
-    padding: 16px;
-}
 .amazon-widget-info {
-    border-right: 1px solid #E1E8ED;
-    border-bottom: 1px solid #E1E8ED;
-    border-left: 1px solid #E1E8ED;
-    padding:5px 10px 10px 10px;
-    border-radius:0 0 15px 15px;
+    border: none;
 }
 .amazon-widget:hover .amazon-widget-info {
     background-color: #E1E8ED;
@@ -1796,14 +1718,16 @@
 .amazon-widget-title {
     font-weight: bold;
     display:block;
+    font-size: 16px;
 }
 .amazon-widget-via {
     color: #aaa;
+    font-size: 10px;
 }
 .amazon-widget-via img {
     border: none;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     margin: 0;
     padding: 0;
     display: inline;
@@ -1812,9 +1736,6 @@
 &lt;/style&gt;
 &lt;div class=&#34;amazon-widget&#34;&gt;
   &lt;a target=&#34;_blank&#34; href=&#34;https://www.amazon.co.jp/gp/product/4295003379/?tag=&#34;&gt;&lt;/a&gt;
-  &lt;div class=&#34;amazon-widget-img&#34;&gt;
-    &lt;img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;MarketPlace=JP&amp;ASIN=4295003379&amp;ServiceVersion=20070822&amp;ID=AsinImage&amp;WS=1&amp;Format=_SL350_&amp;tag=&#34; /&gt;
-  &lt;/div&gt;
   &lt;div class=&#34;amazon-widget-info&#34;&gt;
     &lt;span class=&#34;amazon-widget-title&#34;&gt;
       [第2版]Python 機械学習プログラミング 達人データサイエンティストによる理論と実践 (impress top gear)
@@ -1825,6 +1746,8 @@
     &lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 &lt;p&gt;↑ちょっとデータを変えて色々遊んでいますが、基本的にはこの本の2章をそのままやっただけです。&lt;/p&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;2-分類問題-ー-単純な機械学習アルゴリズムのトレーニング&#34;&gt;2. 分類問題 ー 単純な機械学習アルゴリズムのトレーニング&lt;/h2&gt;
