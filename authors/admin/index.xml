@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ゲッタ〜のHP</title>
-    <link>https://kokuyokugetter.github.io/authors/admin/</link>
-      <atom:link href="https://kokuyokugetter.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
-    <description>ゲッタ〜のHP</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
-    <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>ゲッタ〜のHP</title>
-      <link>https://kokuyokugetter.github.io/authors/admin/</link>
-    </image>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ゲッタ〜のHP</title><link>https://kokuyokugetter.github.io/authors/admin/</link><description>Recent content on ゲッタ〜のHP</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>© 2026 ゲッタ〜</copyright><atom:link href="https://kokuyokugetter.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://kokuyokugetter.github.io/authors/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kokuyokugetter.github.io/authors/admin/</guid><description>&lt;p&gt;【経歴】&lt;/p&gt;&#10;&lt;p&gt;兵庫県出身&lt;/p&gt;&#10;&lt;p&gt;2018年3月に大阪市立大学理学研究科修士課程を修了し、&#10;同年4月からSIerにて、システムエンジニアとしてパッケージ導入コンサルタントや開発などの業務を3年経験（勤続年数4年）。&#10;2022年4月から都内のIT企業に機械学習エンジニアとして転職し、分析の業務を主に行っている。&lt;/p&gt;</description></item></channel></rss>

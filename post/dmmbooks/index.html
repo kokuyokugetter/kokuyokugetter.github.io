@@ -1,1526 +1,404 @@
-<!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.7.0">
-
-  
-
-  
-  
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="ゲッタ〜">
-
-  
-  
-  
-    
-  
-  <meta name="description" content="ログインが必要なページのクローリングはSeleniumが便利だった。">
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://kokuyokugetter.github.io/post/dmmbooks/">
-
-  
-
-
-  
-  
-  
-  <meta name="theme-color" content="#EF525B">
-  
-
-  
-  
-
-  
-  
-  
-  
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
-
-    
-    
-    
-      
-    
-    
-      
-      
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-        
-      
-    
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
-    
-
-    
-
-    
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-        
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700&display=swap">
-  
-
-  
-  
-  
-  
-  <link rel="stylesheet" href="/css/academic.css">
-
-  
-
-
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170093437-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'UA-170093437-1', {});
-
-  
-  document.addEventListener('click', onClickCallback, false);
-</script>
-
-
-  
-
-
-  
-
-  <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png">
-
-  <link rel="canonical" href="https://kokuyokugetter.github.io/post/dmmbooks/">
-
-  
-  
-  
-  
-  
-    
-  
-  
-  <meta property="twitter:card" content="summary_large_image">
-  
-  <meta property="og:site_name" content="ゲッタ〜のHP">
-  <meta property="og:url" content="https://kokuyokugetter.github.io/post/dmmbooks/">
-  <meta property="og:title" content="Python&#43;SeleniumでDMM電子書籍の購入済み書籍の一覧を取得 | ゲッタ〜のHP">
-  <meta property="og:description" content="ログインが必要なページのクローリングはSeleniumが便利だった。"><meta property="og:image" content="https://kokuyokugetter.github.io/post/dmmbooks/featured.png">
-  <meta property="twitter:image" content="https://kokuyokugetter.github.io/post/dmmbooks/featured.png"><meta property="og:locale" content="en-us">
-  
-    
-      <meta property="article:published_time" content="2020-11-10T18:00:05&#43;09:00">
-    
-    <meta property="article:modified_time" content="2020-11-10T18:00:05&#43;09:00">
-  
-
-  
-
-
-    
-
-
-
-
-
-
-  
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://kokuyokugetter.github.io/post/dmmbooks/"
-  },
-  "headline": "Python+SeleniumでDMM電子書籍の購入済み書籍の一覧を取得",
-  
-  "image": [
-    "https://kokuyokugetter.github.io/post/dmmbooks/featured.png"
-  ],
-  
-  "datePublished": "2020-11-10T18:00:05+09:00",
-  "dateModified": "2020-11-10T18:00:05+09:00",
-  
-  "author": {
-    "@type": "Person",
-    "name": "ゲッタ〜"
-  },
-  
-  "publisher": {
-    "@type": "Organization",
-    "name": "ゲッタ〜のHP",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://kokuyokugetter.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
-    }
-  },
-  "description": "ログインが必要なページのクローリングはSeleniumが便利だった。"
-}
-</script>
-
-  
-
-  
-
-
-  
-
-
-  
-
-
-
-
-
-  <title>Python&#43;SeleniumでDMM電子書籍の購入済み書籍の一覧を取得 | ゲッタ〜のHP</title>
-
-</head>
-
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
-
-  <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
-
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div id="search-box">
-        
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
-        
-      </div>
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
-
-
-  
-
-
-
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
-
-    
-    <div class="d-none d-lg-inline-flex">
-      <a class="navbar-brand" href="/">ゲッタ〜のHP</a>
-    </div>
-    
-
-    
-    <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span><i class="fas fa-bars"></i></span>
-    </button>
-    
-
-    
-    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/">ゲッタ〜のHP</a>
-    </div>
-    
-
-    
-    
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
-
-      
-      <ul class="navbar-nav d-md-inline-flex">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#about"><span>Home</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#experience"><span>Experience</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#accomplishments"><span>Qualifications</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#posts"><span>Posts</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-          
-          
-          
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/#contact"><span>Contact</span></a>
-        </li>
-
-        
-        
-
-      
-
-        
-      </ul>
-    </div>
-
-    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-      
-      <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-      </li>
-      
-
-      
-      <li class="nav-item">
-        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-      </li>
-      
-
-      
-
-    </ul>
-
-  </div>
-</nav>
-
-
-  <article class="article">
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-<div class="article-container pt-3">
-  <h1>Python&#43;SeleniumでDMM電子書籍の購入済み書籍の一覧を取得</h1>
-
-  
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Nov 10, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    15 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/categories/tech/">tech</a></span>
-  
-
-</div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-</div>
-
-
-
-  <div class="article-container">
-
-    <div class="article-style">
-      <p>前々から買った本の一覧を見たかったのだが、以前試行錯誤しても全く上手くいかなかったので、</p>
-<div class="amazon-widget">
-  <a target="_blank" rel="noopener" href="https://www.amazon.co.jp/gp/product/4297107384/?tag=" aria-label="Pythonクローリング&amp;スクレイピング[増補改訂版] -データ収集・解析のための実践開発ガイド"></a>
-  <div class="amazon-widget-info">
-    <span class="amazon-widget-title">
-      Pythonクローリング&amp;スクレイピング[増補改訂版] -データ収集・解析のための実践開発ガイド
-    </span>
-    <span class="amazon-widget-via">
-      <img src="https://www.amazon.co.jp/favicon.ico" alt="" loading="lazy" decoding="async" />
-      amazon.co.jp
-    </span>
-  </div>
-</div>
-
-<p>を読んで勉強して再トライした<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
-<br>
-<h2>Table of Contents</h2>
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#実際のコードと実行結果">実際のコードと実行結果</a></li>
-    <li><a href="#参考リンク">参考リンク</a></li>
-  </ul>
-</nav>
-<br>
-<h2 id="実際のコードと実行結果">実際のコードと実行結果</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> selenium <span style="color:#f92672">import</span> webdriver
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> dmm_user_pass
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># ユーザー名、パスワードを漏洩しないための簡易的な方法</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># (同ディレクトリのdmm_user_pass.pyを絶対公開しないようにする)</span>
-</span></span><span style="display:flex;"><span>USER <span style="color:#f92672">=</span> dmm_user_pass<span style="color:#f92672">.</span>USER
-</span></span><span style="display:flex;"><span>PASS <span style="color:#f92672">=</span> dmm_user_pass<span style="color:#f92672">.</span>PASS
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># PhantomJSのドライバーを得る</span>
-</span></span><span style="display:flex;"><span>browser <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>PhantomJS()
-</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>implicitly_wait(<span style="color:#ae81ff">5</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># ログインページにアクセス(ログインすると即購入済みページに遷移されるはず)</span>
-</span></span><span style="display:flex;"><span>url_login <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://accounts.dmm.com/service/login/password&#34;</span>
-</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>get(url_login)
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;ログインページにアクセスしました&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># テキストボックスに文字を入力</span>
-</span></span><span style="display:flex;"><span>e <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#e6db74">&#34;login_id&#34;</span>)
-</span></span><span style="display:flex;"><span>e<span style="color:#f92672">.</span>clear()
-</span></span><span style="display:flex;"><span>e<span style="color:#f92672">.</span>send_keys(USER)
-</span></span><span style="display:flex;"><span>e <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_element_by_id(<span style="color:#e6db74">&#34;password&#34;</span>)
-</span></span><span style="display:flex;"><span>e<span style="color:#f92672">.</span>clear()
-</span></span><span style="display:flex;"><span>e<span style="color:#f92672">.</span>send_keys(PASS)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># フォームを送信</span>
-</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>find_element_by_xpath(<span style="color:#e6db74">&#34;//form[@name=&#39;loginForm&#39;]//input[@type=&#39;submit&#39;]&#34;</span>)<span style="color:#f92672">.</span>click()
-</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;情報を入力してログインボタンを押しました&#34;</span>)
-</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">10</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># DMM電子書籍の購入済みページを表示</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># page1からloopで存在しないページになった場合にはurlが自動的に、</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># https://book.dmm.com/library/?age_limit=all&amp;expired=1になる(遷移したいページとcurrent urlが不一致)</span>
-</span></span><span style="display:flex;"><span>url_purchased <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://book.dmm.com/library/?age_limit=all&amp;expired=1&amp;sort=old&amp;page=&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>):
-</span></span><span style="display:flex;"><span>    page_i <span style="color:#f92672">=</span> url_purchased <span style="color:#f92672">+</span> str(i)
-</span></span><span style="display:flex;"><span>    browser<span style="color:#f92672">.</span>get(page_i)
-</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">5</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> page_i <span style="color:#f92672">!=</span> browser<span style="color:#f92672">.</span>current_url:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span> <span style="color:#75715e"># 上のコメント通りに抜ける処理</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 購入済みのタイトルを列挙</span>
-</span></span><span style="display:flex;"><span>    links <span style="color:#f92672">=</span> browser<span style="color:#f92672">.</span>find_elements_by_css_selector(
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;.m-boxListBookProductBlock__main__info__ttl &gt; a&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> a <span style="color:#f92672">in</span> links:
-</span></span><span style="display:flex;"><span>        title <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span>text
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;-&#34;</span>, title)
-</span></span></code></pre></div><pre><code>/usr/local/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
+<!doctype html><html lang=ja dir=ltr class=scroll-smooth data-default-appearance=light data-auto-appearance=true><head><meta charset=utf-8><meta http-equiv=content-language content="ja"><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><meta name=theme-color><title>Python+SeleniumでDMM電子書籍の購入済み書籍の一覧を取得 &#183; ゲッタ〜のHP</title><meta name=title content="Python+SeleniumでDMM電子書籍の購入済み書籍の一覧を取得 &#183; ゲッタ〜のHP"><meta name=description content="ログインが必要なページのクローリングはSeleniumが便利だった。"><meta name=keywords content="crawling,scraping,Python,"><link rel=canonical href=https://kokuyokugetter.github.io/post/dmmbooks/><meta name=author content="ゲッタ〜"><link href=https://github.com/kokuyokugetter rel=me><link href=https://x.com/kokuyokugetter rel=me><link href=https://www.youtube.com/channel/UCsV8ILOIMEBFu15kR9YYoIA rel=me><meta property="og:url" content="https://kokuyokugetter.github.io/post/dmmbooks/"><meta property="og:site_name" content="ゲッタ〜のHP"><meta property="og:title" content="Python+SeleniumでDMM電子書籍の購入済み書籍の一覧を取得"><meta property="og:description" content="ログインが必要なページのクローリングはSeleniumが便利だった。"><meta property="og:locale" content="ja"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2020-11-10T18:00:05+09:00"><meta property="article:modified_time" content="2020-11-10T18:00:05+09:00"><meta property="article:tag" content="Crawling"><meta property="article:tag" content="Scraping"><meta property="article:tag" content="Python"><meta property="og:image" content="https://kokuyokugetter.github.io/post/dmmbooks/featured.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://kokuyokugetter.github.io/post/dmmbooks/featured.png"><meta name=twitter:title content="Python+SeleniumでDMM電子書籍の購入済み書籍の一覧を取得"><meta name=twitter:description content="ログインが必要なページのクローリングはSeleniumが便利だった。"><link type=text/css rel=stylesheet href=/css/main.bundle.min.4585d5f4bd4707b99a33aedd42509c1a41a9061cb3c320618c2ee9769fe8573e20728fc81006560e449149260afeb5c6a56b2e35c163bd790fc056d5c085bea4.css integrity="sha512-RYXV9L1HB7maM67dQlCcGkGpBhyzwyBhjC7pdp/oVz4gco/IEAZWDkSRSSYK/rXGpWsuNcFjvXkPwFbVwIW+pA=="><script type=text/javascript src=/js/appearance.min.b0d4793491a9f04263e5a3f025d2c8e8c792538af79471cb7b19a8effee4e976f34f8eead20d9a263af68aa9407193c92d0e918433e347c48dcc6d6aa5402709.js integrity="sha512-sNR5NJGp8EJj5aPwJdLI6MeSU4r3lHHLexmo7/7k6XbzT47q0g2aJjr2iqlAcZPJLQ6RhDPjR8SNzG1qpUAnCQ=="></script><script defer src=/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7+kfJ6kKCJxQGC+8wm+Bz9JucDjDTGNew=="></script><script defer src=/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js integrity="sha512-Z7cez37szjhnOpIkTR/9k+218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script><script defer type=text/javascript id=script-bundle src=/js/main.bundle.min.17b3d3bbe00602f12ed247330588c186dd330147642a44a8aca5159f5905a7a6e0a70abb06315b581aef2c4f6d0e4d4bac82dbc1b0916818b057f9ad42c4aae6.js integrity="sha512-F7PTu+AGAvEu0kczBYjBht0zAUdkKkSorKUVn1kFp6bgpwq7BjFbWBrvLE9tDk1LrILbwbCRaBiwV/mtQsSq5g==" data-copy=コピー data-copied=コピーしました></script><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><script type=application/ld+json>[{"@context":"https://schema.org","@type":"Article","articleSection":"Posts","name":"Python\u002bSeleniumでDMM電子書籍の購入済み書籍の一覧を取得","headline":"Python\u002bSeleniumでDMM電子書籍の購入済み書籍の一覧を取得","inLanguage":"ja","url":"https://kokuyokugetter.github.io/post/dmmbooks/","author":{"@type":"Person","name":"ゲッタ〜","image":"https://kokuyokugetter.github.io/img/avatar.png","sameAs":["https://github.com/kokuyokugetter","https://x.com/kokuyokugetter","https://www.youtube.com/channel/UCsV8ILOIMEBFu15kR9YYoIA"]},"copyrightYear":"2020","dateCreated":"2020-11-10T18:00:05\u002b09:00","datePublished":"2020-11-10T18:00:05\u002b09:00","dateModified":"2020-11-10T18:00:05\u002b09:00","keywords":["crawling","scraping","Python"],"mainEntityOfPage":"https://kokuyokugetter.github.io/post/dmmbooks/","wordCount":7097}]</script><script defer src=/js/site.min.f24b68b5e3d9d8b7c06173822957d5f4d3654a98ee4a90f89aebc9062a76c321.js integrity="sha256-8ktotePZ2LfAYXOCKVfV9NNlSpjuSpD4muvJBip2wyE="></script></head><body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar"><div id=the-top class="absolute flex self-center"><a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600" href=#main-content><span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+メインコンテンツへスキップ</a></div><header><div class="main-menu flex items-center w-full gap-2 p-1 pl-0"><a href=/ class="text-base font-medium truncate min-w-0 shrink">ゲッタ〜のHP</a><div class="flex items-center ms-auto"><div class="hidden md:flex"><nav aria-label=メインメニュー class="flex items-center gap-x-5 h-12"><a href=/#about class="flex items-center bf-icon-color-hover" aria-label=About title><span class="text-sm font-medium break-normal">About
+</span></a><a href=/#experience class="flex items-center bf-icon-color-hover" aria-label=Experience title><span class="text-sm font-medium break-normal">Experience
+</span></a><a href=/#qualifications class="flex items-center bf-icon-color-hover" aria-label=Qualifications title><span class="text-sm font-medium break-normal">Qualifications
+</span></a><a href=/post/ class="flex items-center bf-icon-color-hover" aria-label=Posts title=Posts><span class="text-sm font-medium break-normal">Posts
+</span></a><a href=/#contact class="flex items-center bf-icon-color-hover" aria-label=Contact title><span class="text-sm font-medium break-normal">Contact</span></a><div class="flex items-center"><button id=appearance-switcher aria-label=ダークモードへ切り替え type=button class="text-sm bf-icon-color-hover" title=ダークモードへ切り替え><div class="flex items-center justify-center dark:hidden"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M32 256C32 132.2 132.3 32 255.8 32c11.36.0 29.7 1.668 40.9 3.746 9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3 9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480 132.1 480 32 379.6 32 256z"/></svg></span></div><div class="items-center justify-center hidden dark:flex"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02.0-95.1 42.98-95.1 95.1s41.2 96.9 95.1 96.9 95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347l-63.2-91.9 63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89 164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6 12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256 2.74 347.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7 19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109 109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69.0-127.1-57.31-127.1-127.1.0-70.69 57.31-127.1 127.1-127.1S383.1 186.2 383.1 256c0 70.7-56.4 127.1-127.1 127.1z"/></svg></span></div></button></div><button id=search-button aria-label="検索 (/)" class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400" title="検索 (/)">
+<span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span><kbd id=search-shortcut-hint class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400" aria-hidden=true>⌘K</kbd></button></nav></div><div class="flex md:hidden"><div class="mobile-header-row relative flex items-center h-14 gap-4"><button id=appearance-switcher-mobile type=button aria-label=ダークモードへ切り替え title=ダークモードへ切り替え class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400"><div class=dark:hidden><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M32 256C32 132.2 132.3 32 255.8 32c11.36.0 29.7 1.668 40.9 3.746 9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3 9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480 132.1 480 32 379.6 32 256z"/></svg></span></div><div class="hidden dark:block"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02.0-95.1 42.98-95.1 95.1s41.2 96.9 95.1 96.9 95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347l-63.2-91.9 63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89 164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6 12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256 2.74 347.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7 19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109 109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69.0-127.1-57.31-127.1-127.1.0-70.69 57.31-127.1 127.1-127.1S383.1 186.2 383.1 256c0 70.7-56.4 127.1-127.1 127.1z"/></svg></span></div></button>
+<button id=search-button-mobile aria-label="検索 (/)" class="flex items-center justify-center bf-icon-color-hover" title="検索 (/)">
+<span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></button>
+<input type=checkbox id=mobile-menu-toggle autocomplete=off class="hidden peer">
+<label for=mobile-menu-toggle tabindex=0 role=button aria-expanded=false aria-controls=mobile-menu-dialog aria-label=メインメニュー class="flex items-center justify-center cursor-pointer bf-icon-color-hover"><span class="relative block icon"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416c17.7.0 32 14.33 32 32 0 17.7-14.3 32-32 32H32C14.33 128 0 113.7.0 96zM0 256c0-17.7 14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32H32c-17.67.0-32-14.3-32-32zM416 448H32c-17.67.0-32-14.3-32-32s14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32z"/></svg></span></label><div id=mobile-menu-dialog role=dialog aria-modal=true aria-label=メインメニュー style=scrollbar-gutter:stable class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100
+fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99
+bf-scrollbar"><label for=mobile-menu-toggle tabindex=0 role=button aria-expanded=false aria-controls=mobile-menu-dialog class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900"><span class=sr-only>メニューを閉じる</span>
+<span class="relative block icon"><svg viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75.0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75.0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75.0-45.25s32.75-12.5 45.25.0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25.0s12.5 32.75.0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></label><nav aria-label=モバイルメニュー class="mx-auto max-w-md space-y-6"><div class=px-2><div class="flex items-center gap-4"><a href=/#about aria-label=About class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200"><span title class="text-2xl font-bold tracking-tight">About</span></a></div></div><div class=px-2><div class="flex items-center gap-4"><a href=/#experience aria-label=Experience class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200"><span title class="text-2xl font-bold tracking-tight">Experience</span></a></div></div><div class=px-2><div class="flex items-center gap-4"><a href=/#qualifications aria-label=Qualifications class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200"><span title class="text-2xl font-bold tracking-tight">Qualifications</span></a></div></div><div class=px-2><div class="flex items-center gap-4"><a href=/post/ aria-label=Posts class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200"><span title=Posts class="text-2xl font-bold tracking-tight">Posts</span></a></div></div><div class=px-2><div class="flex items-center gap-4"><a href=/#contact aria-label=Contact class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200"><span title class="text-2xl font-bold tracking-tight">Contact</span></a></div></div></nav></div></div></div></div></div><script>(function(){var t,n,e=document.querySelector(".main-menu");if(!e)return;t=window.location.pathname,n=e.querySelectorAll('a[href="'+t+'"]'),n.forEach(function(e){var t=e.querySelectorAll("span");t.forEach(function(e){e.classList.add("active")})})})()</script></header><div class="relative flex flex-col grow"><main id=main-content class=grow><article><header id=single_header class="mt-5 max-w-prose"><ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden"><li class=hidden><a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href=/>ゲッタ〜のHP</a><span class="px-1 text-primary-500">/</span></li><li class=inline><a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href=/post/>Posts</a><span class="px-1 text-primary-500">/</span></li><li class=hidden><a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href=/post/dmmbooks/>Python+SeleniumでDMM電子書籍の購入済み書籍の一覧を取得</a><span class="px-1 text-primary-500">/</span></li></ol><h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Python+SeleniumでDMM電子書籍の購入済み書籍の一覧を取得</h1><div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden"><div class="flex flex-row flex-wrap items-center"><time datetime=2020-11-10T18:00:05+09:00>2020.11.10</time><span class="px-2 text-primary-500">&#183;</span><span title=読むのに必要な時間>15 分</span></div><div class="flex flex-row flex-wrap items-center"><a class="relative mt-[0.5rem] me-2" href=/categories/tech/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Tech
+</span></span></a><a class="relative mt-[0.5rem] me-2" href=/tags/crawling/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Crawling
+</span></span></a><a class="relative mt-[0.5rem] me-2" href=/tags/scraping/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Scraping
+</span></span></a><a class="relative mt-[0.5rem] me-2" href=/tags/python/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Python</span></span></a></div></div></header><section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row"><div class="min-w-0 min-h-0 max-w-fit"><div class="article-content max-w-prose mb-20"><p>前々から買った本の一覧を見たかったのだが、以前試行錯誤しても全く上手くいかなかったので、</p><div class=amazon-widget><a target=_blank rel=noopener href="https://www.amazon.co.jp/gp/product/4297107384/?tag=" aria-label="Pythonクローリング&スクレイピング[増補改訂版] -データ収集・解析のための実践開発ガイド"></a><div class=amazon-widget-info><span class=amazon-widget-title>Pythonクローリング&スクレイピング[増補改訂版] -データ収集・解析のための実践開発ガイド
+</span><span class=amazon-widget-via><img src=https://www.amazon.co.jp/favicon.ico alt loading=lazy decoding=async>
+amazon.co.jp</span></div></div><p>を読んで勉強して再トライした<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>。</p><br><details class=legacy-toc open><summary>目次</summary><nav id=TableOfContents><ul><li><a href=#実際のコードと実行結果>実際のコードと実行結果</a></li><li><a href=#参考リンク>参考リンク</a></li></ul></nav></details><br><h2 class="relative group">実際のコードと実行結果<div id=実際のコードと実行結果 class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#%e5%ae%9f%e9%9a%9b%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a8%e5%ae%9f%e8%a1%8c%e7%b5%90%e6%9e%9c aria-label=アンカー>#</a></span></h2><div class=highlight-wrapper><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>selenium</span> <span class=kn>import</span> <span class=n>webdriver</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>time</span>
+</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=nn>dmm_user_pass</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ユーザー名、パスワードを漏洩しないための簡易的な方法</span>
+</span></span><span class=line><span class=cl><span class=c1># (同ディレクトリのdmm_user_pass.pyを絶対公開しないようにする)</span>
+</span></span><span class=line><span class=cl><span class=n>USER</span> <span class=o>=</span> <span class=n>dmm_user_pass</span><span class=o>.</span><span class=n>USER</span>
+</span></span><span class=line><span class=cl><span class=n>PASS</span> <span class=o>=</span> <span class=n>dmm_user_pass</span><span class=o>.</span><span class=n>PASS</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># PhantomJSのドライバーを得る</span>
+</span></span><span class=line><span class=cl><span class=n>browser</span> <span class=o>=</span> <span class=n>webdriver</span><span class=o>.</span><span class=n>PhantomJS</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>browser</span><span class=o>.</span><span class=n>implicitly_wait</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># ログインページにアクセス(ログインすると即購入済みページに遷移されるはず)</span>
+</span></span><span class=line><span class=cl><span class=n>url_login</span> <span class=o>=</span> <span class=s2>&#34;https://accounts.dmm.com/service/login/password&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>browser</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>url_login</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;ログインページにアクセスしました&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># テキストボックスに文字を入力</span>
+</span></span><span class=line><span class=cl><span class=n>e</span> <span class=o>=</span> <span class=n>browser</span><span class=o>.</span><span class=n>find_element_by_id</span><span class=p>(</span><span class=s2>&#34;login_id&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>e</span><span class=o>.</span><span class=n>clear</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>e</span><span class=o>.</span><span class=n>send_keys</span><span class=p>(</span><span class=n>USER</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>e</span> <span class=o>=</span> <span class=n>browser</span><span class=o>.</span><span class=n>find_element_by_id</span><span class=p>(</span><span class=s2>&#34;password&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>e</span><span class=o>.</span><span class=n>clear</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>e</span><span class=o>.</span><span class=n>send_keys</span><span class=p>(</span><span class=n>PASS</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1># フォームを送信</span>
+</span></span><span class=line><span class=cl><span class=n>browser</span><span class=o>.</span><span class=n>find_element_by_xpath</span><span class=p>(</span><span class=s2>&#34;//form[@name=&#39;loginForm&#39;]//input[@type=&#39;submit&#39;]&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>click</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;情報を入力してログインボタンを押しました&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>time</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mi>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># DMM電子書籍の購入済みページを表示</span>
+</span></span><span class=line><span class=cl><span class=c1># page1からloopで存在しないページになった場合にはurlが自動的に、</span>
+</span></span><span class=line><span class=cl><span class=c1># https://book.dmm.com/library/?age_limit=all&amp;expired=1になる(遷移したいページとcurrent urlが不一致)</span>
+</span></span><span class=line><span class=cl><span class=n>url_purchased</span> <span class=o>=</span> <span class=s1>&#39;https://book.dmm.com/library/?age_limit=all&amp;expired=1&amp;sort=old&amp;page=&#39;</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>100</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>page_i</span> <span class=o>=</span> <span class=n>url_purchased</span> <span class=o>+</span> <span class=nb>str</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>browser</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>page_i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>time</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>page_i</span> <span class=o>!=</span> <span class=n>browser</span><span class=o>.</span><span class=n>current_url</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>break</span> <span class=c1># 上のコメント通りに抜ける処理</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 購入済みのタイトルを列挙</span>
+</span></span><span class=line><span class=cl>    <span class=n>links</span> <span class=o>=</span> <span class=n>browser</span><span class=o>.</span><span class=n>find_elements_by_css_selector</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;.m-boxListBookProductBlock__main__info__ttl &gt; a&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>a</span> <span class=ow>in</span> <span class=n>links</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>title</span> <span class=o>=</span> <span class=n>a</span><span class=o>.</span><span class=n>text</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;-&#34;</span><span class=p>,</span> <span class=n>title</span><span class=p>)</span></span></span></code></pre></div></div><pre><code>/usr/local/lib/python3.7/site-packages/selenium/webdriver/phantomjs/webdriver.py:49: UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead
   warnings.warn('Selenium support for PhantomJS has been deprecated, please use headless '
-</code></pre>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>ログインページにアクセスしました
-</span></span><span style="display:flex;"><span>情報を入力してログインボタンを押しました
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モブサイコ100
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おしえて！ ギャル子ちゃん
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 無邪気の楽園
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> とんでもスキルで異世界放浪メシ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界でスキルを解体したらチートな嫁が増殖しました 概念交差のストラクチャー
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ブラウンシュガァデイズ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ウメハラ FIGHTING GAMERS！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> なれる！SE
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 神達に拾われた男
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 失格紋の最強賢者 〜世界最強の賢者が更に強くなるために転生しました〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 世界最強の後衛 〜迷宮国の新人探索者〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ニートだけどハロワにいったら異世界につれてかれた
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 無職転生 〜ロキシーだって本気です〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 宝くじで40億当たったんだけど異世界に移住する
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ゴブリンスレイヤー
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ゴブリンスレイヤー外伝:イヤーワン
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生したらドラゴンの卵だった〜イバラのドラゴンロード
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生したら剣でした
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 骸骨騎士様、只今異世界へお出掛け中
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> なんでここに先生が！？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 強くてニューサーガ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 冒険者になりたいと都に出て行った娘がSランクになってた 黒髪の戦乙女
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界魔法は遅れてる！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 即死チートが最強すぎて、異世界のやつらがまるで相手にならないんですが。-ΑΩ-
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> THENEWGATE
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界チート魔術師
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> シロクマ転生 森の守護神になったぞ伝説
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 蜘蛛ですが、なにか？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界のんびり農家
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 没落予定なので、鍛冶職人を目指す
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 無職転生 〜異世界行ったら本気だす〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> スライムライフ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> とあるおっさんのVRMMO活動記
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 29歳独身中堅冒険者の日常
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 100万の命の上に俺は立っている ワケあり無料版 5
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最強の職業は勇者でも賢者でもなく鑑定士（仮）らしいですよ？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 野生のラスボスが現れた！黒翼の覇王
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 100万の命の上に俺は立っている
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 獣医さんのお仕事in異世界
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 月が導く異世界道中
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ブサメンガチファイター
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 平兵士は過去を夢見る
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 自重しない元勇者の強くて楽しいニューゲーム
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 努力しすぎた世界最強の武闘家は、魔法世界を余裕で生き抜く。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最強呪族転生〜魔術オタクの理想郷（ユートピア）〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔拳のデイドリーマー
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で『黒の癒し手』って呼ばれています
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> のんびりVRMMO記
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界でカフェを開店しました。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 邪竜転生
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 望まぬ不死の冒険者
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 黒の召喚士
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 村人ですが何か？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アルゲートオンライン
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 効率厨魔導師、第二の人生で魔導を極める
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ワールド・カスタマイズ・クリエー
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 成長チートでなんでもできるようになったが、無職だけは辞められないようです
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> マズ飯エルフと遊牧暮らし
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 賢者の弟子を名乗る賢者 THE COMIC
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で最強の杖に転生した俺が嫌がる少女をムリヤリ魔法少女にPする！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 剣士を目指して入学したのに魔法適性9999なんですけど！？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺の家が魔力スポットだった件 〜住んでいるだけで世界最強〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界迷宮でハーレムを
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 欲望パンドラ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生しちゃったよ（いや、ごめん）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> さようなら竜生、こんにちは人生
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 素材採取家の異世界旅行記
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤンキーは異世界で精霊に愛されます。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺と蛙さんの異世界放浪記
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 軍オタが魔法世界に転生したら、現代兵器で軍隊ハーレムを作っちゃいました！？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 真の仲間じゃないと勇者のパーティーを追い出されたので、辺境でスローライフすることにしました
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ありふれた日常で世界最強
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ありふれた職業で世界最強
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界を制御魔法で切り開け！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アルマディアノス英雄伝
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界転生騒動記
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> じょしラク！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 駆除人
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で孤児院を開いたけど、なぜか誰一人巣立とうとしない件【カラー増量版】
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界おじさん
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 辺境の老騎士 バルド・ローエン
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 宝石の国
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> うちの娘の為ならば、俺はもしかしたら魔王も倒せるかもしれない。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> てのひら開拓村で異世界建国記
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ガチャを回して仲間を増やす 最強の美少女軍団を作り上げろ THE COMIC
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 二度目の勇者は復讐の道を嗤い歩む
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 四度目は嫌な死属性魔術師
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界ゆるり紀行 〜子育てしながら冒険者します〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界支配のスキルテイカー ゼロから始める奴隷ハーレム
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 聖女の魔力は万能です
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 神さまSHOPでチートの香り
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生貴族の異世界冒険録
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 食べるだけでレベルアップ！ 〜駄女神といっしょに異世界無双〜（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ワンワン物語 〜金持ちの犬にしてとは言ったが、フェンリルにしろとは言ってねえ！〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おっさんのリメイク冒険日記
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界ですが魔物栽培しています。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 二度目の人生を異世界で
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界の迷宮都市で治癒魔法使いやってます（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔王になったので、ダンジョン造って人外娘とほのぼのする
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最果てのパラディン
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔王様の街づくり！ 〜最強のダンジョンは近代都市〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ダンジョンシーカー
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> マギクラフト・マイスター
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界温泉に転生した俺の効能がとんでもすぎる
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 物語の中の人
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 地方騎士ハンスの受難
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> LV999の村人
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 精霊達の楽園と理想の異世界生活
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モノノケ！！！！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> どうやら私の身体は完全無敵のようですね
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔王の始め方 THE COMIC
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> マージナル・オペレーション
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生王子はダラけたい
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 豚公爵に転生したから、今度は君に好きと言いたい
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> レディローズは平民になりたい
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モンスターがあふれる世界になったので、好きに生きたいと思います
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Sランクモンスターの《ベヒーモス》だけど、猫と間違われてエルフ娘の騎士（ペット）として暮らしてます
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Re:Monster
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺だけ入れる隠しダンジョン 〜こっそり鍛えて世界最強〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Only Sense Online ―オンリーセンス・オンライン―
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤングジャンプ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヒストリエ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 専門学校JK Ctrl＋Z （1）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 大家さんと僕
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 専門学校JK
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 理想のヒモ生活
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Lv2からチートだった元勇者候補のまったり異世界ライフ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 僕の部屋がダンジョンの休憩所になってしまった件【パートカラー版】
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おっさん冒険者ケインの善行
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 陰の実力者になりたくて！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界系ファンタジー ガンガンいこうぜ！大ボリューム試し読みパック
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 史上最強の大魔王、 村人Aに転生する
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 機械学習のエッセンス 実装しながら学ぶPython、数学、アルゴリズム
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> データサイエンティスト養成読本 ビジネス活用編
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド―
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 絶対にヤッてはいけない異世界召喚
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 水女神は今日も恋をするか？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ［第2版］Python機械学習プログラミング 達人データサイエンティストによる理論と実践
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Rによるやさしい統計学
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 暗殺者である俺のステータスが勇者よりも明らかに強いのだが
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 少女奴●スクール
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ボコボコりんっ！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 早乙女選手、ひたかくす
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Kaggleで勝つデータ分析の技術
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> リビドーハンタータケル
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤクザの大親分が幼女に生まれ変わった話 1巻
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> いきのこれ！ 社畜ちゃん 〜後輩ちゃんオタ活動記〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔王様、リトライ！（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アラフォー社畜のゴーレムマスター（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ガイシューイッショク！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 紀元前1万年のオタ デジタルモザイク版
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ここは俺に任せて先に行けと言ってから10年がたったら伝説になっていた。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異種族レビュアーズコミックアンソロジー 〜ダークネス〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> うれしょん！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ギリギリアウト
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> やんちゃギャルの安城さん
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 佐伯さんは眠ってる
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Kiss×sis
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ハンツー×トラッシュ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 小学生がママでもいいですか？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 【悲報】会社の行き遅れBBA孕ませた
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 自称！平凡魔族の英雄ライフ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> デスラバ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 咲 -Saki-
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔法使いの印刷所
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 大上さん、だだ漏れです。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 都合が良くて可愛いメス。【FANZA限定特典付き】
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヒトモエ委員会 デジタル版
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> マナさんと母屋を離れて…
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> JKハルは異世界で娼婦になった
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 今まで一度も女扱いされたことがない女騎士を女扱いする漫画
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 着たい服がある
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ライドンキング
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界ソープランド輝夜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤンキーJKの異常な愛情
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 【FANZA限定版】モンスター娘の堕とし方
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ばけものえっち【FANZA限定版】
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異種恋愛【電子特装版】【FANZA限定】
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 鬼ヶ島の許婚
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 痛いのは嫌なので防御力に極振りしたいと思います。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 化けネコ葉月の姉妹事情
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界でもふもふなでなでするためにがんばってます。（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 人間以外じゃダメですか？ 人外っ娘・あそーと
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モンスター娘との交合
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 効果検証入門〜正しい比較のための因果推論/計量経済学の基礎
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 酷幻想をアイテムチートで生き抜く THE COMIC 1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ぜつりん！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> クラスが異世界召喚されたなか俺だけ残ったんですが
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 変な知識に詳しい彼女 高床式草子さん
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> お姉さんは女子小学生に興味があります。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 女声男子
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> プラナス・ガール
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おじさんはカワイイものがお好き。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 冒険家になろう！〜スキルボードでダンジョン攻略〜（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ゆうべはお楽しみでしたね
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 変愛彼女〜やだ彼氏のが他の娘に入っちゃってるう〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で失敗しない100の方法
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 田舎のホームセンター男の自由な異世界生活
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> チート薬師のスローライフ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 図書館の大魔術師
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アラフォー男の異世界通販生活
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で 上前はねて 生きていく〜再生魔法使いのゆるふわ人材派遣生活〜（コミック） 1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 商人勇者は異世界を牛耳る！〜栽培スキルでなんでも増やしちゃいます〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ポーション頼みで生き延びます！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 老後に備えて異世界で8万枚の金貨を貯めます
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 事情を知らない転校生がグイグイくる。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ちょっぴり年上でも彼女にしてくれますか？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔術学院を首席で卒業した俺が冒険者を始めるのはそんなにおかしいだろうか
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界チートサバイバル飯
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 完全回避ヒーラーの軌跡
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 剥かせて！竜ケ崎さん
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> いきのこれ！ 社畜ちゃん
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ギャルごはん
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 農民関連のスキルばっか上げてたら何故か強くなった。（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界召喚は二度目です（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界で神様になったので、だいたい何でもできる！！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ハズレ枠の【状態異常スキル】で最強になった俺がすべてを蹂躙するまで
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> リワールド・フロンティア（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 復讐完遂者の人生二周目異世界譚 THE COMIC
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 奴隷商人しか選択肢がないですよ？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ぼっち・ざ・ろっく！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 寄生獣リバーシ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生したらスライムだった件
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 暴食のベルセルク〜俺だけレベルという概念を突破する〜 THE COMIC
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> もふもふを知らなかったら人生の半分は無駄にしていた
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 悪役令嬢の取り巻きやめようと思います
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 金貨1枚で変わる冒険者生活 1巻
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最後にひとつだけお願いしてもよろしいでしょうか 1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おちこぼれフルーツタルト
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 脱オタしてはみたものの
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 社畜と少女の1800日
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> サキちゃんは今夜もぺこぺこ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> デスサイズぷるるん
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 最弱テイマーはゴミ拾いの旅を始めました。@COMIC 第1巻
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 史上最強オークさんの楽しい異世界ハーレムづくり
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> あせとせっけん
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> レベル1の最強賢者 〜呪いで最下級魔法しか使えないけど、神の勘違いで無限の魔力を手に入れ最強に〜 1 【電子版特典イラスト付き】（コミックポルカ）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> フェンリル母さんとあったかご飯（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 幼女戦記
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アタマの中のアレを食べたい
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アスペル・カノジョ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界ちゃんこ〜横綱目前に召喚されたんだが
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 1年A組のモンスター
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> サメガール
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 召喚された賢者は異世界を往く 〜最強なのは不要在庫のアイテムでした〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 聖者無双
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 先生、俺にかまわずイッてください！！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ふたりソロキャンプ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 娘の友達
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> メイドインアビス
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 実践Data Scienceシリーズ PythonではじめるKaggleスタートブック
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> モンスターのご主人様（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おしかけツインテール
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 進化の実〜知らないうちに勝ち組人生〜（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺はロリコンじゃない！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界転生…されてねぇ！（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 永世乙女の戦い方
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 境界迷宮と異界の魔術師
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ひとりぼっちの異世界攻略
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ポンコツ女神の異世界創世録
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ゲーム オブ ファミリア-家族戦記-
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ヤンデレ系乙女ゲーの世界に転生してしまったようです
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔女と淫魔とカワイイお弟子（単話）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 田舎に帰るとやけになついた褐色ポニテショタがいる
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 俺んちに来た女騎士と田舎暮らしすることになった件
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> アラフォーリーマンのシンデレラ転生 1巻
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生魔女よ、暁を謳え （1）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 千のスキルを持つ男 異世界で召喚獣はじめました！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ワールド・ティーチャー 異世界式教育エージェント
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異世界でも風俗嬢やってみた
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異種族巨少女セクステット！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ティアムーン帝国物語（コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> おかしな転生
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 捨てられた皇妃
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 継続は魔力なり〜無能魔法が便利魔法に進化を遂げました〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 悪役令嬢の怠惰な溜め息 1【電子限定特典付き】
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> フリクションガール
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 人間不信の冒険者たちが世界を救うようです
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 訳あり悪役令嬢は、婚約破棄後の人生を自由に生きる
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 雪女と蟹を食う
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ドM女子とがっかり女王様 （1）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 異種族レビュアーズ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 世界を救うために亜人と朝チュンできますか？
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> レジェンド
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 16bitセンセーション 1 私とみんなが作った美少女ゲーム
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 魔導士LV99は空気が読めない
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 彼女、お借りします
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 愛しの国玉 1【電子限定特典付き】
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 古見さんは、コミュ症です。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 史上最強の魔法剣士、Fランク冒険者に転生する 〜剣聖と魔帝、2つの前世を持った男の英雄譚〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 出来損ないと呼ばれた元英雄は、実家から追放されたので好き勝手に生きることにした （コミック）
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 僕の心のヤバイやつ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> せっかくチートを貰って異世界に転移したんだから、好きなように生きてみたい THE COMIC
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> うちの師匠はしっぽがない
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 六道の悪女たち
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 母性天使マザカルカノン 1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> こいつらの正体が女だと俺だけが知っている
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> レベル1だけどユニークスキルで最強です
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 女装してめんどくさい事になってるネクラとヤンキーの両片想い
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 妻、小学生になる。
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 葬送のフリーレン
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 科学的に存在しうるクリーチャー娘の観察日誌
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> とある科学の超電磁砲
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 武士スタント逢坂くん！
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> ナナマル サンバツ
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 声がだせない少女は「彼女が優しすぎる」と思っている
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 女神のスプリンター【DMM限定特典付き】
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> じょしラク！ 〜 2 Years Later〜（単話）
-</span></span></code></pre></div><p>今までにDMM電子書籍で購入した本の一覧を購入日が古い順で全て取得できた。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
-<p>もう少し工夫すればリンクを取得したり、金額を持ってくるようなことも可能だと思うが、時間もかかるし面倒なので今回はやらない。</p>
-<br>
-<p>元々はrequestsモジュールでクローリングしようと思ったが、ログインが上手くいかなくてやめた。</p>
-<p>seleniumは実際の操作をコードに起こすだけなので、ユーザー名・パスワード・ログインボタンの位置(htmlタグのclassやidで特定)さえ分かれば、内部でどんな処理が行われていようとログインできるはずなので、ログインが必要なサイトのクローリングは全部Seleniumでいいんじゃねーかなという気がしている。</p>
-<br>
-<h2 id="参考リンク">参考リンク</h2>
-<ul>
-<li>
-<p>
-<a href="https://qiita.com/syunyo/items/36af8bcb501baf8c7014" target="_blank" rel="noopener">【Python3】ログイン機能付サイトでスクレイピング【requests】【BeautifulSoup】</a></p>
-<ul>
-<li>続きの
-<a href="https://qiita.com/syunyo/items/09cc636344212112a6fc" target="_blank" rel="noopener">【Python3】ブラウザを経由したスクレイピング(動的なページなど)【Selenium】</a>の方も参考にした</li>
-</ul>
-</li>
-<li>
-<p>
-<a href="https://zokibayashi.hatenablog.com/entry/2019/08/30/011556" target="_blank" rel="noopener">デイリーパチンコに接続するコンテナを作った話</a></p>
-<ul>
-<li>DMMログインの部分をまんま拝借</li>
-</ul>
-</li>
-<li>
-<p>
-<a href="https://qiita.com/orangain/items/db4594113c04e8801aad" target="_blank" rel="noopener">SeleniumからHeadless Chromeを使ってみた</a></p>
-<ul>
-<li>
-<p><code>UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead</code>の警告が出ていたので、PhantomJSからChromeに変える際に参考にした。特に
-<a href="https://qiita.com/orangain/items/db4594113c04e8801aad#%E6%BA%96%E5%82%99" target="_blank" rel="noopener">準備</a>の部分を参考にした。</p>
-</li>
-<li>
-<p>実際のコードはほとんど変化ない</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># # PhantomJSのドライバーを得る</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># browser = webdriver.PhantomJS()</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># browser.implicitly_wait(5)</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># ↓</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Chromeのドライバーを得る</span>
-</span></span><span style="display:flex;"><span>options <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>ChromeOptions()
-</span></span><span style="display:flex;"><span>options<span style="color:#f92672">.</span>add_argument(<span style="color:#e6db74">&#39;--headless&#39;</span>) <span style="color:#75715e"># 画面を表示しないオプション</span>
-</span></span><span style="display:flex;"><span>browser <span style="color:#f92672">=</span> webdriver<span style="color:#f92672">.</span>Chrome(options<span style="color:#f92672">=</span>options)
-</span></span><span style="display:flex;"><span>browser<span style="color:#f92672">.</span>implicitly_wait(<span style="color:#ae81ff">5</span>)
-</span></span></code></pre></div></li>
-</ul>
-</li>
-</ul>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>本当に読んだけど、実際は参考リンクの方が役に立った。この本は法律や規約などのことについても触れられているのでタメになる。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p>ちなみにDMM電子書籍は巻数が複数あるものはひとまとめにしているので、実際の冊数はこの一覧よりも多くなっている。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p>やばいエロ漫画があっても気にしないでください&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
-
-    </div>
-
-    
-
-
-
-
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tags/crawling/">crawling</a>
-  
-  <a class="badge badge-light" href="/tags/scraping/">scraping</a>
-  
-  <a class="badge badge-light" href="/tags/python/">Python</a>
-  
-</div>
-
-
-
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="http://twitter.com/intent/tweet?text=%C2%BB&#43;Python&#43;Selenium%e3%81%a7DMM%e9%9b%bb%e5%ad%90%e6%9b%b8%e7%b1%8d%e3%81%ae%e8%b3%bc%e5%85%a5%e6%b8%88%e3%81%bf%e6%9b%b8%e7%b1%8d%e3%81%ae%e4%b8%80%e8%a6%a7%e3%82%92%e5%8f%96%e5%be%97&#43;%7C&#43;%e3%82%b2%e3%83%83%e3%82%bf%e3%80%9c%e3%81%aeHP&amp;url=https://kokuyokugetter.github.io/post/dmmbooks/" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hud3fb04779196eb89622e1c7b7eaa47c4_354302_270x270_fill_lanczos_center_3.PNG" alt="Avatar">
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://kokuyokugetter.github.io/">ゲッタ〜</a></h5>
-      <h6 class="card-subtitle">機械学習エンジニア</h6>
-      <p class="card-text">プログラミングが好き</p>
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:kokuyokugetter&#43;hp@gmail.com" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://x.com/kokuyokugetter" target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/kokuyokugetter" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://kaggle.com/kokuyokugetter" target="_blank" rel="noopener">
-        <i class="fab fa-kaggle"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.youtube.com/channel/UCsV8ILOIMEBFu15kR9YYoIA" target="_blank" rel="noopener">
-        <i class="fab fa-youtube"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://odaibako.net/u/kokuyokugetter" target="_blank" rel="noopener">
-        <i class="fas fa-box-open"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
-  </div>
-
-
-
-
-
-<script src="https://utteranc.es/client.js"
-        repo="kokuyokugetter/kokuyokugetter.github.io"
-        issue-term="pathname"
-        label="Comment"
-        theme="photon-dark"
-        crossorigin="anonymous"
-        async>
-</script>
-<script>
-    MathJax = {
-        tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
-    };
-</script>
-
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
-
-
-
-  
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/post/adaline/">ADALINEの実装をPythonでやってみた</a></li>
-      
-      <li><a href="/post/perceptron/">人工パーセプトロンの実装をpythonでやってみた</a></li>
-      
-      <li><a href="/post/streamlit-demo/">Pythonのコードがそのままwebアプリになる『Streamlit』を試してみた</a></li>
-      
-      <li><a href="/post/abc169-b/">ABC169のB問題にnumpy.prod()を使うと不正解になった件</a></li>
-      
-      <li><a href="/post/juno/">ipadで機械学習ができるiOS/iPadOSアプリの「Juno」を買いました。</a></li>
-      
-    </ul>
-  </div>
-  
-
-
-
-  </div>
-
-  
-
-</article>
-
-      
-
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
-
-      
-
-      
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
-        
-      
-
-    
-
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
-    
-
-    
-    
-    <script>const code_highlighting = true;</script>
-    
-
-    
-    
-    <script>const isSiteThemeDark = false;</script>
-    
-
-    
-    
-    
-    
-    
-    
-    <script>
-      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks"
-        };
-    </script>
-    
-
-    
-    
-
-    
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
-        </div>
-      </div>
-      </div>
-    </script>
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    
-    
-    
-    <script src="/js/academic.min.df22e735169cca39ea07a999d8cba15f.js"></script>
-
-    
-
-
-
-
-
-
-  
-  
-  <div class="container">
-    <footer class="site-footer">
-  
-
-  <p class="powered-by">
-    
-
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
-    
-    <span class="float-right" aria-hidden="true">
-      <a href="#" class="back-to-top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-    
-  </p>
-</footer>
-
-  </div>
-  
-
-  
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body>
-</html>
+</code></pre><div class=highlight-wrapper><div class=highlight><pre tabindex=0 class=chroma><code class=language-markdown data-lang=markdown><span class=line><span class=cl>ログインページにアクセスしました
+</span></span><span class=line><span class=cl>情報を入力してログインボタンを押しました
+</span></span><span class=line><span class=cl><span class=k>-</span> モブサイコ100
+</span></span><span class=line><span class=cl><span class=k>-</span> おしえて！ ギャル子ちゃん
+</span></span><span class=line><span class=cl><span class=k>-</span> 無邪気の楽園
+</span></span><span class=line><span class=cl><span class=k>-</span> とんでもスキルで異世界放浪メシ
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界でスキルを解体したらチートな嫁が増殖しました 概念交差のストラクチャー
+</span></span><span class=line><span class=cl><span class=k>-</span> ブラウンシュガァデイズ
+</span></span><span class=line><span class=cl><span class=k>-</span> ウメハラ FIGHTING GAMERS！
+</span></span><span class=line><span class=cl><span class=k>-</span> なれる！SE
+</span></span><span class=line><span class=cl><span class=k>-</span> 神達に拾われた男
+</span></span><span class=line><span class=cl><span class=k>-</span> 失格紋の最強賢者 〜世界最強の賢者が更に強くなるために転生しました〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 世界最強の後衛 〜迷宮国の新人探索者〜
+</span></span><span class=line><span class=cl><span class=k>-</span> ニートだけどハロワにいったら異世界につれてかれた
+</span></span><span class=line><span class=cl><span class=k>-</span> 無職転生 〜ロキシーだって本気です〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 宝くじで40億当たったんだけど異世界に移住する
+</span></span><span class=line><span class=cl><span class=k>-</span> ゴブリンスレイヤー
+</span></span><span class=line><span class=cl><span class=k>-</span> ゴブリンスレイヤー外伝:イヤーワン
+</span></span><span class=line><span class=cl><span class=k>-</span> 転生したらドラゴンの卵だった〜イバラのドラゴンロード
+</span></span><span class=line><span class=cl><span class=k>-</span> 転生したら剣でした
+</span></span><span class=line><span class=cl><span class=k>-</span> 骸骨騎士様、只今異世界へお出掛け中
+</span></span><span class=line><span class=cl><span class=k>-</span> なんでここに先生が！？
+</span></span><span class=line><span class=cl><span class=k>-</span> 強くてニューサーガ
+</span></span><span class=line><span class=cl><span class=k>-</span> 冒険者になりたいと都に出て行った娘がSランクになってた 黒髪の戦乙女
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界魔法は遅れてる！
+</span></span><span class=line><span class=cl><span class=k>-</span> 即死チートが最強すぎて、異世界のやつらがまるで相手にならないんですが。-ΑΩ-
+</span></span><span class=line><span class=cl><span class=k>-</span> THENEWGATE
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界チート魔術師
+</span></span><span class=line><span class=cl><span class=k>-</span> シロクマ転生 森の守護神になったぞ伝説
+</span></span><span class=line><span class=cl><span class=k>-</span> 蜘蛛ですが、なにか？
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界のんびり農家
+</span></span><span class=line><span class=cl><span class=k>-</span> 没落予定なので、鍛冶職人を目指す
+</span></span><span class=line><span class=cl><span class=k>-</span> 無職転生 〜異世界行ったら本気だす〜
+</span></span><span class=line><span class=cl><span class=k>-</span> スライムライフ
+</span></span><span class=line><span class=cl><span class=k>-</span> とあるおっさんのVRMMO活動記
+</span></span><span class=line><span class=cl><span class=k>-</span> 29歳独身中堅冒険者の日常
+</span></span><span class=line><span class=cl><span class=k>-</span> 100万の命の上に俺は立っている ワケあり無料版 5
+</span></span><span class=line><span class=cl><span class=k>-</span> 最強の職業は勇者でも賢者でもなく鑑定士（仮）らしいですよ？
+</span></span><span class=line><span class=cl><span class=k>-</span> 野生のラスボスが現れた！黒翼の覇王
+</span></span><span class=line><span class=cl><span class=k>-</span> 100万の命の上に俺は立っている
+</span></span><span class=line><span class=cl><span class=k>-</span> 獣医さんのお仕事in異世界
+</span></span><span class=line><span class=cl><span class=k>-</span> 月が導く異世界道中
+</span></span><span class=line><span class=cl><span class=k>-</span> ブサメンガチファイター
+</span></span><span class=line><span class=cl><span class=k>-</span> 平兵士は過去を夢見る
+</span></span><span class=line><span class=cl><span class=k>-</span> 自重しない元勇者の強くて楽しいニューゲーム
+</span></span><span class=line><span class=cl><span class=k>-</span> 努力しすぎた世界最強の武闘家は、魔法世界を余裕で生き抜く。
+</span></span><span class=line><span class=cl><span class=k>-</span> 最強呪族転生〜魔術オタクの理想郷（ユートピア）〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 魔拳のデイドリーマー
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界で『黒の癒し手』って呼ばれています
+</span></span><span class=line><span class=cl><span class=k>-</span> のんびりVRMMO記
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界でカフェを開店しました。
+</span></span><span class=line><span class=cl><span class=k>-</span> 邪竜転生
+</span></span><span class=line><span class=cl><span class=k>-</span> 望まぬ不死の冒険者
+</span></span><span class=line><span class=cl><span class=k>-</span> 黒の召喚士
+</span></span><span class=line><span class=cl><span class=k>-</span> 村人ですが何か？
+</span></span><span class=line><span class=cl><span class=k>-</span> アルゲートオンライン
+</span></span><span class=line><span class=cl><span class=k>-</span> 効率厨魔導師、第二の人生で魔導を極める
+</span></span><span class=line><span class=cl><span class=k>-</span> ワールド・カスタマイズ・クリエー
+</span></span><span class=line><span class=cl><span class=k>-</span> 乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…
+</span></span><span class=line><span class=cl><span class=k>-</span> 成長チートでなんでもできるようになったが、無職だけは辞められないようです
+</span></span><span class=line><span class=cl><span class=k>-</span> マズ飯エルフと遊牧暮らし
+</span></span><span class=line><span class=cl><span class=k>-</span> 賢者の弟子を名乗る賢者 THE COMIC
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界で最強の杖に転生した俺が嫌がる少女をムリヤリ魔法少女にPする！
+</span></span><span class=line><span class=cl><span class=k>-</span> 剣士を目指して入学したのに魔法適性9999なんですけど！？
+</span></span><span class=line><span class=cl><span class=k>-</span> 俺の家が魔力スポットだった件 〜住んでいるだけで世界最強〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界迷宮でハーレムを
+</span></span><span class=line><span class=cl><span class=k>-</span> 欲望パンドラ
+</span></span><span class=line><span class=cl><span class=k>-</span> 転生しちゃったよ（いや、ごめん）
+</span></span><span class=line><span class=cl><span class=k>-</span> さようなら竜生、こんにちは人生
+</span></span><span class=line><span class=cl><span class=k>-</span> 素材採取家の異世界旅行記
+</span></span><span class=line><span class=cl><span class=k>-</span> ヤンキーは異世界で精霊に愛されます。
+</span></span><span class=line><span class=cl><span class=k>-</span> 俺と蛙さんの異世界放浪記
+</span></span><span class=line><span class=cl><span class=k>-</span> 軍オタが魔法世界に転生したら、現代兵器で軍隊ハーレムを作っちゃいました！？
+</span></span><span class=line><span class=cl><span class=k>-</span> 真の仲間じゃないと勇者のパーティーを追い出されたので、辺境でスローライフすることにしました
+</span></span><span class=line><span class=cl><span class=k>-</span> ありふれた日常で世界最強
+</span></span><span class=line><span class=cl><span class=k>-</span> ありふれた職業で世界最強
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界を制御魔法で切り開け！
+</span></span><span class=line><span class=cl><span class=k>-</span> アルマディアノス英雄伝
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界転生騒動記
+</span></span><span class=line><span class=cl><span class=k>-</span> じょしラク！
+</span></span><span class=line><span class=cl><span class=k>-</span> 駆除人
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界で孤児院を開いたけど、なぜか誰一人巣立とうとしない件【カラー増量版】
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界おじさん
+</span></span><span class=line><span class=cl><span class=k>-</span> 辺境の老騎士 バルド・ローエン
+</span></span><span class=line><span class=cl><span class=k>-</span> 宝石の国
+</span></span><span class=line><span class=cl><span class=k>-</span> うちの娘の為ならば、俺はもしかしたら魔王も倒せるかもしれない。
+</span></span><span class=line><span class=cl><span class=k>-</span> てのひら開拓村で異世界建国記
+</span></span><span class=line><span class=cl><span class=k>-</span> ガチャを回して仲間を増やす 最強の美少女軍団を作り上げろ THE COMIC
+</span></span><span class=line><span class=cl><span class=k>-</span> 二度目の勇者は復讐の道を嗤い歩む
+</span></span><span class=line><span class=cl><span class=k>-</span> 四度目は嫌な死属性魔術師
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界ゆるり紀行 〜子育てしながら冒険者します〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界支配のスキルテイカー ゼロから始める奴隷ハーレム
+</span></span><span class=line><span class=cl><span class=k>-</span> 聖女の魔力は万能です
+</span></span><span class=line><span class=cl><span class=k>-</span> 神さまSHOPでチートの香り
+</span></span><span class=line><span class=cl><span class=k>-</span> 転生貴族の異世界冒険録
+</span></span><span class=line><span class=cl><span class=k>-</span> 食べるだけでレベルアップ！ 〜駄女神といっしょに異世界無双〜（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> ワンワン物語 〜金持ちの犬にしてとは言ったが、フェンリルにしろとは言ってねえ！〜
+</span></span><span class=line><span class=cl><span class=k>-</span> おっさんのリメイク冒険日記
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界ですが魔物栽培しています。
+</span></span><span class=line><span class=cl><span class=k>-</span> 二度目の人生を異世界で
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界の迷宮都市で治癒魔法使いやってます（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 魔王になったので、ダンジョン造って人外娘とほのぼのする
+</span></span><span class=line><span class=cl><span class=k>-</span> 最果てのパラディン
+</span></span><span class=line><span class=cl><span class=k>-</span> 魔王様の街づくり！ 〜最強のダンジョンは近代都市〜
+</span></span><span class=line><span class=cl><span class=k>-</span> ダンジョンシーカー
+</span></span><span class=line><span class=cl><span class=k>-</span> マギクラフト・マイスター
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界温泉に転生した俺の効能がとんでもすぎる
+</span></span><span class=line><span class=cl><span class=k>-</span> 物語の中の人
+</span></span><span class=line><span class=cl><span class=k>-</span> 地方騎士ハンスの受難
+</span></span><span class=line><span class=cl><span class=k>-</span> LV999の村人
+</span></span><span class=line><span class=cl><span class=k>-</span> 精霊達の楽園と理想の異世界生活
+</span></span><span class=line><span class=cl><span class=k>-</span> モノノケ！！！！
+</span></span><span class=line><span class=cl><span class=k>-</span> どうやら私の身体は完全無敵のようですね
+</span></span><span class=line><span class=cl><span class=k>-</span> 魔王の始め方 THE COMIC
+</span></span><span class=line><span class=cl><span class=k>-</span> マージナル・オペレーション
+</span></span><span class=line><span class=cl><span class=k>-</span> 転生王子はダラけたい
+</span></span><span class=line><span class=cl><span class=k>-</span> 豚公爵に転生したから、今度は君に好きと言いたい
+</span></span><span class=line><span class=cl><span class=k>-</span> レディローズは平民になりたい
+</span></span><span class=line><span class=cl><span class=k>-</span> モンスターがあふれる世界になったので、好きに生きたいと思います
+</span></span><span class=line><span class=cl><span class=k>-</span> Sランクモンスターの《ベヒーモス》だけど、猫と間違われてエルフ娘の騎士（ペット）として暮らしてます
+</span></span><span class=line><span class=cl><span class=k>-</span> Re:Monster
+</span></span><span class=line><span class=cl><span class=k>-</span> 俺だけ入れる隠しダンジョン 〜こっそり鍛えて世界最強〜
+</span></span><span class=line><span class=cl><span class=k>-</span> Only Sense Online ―オンリーセンス・オンライン―
+</span></span><span class=line><span class=cl><span class=k>-</span> ヤングジャンプ
+</span></span><span class=line><span class=cl><span class=k>-</span> ヒストリエ
+</span></span><span class=line><span class=cl><span class=k>-</span> 専門学校JK Ctrl＋Z （1）
+</span></span><span class=line><span class=cl><span class=k>-</span> 大家さんと僕
+</span></span><span class=line><span class=cl><span class=k>-</span> 専門学校JK
+</span></span><span class=line><span class=cl><span class=k>-</span> 理想のヒモ生活
+</span></span><span class=line><span class=cl><span class=k>-</span> Lv2からチートだった元勇者候補のまったり異世界ライフ
+</span></span><span class=line><span class=cl><span class=k>-</span> 僕の部屋がダンジョンの休憩所になってしまった件【パートカラー版】
+</span></span><span class=line><span class=cl><span class=k>-</span> おっさん冒険者ケインの善行
+</span></span><span class=line><span class=cl><span class=k>-</span> 陰の実力者になりたくて！
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界系ファンタジー ガンガンいこうぜ！大ボリューム試し読みパック
+</span></span><span class=line><span class=cl><span class=k>-</span> 史上最強の大魔王、 村人Aに転生する
+</span></span><span class=line><span class=cl><span class=k>-</span> 機械学習のエッセンス 実装しながら学ぶPython、数学、アルゴリズム
+</span></span><span class=line><span class=cl><span class=k>-</span> データサイエンティスト養成読本 ビジネス活用編
+</span></span><span class=line><span class=cl><span class=k>-</span> Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド―
+</span></span><span class=line><span class=cl><span class=k>-</span> 絶対にヤッてはいけない異世界召喚
+</span></span><span class=line><span class=cl><span class=k>-</span> 水女神は今日も恋をするか？
+</span></span><span class=line><span class=cl><span class=k>-</span> ［第2版］Python機械学習プログラミング 達人データサイエンティストによる理論と実践
+</span></span><span class=line><span class=cl><span class=k>-</span> Rによるやさしい統計学
+</span></span><span class=line><span class=cl><span class=k>-</span> 暗殺者である俺のステータスが勇者よりも明らかに強いのだが
+</span></span><span class=line><span class=cl><span class=k>-</span> 少女奴●スクール
+</span></span><span class=line><span class=cl><span class=k>-</span> ボコボコりんっ！
+</span></span><span class=line><span class=cl><span class=k>-</span> 早乙女選手、ひたかくす
+</span></span><span class=line><span class=cl><span class=k>-</span> Kaggleで勝つデータ分析の技術
+</span></span><span class=line><span class=cl><span class=k>-</span> リビドーハンタータケル
+</span></span><span class=line><span class=cl><span class=k>-</span> ヤクザの大親分が幼女に生まれ変わった話 1巻
+</span></span><span class=line><span class=cl><span class=k>-</span> いきのこれ！ 社畜ちゃん 〜後輩ちゃんオタ活動記〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 魔王様、リトライ！（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> アラフォー社畜のゴーレムマスター（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> ガイシューイッショク！
+</span></span><span class=line><span class=cl><span class=k>-</span> 紀元前1万年のオタ デジタルモザイク版
+</span></span><span class=line><span class=cl><span class=k>-</span> ここは俺に任せて先に行けと言ってから10年がたったら伝説になっていた。
+</span></span><span class=line><span class=cl><span class=k>-</span> 異種族レビュアーズコミックアンソロジー 〜ダークネス〜
+</span></span><span class=line><span class=cl><span class=k>-</span> うれしょん！
+</span></span><span class=line><span class=cl><span class=k>-</span> ギリギリアウト
+</span></span><span class=line><span class=cl><span class=k>-</span> やんちゃギャルの安城さん
+</span></span><span class=line><span class=cl><span class=k>-</span> 佐伯さんは眠ってる
+</span></span><span class=line><span class=cl><span class=k>-</span> Kiss×sis
+</span></span><span class=line><span class=cl><span class=k>-</span> ハンツー×トラッシュ
+</span></span><span class=line><span class=cl><span class=k>-</span> 小学生がママでもいいですか？
+</span></span><span class=line><span class=cl><span class=k>-</span> 【悲報】会社の行き遅れBBA孕ませた
+</span></span><span class=line><span class=cl><span class=k>-</span> 自称！平凡魔族の英雄ライフ
+</span></span><span class=line><span class=cl><span class=k>-</span> デスラバ
+</span></span><span class=line><span class=cl><span class=k>-</span> 咲 -Saki-
+</span></span><span class=line><span class=cl><span class=k>-</span> 魔法使いの印刷所
+</span></span><span class=line><span class=cl><span class=k>-</span> 大上さん、だだ漏れです。
+</span></span><span class=line><span class=cl><span class=k>-</span> 都合が良くて可愛いメス。【FANZA限定特典付き】
+</span></span><span class=line><span class=cl><span class=k>-</span> ヒトモエ委員会 デジタル版
+</span></span><span class=line><span class=cl><span class=k>-</span> マナさんと母屋を離れて…
+</span></span><span class=line><span class=cl><span class=k>-</span> JKハルは異世界で娼婦になった
+</span></span><span class=line><span class=cl><span class=k>-</span> 今まで一度も女扱いされたことがない女騎士を女扱いする漫画
+</span></span><span class=line><span class=cl><span class=k>-</span> 着たい服がある
+</span></span><span class=line><span class=cl><span class=k>-</span> ライドンキング
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界ソープランド輝夜
+</span></span><span class=line><span class=cl><span class=k>-</span> ヤンキーJKの異常な愛情
+</span></span><span class=line><span class=cl><span class=k>-</span> 【FANZA限定版】モンスター娘の堕とし方
+</span></span><span class=line><span class=cl><span class=k>-</span> ばけものえっち【FANZA限定版】
+</span></span><span class=line><span class=cl><span class=k>-</span> 異種恋愛【電子特装版】【FANZA限定】
+</span></span><span class=line><span class=cl><span class=k>-</span> 鬼ヶ島の許婚
+</span></span><span class=line><span class=cl><span class=k>-</span> 痛いのは嫌なので防御力に極振りしたいと思います。
+</span></span><span class=line><span class=cl><span class=k>-</span> 化けネコ葉月の姉妹事情
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界でもふもふなでなでするためにがんばってます。（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 人間以外じゃダメですか？ 人外っ娘・あそーと
+</span></span><span class=line><span class=cl><span class=k>-</span> モンスター娘との交合
+</span></span><span class=line><span class=cl><span class=k>-</span> 効果検証入門〜正しい比較のための因果推論/計量経済学の基礎
+</span></span><span class=line><span class=cl><span class=k>-</span> 酷幻想をアイテムチートで生き抜く THE COMIC 1
+</span></span><span class=line><span class=cl><span class=k>-</span> ぜつりん！
+</span></span><span class=line><span class=cl><span class=k>-</span> クラスが異世界召喚されたなか俺だけ残ったんですが
+</span></span><span class=line><span class=cl><span class=k>-</span> 変な知識に詳しい彼女 高床式草子さん
+</span></span><span class=line><span class=cl><span class=k>-</span> お姉さんは女子小学生に興味があります。
+</span></span><span class=line><span class=cl><span class=k>-</span> 女声男子
+</span></span><span class=line><span class=cl><span class=k>-</span> プラナス・ガール
+</span></span><span class=line><span class=cl><span class=k>-</span> おじさんはカワイイものがお好き。
+</span></span><span class=line><span class=cl><span class=k>-</span> 冒険家になろう！〜スキルボードでダンジョン攻略〜（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> ゆうべはお楽しみでしたね
+</span></span><span class=line><span class=cl><span class=k>-</span> 変愛彼女〜やだ彼氏のが他の娘に入っちゃってるう〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界で失敗しない100の方法
+</span></span><span class=line><span class=cl><span class=k>-</span> 田舎のホームセンター男の自由な異世界生活
+</span></span><span class=line><span class=cl><span class=k>-</span> チート薬師のスローライフ
+</span></span><span class=line><span class=cl><span class=k>-</span> 図書館の大魔術師
+</span></span><span class=line><span class=cl><span class=k>-</span> アラフォー男の異世界通販生活
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界で 上前はねて 生きていく〜再生魔法使いのゆるふわ人材派遣生活〜（コミック） 1
+</span></span><span class=line><span class=cl><span class=k>-</span> 古竜なら素手で倒せますけど、これって常識じゃないんですか？（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 商人勇者は異世界を牛耳る！〜栽培スキルでなんでも増やしちゃいます〜
+</span></span><span class=line><span class=cl><span class=k>-</span> ポーション頼みで生き延びます！
+</span></span><span class=line><span class=cl><span class=k>-</span> 老後に備えて異世界で8万枚の金貨を貯めます
+</span></span><span class=line><span class=cl><span class=k>-</span> 事情を知らない転校生がグイグイくる。
+</span></span><span class=line><span class=cl><span class=k>-</span> ちょっぴり年上でも彼女にしてくれますか？
+</span></span><span class=line><span class=cl><span class=k>-</span> 魔術学院を首席で卒業した俺が冒険者を始めるのはそんなにおかしいだろうか
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界チートサバイバル飯
+</span></span><span class=line><span class=cl><span class=k>-</span> 完全回避ヒーラーの軌跡
+</span></span><span class=line><span class=cl><span class=k>-</span> 剥かせて！竜ケ崎さん
+</span></span><span class=line><span class=cl><span class=k>-</span> いきのこれ！ 社畜ちゃん
+</span></span><span class=line><span class=cl><span class=k>-</span> ギャルごはん
+</span></span><span class=line><span class=cl><span class=k>-</span> 農民関連のスキルばっか上げてたら何故か強くなった。（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界召喚は二度目です（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界で神様になったので、だいたい何でもできる！！
+</span></span><span class=line><span class=cl><span class=k>-</span> ハズレ枠の【状態異常スキル】で最強になった俺がすべてを蹂躙するまで
+</span></span><span class=line><span class=cl><span class=k>-</span> リワールド・フロンティア（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 復讐完遂者の人生二周目異世界譚 THE COMIC
+</span></span><span class=line><span class=cl><span class=k>-</span> 奴隷商人しか選択肢がないですよ？
+</span></span><span class=line><span class=cl><span class=k>-</span> ぼっち・ざ・ろっく！
+</span></span><span class=line><span class=cl><span class=k>-</span> 寄生獣リバーシ
+</span></span><span class=line><span class=cl><span class=k>-</span> 転生したらスライムだった件
+</span></span><span class=line><span class=cl><span class=k>-</span> 暴食のベルセルク〜俺だけレベルという概念を突破する〜 THE COMIC
+</span></span><span class=line><span class=cl><span class=k>-</span> もふもふを知らなかったら人生の半分は無駄にしていた
+</span></span><span class=line><span class=cl><span class=k>-</span> 悪役令嬢の取り巻きやめようと思います
+</span></span><span class=line><span class=cl><span class=k>-</span> 金貨1枚で変わる冒険者生活 1巻
+</span></span><span class=line><span class=cl><span class=k>-</span> 最後にひとつだけお願いしてもよろしいでしょうか 1
+</span></span><span class=line><span class=cl><span class=k>-</span> おちこぼれフルーツタルト
+</span></span><span class=line><span class=cl><span class=k>-</span> 脱オタしてはみたものの
+</span></span><span class=line><span class=cl><span class=k>-</span> 社畜と少女の1800日
+</span></span><span class=line><span class=cl><span class=k>-</span> サキちゃんは今夜もぺこぺこ
+</span></span><span class=line><span class=cl><span class=k>-</span> デスサイズぷるるん
+</span></span><span class=line><span class=cl><span class=k>-</span> 最弱テイマーはゴミ拾いの旅を始めました。<span class=ni>@COMIC</span> 第1巻
+</span></span><span class=line><span class=cl><span class=k>-</span> 史上最強オークさんの楽しい異世界ハーレムづくり
+</span></span><span class=line><span class=cl><span class=k>-</span> あせとせっけん
+</span></span><span class=line><span class=cl><span class=k>-</span> レベル1の最強賢者 〜呪いで最下級魔法しか使えないけど、神の勘違いで無限の魔力を手に入れ最強に〜 1 【電子版特典イラスト付き】（コミックポルカ）
+</span></span><span class=line><span class=cl><span class=k>-</span> フェンリル母さんとあったかご飯（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 幼女戦記
+</span></span><span class=line><span class=cl><span class=k>-</span> アタマの中のアレを食べたい
+</span></span><span class=line><span class=cl><span class=k>-</span> アスペル・カノジョ
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界ちゃんこ〜横綱目前に召喚されたんだが
+</span></span><span class=line><span class=cl><span class=k>-</span> 1年A組のモンスター
+</span></span><span class=line><span class=cl><span class=k>-</span> サメガール
+</span></span><span class=line><span class=cl><span class=k>-</span> 召喚された賢者は異世界を往く 〜最強なのは不要在庫のアイテムでした〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 聖者無双
+</span></span><span class=line><span class=cl><span class=k>-</span> 先生、俺にかまわずイッてください！！
+</span></span><span class=line><span class=cl><span class=k>-</span> ふたりソロキャンプ
+</span></span><span class=line><span class=cl><span class=k>-</span> 娘の友達
+</span></span><span class=line><span class=cl><span class=k>-</span> メイドインアビス
+</span></span><span class=line><span class=cl><span class=k>-</span> 実践Data Scienceシリーズ PythonではじめるKaggleスタートブック
+</span></span><span class=line><span class=cl><span class=k>-</span> モンスターのご主人様（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> おしかけツインテール
+</span></span><span class=line><span class=cl><span class=k>-</span> 進化の実〜知らないうちに勝ち組人生〜（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 俺はロリコンじゃない！
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界転生…されてねぇ！（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 永世乙女の戦い方
+</span></span><span class=line><span class=cl><span class=k>-</span> 境界迷宮と異界の魔術師
+</span></span><span class=line><span class=cl><span class=k>-</span> ひとりぼっちの異世界攻略
+</span></span><span class=line><span class=cl><span class=k>-</span> ポンコツ女神の異世界創世録
+</span></span><span class=line><span class=cl><span class=k>-</span> ゲーム オブ ファミリア-家族戦記-
+</span></span><span class=line><span class=cl><span class=k>-</span> ヤンデレ系乙女ゲーの世界に転生してしまったようです
+</span></span><span class=line><span class=cl><span class=k>-</span> 魔女と淫魔とカワイイお弟子（単話）
+</span></span><span class=line><span class=cl><span class=k>-</span> 田舎に帰るとやけになついた褐色ポニテショタがいる
+</span></span><span class=line><span class=cl><span class=k>-</span> 俺んちに来た女騎士と田舎暮らしすることになった件
+</span></span><span class=line><span class=cl><span class=k>-</span> アラフォーリーマンのシンデレラ転生 1巻
+</span></span><span class=line><span class=cl><span class=k>-</span> 転生魔女よ、暁を謳え （1）
+</span></span><span class=line><span class=cl><span class=k>-</span> 千のスキルを持つ男 異世界で召喚獣はじめました！
+</span></span><span class=line><span class=cl><span class=k>-</span> ワールド・ティーチャー 異世界式教育エージェント
+</span></span><span class=line><span class=cl><span class=k>-</span> 異世界でも風俗嬢やってみた
+</span></span><span class=line><span class=cl><span class=k>-</span> 異種族巨少女セクステット！
+</span></span><span class=line><span class=cl><span class=k>-</span> ティアムーン帝国物語（コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> おかしな転生
+</span></span><span class=line><span class=cl><span class=k>-</span> 捨てられた皇妃
+</span></span><span class=line><span class=cl><span class=k>-</span> 継続は魔力なり〜無能魔法が便利魔法に進化を遂げました〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 悪役令嬢の怠惰な溜め息 1【電子限定特典付き】
+</span></span><span class=line><span class=cl><span class=k>-</span> フリクションガール
+</span></span><span class=line><span class=cl><span class=k>-</span> 人間不信の冒険者たちが世界を救うようです
+</span></span><span class=line><span class=cl><span class=k>-</span> 訳あり悪役令嬢は、婚約破棄後の人生を自由に生きる
+</span></span><span class=line><span class=cl><span class=k>-</span> 雪女と蟹を食う
+</span></span><span class=line><span class=cl><span class=k>-</span> ドM女子とがっかり女王様 （1）
+</span></span><span class=line><span class=cl><span class=k>-</span> 異種族レビュアーズ
+</span></span><span class=line><span class=cl><span class=k>-</span> 世界を救うために亜人と朝チュンできますか？
+</span></span><span class=line><span class=cl><span class=k>-</span> レジェンド
+</span></span><span class=line><span class=cl><span class=k>-</span> 16bitセンセーション 1 私とみんなが作った美少女ゲーム
+</span></span><span class=line><span class=cl><span class=k>-</span> 魔導士LV99は空気が読めない
+</span></span><span class=line><span class=cl><span class=k>-</span> 彼女、お借りします
+</span></span><span class=line><span class=cl><span class=k>-</span> 愛しの国玉 1【電子限定特典付き】
+</span></span><span class=line><span class=cl><span class=k>-</span> 古見さんは、コミュ症です。
+</span></span><span class=line><span class=cl><span class=k>-</span> 史上最強の魔法剣士、Fランク冒険者に転生する 〜剣聖と魔帝、2つの前世を持った男の英雄譚〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 出来損ないと呼ばれた元英雄は、実家から追放されたので好き勝手に生きることにした （コミック）
+</span></span><span class=line><span class=cl><span class=k>-</span> 僕の心のヤバイやつ
+</span></span><span class=line><span class=cl><span class=k>-</span> せっかくチートを貰って異世界に転移したんだから、好きなように生きてみたい THE COMIC
+</span></span><span class=line><span class=cl><span class=k>-</span> うちの師匠はしっぽがない
+</span></span><span class=line><span class=cl><span class=k>-</span> 六道の悪女たち
+</span></span><span class=line><span class=cl><span class=k>-</span> 母性天使マザカルカノン 1
+</span></span><span class=line><span class=cl><span class=k>-</span> こいつらの正体が女だと俺だけが知っている
+</span></span><span class=line><span class=cl><span class=k>-</span> レベル1だけどユニークスキルで最強です
+</span></span><span class=line><span class=cl><span class=k>-</span> 女装してめんどくさい事になってるネクラとヤンキーの両片想い
+</span></span><span class=line><span class=cl><span class=k>-</span> 妻、小学生になる。
+</span></span><span class=line><span class=cl><span class=k>-</span> 転生吸血鬼さんはお昼寝がしたい〜Please take care of me.〜
+</span></span><span class=line><span class=cl><span class=k>-</span> 葬送のフリーレン
+</span></span><span class=line><span class=cl><span class=k>-</span> 科学的に存在しうるクリーチャー娘の観察日誌
+</span></span><span class=line><span class=cl><span class=k>-</span> とある科学の超電磁砲
+</span></span><span class=line><span class=cl><span class=k>-</span> 武士スタント逢坂くん！
+</span></span><span class=line><span class=cl><span class=k>-</span> ナナマル サンバツ
+</span></span><span class=line><span class=cl><span class=k>-</span> 声がだせない少女は「彼女が優しすぎる」と思っている
+</span></span><span class=line><span class=cl><span class=k>-</span> 女神のスプリンター【DMM限定特典付き】
+</span></span><span class=line><span class=cl>- じょしラク！ 〜 2 Years Later〜（単話）</span></span></code></pre></div></div><p>今までにDMM電子書籍で購入した本の一覧を購入日が古い順で全て取得できた。<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup> <sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup></p><p>もう少し工夫すればリンクを取得したり、金額を持ってくるようなことも可能だと思うが、時間もかかるし面倒なので今回はやらない。</p><br><p>元々はrequestsモジュールでクローリングしようと思ったが、ログインが上手くいかなくてやめた。</p><p>seleniumは実際の操作をコードに起こすだけなので、ユーザー名・パスワード・ログインボタンの位置(htmlタグのclassやidで特定)さえ分かれば、内部でどんな処理が行われていようとログインできるはずなので、ログインが必要なサイトのクローリングは全部Seleniumでいいんじゃねーかなという気がしている。</p><br><h2 class="relative group">参考リンク<div id=参考リンク class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#%e5%8f%82%e8%80%83%e3%83%aa%e3%83%b3%e3%82%af aria-label=アンカー>#</a></span></h2><ul><li><p><a href=https://qiita.com/syunyo/items/36af8bcb501baf8c7014 target=_blank rel=noreferrer>【Python3】ログイン機能付サイトでスクレイピング【requests】【BeautifulSoup】</a></p><ul><li>続きの<a href=https://qiita.com/syunyo/items/09cc636344212112a6fc target=_blank rel=noreferrer>【Python3】ブラウザを経由したスクレイピング(動的なページなど)【Selenium】</a>の方も参考にした</li></ul></li><li><p><a href=https://zokibayashi.hatenablog.com/entry/2019/08/30/011556 target=_blank rel=noreferrer>デイリーパチンコに接続するコンテナを作った話</a></p><ul><li>DMMログインの部分をまんま拝借</li></ul></li><li><p><a href=https://qiita.com/orangain/items/db4594113c04e8801aad target=_blank rel=noreferrer>SeleniumからHeadless Chromeを使ってみた</a></p><ul><li><p><code>UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead</code>の警告が出ていたので、PhantomJSからChromeに変える際に参考にした。特に<a href=https://qiita.com/orangain/items/db4594113c04e8801aad#%E6%BA%96%E5%82%99 target=_blank rel=noreferrer>準備</a>の部分を参考にした。</p></li><li><p>実際のコードはほとんど変化ない</p><div class=highlight-wrapper><div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=line><span class=cl><span class=c1># # PhantomJSのドライバーを得る</span>
+</span></span><span class=line><span class=cl><span class=c1># browser = webdriver.PhantomJS()</span>
+</span></span><span class=line><span class=cl><span class=c1># browser.implicitly_wait(5)</span>
+</span></span><span class=line><span class=cl><span class=c1># ↓</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Chromeのドライバーを得る</span>
+</span></span><span class=line><span class=cl><span class=n>options</span> <span class=o>=</span> <span class=n>webdriver</span><span class=o>.</span><span class=n>ChromeOptions</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>options</span><span class=o>.</span><span class=n>add_argument</span><span class=p>(</span><span class=s1>&#39;--headless&#39;</span><span class=p>)</span> <span class=c1># 画面を表示しないオプション</span>
+</span></span><span class=line><span class=cl><span class=n>browser</span> <span class=o>=</span> <span class=n>webdriver</span><span class=o>.</span><span class=n>Chrome</span><span class=p>(</span><span class=n>options</span><span class=o>=</span><span class=n>options</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>browser</span><span class=o>.</span><span class=n>implicitly_wait</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span></span></span></code></pre></div></div></li></ul></li></ul><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>本当に読んだけど、実際は参考リンクの方が役に立った。この本は法律や規約などのことについても触れられているのでタメになる。&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>ちなみにDMM電子書籍は巻数が複数あるものはひとまとめにしているので、実際の冊数はこの一覧よりも多くなっている。&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p>やばいエロ漫画があっても気にしないでください&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div><section class="flex flex-row flex-wrap justify-center pt-4 text-xl"><a class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" target=_blank href="https://twitter.com/intent/tweet/?url=https://kokuyokugetter.github.io/post/dmmbooks/&amp;text=Python+Selenium%e3%81%a7DMM%e9%9b%bb%e5%ad%90%e6%9b%b8%e7%b1%8d%e3%81%ae%e8%b3%bc%e5%85%a5%e6%b8%88%e3%81%bf%e6%9b%b8%e7%b1%8d%e3%81%ae%e4%b8%80%e8%a6%a7%e3%82%92%e5%8f%96%e5%be%97" title=Twitterに投稿する aria-label=Twitterに投稿する><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></span>
+</a><a class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" target=_blank href="https://www.facebook.com/sharer/sharer.php?u=https://kokuyokugetter.github.io/post/dmmbooks/&amp;quote=Python+Selenium%e3%81%a7DMM%e9%9b%bb%e5%ad%90%e6%9b%b8%e7%b1%8d%e3%81%ae%e8%b3%bc%e5%85%a5%e6%b8%88%e3%81%bf%e6%9b%b8%e7%b1%8d%e3%81%ae%e4%b8%80%e8%a6%a7%e3%82%92%e5%8f%96%e5%be%97" title=Facebookでシェアする aria-label=Facebookでシェアする><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14.0 55.52 4.84 55.52 4.84v61h-31.28c-30.8.0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+</span></a><a class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" target=_blank href="mailto:?body=https://kokuyokugetter.github.io/post/dmmbooks/&amp;subject=Python+Selenium%e3%81%a7DMM%e9%9b%bb%e5%ad%90%e6%9b%b8%e7%b1%8d%e3%81%ae%e8%b3%bc%e5%85%a5%e6%b8%88%e3%81%bf%e6%9b%b8%e7%b1%8d%e3%81%ae%e4%b8%80%e8%a6%a7%e3%82%92%e5%8f%96%e5%be%97" title=" Eメールを送る" aria-label=" Eメールを送る"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1-27.64 140.9 68.65 266.2 199.1 285.1 19.01 2.888 36.17-12.26 36.17-31.49l1e-4-.6631c0-15.74-11.44-28.88-26.84-31.24-84.35-12.98-149.2-86.13-149.2-174.2.0-102.9 88.61-185.5 193.4-175.4 91.54 8.869 158.6 91.25 158.6 183.2v16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98.0036c-7.299.0-13.2 4.992-15.12 11.68-24.85-12.15-54.24-16.38-86.06-5.106-38.75 13.73-68.12 48.91-73.72 89.64-9.483 69.01 43.81 128 110.9 128 26.44.0 50.43-9.544 69.59-24.88 24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3c0-149.2-133.9-265.632-287.3-235.57zM239.1 304.3c-26.47.0-48-21.56-48-48.05s21.53-48.05 48-48.05 48 21.56 48 48.05-20.6 48.05-48 48.05z"/></svg>
+</span></a><a class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" target=_blank href="https://line.me/R/share?text=https://kokuyokugetter.github.io/post/dmmbooks/%20Python+Selenium%e3%81%a7DMM%e9%9b%bb%e5%ad%90%e6%9b%b8%e7%b1%8d%e3%81%ae%e8%b3%bc%e5%85%a5%e6%b8%88%e3%81%bf%e6%9b%b8%e7%b1%8d%e3%81%ae%e4%b8%80%e8%a6%a7%e3%82%92%e5%8f%96%e5%be%97" title=LINEでシェアする aria-label=LINEでシェアする><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M311 196.8v81.3c0 2.1-1.6 3.7-3.7 3.7h-13c-1.3.0-2.4-.7-3-1.5L254 230v48.2c0 2.1-1.6 3.7-3.7 3.7h-13c-2.1.0-3.7-1.6-3.7-3.7V196.9c0-2.1 1.6-3.7 3.7-3.7h12.9c1.1.0 2.4.6 3 1.6l37.3 50.3V196.9c0-2.1 1.6-3.7 3.7-3.7h13c2.1-.1 3.8 1.6 3.8 3.5zm-93.7-3.7h-13c-2.1.0-3.7 1.6-3.7 3.7v81.3c0 2.1 1.6 3.7 3.7 3.7h13c2.1.0 3.7-1.6 3.7-3.7V196.8c0-1.9-1.6-3.7-3.7-3.7zm-31.4 68.1H150.3V196.8c0-2.1-1.6-3.7-3.7-3.7h-13c-2.1.0-3.7 1.6-3.7 3.7v81.3c0 1 .3 1.8 1 2.5.7.6 1.5 1 2.5 1h52.2c2.1.0 3.7-1.6 3.7-3.7v-13c0-1.9-1.6-3.7-3.5-3.7zm193.7-68.1H327.3c-1.9.0-3.7 1.6-3.7 3.7v81.3c0 1.9 1.6 3.7 3.7 3.7h52.2c2.1.0 3.7-1.6 3.7-3.7V265c0-2.1-1.6-3.7-3.7-3.7H344V247.7h35.5c2.1.0 3.7-1.6 3.7-3.7V230.9c0-2.1-1.6-3.7-3.7-3.7H344V213.5h35.5c2.1.0 3.7-1.6 3.7-3.7v-13c-.1-1.9-1.7-3.7-3.7-3.7zM512 93.4v326c-.1 51.2-42.1 92.7-93.4 92.6H92.6C41.4 511.9-.1 469.8.0 418.6V92.6C.1 41.4 42.2-.1 93.4.0h326c51.2.1 92.7 42.1 92.6 93.4zM441.6 233.5c0-83.4-83.7-151.3-186.4-151.3S68.8 150.1 68.8 233.5c0 74.7 66.3 137.4 155.9 149.3 21.8 4.7 19.3 12.7 14.4 42.1-.8 4.7-3.8 18.4 16.1 10.1s107.3-63.2 146.5-108.2c27-29.7 39.9-59.8 39.9-93.1z"/></svg></span></a></section><h2 class="mt-8 text-2xl font-extrabold mb-10">関連記事</h2><section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3"><article class="article-link--related group relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"><div class="flex-none relative overflow-hidden thumbnail_card_related" style=--thumbnail-aspect-ratio:1.5><img src=/post/adaline/featured_hu_536aff55fb745a13.jpg alt=ADALINEの実装をPythonでやってみた loading=lazy decoding=async fetchpriority=low class="nozoom not-prose absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"></div><div class=p-4><header><a href=/post/adaline/ class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"><h2>ADALINEの実装をPythonでやってみた</h2></a></header><div class="text-sm text-neutral-500 dark:text-neutral-400"><div class="flex flex-row flex-wrap items-center"><time datetime=2020-10-23T00:18:58+09:00>2020.10.23</time><span class="px-2 text-primary-500">&#183;</span><span title=読むのに必要な時間>8 分</span></div><div class="flex flex-row flex-wrap items-center"><a class="relative mt-[0.5rem] me-2" href=/categories/tech/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Tech
+</span></span></a><a class="relative mt-[0.5rem] me-2" href=/tags/machine-learning/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Machine-Learning
+</span></span></a><a class="relative mt-[0.5rem] me-2" href=/tags/python/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Python</span></span></a></div></div><div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">前回の続き、パーセプトロンを若干改良</div></div><div class="px-6 pt-4 pb-2"></div></article><article class="article-link--related group relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"><div class="flex-none relative overflow-hidden thumbnail_card_related" style=--thumbnail-aspect-ratio:1.5><img src=/post/perceptron/featured_hu_174f1dbc6cc9dbce.jpg alt=人工パーセプトロンの実装をpythonでやってみた loading=lazy decoding=async fetchpriority=low class="nozoom not-prose absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"></div><div class=p-4><header><a href=/post/perceptron/ class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"><h2>人工パーセプトロンの実装をpythonでやってみた</h2></a></header><div class="text-sm text-neutral-500 dark:text-neutral-400"><div class="flex flex-row flex-wrap items-center"><time datetime=2020-10-17T20:58:10+09:00>2020.10.17</time><span class="px-2 text-primary-500">&#183;</span><span title=読むのに必要な時間>5 分</span></div><div class="flex flex-row flex-wrap items-center"><a class="relative mt-[0.5rem] me-2" href=/categories/tech/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Tech
+</span></span></a><a class="relative mt-[0.5rem] me-2" href=/tags/machine-learning/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Machine-Learning
+</span></span></a><a class="relative mt-[0.5rem] me-2" href=/tags/python/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Python</span></span></a></div></div><div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">本を読んでそのままやりました</div></div><div class="px-6 pt-4 pb-2"></div></article><article class="article-link--related group relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600"><div class="flex-none relative overflow-hidden thumbnail_card_related" style=--thumbnail-aspect-ratio:1.5><img src=/post/streamlit-demo/featured_hu_5050422e775acd8f.png alt=Pythonのコードがそのままwebアプリになる『Streamlit』を試してみた loading=lazy decoding=async fetchpriority=low class="nozoom not-prose absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"></div><div class=p-4><header><a href=/post/streamlit-demo/ class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2"><h2>Pythonのコードがそのままwebアプリになる『Streamlit』を試してみた</h2></a></header><div class="text-sm text-neutral-500 dark:text-neutral-400"><div class="flex flex-row flex-wrap items-center"><time datetime=2020-09-02T20:13:28+09:00>2020.09.02</time><span class="px-2 text-primary-500">&#183;</span><span title=読むのに必要な時間>2 分</span></div><div class="flex flex-row flex-wrap items-center"><a class="relative mt-[0.5rem] me-2" href=/categories/tech/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Tech
+</span></span></a><a class="relative mt-[0.5rem] me-2" href=/tags/python/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Python
+</span></span></a><a class="relative mt-[0.5rem] me-2" href=/tags/statistics/><span class="flex cursor-pointer"><span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">Statistics</span></span></a></div></div><div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">試しにサイコロの出目の平均値の分布が正規分布に近づくのをチェック</div></div><div class="px-6 pt-4 pb-2"></div></article></section></div></section><footer class="pt-8 max-w-prose print:hidden"><div class=pt-8><hr class="border-dotted border-neutral-300 dark:border-neutral-600"><div class="flex justify-between pt-3"><span class="flex flex-col"><a class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400" href=/post/202010buy/><span class=leading-6><span class="inline-block rtl:rotate-180">&larr;</span>&ensp;2020年10月に買ったもの
+</span></a><span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400"><time datetime=2020-10-27T12:00:00+09:00>2020.10.27</time>
+</span></span><span class="flex flex-col items-end"><a class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400" href=/post/202011buy/><span class=leading-6>2020年11月に買ったもの&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+</span></a><span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400"><time datetime=2020-11-26T09:11:43+09:00>2020.11.26</time></span></span></div></div></footer></article><div id=scroll-to-top class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200"><a href=#the-top class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400" aria-label=TOPへスクロール title=TOPへスクロール>&uarr;</a></div></main><footer id=site-footer class="py-10 print:hidden"><nav aria-label=フッターメニュー class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400"><ul class="flex list-none flex-col sm:flex-row"><li class="flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0"><a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href=/post/index.xml title>RSS</a></li><li class="flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0"><a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href=https://github.com/kokuyokugetter title>GitHub</a></li></ul></nav><div class="flex items-center justify-between"><p class="text-sm text-neutral-500 dark:text-neutral-400">&copy;
+2026
+ゲッタ〜</p><p class="text-xs text-neutral-500 dark:text-neutral-400"><a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href=https://blowfish.page/ target=_blank rel="noopener noreferrer">Blowfish</a> で構築されています</p></div></footer><div id=search-wrapper role=dialog aria-modal=true aria-label=検索 class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500" data-url=/><div id=search-modal class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"><header class="relative z-10 flex items-center justify-between flex-none px-2"><form class="flex items-center flex-auto min-w-0"><div class="flex items-center justify-center w-8 h-8 text-neutral-400"><span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></span></div><input type=search id=search-query aria-label=検索 class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent" placeholder=検索 tabindex=0></form><button id=close-search-button class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400" title="閉じる (Esc)">
+<span class="relative block icon"><svg viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75.0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75.0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75.0-45.25s32.75-12.5 45.25.0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25.0s12.5 32.75.0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></button></header><section class="flex-auto px-2 overflow-auto"><ul id=search-results></ul></section></div></div></div></body></html>

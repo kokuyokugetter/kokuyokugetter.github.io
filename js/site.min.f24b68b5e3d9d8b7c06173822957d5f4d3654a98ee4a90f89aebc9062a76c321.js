@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("search-query");e?.addEventListener("input",()=>{e.dispatchEvent(new KeyboardEvent("keyup",{bubbles:!0}))})})

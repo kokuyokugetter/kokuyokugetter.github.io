@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories | ゲッタ〜のHP</title>
-    <link>https://kokuyokugetter.github.io/categories/</link>
-      <atom:link href="https://kokuyokugetter.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Aug 2026 08:23:22 +0900</lastBuildDate>
-    <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>Categories</title>
-      <link>https://kokuyokugetter.github.io/categories/</link>
-    </image>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on ゲッタ〜のHP</title><link>https://kokuyokugetter.github.io/categories/</link><description>Recent content in Categories on ゲッタ〜のHP</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>© 2026 ゲッタ〜</copyright><lastBuildDate>Mon, 31 Aug 2026 08:23:22 +0900</lastBuildDate><atom:link href="https://kokuyokugetter.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Diary</title><link>https://kokuyokugetter.github.io/categories/diary/</link><pubDate>Mon, 31 Aug 2026 08:23:22 +0900</pubDate><guid>https://kokuyokugetter.github.io/categories/diary/</guid><description/></item><item><title>Tech</title><link>https://kokuyokugetter.github.io/categories/tech/</link><pubDate>Sun, 17 Sep 2023 22:48:26 +0900</pubDate><guid>https://kokuyokugetter.github.io/categories/tech/</guid><description/></item><item><title>Impression</title><link>https://kokuyokugetter.github.io/categories/impression/</link><pubDate>Tue, 15 Dec 2020 00:13:13 +0900</pubDate><guid>https://kokuyokugetter.github.io/categories/impression/</guid><description/></item><item><title>Joke</title><link>https://kokuyokugetter.github.io/categories/joke/</link><pubDate>Sun, 19 Jul 2020 22:45:02 +0900</pubDate><guid>https://kokuyokugetter.github.io/categories/joke/</guid><description/></item></channel></rss>
